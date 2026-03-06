@@ -1,0 +1,793 @@
+Clasifica los siguientes compuestos según su grupo o familia a la que pertenecen, eligiendo una de las opciones de esta lista: 
+grupos_compuestos = {
+    1: "Alcanos",
+    2: "Alquenos y alquinos",
+    3: "Ácidos carboxílicos",
+    4: "Ésteres",
+    5: "Alcoholes",
+    6: "Fenoles",
+    7: "Cetonas",
+    8: "Aldehídos",
+    9: "Éteres",
+    10: "Aminas",
+    11: "Amidas",
+    12: "Nitrilos",
+    13: "Anillos aromáticos",
+    14: "Ésteres de ácido fosfórico",
+    15: "Silanos / Siloxanos",
+    16: "Esteroides / Terpenos",
+    17: "Lactonas y lactamas",
+    18: "Compuestos heterocíclicos",
+    19: "Compuestos halogenados",
+    20: "Otros",
+    21: "Anilinas / Derivados de anilina",
+    22: "Ftalatos",
+    23: "Aldehídos aromáticos",
+    24: "Cetonas aromáticas",
+    25: "Amidas aromáticas",
+    26: "Amidas alifáticas",
+    27: "Alcoholes grasos / largos",
+    28: "Ácidos grasos",
+    29: "Compuestos organosulfurados",
+    30: "Lactonas aromáticas",
+    31: "Compuestos bencénicos sustituidos",
+    32: "Compuestos nitrogenados heterocíclicos",
+    33: "Compuestos con oxígeno cíclico",
+    34: "Éteres de glicoles",
+    35: "Compuestos con grupos TMS (trimetilsililo)",
+    36: "Compuestos con anillos fundidos",
+    37: "Compuestos policíclicos aromáticos (PAHs)",
+    38: "Nitrilos aromáticos",
+    39: "Otros"
+}
+Y devuélveme simplemente el CAS del compuesto y el número de la familia a la que pertenece, en formato cas : numero. Aquí está la lista de compuestos:
+cas: 1016-59-7, name: Phenazine, 1-methyl-, formula: C13H10N2
+cas: 2876-18-8, name: Phenazine, 2-methoxy-, formula: C13H10N2O
+cas: 1000130-54-4, name: Phenethenamine, N-benzoyl-4-hydroxy-, formula: C15H13NO2
+cas: 23693-18-7, name: Phenethylamine, 2-methoxy-.alpha.-methyl-4,5-(methylenedioxy)-, formula: C11H15NO3
+cas: 1082-88-8, name: Phenethylamine, 3,4,5-trimethoxy-.alpha.-methyl-, formula: C12H19NO3
+cas: 13674-05-0, name: Phenethylamine, 3-methoxy-.alpha.-methyl-4,5-(methylenedioxy)-, formula: C11H15NO3
+cas: 10538-85-9, name: Phenethylamine, N-methyl-.beta.,3,4-tris(trimethylsiloxy)-, formula: C18H37NO3Si3
+cas: 119-47-1, name: Phenol, 2,2'-methylenebis[6-(1,1-dimethylethyl)-4-methyl-, formula: C23H32O2
+cas: 27257-08-5, name: Phenol, 2,3-dimethoxy-, acetate, formula: C10H12O4
+cas: 607-95-4, name: Phenol, 2,4,6-tribromo-, acetate, formula: C8H5Br3O2
+cas: 732-26-3, name: Phenol, 2,4,6-tris(1,1-dimethylethyl)-, formula: C18H30O
+cas: 2934-07-8, name: Phenol, 2,4,6-tris(1-methylethyl)-, formula: C15H24O
+cas: 96-76-4, name: Phenol, 2,4-bis(1,1-dimethylethyl)-, formula: C14H22O
+cas: 120-95-6, name: Phenol, 2,4-bis(1,1-dimethylpropyl)-, formula: C16H26O
+cas: 2772-45-4, name: Phenol, 2,4-bis(1-methyl-1-phenylethyl)-, formula: C24H26O
+cas: 2769-94-0, name: Phenol, 2,4-bis(1-phenylethyl)-, formula: C22H22O
+cas: 20039-94-5, name: Phenol, 2,4-di-t-butyl-6-nitro-, formula: C14H21NO3
+cas: 5875-45-6, name: Phenol, 2,5-bis(1,1-dimethylethyl)-, formula: C14H22O
+cas: 1000115-36-0, name: Phenol, 2,5-bis(1-methylethyl)-, acetate, formula: C14H20O2
+cas: 128-39-2, name: Phenol, 2,6-bis(1,1-dimethylethyl)-, formula: C14H22O
+cas: 87-97-8, name: Phenol, 2,6-bis(1,1-dimethylethyl)-4-(methoxymethyl)-, formula: C16H26O2
+cas: 4130-42-1, name: Phenol, 2,6-bis(1,1-dimethylethyl)-4-ethyl-, formula: C16H26O
+cas: 20600-84-4, name: Phenol, 2,6-bis(1,1-dimethylethyl)-4-isocyano-, formula: C15H21NO
+cas: 1918-11-2, name: Phenol, 2,6-bis(1,1-dimethylethyl)-4-methyl-, methylcarbamate, formula: C17H27NO2
+cas: 20690-83-9, name: Phenol, 2,6-di-tert-butyl-2',6'-dimethoxy-4,4'-methylenedi-, formula: C23H32O4
+cas: 2432-14-6, name: Phenol, 2,6-dibromo-4-methyl-, formula: C7H6Br2O
+cas: 944-99-0, name: Phenol, 2,6-dimethoxy-, acetate, formula: C10H12O4
+cas: 88-18-6, name: Phenol, 2-(1,1-dimethylethyl)-, formula: C10H14O
+cas: 13037-79-1, name: Phenol, 2-(1,1-dimethylethyl)-3-methyl-, formula: C11H16O
+cas: 5806-73-5, name: Phenol, 2-(1,1-dimethylethyl)-4-(1,1,3,3-tetramethylbutyl)-, formula: C18H30O
+cas: 2409-55-4, name: Phenol, 2-(1,1-dimethylethyl)-4-methyl-, formula: C11H16O
+cas: 2219-82-1, name: Phenol, 2-(1,1-dimethylethyl)-6-methyl-, formula: C11H16O
+cas: 4237-44-9, name: Phenol, 2-(1-phenylethyl)-, formula: C14H14O
+cas: 1000258-83-7, name: Phenol, 2-(2-pentyn-4-yl)-4-methyl-, formula: C12H14O
+cas: 17235-14-2, name: Phenol, 2-(3-hydroxy-3-methyl-1-butenyl)-, (Z)-, formula: C11H14O2
+cas: 3864-99-1, name: Phenol, 2-(5-chloro-2H-benzotriazol-2-yl)-4,6-bis(1,1-dimethylethyl)-, formula: C20H24ClN3O
+cas: 61348-47-8, name: Phenol, 2-(5-isoxazolyl)-, formula: C9H7NO2
+cas: 6272-38-4, name: Phenol, 2-(phenylmethoxy)-, formula: C13H12O2
+cas: 28994-41-4, name: Phenol, 2-(phenylmethyl)-, formula: C13H12O
+cas: 1643-39-6, name: Phenol, 2-amino-4,6-bis(1,1-dimethylethyl)-, formula: C14H23NO
+cas: 17332-11-5, name: Phenol, 2-bromo-4-methoxy-, formula: C7H7BrO2
+cas: 94-86-0, name: Phenol, 2-ethoxy-5-(1-propenyl)-, formula: C11H14O2
+cas: 2219-84-3, name: Phenol, 2-methyl-4-(1,1,3,3-tetramethylbutyl)-, formula: C15H24O
+cas: 644-35-9, name: Phenol, 2-propyl-, formula: C9H12O
+cas: 642-71-7, name: Phenol, 3,4,5-trimethoxy-, formula: C9H12O4
+cas: 2033-89-8, name: Phenol, 3,4-dimethoxy-, formula: C8H10O3
+cas: 95-65-8, name: Phenol, 3,4-dimethyl-, formula: C8H10O
+cas: 1138-52-9, name: Phenol, 3,5-bis(1,1-dimethylethyl)-, formula: C14H22O
+cas: 88-32-4, name: Phenol, 3-(1,1-dimethylethyl)-4-methoxy-, formula: C11H16O2
+cas: 1000221-46-6, name: Phenol, 3-isopropoxy-5-methyl-, formula: C10H14O2
+cas: 27955-94-8, name: Phenol, 4,4',4''-ethylidynetris-, formula: C20H18O3
+cas: 80-05-7, name: Phenol, 4,4'-(1-methylethylidene)bis-, formula: C15H16O2
+cas: 5384-21-4, name: Phenol, 4,4'-methylenebis[2,6-dimethyl-, formula: C17H20O2
+cas: 616-55-7, name: Phenol, 4,6-di(1,1-dimethylethyl)-2-methyl-, formula: C15H24O
+cas: 140-66-9, name: Phenol, 4-(1,1,3,3-tetramethylbutyl)-, formula: C14H22O
+cas: 80-46-6, name: Phenol, 4-(1,1-dimethylpropyl)-, formula: C11H16O
+cas: 599-64-4, name: Phenol, 4-(1-methyl-1-phenylethyl)-, formula: C15H16O
+cas: 99-71-8, name: Phenol, 4-(1-methylpropyl)-, formula: C10H14O
+cas: 1988-89-2, name: Phenol, 4-(1-phenylethyl)-, formula: C14H14O
+cas: 6335-83-7, name: Phenol, 4-(2-phenylethyl)-, formula: C14H14O
+cas: 34168-00-8, name: Phenol, 4-[(5,6,7,8-tetrahydro-1,3-dioxolo[4,5-g]isoquinolin-5-yl)methyl]-, (R)-, formula: C17H17NO3
+cas: 25866-03-9, name: Phenol, 4-[(5,6,7,8-tetrahydro-6-methyl-1,3-dioxolo[4,5-g]isoquinolin-5-yl)methyl]-, (R)-, formula: C18H19NO3
+cas: 6452-64-8, name: Phenol, 4-[(dimethylamino)methyl]-3,5-dimethyl-, methylcarbamate (ester), formula: C13H20N2O2
+cas: 370-98-9, name: Phenol, 4-[2-(methylamino)ethyl]-, formula: C9H13NO
+cas: 1638-22-8, name: Phenol, 4-butyl-, formula: C10H14O
+cas: 622-62-8, name: Phenol, 4-ethoxy-, formula: C8H10O2
+cas: 2785-89-9, name: Phenol, 4-ethyl-2-methoxy-, formula: C9H12O2
+cas: 1000196-37-6, name: Phenol, 4-mercapto-2-(4-chlorobenzyl)-, formula: C13H11ClOS
+cas: 14938-35-3, name: Phenol, 4-pentyl-, formula: C11H16O
+cas: 831-82-3, name: Phenol, 4-phenoxy-, formula: C12H10O2
+cas: 18979-50-5, name: Phenol, 4-propoxy-, formula: C9H12O2
+cas: 645-56-7, name: Phenol, 4-propyl-, formula: C9H12O
+cas: 528-79-0, name: Phenol, 5-methyl-2-(1-methylethyl)-, acetate, formula: C12H16O2
+cas: 585-34-2, name: Phenol, m-tert-butyl-, formula: C10H14O
+cas: 98-54-4, name: Phenol, p-tert-butyl-, formula: C10H14O
+cas: 92-84-2, name: Phenothiazine, formula: C12H9NS
+cas: 1000140-13-9, name: Phenyl 2-(2'-furanyl)cyclopropyl ketone, formula: C14H12O2
+cas: 14548-46-0, name: Phenyl 4-pyridyl ketone, formula: C12H9NO
+cas: 1000331-14-2, name: Phenylacetic acid, 2,3-dichlorophenyl ester, formula: C14H10Cl2O2
+cas: 1000307-53-4, name: Phenylacetic acid, 4-cyanophenyl ester, formula: C15H11NO2
+cas: 1000282-91-4, name: Phenylacetic acid, dodec-9-ynyl ester, formula: C20H28O2
+cas: 60-12-8, name: Phenylethyl Alcohol, formula: C8H10O
+cas: 1074-12-0, name: Phenylglyoxal, formula: C8H6O2
+cas: 2929-77-3, name: Phenylmethanediol dibutanoate, formula: C15H20O4
+cas: 2437-62-9, name: Phlorobutyrophenone, formula: C10H12O4
+cas: 2959-74-2, name: Phosphine oxide, diphenyl(phenylmethyl)-, formula: C19H17OP
+cas: 23743-26-2, name: Phosphine, 1,2-ethanediylbis[dicyclohexyl-, formula: C26H48P2
+cas: 103099-52-1, name: Phosphine, 1,3-propanediylbis[dicyclohexyl-, formula: C27H50P2
+cas: 1000163-56-9, name: Phosphine, [2-(6-methyl-2-pyridyl)ethyl](phenyl)-[3-(di-t-butylphosphino)propyl]-, formula: C25H39NP2
+cas: 77609-83-7, name: Phosphine, [2-[(dimethylphosphino)methyl]-2-methyl-1,3-propanediyl]bis[dimethyl-, formula: C11H27P3
+cas: 6372-43-6, name: Phosphine, bis(1-methylethyl)phenyl-, formula: C12H19P
+cas: 1486-28-8, name: Phosphine, methyldiphenyl-, formula: C13H13P
+cas: 25097-42-1, name: Phosphinic acid, (1,1-dimethylethyl)[4-(1,1-dimethylethyl)phenyl]-, formula: C14H23O2P
+cas: 1000306-03-5, name: Phosphinic acid, diethyl-,  methyl ester, formula: C5H13O2P
+cas: 1706-93-0, name: Phosphinic acid, diphenyl-, cyclohexyl ester, formula: C18H21O2P
+cas: 691-96-3, name: Phosphinous acid, diisopropyl ester, formula: C6H15O3P
+cas: 29949-66-4, name: Phosphinous chloride, tert-butylisopropyl-, formula: C7H16ClP
+cas: 14540-45-5, name: Phosphonic acid, 1,1-dimethylethyl ethyl ester, formula: C6H15O3P
+cas: 1809-20-7, name: Phosphonic acid, bis(1-methylethyl) ester, formula: C6H15O3P
+cas: 1656-73-1, name: Phosphonic acid, ethyl hexyl ester, formula: C8H19O3P
+cas: 6163-75-3, name: Phosphonic acid, ethyl-, dimethyl ester, formula: C4H11O3P
+cas: 18279-83-9, name: Phosphonic acid, methyl-, bis(trimethylsilyl) ester, formula: C7H21O3PSi2
+cas: 22583-27-3, name: Phosphonic acid, methyl-, dicyclopentyl ester, formula: C11H21O3P
+cas: 77304-63-3, name: Phosphonic acid, methyl-, dihexyl ester, formula: C13H29O3P
+cas: 14939-34-5, name: Phosphonic difluoride, formula: F2HOP
+cas: 665-33-8, name: Phosphonofluoridic acid, (1-methylethyl)-, 1-methylethyl ester, formula: C6H14FO2P
+cas: 333416-30-1, name: Phosphonofluoridic acid, (1-methylethyl)-, butyl ester, formula: C7H16FO2P
+cas: 333416-29-8, name: Phosphonofluoridic acid, (1-methylethyl)-, propyl ester, formula: C6H14FO2P
+cas: 333416-08-3, name: Phosphonofluoridic acid, ethyl-, decyl ester, formula: C12H26FO2P
+cas: 1189-87-3, name: Phosphonofluoridic acid, ethyl-, isopropyl ester, formula: C5H12FO2P
+cas: 660-21-9, name: Phosphonofluoridic acid, methyl-, 3,3-dimethylbutyl ester, formula: C7H16FO2P
+cas: 211192-74-4, name: Phosphonofluoridic acid, methyl-, nonyl ester, formula: C10H22FO2P
+cas: 812-13-5, name: Phosphonothioamidodifluoridate, N,N-dimethyl-, formula: C2H6F2NPS
+cas: 29246-85-3, name: Phosphoramidous chloride fluoride, dimethyl-, formula: C2H6ClFNP
+cas: 25757-74-8, name: Phosphoramidous difluoride, formula: F2H2NP
+cas: 814-97-1, name: Phosphoramidous difluoride, dimethyl-, formula: C2H6F2NP
+cas: 17027-41-7, name: Phosphoric acid, 2-chloroethenyl dimethyl ester, formula: C4H8ClO4P
+cas: 1000309-01-8, name: Phosphoric acid, bis(2-ethylhexyl) propyl ester, formula: C19H41O4P
+cas: 1000308-96-0, name: Phosphoric acid, didecyl ethyl ester, formula: C22H47O4P
+cas: 1000308-89-3, name: Phosphoric acid, diethyl dodecyl ester, formula: C16H35O4P
+cas: 1000308-95-2, name: Phosphoric acid, diethyl nonyl ester, formula: C13H29O4P
+cas: 1000308-90-4, name: Phosphoric acid, diethyl octyl ester, formula: C12H27O4P
+cas: 20195-08-8, name: Phosphoric acid, diethyl pentyl ester, formula: C9H21O4P
+cas: 1000308-90-9, name: Phosphoric acid, diheptyl methyl ester, formula: C15H33O4P
+cas: 1000308-89-1, name: Phosphoric acid, dihexyl ethyl ester, formula: C14H31O4P
+cas: 55955-88-9, name: Phosphoric acid, dimethyl pentyl ester, formula: C7H17O4P
+cas: 1000308-90-5, name: Phosphoric acid, dipentyl ethyl ester, formula: C12H27O4P
+cas: 1000309-02-0, name: Phosphoric acid, dipropyl 2-ethylhexyl ester, formula: C14H31O4P
+cas: 1000309-01-5, name: Phosphoric acid, dipropyl heptyl ester, formula: C13H29O4P
+cas: 1000309-01-0, name: Phosphoric acid, dipropyl nonyl ester, formula: C15H33O4P
+cas: 1000308-96-4, name: Phosphoric acid, dipropyl octyl ester, formula: C14H31O4P
+cas: 1000308-89-7, name: Phosphoric acid, diundecyl methyl ester, formula: C23H49O4P
+cas: 1000308-90-2, name: Phosphoric acid, ethyl octyl pentyl ester, formula: C15H33O4P
+cas: 29761-21-5, name: Phosphoric acid, isodecyl diphenyl ester, formula: C22H31O4P
+cas: 2627-35-2, name: Phosphoric acid, monododecyl ester, formula: C12H27O4P
+cas: 1000308-91-1, name: Phosphoric acid, trihexyl ester, formula: C18H39O4P
+cas: 78-42-2, name: Phosphoric acid, tris(2-ethylhexyl) ester, formula: C24H51O4P
+cas: 17420-29-0, name: Phosphorin, 2,4,6-tris(1,1-dimethylethyl)-, formula: C17H29P
+cas: 1000309-08-8, name: Phosphorochloridic acid, dipentyl ester, formula: C10H22ClO3P
+cas: 28314-61-6, name: Phosphorocyanidothioic difluoride, formula: CF2NPS
+cas: 14118-40-2, name: Phosphorocyanidous difluoride, formula: CF2NP
+cas: 1735-82-6, name: Phosphorodiamidous fluoride, tetramethyl-, formula: C4H12FN2P
+cas: 301-13-3, name: Phosphorous acid, tris(2-ethylhexyl) ester, formula: C24H51O3P
+cas: 7647-19-0, name: Phosphorus pentafluoride, formula: F5P
+cas: 7783-55-3, name: Phosphorus trifluoride, formula: F3P
+cas: 88-97-1, name: Phthalamic acid, formula: C8H7NO3
+cas: 7188-22-9, name: Phthalazine, 1-phenyl-, formula: C14H10N2
+cas: 1000309-09-6, name: Phthalic acid, 1-cyclopentylethyl heptyl ester, formula: C22H32O4
+cas: 1000309-73-8, name: Phthalic acid, 1-cyclopentylethyl nonyl ester, formula: C24H36O4
+cas: 1000309-74-0, name: Phthalic acid, 1-cyclopentylethyl undecyl ester, formula: C26H40O4
+cas: 1000315-16-3, name: Phthalic acid, 1-phenylpropyl butyl ester, formula: C21H24O4
+cas: 1000356-92-5, name: Phthalic acid, 2,2-dichloroethyl isobutyl ester, formula: C14H16Cl2O4
+cas: 1000357-08-5, name: Phthalic acid, 2,3-dimethylphenyl propyl ester, formula: C19H20O4
+cas: 1000356-84-1, name: Phthalic acid, 2,4-dimethylpent-3-yl ethyl ester, formula: C17H24O4
+cas: 1000356-84-8, name: Phthalic acid, 2,4-dimethylpent-3-yl nonyl ester, formula: C24H38O4
+cas: 1000356-84-5, name: Phthalic acid, 2,4-dimethylpent-3-yl pentyl ester, formula: C20H30O4
+cas: 1000356-84-2, name: Phthalic acid, 2,4-dimethylpent-3-yl propyl ester, formula: C18H26O4
+cas: 1000356-34-8, name: Phthalic acid, 2,5-dichlorophenyl pentyl ester, formula: C19H18Cl2O4
+cas: 1000315-26-1, name: Phthalic acid, 2,6-dimethoxyphenyl ethyl ester, formula: C18H18O6
+cas: 1000378-04-5, name: Phthalic acid, 2-(4-bromophenyl)ethyl dodecyl ester, formula: C28H37BrO4
+cas: 1000377-91-3, name: Phthalic acid, 2-(4-chlorophenoxy)ethyl dodecyl ester, formula: C28H37ClO5
+cas: 1000377-90-2, name: Phthalic acid, 2-(4-chlorophenoxy)ethyl ethyl ester, formula: C18H17ClO5
+cas: 1000315-81-3, name: Phthalic acid, 2-acethylphenyl propyl ester, formula: C19H18O5
+cas: 1000315-28-7, name: Phthalic acid, 2-bromo-4-fluorophenyl hexyl ester, formula: C20H20BrFO4
+cas: 1000315-64-9, name: Phthalic acid, 2-chlorophenyl 4-methoxyphenyl ester, formula: C21H15ClO5
+cas: 1000309-86-6, name: Phthalic acid, 2-chlorophenyl ethyl ester, formula: C16H13ClO4
+cas: 1000356-82-2, name: Phthalic acid, 2-chloropropyl ethyl ester, formula: C13H15ClO4
+cas: 1000356-82-8, name: Phthalic acid, 2-chloropropyl heptyl ester, formula: C18H25ClO4
+cas: 1000356-82-7, name: Phthalic acid, 2-chloropropyl hexyl ester, formula: C17H23ClO4
+cas: 1000356-82-4, name: Phthalic acid, 2-chloropropyl isobutyl ester, formula: C15H19ClO4
+cas: 1000356-82-6, name: Phthalic acid, 2-chloropropyl isohexyl ester, formula: C17H23ClO4
+cas: 1000356-83-0, name: Phthalic acid, 2-chloropropyl nonyl ester, formula: C20H29ClO4
+cas: 1000356-82-3, name: Phthalic acid, 2-chloropropyl propyl ester, formula: C14H17ClO4
+cas: 1000309-88-0, name: Phthalic acid, 2-cyclohexylethyl undecyl ester, formula: C27H42O4
+cas: 1000315-79-6, name: Phthalic acid, 2-diethylaminoethyl dodecyl ester, formula: C26H43NO4
+cas: 1000322-86-9, name: Phthalic acid, 2-ethoxyethyl ethyl ester, formula: C14H18O5
+cas: 1000356-89-2, name: Phthalic acid, 2-ethylbutyl heptyl ester, formula: C21H32O4
+cas: 1000356-88-8, name: Phthalic acid, 2-ethylbutyl propyl ester, formula: C17H24O4
+cas: 1000356-89-6, name: Phthalic acid, 2-ethylbutyl undecyl ester, formula: C25H40O4
+cas: 1000315-35-8, name: Phthalic acid, 2-ethylcyclohexyl heptyl ester, formula: C23H34O4
+cas: 1000360-51-1, name: Phthalic acid, 2-fluorophenyl propyl ester, formula: C17H15FO4
+cas: 1000315-52-2, name: Phthalic acid, 2-isopropylphenyl methyl ester, formula: C18H18O4
+cas: 1000315-79-8, name: Phthalic acid, 2-methoxyethyl propyl ester, formula: C14H18O5
+cas: 1000322-81-6, name: Phthalic acid, 2-methylbutyl octyl ester, formula: C21H32O4
+cas: 1000322-81-2, name: Phthalic acid, 2-methylbutyl pentyl ester, formula: C18H26O4
+cas: 1000322-81-1, name: Phthalic acid, 2-methylbutyl propyl ester, formula: C16H22O4
+cas: 1000356-91-4, name: Phthalic acid, 2-methylpent-3-yl nonyl ester, formula: C23H36O4
+cas: 1000356-91-6, name: Phthalic acid, 2-methylpent-3-yl undecyl ester, formula: C25H40O4
+cas: 1000314-95-3, name: Phthalic acid, 2-methylphenyl pentyl ester, formula: C20H22O4
+cas: 1000315-56-2, name: Phthalic acid, 2-pentyl 2-propyl ester, formula: C16H22O4
+cas: 1000315-47-5, name: Phthalic acid, 2-pentyl propyl ester, formula: C16H22O4
+cas: 1000315-48-3, name: Phthalic acid, 2-pentyl undecyl ester, formula: C24H38O4
+cas: 1000309-77-1, name: Phthalic acid, 2-phenylethyl propyl ester, formula: C19H20O4
+cas: 1000377-92-7, name: Phthalic acid, 2-propylpentyl undecyl ester, formula: C27H44O4
+cas: 1000357-01-1, name: Phthalic acid, 3,3-dimethylbut-2-yl dodecyl ester, formula: C26H42O4
+cas: 1000357-00-7, name: Phthalic acid, 3,3-dimethylbut-2-yl octyl ester, formula: C22H34O4
+cas: 1000357-00-3, name: Phthalic acid, 3,3-dimethylbut-2-yl pentyl ester, formula: C19H28O4
+cas: 1000315-27-5, name: Phthalic acid, 3,4-dichlorophenyl hexyl ester, formula: C20H20Cl2O4
+cas: 1000315-27-4, name: Phthalic acid, 3,4-dichlorophenyl pentyl ester, formula: C19H18Cl2O4
+cas: 1000315-27-2, name: Phthalic acid, 3,4-dichlorophenyl propyl ester, formula: C17H14Cl2O4
+cas: 1000315-70-2, name: Phthalic acid, 3,4-dimethylphenyl phenyl ester, formula: C22H18O4
+cas: 1000315-70-0, name: Phthalic acid, 3,5-difluorophenyl 3,4-dimethylphenyl ester, formula: C22H16F2O4
+cas: 1000315-73-8, name: Phthalic acid, 3,5-dimethylphenyl 4-formylphenyl ester, formula: C23H18O5
+cas: 1000315-66-3, name: Phthalic acid, 3,5-dimethylphenyl 4-isopropylphenyl ester, formula: C25H24O4
+cas: 1000309-78-1, name: Phthalic acid, 3,5-dimethylphenyl ethyl ester, formula: C18H18O4
+cas: 1000315-70-8, name: Phthalic acid, 3,5-dimethylphenyl methyl ester, formula: C17H16O4
+cas: 1000356-49-8, name: Phthalic acid, 3-fluorophenyl propyl ester, formula: C17H15FO4
+cas: 1000371-10-9, name: Phthalic acid, 3-methylbenzyl ethyl ester, formula: C18H18O4
+cas: 1000357-10-7, name: Phthalic acid, 3-methylbut-3-enyl nonyl ester, formula: C22H32O4
+cas: 1000356-81-0, name: Phthalic acid, 3-methylbutyl nonyl ester, formula: C22H34O4
+cas: 1000356-80-2, name: Phthalic acid, 3-methylbutyl propyl ester, formula: C16H22O4
+cas: 1000371-14-1, name: Phthalic acid, 4,4-dimethylpent-2-yl butyl ester, formula: C19H28O4
+cas: 1000371-13-5, name: Phthalic acid, 4,4-dimethylpent-2-yl decyl ester, formula: C25H40O4
+cas: 1000371-13-6, name: Phthalic acid, 4,4-dimethylpent-2-yl nonyl ester, formula: C24H38O4
+cas: 1000371-14-3, name: Phthalic acid, 4,4-dimethylpent-2-yl propyl ester, formula: C18H26O4
+cas: 1000309-81-0, name: Phthalic acid, 4-bromophenyl butyl ester, formula: C18H17BrO4
+cas: 1000309-80-8, name: Phthalic acid, 4-bromophenyl ethyl ester, formula: C16H13BrO4
+cas: 1000309-81-4, name: Phthalic acid, 4-bromophenyl heptyl ester, formula: C21H23BrO4
+cas: 1000309-81-3, name: Phthalic acid, 4-bromophenyl hexyl ester, formula: C20H21BrO4
+cas: 1000309-81-5, name: Phthalic acid, 4-bromophenyl octyl ester, formula: C22H25BrO4
+cas: 1000309-81-1, name: Phthalic acid, 4-bromophenyl pentyl ester, formula: C19H19BrO4
+cas: 1000315-71-2, name: Phthalic acid, 4-chloro-3-methylphenyl methyl ester, formula: C16H13ClO4
+cas: 1000315-24-7, name: Phthalic acid, 4-chlorophenyl propyl ester, formula: C17H15ClO4
+cas: 1000315-51-9, name: Phthalic acid, 4-cyanophenyl 2-ethylhexyl ester, formula: C23H25NO4
+cas: 1000315-65-5, name: Phthalic acid, 4-cyanophenyl 3-methylphenyl ester, formula: C22H15NO4
+cas: 1000309-79-4, name: Phthalic acid, 4-cyanophenyl hexyl ester, formula: C21H21NO4
+cas: 1000309-79-7, name: Phthalic acid, 4-cyanophenyl nonyl ester, formula: C24H27NO4
+cas: 1000315-63-6, name: Phthalic acid, 4-fluoro-2-nitrophenyl 2-pentyl ester, formula: C19H18FNO6
+cas: 1000315-63-4, name: Phthalic acid, 4-fluoro-2-nitrophenyl methyl ester, formula: C15H10FNO6
+cas: 1000315-66-1, name: Phthalic acid, 4-isopropylphenyl 3-methylphenyl ester, formula: C24H22O4
+cas: 1000315-22-0, name: Phthalic acid, 4-isopropylphenyl propyl ester, formula: C20H22O4
+cas: 1000315-68-0, name: Phthalic acid, 4-methoxyphenyl 3-methylphenyl ester, formula: C22H18O5
+cas: 1000315-67-7, name: Phthalic acid, 4-methoxyphenyl methyl ester, formula: C16H14O5
+cas: 1000377-94-3, name: Phthalic acid, 4-methylhept-3-yl octyl ester, formula: C24H38O4
+cas: 1000377-94-6, name: Phthalic acid, 4-methylhept-3-yl undecyl ester, formula: C27H44O4
+cas: 1000356-87-9, name: Phthalic acid, 4-methylpent-2-yl nonyl ester, formula: C23H36O4
+cas: 1000315-57-3, name: Phthalic acid, 4-nitrophenyl 2-propyl ester, formula: C17H15NO6
+cas: 1000309-76-9, name: Phthalic acid, 4-nitrophenyl octyl ester, formula: C22H25NO6
+cas: 1000309-76-5, name: Phthalic acid, 4-nitrophenyl pentyl ester, formula: C19H19NO6
+cas: 1000314-83-9, name: Phthalic acid, 4-octyl pentyl ester, formula: C21H32O4
+cas: 1000314-84-4, name: Phthalic acid, 4-octyl undecyl ester, formula: C27H44O4
+cas: 1000314-89-4, name: Phthalic acid, 5-methoxy-3-methylpentyl tridecyl ester, formula: C28H46O5
+cas: 1000371-08-4, name: Phthalic acid, 5-methylhex-2-yl decyl ester, formula: C25H40O4
+cas: 1000371-09-3, name: Phthalic acid, 5-methylhex-2-yl ethyl ester, formula: C17H24O4
+cas: 1000371-08-5, name: Phthalic acid, 5-methylhex-2-yl nonyl ester, formula: C24H38O4
+cas: 1000315-17-4, name: Phthalic acid, 6-ethyl-3-octyl butyl ester, formula: C22H34O4
+cas: 1000315-17-7, name: Phthalic acid, 6-ethyl-3-octyl heptyl ester, formula: C25H40O4
+cas: 1000315-17-9, name: Phthalic acid, 6-ethyl-3-octyl isobutyl ester, formula: C22H34O4
+cas: 1000315-53-8, name: Phthalic acid, 6-ethyloct-3-yl 2-ethylhexyl ester, formula: C26H42O4
+cas: 1000377-96-3, name: Phthalic acid, 6-methylhept-2-yl nonyl ester, formula: C25H40O4
+cas: 1000377-96-2, name: Phthalic acid, 6-methylhept-2-yl octyl ester, formula: C24H38O4
+cas: 1000315-42-5, name: Phthalic acid, 7-methyloct-3-yn-5-yl propyl ester, formula: C20H26O4
+cas: 1000356-85-6, name: Phthalic acid, 8-chlorooctyl ethyl ester, formula: C18H25ClO4
+cas: 1000356-86-3, name: Phthalic acid, 8-chlorooctyl heptyl ester, formula: C23H35ClO4
+cas: 1000356-86-2, name: Phthalic acid, 8-chlorooctyl hexyl ester, formula: C22H33ClO4
+cas: 33672-94-5, name: Phthalic acid, allyl ethyl ester, formula: C13H14O4
+cas: 1000309-04-3, name: Phthalic acid, benzyl isobutyl ester, formula: C19H20O4
+cas: 1000315-48-5, name: Phthalic acid, bis(2-pentyl) ester, formula: C18H26O4
+cas: 20548-62-3, name: Phthalic acid, bis(7-methyloctyl) ester, formula: C26H42O4
+cas: 1000315-75-9, name: Phthalic acid, but-3-yn-2-yl 3-methylphenyl ester, formula: C19H16O4
+cas: 1000356-92-6, name: Phthalic acid, butyl 2,2-dichloroethyl ester, formula: C14H16Cl2O4
+cas: 1000356-82-5, name: Phthalic acid, butyl 2-chloropropyl ester, formula: C15H19ClO4
+cas: 1000315-35-5, name: Phthalic acid, butyl 2-ethylcyclohexyl ester, formula: C20H28O4
+cas: 1000356-90-8, name: Phthalic acid, butyl 2-methylpent-3-yl ester, formula: C18H26O4
+cas: 1000315-47-6, name: Phthalic acid, butyl 2-pentyl ester, formula: C17H24O4
+cas: 1000357-01-9, name: Phthalic acid, butyl 2-propylphenyl ester, formula: C21H24O4
+cas: 1000357-09-5, name: Phthalic acid, butyl 2-tert-butyl-6-methylphenyl ester, formula: C23H28O4
+cas: 1000357-00-2, name: Phthalic acid, butyl 3,3-dimethylbut-2-yl ester, formula: C18H26O4
+cas: 1000356-80-4, name: Phthalic acid, butyl 3-methylbutyl ester, formula: C17H24O4
+cas: 1000377-93-9, name: Phthalic acid, butyl 4-methylhept-3-yl ester, formula: C20H30O4
+cas: 1000314-83-8, name: Phthalic acid, butyl 4-octyl ester, formula: C20H30O4
+cas: 1000377-95-8, name: Phthalic acid, butyl 6-methylhept-2-yl ester, formula: C20H30O4
+cas: 1000314-89-9, name: Phthalic acid, butyl cyclobutyl ester, formula: C16H20O4
+cas: 1000322-82-9, name: Phthalic acid, butyl cycloheptyl ester, formula: C19H26O4
+cas: 1000308-93-9, name: Phthalic acid, butyl dodecyl ester, formula: C24H38O4
+cas: 1000315-19-2, name: Phthalic acid, butyl hex-2-yn-4-yl ester, formula: C18H22O4
+cas: 1000356-95-5, name: Phthalic acid, butyl hex-3-yl ester, formula: C18H26O4
+cas: 1000308-99-5, name: Phthalic acid, butyl hexyl ester, formula: C18H26O4
+cas: 1000309-03-7, name: Phthalic acid, butyl neopentyl ester, formula: C17H24O4
+cas: 1000315-43-7, name: Phthalic acid, butyl tridec-2-yn-1-yl ester, formula: C25H36O4
+cas: 1000315-41-5, name: Phthalic acid, butyl undec-2-en-1-yl ester, formula: C23H34O4
+cas: 1000308-91-2, name: Phthalic acid, butyl undecyl ester, formula: C23H36O4
+cas: 1000360-27-5, name: Phthalic acid, cis-hex-3-enyl ethyl ester, formula: C16H20O4
+cas: 1000314-90-5, name: Phthalic acid, cyclobutyl decyl ester, formula: C22H32O4
+cas: 1000315-41-1, name: Phthalic acid, cyclobutyl ethyl ester, formula: C14H16O4
+cas: 1000314-90-2, name: Phthalic acid, cyclobutyl heptyl ester, formula: C19H26O4
+cas: 1000314-90-1, name: Phthalic acid, cyclobutyl hexyl ester, formula: C18H24O4
+cas: 1000314-91-1, name: Phthalic acid, cyclobutyl isobutyl ester, formula: C16H20O4
+cas: 1000314-91-2, name: Phthalic acid, cyclobutyl isohexyl ester, formula: C18H24O4
+cas: 1000314-90-3, name: Phthalic acid, cyclobutyl octyl ester, formula: C20H28O4
+cas: 1000314-90-0, name: Phthalic acid, cyclobutyl pentyl ester, formula: C17H22O4
+cas: 1000315-41-2, name: Phthalic acid, cyclobutyl propyl ester, formula: C15H18O4
+cas: 1000314-90-8, name: Phthalic acid, cyclobutyl tridecyl ester, formula: C25H38O4
+cas: 1000322-83-3, name: Phthalic acid, cycloheptyl heptyl ester, formula: C22H32O4
+cas: 1000322-83-4, name: Phthalic acid, cycloheptyl nonyl ester, formula: C24H36O4
+cas: 1000322-83-5, name: Phthalic acid, cycloheptyl undecyl ester, formula: C26H40O4
+cas: 1000315-56-4, name: Phthalic acid, cyclohexyl 2-propyl ester, formula: C17H22O4
+cas: 1000315-33-3, name: Phthalic acid, cyclohexyl ethyl ester, formula: C16H20O4
+cas: 1000315-33-8, name: Phthalic acid, cyclohexyl heptyl ester, formula: C21H30O4
+cas: 1000315-33-7, name: Phthalic acid, cyclohexyl hexyl ester, formula: C20H28O4
+cas: 1000315-34-0, name: Phthalic acid, cyclohexyl isohexyl ester, formula: C18H24O4
+cas: 1000315-33-6, name: Phthalic acid, cyclohexyl pentyl ester, formula: C19H26O4
+cas: 1000309-08-6, name: Phthalic acid, cyclohexylmethyl butyl ester, formula: C19H26O4
+cas: 1000314-91-9, name: Phthalic acid, cyclohexylmethyl decyl ester, formula: C25H38O4
+cas: 1000309-10-0, name: Phthalic acid, cyclohexylmethyl ethyl ester, formula: C17H22O4
+cas: 1000314-91-7, name: Phthalic acid, cyclohexylmethyl heptyl ester, formula: C22H32O4
+cas: 1000314-91-8, name: Phthalic acid, cyclohexylmethyl octyl ester, formula: C23H34O4
+cas: 1000314-92-0, name: Phthalic acid, cyclohexylmethyl undecyl ester, formula: C26H40O4
+cas: 1000356-89-5, name: Phthalic acid, decyl 2-ethylbutyl ester, formula: C24H38O4
+cas: 1000315-36-0, name: Phthalic acid, decyl 2-ethylcyclohexyl ester, formula: C26H40O4
+cas: 1000356-91-5, name: Phthalic acid, decyl 2-methylpent-3-yl ester, formula: C24H38O4
+cas: 1000315-48-2, name: Phthalic acid, decyl 2-pentyl ester, formula: C23H36O4
+cas: 1000377-92-6, name: Phthalic acid, decyl 2-propylpentyl ester, formula: C26H42O4
+cas: 1000357-02-5, name: Phthalic acid, decyl 2-propylphenyl ester, formula: C27H36O4
+cas: 1000356-88-0, name: Phthalic acid, decyl 4-methylpent-2-yl ester, formula: C24H38O4
+cas: 1000314-84-3, name: Phthalic acid, decyl 4-octyl ester, formula: C26H42O4
+cas: 1000377-96-4, name: Phthalic acid, decyl 6-methylhept-2-yl ester, formula: C26H42O4
+cas: 1000356-94-5, name: Phthalic acid, decyl dec-2-yl ester, formula: C28H46O4
+cas: 1000356-99-4, name: Phthalic acid, decyl hept-3-yl ester, formula: C25H40O4
+cas: 1000356-79-1, name: Phthalic acid, decyl hept-4-yl ester, formula: C25H40O4
+cas: 1000356-96-1, name: Phthalic acid, decyl hex-3-yl ester, formula: C24H38O4
+cas: 1000309-00-9, name: Phthalic acid, decyl pentyl ester, formula: C23H36O4
+cas: 1000360-48-8, name: Phthalic acid, decyl trans-hex-3-enyl ester, formula: C24H36O4
+cas: 1000377-79-9, name: Phthalic acid, di(2,3,6-trifluorobenzyl) ester, formula: C22H12F6O4
+cas: 1000357-09-2, name: Phthalic acid, di(2,3-dimethylphenyl) ester, formula: C24H22O4
+cas: 1000356-50-0, name: Phthalic acid, di(2-fluorophenyl) ester, formula: C20H12F2O4
+cas: 1000377-93-5, name: Phthalic acid, di(2-propylpentyl) ester, formula: C24H38O4
+cas: 1000309-82-6, name: Phthalic acid, di(3,4-dimethylphenyl) ester, formula: C24H22O4
+cas: 1000314-94-8, name: Phthalic acid, di(3-chlorophenyl) ester, formula: C20H12Cl2O4
+cas: 1000357-08-4, name: Phthalic acid, di(3-ethylphenyl) ester, formula: C24H22O4
+cas: 1000356-66-1, name: Phthalic acid, di(3-fluorophenyl) ester, formula: C20H12F2O4
+cas: 1000315-37-3, name: Phthalic acid, di(3-methylphenyl) ester, formula: C22H18O4
+cas: 1000356-88-6, name: Phthalic acid, di(4-methylpent-2-yl) ester, formula: C20H30O4
+cas: 1000315-17-8, name: Phthalic acid, di(6-ethyl-3-octyl) ester, formula: C28H46O4
+cas: 1000377-97-3, name: Phthalic acid, di(6-methylhept-2-yl) ester, formula: C24H38O4
+cas: 1000322-83-7, name: Phthalic acid, di(cycloheptyl) ester, formula: C22H30O4
+cas: 1000357-00-0, name: Phthalic acid, di(hept-3-yl) ester, formula: C22H34O4
+cas: 1000356-80-0, name: Phthalic acid, di(hept-4-yl) ester, formula: C22H34O4
+cas: 1000356-96-7, name: Phthalic acid, di(hex-3-yl) ester, formula: C20H30O4
+cas: 1000377-72-3, name: Phthalic acid, di(oct-3-yl) ester, formula: C24H38O4
+cas: 1000309-86-3, name: Phthalic acid, diamide, N,N'-diethyl-N,N'-bis(3-methylphenyl)-, formula: C26H28N2O2
+cas: 1000322-85-0, name: Phthalic acid, diamide, N-N'-dimethyl-N-N'-bis(phenyl)-, formula: C22H20N2O2
+cas: 1000309-84-0, name: Phthalic acid, dodecyl 2-isopropoxyphenyl ester, formula: C29H40O5
+cas: 1000356-66-8, name: Phthalic acid, dodecyl 3-fluorophenyl ester, formula: C26H33FO4
+cas: 1000314-84-5, name: Phthalic acid, dodecyl 4-octyl ester, formula: C28H46O4
+cas: 1000308-93-4, name: Phthalic acid, dodecyl ethyl ester, formula: C22H34O4
+cas: 1000360-49-0, name: Phthalic acid, dodecyl trans-hex-3-enyl ester, formula: C26H40O4
+cas: 1000315-41-3, name: Phthalic acid, entyl undec-2-en-1-yl ester, formula: C21H30O4
+cas: 1000356-88-7, name: Phthalic acid, ethyl 2-ethylbutyl ester, formula: C16H22O4
+cas: 1000315-35-3, name: Phthalic acid, ethyl 2-ethylcyclohexyl ester, formula: C18H24O4
+cas: 1000315-19-8, name: Phthalic acid, ethyl 2-methylallyl ester, formula: C14H16O4
+cas: 1000322-81-0, name: Phthalic acid, ethyl 2-methylbutyl ester, formula: C15H20O4
+cas: 1000356-90-5, name: Phthalic acid, ethyl 2-methylpent-3-yl ester, formula: C16H22O4
+cas: 1000315-47-4, name: Phthalic acid, ethyl 2-pentyl ester, formula: C15H20O4
+cas: 1000377-91-7, name: Phthalic acid, ethyl 2-propylpentyl ester, formula: C18H26O4
+cas: 1000357-01-6, name: Phthalic acid, ethyl 2-propylphenyl ester, formula: C19H20O4
+cas: 1000309-81-6, name: Phthalic acid, ethyl 3,4-dimethylphenyl ester, formula: C18H18O4
+cas: 1000357-07-5, name: Phthalic acid, ethyl 3-ethylphenyl ester, formula: C18H18O4
+cas: 1000356-49-9, name: Phthalic acid, ethyl 3-fluorophenyl ester, formula: C16H13FO4
+cas: 1000377-97-4, name: Phthalic acid, ethyl 3-methoxybenzyl ester, formula: C18H18O5
+cas: 1000356-80-1, name: Phthalic acid, ethyl 3-methylbutyl ester, formula: C15H20O4
+cas: 1000315-21-9, name: Phthalic acid, ethyl 4-isopropylphenyl ester, formula: C19H20O4
+cas: 1000356-87-0, name: Phthalic acid, ethyl 4-methylpent-2-yl ester, formula: C16H22O4
+cas: 1000314-83-6, name: Phthalic acid, ethyl 4-octyl ester, formula: C18H26O4
+cas: 1000377-95-5, name: Phthalic acid, ethyl 6-methylhept-2-yl ester, formula: C18H26O4
+cas: 1000356-96-8, name: Phthalic acid, ethyl hept-2-yl ester, formula: C17H24O4
+cas: 1000356-98-4, name: Phthalic acid, ethyl hept-3-yl ester, formula: C17H24O4
+cas: 1000356-78-1, name: Phthalic acid, ethyl hept-4-yl ester, formula: C17H24O4
+cas: 1000356-95-2, name: Phthalic acid, ethyl hex-3-yl ester, formula: C16H22O4
+cas: 1000314-99-6, name: Phthalic acid, ethyl isoporpyl ester, formula: C13H16O4
+cas: 1000308-93-5, name: Phthalic acid, ethyl nonyl ester, formula: C19H28O4
+cas: 1000377-71-2, name: Phthalic acid, ethyl oct-3-yl ester, formula: C18H26O4
+cas: 1000309-10-9, name: Phthalic acid, ethyl octadecyl ester, formula: C28H46O4
+cas: 1000315-45-2, name: Phthalic acid, ethyl pent-2-en-4-yn-1-yl ester, formula: C15H14O4
+cas: 1000360-46-2, name: Phthalic acid, ethyl pent-4-enyl ester, formula: C15H18O4
+cas: 1000308-93-3, name: Phthalic acid, ethyl pentadecyl ester, formula: C25H40O4
+cas: 1000308-93-6, name: Phthalic acid, ethyl pentyl ester, formula: C15H20O4
+cas: 1000309-00-5, name: Phthalic acid, ethyl tetradecyl ester, formula: C24H38O4
+cas: 1000360-47-9, name: Phthalic acid, ethyl trans-hex-3-enyl ester, formula: C16H20O4
+cas: 1000315-43-5, name: Phthalic acid, ethyl tridec-2-yn-1-yl ester, formula: C23H32O4
+cas: 1000356-97-6, name: Phthalic acid, hept-2-yl nonyl ester, formula: C24H38O4
+cas: 1000356-96-9, name: Phthalic acid, hept-2-yl propyl ester, formula: C18H26O4
+cas: 1000356-98-6, name: Phthalic acid, hept-3-yl isobutyl ester, formula: C19H28O4
+cas: 1000356-99-3, name: Phthalic acid, hept-3-yl nonyl ester, formula: C24H38O4
+cas: 1000356-79-0, name: Phthalic acid, hept-4-yl nonyl ester, formula: C24H38O4
+cas: 1000356-79-2, name: Phthalic acid, hept-4-yl undecyl ester, formula: C26H42O4
+cas: 1000356-79-8, name: Phthalic acid, heptadecyl hept-4-yl ester, formula: C32H54O4
+cas: 1000315-47-9, name: Phthalic acid, heptyl 2-pentyl ester, formula: C20H30O4
+cas: 1000314-84-1, name: Phthalic acid, heptyl 4-octyl ester, formula: C23H36O4
+cas: 1000377-96-1, name: Phthalic acid, heptyl 6-methylhept-2-yl ester, formula: C23H36O4
+cas: 1000356-78-8, name: Phthalic acid, heptyl hept-4-yl ester, formula: C22H34O4
+cas: 1000356-95-8, name: Phthalic acid, heptyl hex-3-yl ester, formula: C21H32O4
+cas: 1000308-94-1, name: Phthalic acid, heptyl pentyl ester, formula: C20H30O4
+cas: 1000315-44-0, name: Phthalic acid, heptyl tridec-2-yn-1-yl ester, formula: C28H42O4
+cas: 1000315-19-3, name: Phthalic acid, hex-2-yn-4-yl hexyl ester, formula: C20H26O4
+cas: 1000315-19-1, name: Phthalic acid, hex-2-yn-4-yl propyl ester, formula: C17H20O4
+cas: 1000356-95-4, name: Phthalic acid, hex-3-yl isobutyl ester, formula: C18H26O4
+cas: 1000356-96-0, name: Phthalic acid, hex-3-yl nonyl ester, formula: C23H36O4
+cas: 1000356-95-9, name: Phthalic acid, hex-3-yl octyl ester, formula: C22H34O4
+cas: 1000357-02-2, name: Phthalic acid, hexyl 2-propylphenyl ester, formula: C23H28O4
+cas: 1000356-87-6, name: Phthalic acid, hexyl 4-methylpent-2-yl ester, formula: C20H30O4
+cas: 1000309-76-7, name: Phthalic acid, hexyl 4-nitrophenyl ester, formula: C20H21NO6
+cas: 1000308-93-8, name: Phthalic acid, hexyl heptyl ester, formula: C21H32O4
+cas: 1000360-46-5, name: Phthalic acid, hexyl pent-4-enyl ester, formula: C19H26O4
+cas: 1000356-29-5, name: Phthalic acid, hexyl pentafluorophenyl ester, formula: C20H17F5O4
+cas: 1000315-43-9, name: Phthalic acid, hexyl tridec-2-yn-1-yl ester, formula: C27H40O4
+cas: 1000315-48-6, name: Phthalic acid, isobutyl 2-pentyl ester, formula: C17H24O4
+cas: 1000356-80-3, name: Phthalic acid, isobutyl 3-methylbutyl ester, formula: C17H24O4
+cas: 1000314-89-6, name: Phthalic acid, isobutyl 5-methoxy-3-methylpentyl ester, formula: C19H28O5
+cas: 1000356-19-0, name: Phthalic acid, isobutyl pentafluorophenyl ester, formula: C18H13F5O4
+cas: 1000308-98-9, name: Phthalic acid, isohexyl propyl ester, formula: C17H24O4
+cas: 1000315-44-4, name: Phthalic acid, isohexyl tridec-2-yn-1-yl ester, formula: C27H40O4
+cas: 1000315-00-2, name: Phthalic acid, isoporpyl octyl ester, formula: C19H28O4
+cas: 1000315-68-3, name: Phthalic acid, methyl 2-nitrophenyl ester, formula: C15H11NO6
+cas: 1000315-55-1, name: Phthalic acid, methyl 2-pentyl ester, formula: C14H18O4
+cas: 1000315-62-1, name: Phthalic acid, methyl 4-(2-phenylprop-2-yl)phenyl ester, formula: C24H22O4
+cas: 1000315-74-7, name: Phthalic acid, methyl non-5-yn-3-yl ester, formula: C18H22O4
+cas: 1000315-59-8, name: Phthalic acid, methyl phenyl ester, formula: C15H12O4
+cas: 1000315-33-1, name: Phthalic acid, monoamide, N,N-diisopropyl-, butyl ester, formula: C18H27NO3
+cas: 1000315-48-1, name: Phthalic acid, nonyl 2-pentyl ester, formula: C22H34O4
+cas: 1000377-92-5, name: Phthalic acid, nonyl 2-propylpentyl ester, formula: C25H40O4
+cas: 1000314-84-2, name: Phthalic acid, nonyl 4-octyl ester, formula: C25H40O4
+cas: 1000356-30-4, name: Phthalic acid, nonyl pentafluorophenyl ester, formula: C23H23F5O4
+cas: 1000360-50-5, name: Phthalic acid, nonyl trans-dec-3-enyl ester, formula: C27H42O4
+cas: 1000360-48-7, name: Phthalic acid, nonyl trans-hex-3-enyl ester, formula: C23H34O4
+cas: 1000315-44-2, name: Phthalic acid, nonyl tridec-2-yn-1-yl ester, formula: C30H46O4
+cas: 1000315-48-0, name: Phthalic acid, octyl 2-pentyl ester, formula: C21H32O4
+cas: 1000360-48-6, name: Phthalic acid, octyl trans-hex-3-enyl ester, formula: C22H32O4
+cas: 1000360-45-4, name: Phthalic acid, pent-4-enyl propyl ester, formula: C16H20O4
+cas: 1000309-77-4, name: Phthalic acid, pentyl 2-phenylethyl ester, formula: C21H24O4
+cas: 1000315-43-8, name: Phthalic acid, pentyl tridec-2-yn-1-yl ester, formula: C26H38O4
+cas: 1000357-01-7, name: Phthalic acid, propyl 2-propylphenyl ester, formula: C20H22O4
+cas: 1000357-09-3, name: Phthalic acid, propyl 2-tert-butyl-6-methylphenyl ester, formula: C22H26O4
+cas: 1000315-43-6, name: Phthalic acid, propyl tridec-2-yn-1-yl ester, formula: C24H34O4
+cas: 85-44-9, name: Phthalic anhydride, formula: C8H4O3
+cas: 85-41-6, name: Phthalimide, formula: C8H5NO2
+cas: 21871-90-9, name: Physcion-10,10'-bianthrone, formula: C32H26O8
+cas: 150-86-7, name: Phytol, formula: C20H40O
+cas: 1000375-01-4, name: Phytol, acetate, formula: C22H42O2
+cas: 88-89-1, name: Picric acid, formula: C6H3N3O7
+cas: 92-13-7, name: Pilocarpine, formula: C11H16N2O2
+cas: 127-27-5, name: Pimaric acid, formula: C20H30O2
+cas: 110-85-0, name: Piperazine, formula: C4H10N2
+cas: 4164-37-8, name: Piperazine, 1,4-dinitro-, formula: C4H8N4O4
+cas: 1000137-95-1, name: Piperazine, 1-[(2,4-dichlorobenzoyl)methyl]-4-methyl-, formula: C13H16Cl2N2O
+cas: 55380-34-2, name: Piperazine, 2,6-dimethyl-1,4-dinitroso-, formula: C6H12N4O2
+cas: 1000325-03-2, name: Piperazine, N-(2-cyanoethyl)-, formula: C7H13N3
+cas: 1000156-87-2, name: Piperazine-2,5-dione, 1,4-dimethyl-3,3'-bis-, formula: C12H18N4O4
+cas: 259228-04-1, name: Piperazine-2,5-dione, 4-(4-methylbenzoyl)-, formula: C12H12N2O3
+cas: 1000318-39-2, name: Piperidin-1-yl-acetic acid, fluoren-9-ylidene-hydrazide, formula: C20H21N3O
+cas: 103634-57-7, name: Piperidin-3-one, 2,2,5-methyl-, formula: C8H15NO
+cas: 110-89-4, name: Piperidine, formula: C5H11N
+cas: 21901-99-5, name: Piperidine, 1-(1-methylpentyl)-, formula: C11H23N
+cas: 85152-52-9, name: Piperidine, 1-[[(1,1-dimethylethyl)imino]methyl]-, formula: C10H20N2
+cas: 766-52-9, name: Piperidine, 1-ethyl-2-methyl-, formula: C8H17N
+cas: 4801-58-5, name: Piperidine, 1-hydroxy-, formula: C5H11NO
+cas: 100-75-4, name: Piperidine, 1-nitroso-, formula: C5H10N2O
+cas: 458-88-8, name: Piperidine, 2-propyl-, (S)-, formula: C8H17N
+cas: 94-62-2, name: Piperine, formula: C17H19NO3
+cas: 120-57-0, name: Piperonal, formula: C8H6O3
+cas: 51-03-6, name: Piperonyl butoxide, formula: C19H30O5
+cas: 59-39-2, name: Piperoxan, formula: C14H19NO2
+cas: 3377-92-2, name: Pivalic acid vinyl ester, formula: C7H12O2
+cas: 1000330-92-2, name: Pivalic acid, 2-formyl-4,6-dichlorophenyl ester, formula: C12H12Cl2O3
+cas: 1000330-91-9, name: Pivalic acid, 3,4-dimethylphenyl ester, formula: C13H18O2
+cas: 7715-48-2, name: Podocarp-7-en-3-one, 13.beta.-methyl-13-vinyl-, formula: C20H30O
+cas: 53-43-0, name: Prasterone, formula: C19H28O2
+cas: 104597-49-1, name: Prasterone acetate, formula: C21H30O3
+cas: 17598-02-6, name: Precocene I, formula: C12H14O2
+cas: 17449-92-2, name: Pregn-5-en-20-one, 3-(acetyloxy)-16-bromo-, (3.beta.,16.alpha.)-, formula: C23H33BrO3
+cas: 1236-09-5, name: Pregn-5-ene-3,20-dione, formula: C21H30O2
+cas: 1000148-67-7, name: Pregn-5-ene-3.beta.-ol, 20-methylene-, acetate, formula: C24H36O2
+cas: 979-02-2, name: Pregna-5,16-dien-20-one, 3-(acetyloxy)-, (3.beta.)-, formula: C23H32O3
+cas: 1162-53-4, name: Pregna-5,16-dien-20-one, 3-hydroxy-, (3.beta.)-, formula: C21H30O2
+cas: 13164-34-6, name: Pregnan-3.beta.-ol, formula: C21H36O
+cas: 1098-45-9, name: Pregnane-3,17,20-triol, (3.alpha.,5.beta.,20S)-, formula: C21H36O3
+cas: 76-76-6, name: Probarbital, formula: C9H14N2O3
+cas: 3228-03-3, name: Promecarb artifact [5-isopropyl-3-methylphenol], formula: C10H14O
+cas: 1000372-70-8, name: Prop-2-yn-1-yl 2-methylbutanoate, formula: C8H12O2
+cas: 1000267-40-3, name: Propan-2-one, 1-(4-isopropoxy-3-methoxyphenyl)-, formula: C13H18O3
+cas: 16713-38-5, name: Propanal, (1-methylethyl)hydrazone, formula: C6H14N2
+cas: 53346-05-7, name: Propanal, 2-(phenylmethoxy)-, formula: C10H12O2
+cas: 78-84-2, name: Propanal, 2-methyl-, formula: C4H8O
+cas: 75268-02-9, name: Propanal, 2-methyl-, (1-methylethyl)(2-methylpropyl)hydrazone, formula: C11H24N2
+cas: 34687-36-0, name: Propanal, 2-methyl-, bis(2-methylpropyl)hydrazone, formula: C12H26N2
+cas: 19031-78-8, name: Propanal, 2-propenylhydrazone, formula: C6H12N2
+cas: 20607-75-4, name: Propanal, butylhydrazone, formula: C7H16N2
+cas: 34687-35-9, name: Propanal, dipropylhydrazone, formula: C9H20N2
+cas: 19718-39-9, name: Propanal, propylhydrazone, formula: C6H14N2
+cas: 79-05-0, name: Propanamide, formula: C3H7NO
+cas: 754-10-9, name: Propanamide, 2,2-dimethyl-, formula: C5H11NO
+cas: 56619-95-5, name: Propanamide, 2,2-dimethyl-N-(4-nitrophenyl)-, formula: C11H14N2O3
+cas: 2760-38-5, name: Propanamide, 2-hydroxy-2-methyl-N-phenyl-, formula: C10H13NO2
+cas: 328285-46-7, name: Propanamide, 3-(1-pyrrolidinyl)-N-(2-thiazolyl)-, formula: C10H15N3OS
+cas: 1000308-08-2, name: Propanamide, N,N-dihexyl-2-methyl-, formula: C16H33NO
+cas: 88288-07-7, name: Propanamide, N-(2-fluorophenyl)-2,2-dimethyl-, formula: C11H14FNO
+cas: 1000308-08-0, name: Propanamide, N-(2-fluorophenyl)-2-methyl-, formula: C10H12FNO
+cas: 18266-55-2, name: Propanamide, N-(2-hydroxyethyl)-, formula: C5H11NO2
+cas: 5129-72-6, name: Propanamide, N-ethyl-, formula: C5H11NO
+cas: 105-82-8, name: Propane, 1,1'-[ethylidenebis(oxy)]bis-, formula: C8H18O2
+cas: 598-03-8, name: Propane, 1,1'-sulfonylbis-, formula: C6H14O2S
+cas: 102-52-3, name: Propane, 1,1,3,3-tetramethoxy-, formula: C7H16O4
+cas: 4744-08-5, name: Propane, 1,1-diethoxy-, formula: C7H16O2
+cas: 41632-89-7, name: Propane, 1,1-dimethoxy-2-methyl-, formula: C6H14O2
+cas: 78-75-1, name: Propane, 1,2-dibromo-, formula: C3H6Br2
+cas: 627-31-6, name: Propane, 1,3-diiodo-, formula: C3H6I2
+cas: 20680-10-8, name: Propane, 1-(1-ethoxyethoxy)-, formula: C7H16O2
+cas: 627-08-7, name: Propane, 1-(1-methylethoxy)-, formula: C6H14O
+cas: 34180-11-5, name: Propane, 1-(chloromethoxy)-2-methyl-, formula: C5H11ClO
+cas: 16330-21-5, name: Propane, 1-(ethenylthio)-, formula: C5H10S
+cas: 106-94-5, name: Propane, 1-bromo-, formula: C3H7Br
+cas: 753-89-9, name: Propane, 1-chloro-2,2-dimethyl-, formula: C5H11Cl
+cas: 2425-66-3, name: Propane, 1-chloro-2-nitro-, formula: C3H6ClNO2
+cas: 628-32-0, name: Propane, 1-ethoxy-, formula: C5H12O
+cas: 107-08-4, name: Propane, 1-iodo-, formula: C3H7I
+cas: 513-38-2, name: Propane, 1-iodo-2-methyl-, formula: C4H9I
+cas: 4447-60-3, name: Propane, 2,2',2''-[methylidynetris(oxy)]tris-, formula: C10H22O3
+cas: 2568-89-0, name: Propane, 2,2'-[methylenebis(oxy)]bis-, formula: C7H16O2
+cas: 594-16-1, name: Propane, 2,2-dibromo-, formula: C3H6Br2
+cas: 420-45-1, name: Propane, 2,2-difluoro-, formula: C3H6F2
+cas: 77-76-9, name: Propane, 2,2-dimethoxy-, formula: C5H12O2
+cas: 20637-37-0, name: Propane, 2-(chloromethyl)-1,3-dimethoxy-2-methyl-, formula: C7H15ClO2
+cas: 5145-99-3, name: Propane, 2-(ethylthio)-, formula: C5H12S
+cas: 1886-75-5, name: Propane, 2-[(1,1-dimethylethyl)sulfonyl]-2-methyl-, formula: C8H18O2S
+cas: 507-19-7, name: Propane, 2-bromo-2-methyl-, formula: C4H9Br
+cas: 507-20-0, name: Propane, 2-chloro-2-methyl-, formula: C4H9Cl
+cas: 25683-97-0, name: Propane, 2-cyclohexyl-2-phenyl-, formula: C15H22
+cas: 75-30-9, name: Propane, 2-iodo-, formula: C3H7I
+cas: 1795-48-8, name: Propane, 2-isocyanato-, formula: C4H7NO
+cas: 1609-86-5, name: Propane, 2-isocyanato-2-methyl-, formula: C5H9NO
+cas: 598-53-8, name: Propane, 2-methoxy-, formula: C4H10O
+cas: 1634-04-4, name: Propane, 2-methoxy-2-methyl-, formula: C5H12O
+cas: 625-74-1, name: Propane, 2-methyl-1-nitro-, formula: C4H9NO2
+cas: 17348-59-3, name: Propane, 2-methyl-2-(1-methylethoxy)-, formula: C7H16O
+cas: 594-70-7, name: Propane, 2-methyl-2-nitro-, formula: C4H9NO2
+cas: 79-46-9, name: Propane, 2-nitro-, formula: C3H7NO2
+cas: 5331-24-8, name: Propane-1,1-diol dipropanoate, formula: C9H16O4
+cas: 56041-82-8, name: Propane-1,3-diamine, 2-t-butyl-, formula: C7H18N2
+cas: 2163-42-0, name: Propane-1,3-diol, 2-methyl-, formula: C4H10O2
+cas: 7206-76-0, name: Propanediamide, 2-ethyl-2-phenyl-, formula: C11H14N2O2
+cas: 91396-90-6, name: Propanedinitrile, 2-(4-acetyl-3,5-dimethyl-2-pyrrolyl)methylene-, formula: C12H11N3O
+cas: 76100-13-5, name: Propanedinitrile, 2-(5-phenylthio-2-thienylmethylene)-, formula: C14H8N2S2
+cas: 74764-55-9, name: Propanedinitrile, cyclohexyl(2-methylcyclohexyl)-, formula: C16H24N2
+cas: 922-64-5, name: Propanedinitrile, methylene-, formula: C4H2N2
+cas: 6829-40-9, name: Propanedioic acid, amino-, diethyl ester, formula: C7H13NO4
+cas: 105-53-3, name: Propanedioic acid, diethyl ester, formula: C7H12O4
+cas: 70841-85-9, name: Propanedioic acid, dihydroxy-, bis(1-methylethyl) ester, formula: C9H16O6
+cas: 1117-19-7, name: Propanedioic acid, dipropyl ester, formula: C9H16O4
+cas: 294878-35-6, name: Propanedioic acid, nitrile, hydrazide, N2-(1-oxo-3-phenyl-2-propenyl)-, formula: C12H11N3O2
+cas: 3298-40-6, name: Propanedioic acid, oxo-, dimethyl ester, formula: C5H6O5
+cas: 616-62-6, name: Propanedioic acid, propyl-, formula: C6H10O4
+cas: 630-18-2, name: Propanenitrile, 2,2-dimethyl-, formula: C5H9N
+cas: 78-97-7, name: Propanenitrile, 2-hydroxy-, formula: C3H5NO
+cas: 2432-43-1, name: Propanethioic acid, S-propyl ester, formula: C6H12OS
+cas: 643-75-4, name: Propanetrione, diphenyl-, formula: C15H10O3
+cas: 591-34-4, name: Propanoic acid, 1-methylpropyl ester, formula: C7H14O2
+cas: 57025-45-3, name: Propanoic acid, 2,2-dimethyl-, 2,4-dinitrophenyl ester, formula: C11H12N2O6
+cas: 54644-43-8, name: Propanoic acid, 2,2-dimethyl-, 2,6-bis(1,1-dimethylethyl)-4-methylphenyl ester, formula: C20H32O2
+cas: 16387-18-1, name: Propanoic acid, 2,2-dimethyl-, 2-ethylhexyl ester, formula: C13H26O2
+cas: 34574-27-1, name: Propanoic acid, 2,2-dimethyl-, anhydride with diethylborinic acid, formula: C9H19BO2
+cas: 20442-70-0, name: Propanoic acid, 2,2-dimethyl-, cesium salt, formula: C5H9CsO2
+cas: 5129-35-1, name: Propanoic acid, 2,2-dimethyl-, propyl ester, formula: C8H16O2
+cas: 2786-22-3, name: Propanoic acid, 2-(aminooxy)-, formula: C3H7NO3
+cas: 96843-07-1, name: Propanoic acid, 2-(benzoylthio)-, ethyl ester, formula: C12H14O3S
+cas: 64096-81-7, name: Propanoic acid, 2-acetylhydrazono-, formula: C5H8N2O3
+cas: 80-55-7, name: Propanoic acid, 2-hydroxy-2-methyl-, ethyl ester, formula: C6H12O3
+cas: 24567-27-9, name: Propanoic acid, 2-hydroxyethyl ester, formula: C5H10O3
+cas: 4324-37-2, name: Propanoic acid, 2-methoxy-, formula: C4H8O3
+cas: 17639-76-8, name: Propanoic acid, 2-methoxy-, methyl ester, formula: C5H10O3
+cas: 74381-40-1, name: Propanoic acid, 2-methyl-, 1-(1,1-dimethylethyl)-2-methyl-1,3-propanediyl ester, formula: C16H30O4
+cas: 617-50-5, name: Propanoic acid, 2-methyl-, 1-methylethyl ester, formula: C7H14O2
+cas: 74367-33-2, name: Propanoic acid, 2-methyl-, 2,2-dimethyl-1-(2-hydroxy-1-methylethyl)propyl ester, formula: C12H24O3
+cas: 74367-31-0, name: Propanoic acid, 2-methyl-, 2-ethyl-3-hydroxyhexyl ester, formula: C12H24O3
+cas: 15727-77-2, name: Propanoic acid, 2-methyl-, 2-propenyl ester, formula: C7H12O2
+cas: 74367-34-3, name: Propanoic acid, 2-methyl-, 3-hydroxy-2,4,4-trimethylpentyl ester, formula: C12H24O3
+cas: 97-72-3, name: Propanoic acid, 2-methyl-, anhydride, formula: C8H14O3
+cas: 97-87-0, name: Propanoic acid, 2-methyl-, butyl ester, formula: C8H16O2
+cas: 5454-22-8, name: Propanoic acid, 2-methyl-, decyl ester, formula: C14H28O2
+cas: 644-49-5, name: Propanoic acid, 2-methyl-, propyl ester, formula: C7H14O2
+cas: 1000131-87-0, name: Propanoic acid, 2-methyl-3-[4-t-butyl]phenyl-, formula: C14H20O2
+cas: 2408-20-0, name: Propanoic acid, 2-propenyl ester, formula: C6H10O2
+cas: 123-28-4, name: Propanoic acid, 3,3'-thiobis-, didodecyl ester, formula: C30H58O4S
+cas: 55656-58-1, name: Propanoic acid, 3-(acetyloxy)-, anhydride, formula: C10H14O7
+cas: 309935-84-0, name: Propanoic acid, 3-(perhydro-2,5-dioxo-imidazo[4,5-d]imidazol-1-yl)-, formula: C7H10N4O4
+cas: 1000142-41-5, name: Propanoic acid, 3-chloro-, 4-formylphenyl ester, formula: C10H9ClO3
+cas: 20497-95-4, name: Propanoic acid, 3-nitro-, methyl ester, formula: C4H7NO4
+cas: 123-62-6, name: Propanoic acid, anhydride, formula: C6H10O3
+cas: 5454-19-3, name: Propanoic acid, decyl ester, formula: C13H26O2
+cas: 105-38-4, name: Propanoic acid, ethenyl ester, formula: C5H8O2
+cas: 55934-93-5, name: Propanol, [(butoxymethylethoxy)methylethoxy]-, formula: C13H28O4
+cas: 79-03-8, name: Propanoyl chloride, formula: C3H5ClO
+cas: 79-30-1, name: Propanoyl chloride, 2-methyl-, formula: C4H7ClO
+cas: 625-36-5, name: Propanoyl chloride, 3-chloro-, formula: C3H4Cl2O
+cas: 107-19-7, name: Propargyl alcohol, formula: C3H4O
+cas: 1000352-28-3, name: Propargyl alcohol, trifluoroacetate, formula: C5H3F3O2
+cas: 94008-41-0, name: Propenoic acid, 2-cyano-3-(1-methyl-5-phenylthio-2-pyrrolyl)-, methyl ester, formula: C16H14N2O2S
+cas: 122-42-9, name: Propham, formula: C10H13NO2
+cas: 999048-03-2, name: Propiconazole-II {CAS # 60207-90-1}, formula: C15H17Cl2N3O2
+cas: 1000264-71-8, name: Propiohydrazide, 2,2-dimethyl-N2-(4,4-dimethyl-3-oxopentylideno)-, formula: C12H22N2O2
+cas: 57-57-8, name: Propiolactone, formula: C3H4O2
+cas: 1070-71-9, name: Propiolonitrile, formula: C3HN
+cas: 932710-53-7, name: Propionaldehyde, (O-pentafluorobenzyl)oxime, (Z) or (E)-, formula: C10H8F5NO
+cas: 28236-90-0, name: Propionaldehyde, diethylhydrazone, formula: C7H16N2
+cas: 1000360-69-9, name: Propionic acid, 2,3-dimethylphenyl ester, formula: C11H14O2
+cas: 1000151-15-1, name: Propionic acid, 2-isopropoxy-, methyl ester, formula: C7H14O3
+cas: 1000360-69-7, name: Propionic acid, 2-propylphenyl ester, formula: C12H16O2
+cas: 1000304-09-3, name: Propionic acid, 3-tetrazol-1-yl-, formula: C4H6N4O2
+cas: 1000360-70-0, name: Propionic acid, 4-biphenyl ester, formula: C15H14O2
+cas: 2040-22-4, name: Propiophenone, 2,2',4',6'-tetramethyl-, formula: C13H18O
+cas: 114-26-1, name: Propoxur, formula: C11H15NO3
+cas: 1912-31-8, name: Propyl methanesulfonate, formula: C4H10O3S
+cas: 107-10-8, name: Propylamine, formula: C3H9N
+cas: 1000281-48-5, name: Propylhexadrine, n-heptafluorobutyryl deriv., formula: C14H20F7NO
+cas: 131229-65-7, name: Propylneopentylamine, formula: C8H19N
+cas: 94-13-3, name: Propylparaben, formula: C10H12O3
+cas: 333416-26-5, name: Propylphosphonic acid, fluoroanhydride, 2-methylpropyl ester, formula: C7H16FO2P
+cas: 333416-19-6, name: Propylphosphonic acid, fluoroanhydride, heptyl ester, formula: C10H22FO2P
+cas: 479-92-5, name: Propyphenazone, formula: C14H18N2O
+cas: 2432-21-5, name: Pteridine, 4-methyl-, formula: C7H6N4
+cas: 27766-71-8, name: Pumiliotoxin C (195a), formula: C13H25N
+cas: 25005-95-2, name: Pyrazine, 2,3-dihydro-5,6-di-2-pyridinyl-, formula: C14H12N4
+cas: 5910-89-4, name: Pyrazine, 2,3-dimethyl-, formula: C6H8N2
+cas: 55138-73-3, name: Pyrazine, 2,5-dimethyl-3-(1-propenyl)-, (Z)-, formula: C9H12N2
+cas: 13067-27-1, name: Pyrazine, 2,6-diethyl-, formula: C8H12N2
+cas: 108-50-9, name: Pyrazine, 2,6-dimethyl-, formula: C6H8N2
+cas: 13925-03-6, name: Pyrazine, 2-ethyl-6-methyl-, formula: C7H10N2
+cas: 18217-81-7, name: Pyrazine, 2-methyl-6-(1-propenyl)-, (E)-, formula: C8H10N2
+cas: 55138-67-5, name: Pyrazine, 2-methyl-6-(1-propenyl)-, (Z)-, formula: C8H10N2
+cas: 18138-05-1, name: Pyrazine, 3,5-diethyl-2-methyl-, formula: C9H14N2
+cas: 34413-32-6, name: Pyrazine, isopropenyl-, formula: C7H8N2
+cas: 1000311-04-5, name: Pyrazol-3-one, 4-isopropyl-1,5-dimethyl-2-[4-(piperidine-1-sulfonyl)phenyl]-1,2-dihydro-, formula: C19H27N3O3S
+cas: 5203-75-8, name: Pyrazol-5-ol, 1-acetyl-3,4-dimethyl-, acetate (ester), formula: C9H12N2O3
+cas: 1000276-18-2, name: Pyrazol-5-ol, 3-(3,4,5-trimethoxyphenyl)-, formula: C12H14N2O4
+cas: 19078-32-1, name: Pyrazole, 3,4,4,5-tetramethyl-, formula: C7H12N2
+cas: 1000271-83-1, name: Pyrazole, 3,5-di(4-chlorophenyl)-1-(4-fluorophenyl)-, formula: C21H13Cl2FN2
+cas: 312746-30-8, name: Pyrazole, 3,5-dimethyl-1-(4-fluorophenyl)aminocarbonyl-, formula: C12H12FN3O
+cas: 345950-83-6, name: Pyrazole, 5-methyl-3,4-dinitro-1-(piperidinoylmethyl)-, formula: C11H15N5O5
+cas: 1000260-82-2, name: Pyrazole-3-carbohydrazide, N2-(1-methyl-4-nitropyrazol-3-yl)-1-methyl-, formula: C9H11N7O3
+cas: 103589-72-6, name: Pyrazole-3-carboxamide, 4-iodo-1-methyl-, formula: C5H6IN3O
+cas: 89202-82-4, name: Pyrazole-3-carboxamide, N-phenyl-1-methyl-, formula: C11H11N3O
+cas: 1000271-01-5, name: Pyrazole-3-carboxylic acid, 1-acetyl-4-acetylamino-, formula: C8H9N3O4
+cas: 312533-15-6, name: Pyrazole-3-carboxylic acid, 4-chloro-1-methyl-, 2-trifluoromethylbenzylidenamino ester, formula: C13H9ClF3N3O2
+cas: 25016-11-9, name: Pyrazole-4-carboxaldehyde, 1-methyl-, formula: C5H6N2O
+cas: 138628-46-3, name: Pyrazolo[1,5-a]pyrimidine, 2,5,7-trimethyl-3-phenyl-, formula: C15H15N3
+cas: 1000267-29-6, name: Pyrazolo[1,5-a]pyrimidine, 2,7-dimethyl-5-phenyl-, formula: C14H13N3
+cas: 186956-64-9, name: Pyrazolo[1,5-a]pyrimidine, 2-methyl-7-phenyl-, formula: C13H11N3
+cas: 6726-55-2, name: Pyrazolo[5,1-c]-as-triazine-3-carboxylic acid, 4-methyl-, formula: C7H6N4O2
+cas: 16150-81-5, name: Pyrazolo[5,1-c][1,2,4]benzotriazin-8-ol, acetate (ester), formula: C11H8N4O2
+cas: 6763-70-8, name: Pyrazolo[5,1-c][1,2,4]triazine, 6-(fluoroacetyl)-4,6-dihydro-3-methyl-4-methylene-, formula: C9H9FN4O
+cas: 129-00-0, name: Pyrene, formula: C16H10
+cas: 74298-70-7, name: Pyrene, 1,9-dimethyl-, formula: C18H14
+cas: 69207-40-5, name: Pyridazin-3(2H)-one, 4-chloro-2-methyl-5-methylthio-, formula: C6H7ClN2OS
+cas: 98796-04-4, name: Pyridazin-3(2H)-one, 5-chloro-2-(3-trifluoromethylphenyl)-4-methylamino-, formula: C12H9ClF3N3O
+cas: 1000153-09-2, name: Pyridin-2,6-diol, diacetate, formula: C9H9NO4
+cas: 1000372-73-7, name: Pyridin-3-yl 2-methylbutanoate, formula: C10H13NO2
+cas: 50900-29-3, name: Pyridine, 1,2-dihydro-1-phenyl-, formula: C11H11N
+cas: 19615-27-1, name: Pyridine, 1-acetyl-1,2,3,4-tetrahydro-, formula: C7H11NO
+cas: 1132-37-2, name: Pyridine, 2,2'-methylenebis-, formula: C11H10N2
+cas: 505-18-0, name: Pyridine, 2,3,4,5-tetrahydro-, formula: C5H9N
+cas: 1604-01-9, name: Pyridine, 2,3,4,5-tetrahydro-6-propyl-, formula: C8H15N
+cas: 80206-51-5, name: Pyridine, 2,3,4,5-tetramethyl-6-phenyl-, formula: C15H17N
+cas: 589-93-5, name: Pyridine, 2,5-dimethyl-, formula: C7H9N
+cas: 935-28-4, name: Pyridine, 2,6-diethyl-, formula: C9H13N
+cas: 19036-99-8, name: Pyridine, 2-(2-(4-methoxyphenyl)ethenyl)-, trans-, formula: C14H13NO
+cas: 714-08-9, name: Pyridine, 2-(2-phenylethenyl)-, formula: C13H11N
+cas: 101-82-6, name: Pyridine, 2-(phenylmethyl)-, formula: C12H11N
+cas: 120517-35-3, name: Pyridine, 2-[2-(dibutylphosphino)ethyl]-, formula: C15H26NP
+cas: 770-20-7, name: Pyridine, 2-acetamido-6-hydroxy-, formula: C7H8N2O2
+cas: 1124-35-2, name: Pyridine, 2-ethyl-4,6-dimethyl-, formula: C9H13N
+cas: 5216-04-6, name: Pyridine, 3,4-diphenyl-, formula: C17H13N
+cas: 24380-92-5, name: Pyridine, 3-(1-methyl-2-piperidinyl)-, (S)-, formula: C11H16N2
+cas: 54-11-5, name: Pyridine, 3-(1-methyl-2-pyrrolidinyl)-, (S)-, formula: C10H14N2
+cas: 50559-57-4, name: Pyridine, 3-(1a,2,7,7a-tetrahydro-2-methoxy-1-phenyl-1,2,7-metheno-1H-cyclopropa[b]naphthalen-8-yl)-, formula: C24H19NO
+cas: 18794-30-4, name: Pyridine, 3-[(1,1-dimethylethyl)thio]-, formula: C9H13NS
+cas: 626-55-1, name: Pyridine, 3-bromo-, formula: C5H4BrN
+cas: 31396-33-5, name: Pyridine, 3-butyl-, 1-oxide, formula: C9H13NO
+cas: 372-47-4, name: Pyridine, 3-fluoro-, formula: C5H4FN
+cas: 28489-52-3, name: Pyridine, 3-methyl-2,6-diphenyl-, formula: C18H15N
+cas: 10273-90-2, name: Pyridine, 3-methyl-2-phenyl-, formula: C12H11N
+cas: 1008-88-4, name: Pyridine, 3-phenyl-, formula: C11H9N
+cas: 26891-61-2, name: Pyridine, 4-(propylthio)-, formula: C8H11NS
+cas: 18794-26-8, name: Pyridine, 4-[(1,1-dimethylethyl)thio]-, formula: C9H13NS
+cas: 100-43-6, name: Pyridine, 4-ethenyl-, formula: C7H7N
+cas: 1122-96-9, name: Pyridine, 4-methoxy-1-oxide-, formula: C6H7NO2
+cas: 18794-38-2, name: Pyridine, 4-tert-butyl-2-(tert-butylthio)-, formula: C13H21NS
+cas: 1000155-64-3, name: Pyridine, 6-methyl-2-[(2,3-dimethyl-2-butyl)dimethylsilyloxy]-, formula: C14H25NOSi
+cas: 1000153-09-1, name: Pyridine-2,6-diol, monoacetate, formula: C7H7NO3
+cas: 129027-87-8, name: Pyridine-3-carbonitrile, 1,2,3,4-tetrahydro-5-acetyl-4-(2-furyl)-6-methyl-2-oxo-, formula: C13H12N2O3
+cas: 179088-20-1, name: Pyridine-3-carbonitrile, 1,2-dihydro-5-acetyl-6-methyl-4-(2-thienyl)-2-thioxo-, formula: C13H10N2OS2
+cas: 351066-55-2, name: Pyridine-3-carbonitrile, 1,2-dihydro-6-(1,3-benzodioxol-5-yl)-2-oxo-4-phenyl-, formula: C19H12N2O3
+cas: 91973-67-0, name: Pyridine-3-carboxamide, N-(4-hydroxyphenyl)-, formula: C12H10N2O2
+cas: 7291-22-7, name: Pyridine-D5-, formula: C5D5N
+cas: 28460-19-7, name: Pyridinium, 1-amino-, chloride, formula: C5H7ClN2
+cas: 52806-02-7, name: Pyridinium, 1-methyl-2-phenyl-, iodide, formula: C12H12IN
+cas: 24410-19-3, name: Pyrido[2,3-d]pyrimidin-4(1H)-one, formula: C7H5N3O
+cas: 161466-00-8, name: Pyrido[2,3-d]pyrimidin-5(8H)-one, 2-methyl-4-phenyl-, formula: C14H11N3O
+cas: 18592-55-7, name: Pyrido[2,3-d]thiazolo[3,2-b]pyridazin-4-ium, 3-phenyl-, perchlorate, formula: C15H10ClN3O4S
+cas: 24410-25-1, name: Pyrido[3,2-d]pyrimidine-2,4(1H,3H)-dione, 1,3-dimethyl-, formula: C9H9N3O2
+cas: 91-84-9, name: Pyrilamine, formula: C17H23N3O
+cas: 4271-96-9, name: Pyrimidine, 1,4,5,6-tetrahydro-1,2-dimethyl-, formula: C6H12N2
+cas: 96548-91-3, name: Pyrimidine, 2-fluoro-4-amino-, formula: C4H4FN3
+cas: 5053-43-0, name: Pyrimidine, 2-methyl-, formula: C5H6N2
+cas: 98792-85-9, name: Pyrimidine, 4,6-dimethoxy-5-acetyl-, formula: C8H10N2O3
+cas: 97630-77-8, name: Pyrimidine, 4-(2-hydroxy-5-methoxyphenyl)-, formula: C11H10N2O2
+cas: 1000115-50-2, name: Pyrimidine, 4-butyl-3,4-dihydro-5-methyl-, formula: C9H16N2
+cas: 83858-08-6, name: Pyrimidine, 4-dimethylamino-6-(4-fluorophenyl)-, formula: C12H12FN3
+cas: 56621-84-2, name: Pyrimidine, 5-formamido-, formula: C5H5N3O
+cas: 296879-03-3, name: Pyrimidine-2,4(1H,3H)-dione, 5-bromo-1-(1-methoxyethyl)-, formula: C7H9BrN2O3
+cas: 310421-12-6, name: Pyrimidine-2,4,6(1H,3H,5H)-trione, 5-[3-[2-(4-tert-butylphenoxy)ethoxy]benzylidene]-, formula: C23H24N2O5
+cas: 6674-22-2, name: Pyrimido[1,2-a]azepine, 2,3,4,6,7,8,9,10-octahydro-, formula: C9H16N2
+cas: 22106-07-6, name: Pyrimido[1,6-a]indole, 1,2,3,4-tetrahydro-2,5-dimethyl-, formula: C13H16N2
+cas: 503-84-4, name: Pyrollidine, 2,5-bis(imino)-, formula: C4H7N3
+cas: 65996-50-1, name: Pyrolo[3,2-d]pyrimidin-2,4(1H,3H)-dione, formula: C6H5N3O2
+cas: 302566-41-2, name: Pyrrol-2(5H)-one, 4-acetyl-3-hydroxy-5-(3-nitrophenyl)-1-[2-(1-piperazinyl)ethyl]-, formula: C18H22N4O5
+cas: 3042-21-5, name: Pyrrole, 2-methyl-5-phenyl-, formula: C11H11N
+cas: 32487-71-1, name: Pyrrole-3-carbonitrile, 5-formyl-2,4-dimethyl-, formula: C8H8N2O
+cas: 1000318-16-9, name: Pyrrolidin-1-yl-acetic acid, hydrazide, formula: C6H13N3O
+cas: 1000303-70-5, name: Pyrrolidin-2-one, 1-(4-aminophenyl)-, formula: C10H12N2O
+cas: 123-75-1, name: Pyrrolidine, formula: C4H9N
+cas: 4030-18-6, name: Pyrrolidine, 1-acetyl-, formula: C6H11NO
+cas: 120-94-5, name: Pyrrolidine, 1-methyl-, formula: C5H11N
+cas: 3447-03-8, name: Pyrrolidine, 2-butyl-1-methyl-, formula: C9H19N
+cas: 34375-89-8, name: Pyrrolidine, 3-methyl-, formula: C5H11N
+cas: 70008-32-1, name: Pyrrolidine, 4-((N,N-dimethylcarbamoyl)benzyl)triphenylacetyl-, formula: C34H34N2O2
+cas: 37772-89-7, name: Pyrrolidine-2,4-dione, formula: C4H5NO2
+cas: 123494-96-2, name: Pyrrolidine-2,5-dione, 1-(2-nitro-3-pyridyl)-, formula: C9H7N3O4
+cas: 1000125-96-3, name: Pyrrolizidine-1-one, 7-acetylmethyl-, formula: C10H15NO2
+cas: 14705-60-3, name: Pyrrolo[1,2-a]pyrazine-1,4-dione, hexahydro-3-(phenylmethyl)-, formula: C14H16N2O2
+cas: 56929-61-4, name: Pyrrolo[1,2-a]thieno[2,3-d]pyrimidin-4(6H)-one, 7,8-dihydro-2,3-dimethyl-, formula: C11H12N2OS
+cas: 700-46-9, name: Quinazoline, 4-methyl-, formula: C9H8N2
+cas: 309727-05-7, name: Quinolin-2-amine, 4-methyl-N-(2-methoxy-5-methylphenylamino)-, formula: C18H18N2O
+cas: 91-22-5, name: Quinoline, formula: C9H7N
+cas: 147-47-7, name: Quinoline, 1,2-dihydro-2,2,4-trimethyl-, formula: C12H15N
+cas: 93-37-8, name: Quinoline, 2,7-dimethyl-, formula: C11H11N
+cas: 76890-08-9, name: Quinoline, 2-(2,4-dimethylphenyl)-, formula: C17H15N
+cas: 1613-34-9, name: Quinoline, 2-ethyl-, formula: C11H11N
+cas: 612-96-4, name: Quinoline, 2-phenyl-, formula: C15H11N
+cas: 491-35-0, name: Quinoline, 4-methyl-, formula: C10H9N
+cas: 91-62-3, name: Quinoline, 6-methyl-, formula: C10H9N
+cas: 875-63-8, name: Quinoline, decahydro-1-methyl-, trans-, formula: C10H19N
+cas: 63983-61-9, name: Quinoline, decahydro-2,5-dipropyl-, formula: C15H29N
+cas: 100-76-5, name: Quinuclidine, formula: C7H13N
+cas: 1000145-01-8, name: R(-)-1-Cyano-2-methylpyrrolidine, formula: C6H10N2
+cas: 82360-67-6, name: RS-2,3-hexanediol, formula: C6H14O2
+cas: 21416-67-1, name: Razoxane, formula: C11H16N4O4
+cas: 102-29-4, name: Resorcinol monoacetate, formula: C8H8O3
+cas: 127-47-9, name: Retinol, acetate, formula: C22H32O2
+cas: 101470-87-5, name: Retinoyl-.beta.-glucuronide 6',3'-lactone, formula: C26H34O7
+cas: 1000149-52-8, name: Ribitol, 1,3:4,5-di-O-(ethylboranediyl)-2-deoxy-, formula: C9H18B2O4
+cas: 16653-52-4, name: Rockogenin, formula: C27H44O4

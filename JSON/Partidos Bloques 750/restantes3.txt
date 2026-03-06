@@ -1,0 +1,84 @@
+Clasifica los siguientes compuestos según su grupo o familia a la que pertenecen, eligiendo una de las opciones de esta lista: 
+grupos_compuestos = {
+    1: "Alcanos",
+    2: "Alquenos y alquinos",
+    3: "Ácidos carboxílicos",
+    4: "Ésteres",
+    5: "Alcoholes",
+    6: "Fenoles",
+    7: "Cetonas",
+    8: "Aldehídos",
+    9: "Éteres",
+    10: "Aminas",
+    11: "Amidas",
+    12: "Nitrilos",
+    13: "Anillos aromáticos",
+    14: "Ésteres de ácido fosfórico",
+    15: "Silanos / Siloxanos",
+    16: "Esteroides / Terpenos",
+    17: "Lactonas y lactamas",
+    18: "Compuestos heterocíclicos",
+    19: "Compuestos halogenados",
+    20: "Otros",
+    21: "Anilinas / Derivados de anilina",
+    22: "Ftalatos",
+    23: "Aldehídos aromáticos",
+    24: "Cetonas aromáticas",
+    25: "Amidas aromáticas",
+    26: "Amidas alifáticas",
+    27: "Alcoholes grasos / largos",
+    28: "Ácidos grasos",
+    29: "Compuestos organosulfurados",
+    30: "Lactonas aromáticas",
+    31: "Compuestos bencénicos sustituidos",
+    32: "Compuestos nitrogenados heterocíclicos",
+    33: "Compuestos con oxígeno cíclico",
+    34: "Éteres de glicoles",
+    35: "Compuestos con grupos TMS (trimetilsililo)",
+    36: "Compuestos con anillos fundidos",
+    37: "Compuestos policíclicos aromáticos (PAHs)",
+    38: "Nitrilos aromáticos",
+    39: "Otros"
+}
+Y devuélveme simplemente el CAS del compuesto y el número de la familia a la que pertenece, en formato cas : numero. Aquí está la lista de compuestos:
+cas: 1000348-48-9 - name: D-Alanine, N-(4-anisoyl)-, pentyl ester - formula: C16H23NO4
+cas: 30571-71-2 - name: Decane, 3-bromo- - formula: C10H21Br
+cas: 6100-74-9 - name: Ethanone, 1-(3-hydroxy-4-methoxyphenyl)- - formula: C9H10O3
+cas: 121-71-1 - name: Ethanone, 1-(3-hydroxyphenyl)- - formula: C8H8O2
+cas: 37074-39-8 - name: Ethanone, 1-(4-chloro-3-methylphenyl)- - formula: C9H9ClO
+cas: 1000373-75-8 - name: Hexan-3-yl (E)-2-methylbut-2-enoate - formula: C11H20O2
+cas: 1000372-76-1 - name: Hexan-3-yl 2,3,4,5,6-pentafluorobenzoate - formula: C13H13F5O2
+cas: 996-12-3 - name: Hexanal, 2,2-dimethyl- - formula: C8H16O
+cas: 41065-97-8 - name: Hexanal, 4-methyl- - formula: C7H14O
+cas: 628-02-4 - name: Hexanamide - formula: C6H13NO
+cas: 1000340-14-7 - name: Hexanamide, N-(2,4-dimethoxyphenyl)- - formula: C14H21NO3
+cas: 1000340-14-2 - name: Hexanamide, N-(2-fluorophenyl)- - formula: C12H16FNO
+cas: 1000340-15-0 - name: Hexanamide, N-(3,4-dimethoxyphenethyl)- - formula: C16H25NO3
+cas: 112-58-3 - name: Hexane, 1,1'-oxybis- - formula: C12H26O
+cas: 74421-17-3 - name: Hexane, 1-(hexyloxy)-2-methyl- - formula: C13H28O
+cas: 74421-20-8 - name: Hexane, 1-(hexyloxy)-4-methyl- - formula: C13H28O
+cas: 74421-19-5 - name: Hexane, 1-(hexyloxy)-5-methyl- - formula: C13H28O
+cas: 544-10-5 - name: Hexane, 1-chloro- - formula: C6H13Cl
+cas: 33240-56-1 - name: Hexane, 1-chloro-5-methyl- - formula: C7H15Cl
+cas: 638-45-9 - name: Hexane, 1-iodo- - formula: C6H13I
+cas: 53685-78-2 - name: Hexane, 1-propoxy- - formula: C9H20O
+cas: 13475-81-5 - name: Hexane, 2,2,3,3-tetramethyl- - formula: C10H22
+cas: 16747-26-5 - name: Hexane, 2,2,4-trimethyl- - formula: C9H20
+cas: 1071-81-4 - name: Hexane, 2,2,5,5-tetramethyl- - formula: C10H22
+cas: 3522-94-9 - name: Hexane, 2,2,5-trimethyl- - formula: C9H20
+cas: 590-73-8 - name: Hexane, 2,2-dimethyl- - formula: C8H18
+cas: 921-47-1 - name: Hexane, 2,3,4-trimethyl- - formula: C9H20
+cas: 1069-53-0 - name: Hexane, 2,3,5-trimethyl- - formula: C9H20
+cas: 584-94-1 - name: Hexane, 2,3-dimethyl- - formula: C8H18
+cas: 16747-30-1 - name: Hexane, 2,4,4-trimethyl- - formula: C9H20
+cas: 589-43-5 - name: Hexane, 2,4-dimethyl- - formula: C8H18
+cas: 592-13-2 - name: Hexane, 2,5-dimethyl- - formula: C8H18
+cas: 18589-27-0 - name: Hexane, 2-iodo- - formula: C6H13I
+cas: 591-76-4 - name: Hexane, 2-methyl- - formula: C7H16
+cas: 5171-84-6 - name: Hexane, 3,3,4,4-tetramethyl- - formula: C10H22
+cas: 563-16-6 - name: Hexane, 3,3-dimethyl- - formula: C8H18
+cas: 62850-21-9 - name: Hexane, 3,4-bis(1,1-dimethylethyl)-2,2,5,5-tetramethyl- - formula: C18H38
+cas: 3377-87-5 - name: Hexane, 3-bromo- - formula: C6H13Br
+cas: 16789-46-1 - name: Hexane, 3-ethyl-2-methyl- - formula: C9H20
+cas: 3074-76-8 - name: Hexane, 3-ethyl-3-methyl- - formula: C9H20
+cas: 1000372-79-4 - name: Isobutyl 2-(4-methylcyclohex-3-enyl)propan-2-yl carbonate - formula: C15H26O3

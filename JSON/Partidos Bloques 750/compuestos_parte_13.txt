@@ -1,0 +1,333 @@
+Clasifica los siguientes compuestos según su grupo o familia a la que pertenecen, eligiendo una de las opciones de esta lista: 
+grupos_compuestos = {
+    1: "Alcanos",
+    2: "Alquenos y alquinos",
+    3: "Ácidos carboxílicos",
+    4: "Ésteres",
+    5: "Alcoholes",
+    6: "Fenoles",
+    7: "Cetonas",
+    8: "Aldehídos",
+    9: "Éteres",
+    10: "Aminas",
+    11: "Amidas",
+    12: "Nitrilos",
+    13: "Anillos aromáticos",
+    14: "Ésteres de ácido fosfórico",
+    15: "Silanos / Siloxanos",
+    16: "Esteroides / Terpenos",
+    17: "Lactonas y lactamas",
+    18: "Compuestos heterocíclicos",
+    19: "Compuestos halogenados",
+    20: "Otros",
+    21: "Anilinas / Derivados de anilina",
+    22: "Ftalatos",
+    23: "Aldehídos aromáticos",
+    24: "Cetonas aromáticas",
+    25: "Amidas aromáticas",
+    26: "Amidas alifáticas",
+    27: "Alcoholes grasos / largos",
+    28: "Ácidos grasos",
+    29: "Compuestos organosulfurados",
+    30: "Lactonas aromáticas",
+    31: "Compuestos bencénicos sustituidos",
+    32: "Compuestos nitrogenados heterocíclicos",
+    33: "Compuestos con oxígeno cíclico",
+    34: "Éteres de glicoles",
+    35: "Compuestos con grupos TMS (trimetilsililo)",
+    36: "Compuestos con anillos fundidos",
+    37: "Compuestos policíclicos aromáticos (PAHs)",
+    38: "Nitrilos aromáticos",
+    39: "Otros"
+}
+Y devuélveme simplemente el CAS del compuesto y el número de la familia a la que pertenece, en formato cas : numero. Aquí está la lista de compuestos:
+cas: 69841-15-2, name: cis-4,6-Dimethylcyclohexane-1,3-dione, formula: C8H12O2
+cas: 10417-94-4, name: cis-5,8,11,14,17-Eicosapentaenoic acid, formula: C20H30O2
+cas: 1000139-66-2, name: cis-5-Methyl-2-isopropyl-2-hexen-1-al, formula: C10H18O
+cas: 56219-04-6, name: cis-9-Hexadecenal, formula: C16H30O
+cas: 10412-77-8, name: cis-Cyclohexane-1,4-dimethanol, diacetate, formula: C12H20O4
+cas: 506-17-2, name: cis-Vaccenic acid, formula: C18H34O2
+cas: 1000131-71-2, name: cis-Z-.alpha.-Bisabolene epoxide, formula: C15H24O
+cas: 1000149-19-1, name: d-Glucohexodialdose, formula: C6H10O6
+cas: 1000328-23-4, name: d-Proline, N-(2-chloroethoxycarbonyl)-, heptadecyl ester, formula: C25H46ClNO4
+cas: 1000328-22-3, name: d-Proline, N-(2-chloroethoxycarbonyl)-, isohexyl ester, formula: C14H24ClNO4
+cas: 1000328-22-6, name: d-Proline, N-(2-chloroethoxycarbonyl)-, octyl ester, formula: C16H28ClNO4
+cas: 1000328-19-4, name: d-Proline, N-(2-methoxyethoxycarbonyl)-, hexyl ester, formula: C15H27NO5
+cas: 1000320-97-8, name: d-Proline, N-allyloxycarbonyl-, allyl ester, formula: C12H17NO4
+cas: 1000320-96-9, name: d-Proline, N-allyloxycarbonyl-, nonyl ester, formula: C18H31NO4
+cas: 1000320-97-1, name: d-Proline, N-allyloxycarbonyl-, undecyl ester, formula: C20H35NO4
+cas: 1000320-83-6, name: d-Proline, N-ethoxycarbonyl-, isohexyl ester, formula: C14H25NO4
+cas: 1000320-79-1, name: d-Proline, N-methoxycarbonyl-, heptyl ester, formula: C14H25NO4
+cas: 1000320-78-7, name: d-Proline, N-methoxycarbonyl-, isobutyl ester, formula: C11H19NO4
+cas: 1000320-78-8, name: d-Proline, N-methoxycarbonyl-, pentyl ester, formula: C12H21NO4
+cas: 1000328-21-6, name: d-Proline, N-neopentyloxycarbonyl-, hexadecyl ester, formula: C27H51NO4
+cas: 1000320-82-5, name: d-Proline, n-propoxycarbonyl-, heptyl ester, formula: C16H29NO4
+cas: 18071-35-7, name: di-n-Propylaminoacetonitrile, formula: C8H16N2
+cas: 2217-08-5, name: di-n-Propylbarbituric acid, formula: C10H16N2O3
+cas: 16165-33-6, name: di-n-Undecylamine, formula: C22H47N
+cas: 2789-88-0, name: di-p-Tolylacetylene, formula: C16H14
+cas: 13086-84-5, name: di-t-Butyl phosphite, formula: C8H19O3P
+cas: 24424-99-5, name: di-tert-Butyl dicarbonate, formula: C10H18O5
+cas: 1000378-88-6, name: di[1-(3,4-methylenedioxyphenyl)-2-propyl]methylamine, formula: C21H25NO4
+cas: 10191-41-0, name: dl-.alpha.-Tocopherol, formula: C29H50O2
+cas: 38150-49-1, name: dl-2-(3-Thienyl)glycine, formula: C6H7NO2S
+cas: 485-33-6, name: dl-Laudanosoline hydrobromide, formula: C17H19NO4
+cas: 42558-37-2, name: endo-2-Methylbicyclo[3.3.1]nonane, formula: C10H18
+cas: 1000154-13-0, name: erythro-(cis)(1,4),(cis)(1',4')-4,4'-Dihydroxybicyclooctyl, formula: C16H30O2
+cas: 28474-90-0, name: l-(+)-Ascorbic acid 2,6-dihexadecanoate, formula: C38H68O8
+cas: 1000299-62-7, name: l-Alanine, N-(2,3,4-trifluorobenzoyl)-, methyl ester, formula: C11H10F3NO3
+cas: 1000314-02-9, name: l-Alanine, N-(2,6-difluorobenzoyl)-, heptyl ester, formula: C17H23F2NO3
+cas: 1000327-92-5, name: l-Alanine, N-(2-chloroethoxycarbonyl)-, heptyl ester, formula: C13H24ClNO4
+cas: 1000327-92-4, name: l-Alanine, N-(2-chloroethoxycarbonyl)-, hexyl ester, formula: C12H22ClNO4
+cas: 1000314-04-7, name: l-Alanine, N-(2-fluorobenzoyl)-, decyl ester, formula: C20H30FNO3
+cas: 1000314-04-9, name: l-Alanine, N-(2-fluorobenzoyl)-, dodecyl ester, formula: C22H34FNO3
+cas: 1000314-04-1, name: l-Alanine, N-(2-fluorobenzoyl)-, ethyl ester, formula: C12H14FNO3
+cas: 1000299-61-9, name: l-Alanine, N-(2-fluorobenzoyl)-, methyl ester, formula: C11H12FNO3
+cas: 1000314-28-3, name: l-Alanine, N-(2-furoyl)-, butyl ester, formula: C12H17NO4
+cas: 1000314-28-0, name: l-Alanine, N-(2-furoyl)-, ethyl ester, formula: C10H13NO4
+cas: 1000314-28-4, name: l-Alanine, N-(2-furoyl)-, hexyl ester, formula: C14H21NO4
+cas: 1000314-28-7, name: l-Alanine, N-(2-furoyl)-, nonyl ester, formula: C17H27NO4
+cas: 1000314-28-6, name: l-Alanine, N-(2-furoyl)-, octyl ester, formula: C16H25NO4
+cas: 1000314-33-1, name: l-Alanine, N-(2-thienylcarbonyl)-, butyl ester, formula: C12H17NO3S
+cas: 1000314-33-4, name: l-Alanine, N-(2-thienylcarbonyl)-, hexyl ester, formula: C14H21NO3S
+cas: 1000299-59-4, name: l-Alanine, N-(2-thienylcarbonyl)-, methyl ester, formula: C9H11NO3S
+cas: 1000314-33-2, name: l-Alanine, N-(2-thienylcarbonyl)-, pentyl ester, formula: C13H19NO3S
+cas: 1000314-26-9, name: l-Alanine, N-(3-trifluoromethylbenzoyl)-, heptyl ester, formula: C18H24F3NO3
+cas: 1000314-15-6, name: l-Alanine, N-(4-butylbenzoyl)-, hexyl ester, formula: C20H31NO3
+cas: 1000314-16-2, name: l-Alanine, N-(4-ethylbenzoyl)-, heptyl ester, formula: C19H29NO3
+cas: 1000314-16-0, name: l-Alanine, N-(4-ethylbenzoyl)-, isobutyl ester, formula: C16H23NO3
+cas: 1000313-93-5, name: l-Alanine, N-(4-fluorobenzoyl)-, hexyl ester, formula: C16H22FNO3
+cas: 1000299-64-6, name: l-Alanine, N-(p-toluoyl)-, methyl ester, formula: C12H15NO3
+cas: 1000314-06-8, name: l-Alanine, N-(p-toluoyl)-, octyl ester, formula: C19H29NO3
+cas: 1000313-43-8, name: l-Alanine, N-allyloxycarbonyl-, allyl ester, formula: C10H15NO4
+cas: 1000313-40-3, name: l-Alanine, N-ethoxycarbonyl-, propyl ester, formula: C9H17NO4
+cas: 1000313-44-0, name: l-Alanine, N-isobutoxycarbonyl-, isobutyl ester, formula: C12H23NO4
+cas: 1000327-91-1, name: l-Alanine, n-pentadecafluorooctanoyl-, hexyl ester, formula: C17H18F15NO3
+cas: 1000322-67-9, name: l-Alanine, n-propargyloxycarbonyl-, decyl ester, formula: C17H29NO4
+cas: 1000322-67-8, name: l-Alanine, n-propargyloxycarbonyl-, hexyl ester, formula: C13H21NO4
+cas: 1000299-69-0, name: l-Cysteine, N,S-bis(2-trifluoromethylbenzoyl)-, methyl ester, formula: C20H15F6NO4S
+cas: 1000313-56-4, name: l-Isoleucine, N-propoxycarbonyl-, butyl ester, formula: C14H27NO4
+cas: 1000313-56-5, name: l-Isoleucine, N-propoxycarbonyl-, pentyl ester, formula: C15H29NO4
+cas: 1000327-73-4, name: l-Leucine, N-(2,3,4-trifluorobenzoyl)-, nonyl ester, formula: C22H32F3NO3
+cas: 1000327-67-8, name: l-Leucine, N-(3-fluorobenzoyl)- butyl ester, formula: C17H24FNO3
+cas: 1000321-90-5, name: l-Leucine, N-allyloxycarbonyl-N-methyl-, dodecyl ester, formula: C23H43NO4
+cas: 1000321-90-7, name: l-Leucine, N-allyloxycarbonyl-N-methyl-, hexadecyl ester, formula: C27H51NO4
+cas: 1000321-90-6, name: l-Leucine, N-allyloxycarbonyl-N-methyl-, pentadecyl ester, formula: C26H49NO4
+cas: 1000322-03-4, name: l-Leucine, N-benzyloxycarbonyl-N-methyl-, ethyl ester, formula: C17H25NO4
+cas: 1000321-92-7, name: l-Leucine, N-ethoxycarbonyl-N-methyl-, dodecyl ester, formula: C22H43NO4
+cas: 1000321-93-0, name: l-Leucine, N-ethoxycarbonyl-N-methyl-, hexadecyl ester, formula: C26H51NO4
+cas: 1000321-92-5, name: l-Leucine, N-ethoxycarbonyl-N-methyl-, nonyl ester, formula: C19H37NO4
+cas: 1000321-92-9, name: l-Leucine, N-ethoxycarbonyl-N-methyl-, pentadecyl ester, formula: C25H49NO4
+cas: 1000321-87-8, name: l-Leucine, N-isobutoxycarbonyl-N-methyl-, pentadecyl ester, formula: C27H53NO4
+cas: 1000328-54-8, name: l-Leucine, N-methyl-N-(2-methoxyethoxycarbonyl)-, tetradecyl ester, formula: C25H49NO5
+cas: 1000321-86-6, name: l-Leucine, N-methyl-n-propoxycarbonyl-, heptadecyl ester, formula: C28H55NO4
+cas: 1000321-85-7, name: l-Leucine, N-methyl-n-propoxycarbonyl-, heptyl ester, formula: C18H35NO4
+cas: 1000321-86-4, name: l-Leucine, N-methyl-n-propoxycarbonyl-, pentadecyl ester, formula: C26H51NO4
+cas: 1000313-86-8, name: l-Leucine, N-propoxycarbonyl-, isohexyl ester, formula: C16H31NO4
+cas: 1000321-89-2, name: l-Leucine, n-butoxycarbonyl-N-methyl-, pentadecyl ester, formula: C27H53NO4
+cas: 1000327-66-7, name: l-Leucine, n-pentafluorobenzoyl-. octyl ester, formula: C21H28F5NO3
+cas: 1000328-00-0, name: l-Leucine, n-propargyloxycarbonyl-, ethyl ester, formula: C12H19NO4
+cas: 1000328-00-6, name: l-Leucine, n-propargyloxycarbonyl-, heptyl ester, formula: C17H29NO4
+cas: 1000327-68-1, name: l-Leucine. N-(3-fluorobenzoyl)-, hexyl ester, formula: C19H28FNO3
+cas: 1000329-58-5, name: l-Norleucine, N-ethoxycarbonyl-, decyl ester, formula: C19H37NO4
+cas: 1000328-72-5, name: l-Norvaline, N-(2-chloroethoxycarbonyl)-, hexyl ester, formula: C14H26ClNO4
+cas: 1000328-72-7, name: l-Norvaline, N-(2-chloroethoxycarbonyl)-, octyl ester, formula: C16H30ClNO4
+cas: 1000328-64-8, name: l-Norvaline, N-(2-methoxyethoxycarbonyl)-, 2-methoxyethyl ester, formula: C12H23NO6
+cas: 1000328-64-3, name: l-Norvaline, N-(2-methoxyethoxycarbonyl)-, undecyl ester, formula: C20H39NO5
+cas: 1000320-75-8, name: l-Norvaline, N-allyloxycarbonyl-, allyl ester, formula: C12H19NO4
+cas: 1000320-70-6, name: l-Norvaline, N-ethoxycarbonyl-, nonyl ester, formula: C17H33NO4
+cas: 1000320-77-9, name: l-Norvaline, n-butoxycarbonyl-, dodecyl ester, formula: C22H43NO4
+cas: 1000320-77-5, name: l-Norvaline, n-butoxycarbonyl-, heptyl ester, formula: C17H33NO4
+cas: 1000320-78-1, name: l-Norvaline, n-butoxycarbonyl-, pentadecyl ester, formula: C25H49NO4
+cas: 1000328-61-7, name: l-Norvaline, n-propargyloxycarbonyl-, butyl ester, formula: C13H21NO4
+cas: 1000328-62-0, name: l-Norvaline, n-propargyloxycarbonyl-, hexyl ester, formula: C15H25NO4
+cas: 1000328-61-9, name: l-Norvaline, n-propargyloxycarbonyl-, isohexyl ester, formula: C15H25NO4
+cas: 1000320-74-2, name: l-Norvaline, n-propoxycarbonyl-, heptadecyl ester, formula: C26H51NO4
+cas: 1000320-73-7, name: l-Norvaline, n-propoxycarbonyl-, undecyl ester, formula: C20H39NO4
+cas: 5405-40-3, name: l-Pantoyl lactone, formula: C6H10O3
+cas: 1000299-67-3, name: l-Phenylalanine, N-(p-anisoyl)-, methyl ester, formula: C18H19NO4
+cas: 1000299-63-1, name: l-Proline, N-(2,3,4-trifluorobenzoyl)-, methyl ester, formula: C13H12F3NO3
+cas: 1000299-66-2, name: l-Proline, N-(2,6-difluorobenzoyl)-, methyl ester, formula: C13H13F2NO3
+cas: 1000328-49-6, name: l-Proline, N-(2-chloroethoxycarbonyl)-, dodecyl ester, formula: C20H36ClNO4
+cas: 1000299-64-0, name: l-Proline, N-(m-toluoyl)-, methyl ester, formula: C14H17NO3
+cas: 1000313-65-2, name: l-Proline, N-allyloxycarbonyl-, hexyl ester, formula: C15H25NO4
+cas: 1000313-65-4, name: l-Proline, N-allyloxycarbonyl-, octyl ester, formula: C17H29NO4
+cas: 1000321-10-4, name: l-Proline, n-heptafluorobutyryl-, decyl ester, formula: C19H28F7NO3
+cas: 1000321-10-6, name: l-Proline, n-heptafluorobutyryl-, dodecyl ester, formula: C21H32F7NO3
+cas: 1000321-09-8, name: l-Proline, n-heptafluorobutyryl-, isobutyl ester, formula: C13H16F7NO3
+cas: 1000321-06-4, name: l-Proline, n-pentafluoropropionyl-, butyl ester, formula: C12H16F5NO3
+cas: 1000321-06-8, name: l-Proline, n-pentafluoropropionyl-, heptyl ester, formula: C15H22F5NO3
+cas: 1000321-06-7, name: l-Proline, n-pentafluoropropionyl-, hexyl ester, formula: C14H20F5NO3
+cas: 1000328-17-4, name: l-Proline, n-propargyloxycarbonyl-, propargyl ester, formula: C12H13NO4
+cas: 1000322-64-7, name: l-Prolylglycine, N-methoxycarbonyl-, 2,2,2-trifluoroethyl ester, formula: C11H15F3N2O5
+cas: 1000299-67-0, name: l-Valine, N-(p-anisoyl)-, methyl ester, formula: C14H19NO4
+cas: 1000320-89-3, name: l-Valine, n-heptafluorobutyryl-, ethyl ester, formula: C11H14F7NO3
+cas: 1000320-89-5, name: l-Valine, n-heptafluorobutyryl-, isobutyl ester, formula: C13H18F7NO3
+cas: 1000320-88-0, name: l-Valine, n-pentafluoropropionyl-, isobutyl ester, formula: C12H18F5NO3
+cas: 1000323-31-3, name: l-Valine, n-propargyloxycarbonyl-, decyl ester, formula: C19H33NO4
+cas: 1000323-31-5, name: l-Valine, n-propargyloxycarbonyl-, dodecyl ester, formula: C21H37NO4
+cas: 1000323-31-9, name: l-Valine, n-propargyloxycarbonyl-, heptadecyl ester, formula: C26H47NO4
+cas: 1000323-31-6, name: l-Valine, n-propargyloxycarbonyl-, tetradecyl ester, formula: C23H41NO4
+cas: 117423-75-3, name: m-(p-Methoxyphenoxy)benzoic acid, formula: C14H12O4
+cas: 54060-30-9, name: m-Aminophenylacetylene, formula: C8H7N
+cas: 1000307-80-5, name: m-Anisic acid, 2-naphthyl ester, formula: C18H14O3
+cas: 1000292-25-0, name: m-Anisic acid, cyclobutyl ester, formula: C12H14O3
+cas: 108-39-4, name: m-Cresol, formula: C7H8O
+cas: 122-46-3, name: m-Cresyl acetate, formula: C9H10O2
+cas: 22699-70-3, name: m-Ethylacetophenone, formula: C10H12O
+cas: 456-49-5, name: m-Fluoroanisole, formula: C7H7FO
+cas: 126165-50-2, name: m-Methoxybenzoic acid, 2-chlorophenyl ester, formula: C14H11ClO3
+cas: 5462-05-5, name: m-Toluic acid, 3-phenylpropyl ester, formula: C17H18O2
+cas: 1000292-23-2, name: m-Toluic acid, cyclobutyl ester, formula: C12H14O2
+cas: 1000292-49-9, name: m-Toluic acid, tridec-2-ynyl ester, formula: C21H30O2
+cas: 32388-93-5, name: meso-2,5-Dimethyl-3,4-hexanediol, formula: C8H18O2
+cas: 65149-86-2, name: meso-3,4-Dicyclohexyl-2,2,5,5-tetramethylhexane, formula: C22H42
+cas: 693-65-2, name: n-Amyl ether, formula: C10H22O
+cas: 2403-22-7, name: n-Butylbenzylamine, formula: C11H17N
+cas: 637-65-0, name: n-Butyric acid tetrahydrofurfuryl ester, formula: C8H14O3
+cas: 3050-69-9, name: n-Caproic acid vinyl ester, formula: C8H14O2
+cas: 334-48-5, name: n-Decanoic acid, formula: C10H20O2
+cas: 193090-25-4, name: n-Decyl methylphosphonofluoridate, formula: C11H24FO2P
+cas: 1454-85-9, name: n-Heptadecanol-1, formula: C17H36O
+cas: 19781-73-8, name: n-Heptadecylcyclohexane, formula: C23H46
+cas: 2499-58-3, name: n-Heptyl acrylate, formula: C10H18O2
+cas: 162085-82-7, name: n-Heptyl methylphosphonofluoridate, formula: C8H18FO2P
+cas: 57-10-3, name: n-Hexadecanoic acid, formula: C16H32O2
+cas: 6259-76-3, name: n-Hexyl salicylate, formula: C13H18O3
+cas: 1454-84-8, name: n-Nonadecanol-1, formula: C19H40O
+cas: 5299-64-9, name: n-Nonanoylmorpholine, formula: C13H25NO2
+cas: 6008-36-2, name: n-Octyl phenyl ketone, formula: C15H22O
+cas: 629-76-5, name: n-Pentadecanol, formula: C15H32O
+cas: 6006-95-7, name: n-Pentadecylcyclohexane, formula: C21H42
+cas: 13454-59-6, name: n-Pentyl methylphosphonofluoridate, formula: C6H14FO2P
+cas: 1000336-79-4, name: n-Propyl 9,12,15-octadecatrienoate, formula: C21H36O2
+cas: 1000336-71-6, name: n-Propyl 9-octadecenoate, formula: C21H40O2
+cas: 109-60-4, name: n-Propyl acetate, formula: C5H10O2
+cas: 2315-68-6, name: n-Propyl benzoate, formula: C10H12O2
+cas: 109-61-5, name: n-Propyl chloroformate, formula: C4H7ClO2
+cas: 763-14-4, name: n-Propyl methylphosphonofluoridate, formula: C4H10FO2P
+cas: 26389-60-6, name: n-Propylcyclopropanemethylamine, formula: C7H15N
+cas: 506-51-4, name: n-Tetracosanol-1, formula: C24H50O
+cas: 112-70-9, name: n-Tridecan-1-ol, formula: C13H28O
+cas: 6006-33-3, name: n-Tridecylcyclohexane, formula: C19H38
+cas: 333416-16-3, name: n.-Butyl n.-propylphosphonofluoridate, formula: C7H16FO2P
+cas: 71240-83-0, name: n.-Octanoic acid, 2-[(trimethylsilyl)amino]-, trimethylsilyl ester, formula: C14H33NO2Si2
+cas: 1000273-62-9, name: o-(4-Methylcyclohexyl) S-(2-diethylaminoethyl) ethylphosphonothiolate, formula: C15H32NO2PS
+cas: 1000273-61-5, name: o-(n-Decyl) S-(2-diethylaminoethyl) methylphosphonothiolate, formula: C17H38NO2PS
+cas: 1000273-63-3, name: o-(n-Nonyl) S-(2-diethylaminoethyl) ethylphosphonothiolate, formula: C17H38NO2PS
+cas: 1000273-63-0, name: o-(n-Octyl) S-(2-diethylaminoethyl) ethylphosphonothiolate, formula: C16H36NO2PS
+cas: 1000307-79-5, name: o-Anisic acid, 4-nitrophenyl ester, formula: C14H11NO5
+cas: 1000307-05-5, name: o-Anisic acid, morpholide, formula: C12H15NO3
+cas: 1000292-57-9, name: o-Anisic acid, tridec-2-ynyl ester, formula: C21H30O3
+cas: 1000273-62-6, name: o-Cyclohexyl S-(2-diethylaminoethyl) ethylphosphonothiolate, formula: C14H30NO2PS
+cas: 445-27-2, name: o-Fluoroacetophenone, formula: C8H7FO
+cas: 5747-23-9, name: o-Phenylene benzeneboronate, formula: C12H9BO2
+cas: 90-43-7, name: o-Phenylphenol, formula: C12H10O
+cas: 1000292-22-6, name: o-Toluic acid, 1-adamantylmethyl ester, formula: C19H24O2
+cas: 23597-23-1, name: o-Toluic acid, 2-methylphenyl ester, formula: C15H14O2
+cas: 1000307-45-4, name: o-Toluic acid, 3-methylphenyl ester, formula: C15H14O2
+cas: 1000307-45-8, name: o-Toluic acid, 4-cyanophenyl ester, formula: C15H11NO2
+cas: 95-47-6, name: o-Xylene, formula: C8H10
+cas: 445-28-3, name: ortho-Fluorobenzamide, formula: C7H6FNO
+cas: 610-99-1, name: ortho-Hydroxypropiophenone, formula: C9H10O2
+cas: 57634-55-6, name: p-(2-Amino-4-thiazolyl)phenol, formula: C9H8N2OS
+cas: 588-53-4, name: p-(Benzylideneamino)phenol, formula: C13H11NO
+cas: 73291-09-5, name: p-(Chloromethyl)benzaldehyde, formula: C8H7ClO
+cas: 2929-84-2, name: p-(Dimethylamino)benzaldehyde oxime, formula: C9H12N2O
+cas: 1000307-64-0, name: p-Anisic acid, 2-naphthyl ester, formula: C18H14O3
+cas: 1000307-63-8, name: p-Anisic acid, 3,4-dichlorophenyl ester, formula: C14H10Cl2O3
+cas: 1000307-63-5, name: p-Anisic acid, 3,5-dimethylphenyl ester, formula: C16H16O3
+cas: 1000307-63-7, name: p-Anisic acid, 4-cyanophenyl ester, formula: C15H11NO3
+cas: 1000307-63-9, name: p-Anisic acid, 4-nitrophenyl ester, formula: C14H11NO5
+cas: 1000299-20-0, name: p-Anisic acid, tridec-2-ynyl ester, formula: C21H30O3
+cas: 15437-14-6, name: p-Benzophenetidide, formula: C15H15NO2
+cas: 836-43-1, name: p-Benzyloxybenzyl alcohol, formula: C14H14O2
+cas: 1613-88-3, name: p-Chlorobenzohydroxamic acid, formula: C7H6ClNO2
+cas: 59662-53-2, name: p-Cyanophenyl 4'-pentyl-4-biphenylcarboxylate, formula: C25H23NO2
+cas: 67951-45-5, name: p-Cyanophenyl p-(2-methylbutoxy)benzoate, formula: C19H19NO3
+cas: 67131-97-9, name: p-Cyanophenyl p-(2-propoxyethoxy)benzoate, formula: C19H19NO4
+cas: 2985-57-1, name: p-Decylphenol, formula: C16H26O
+cas: 371-40-4, name: p-Fluoroaniline, formula: C6H6FN
+cas: 37593-03-6, name: p-Heptylacetophenone, formula: C15H22O
+cas: 39905-44-7, name: p-Heptyloxyaniline, formula: C13H21NO
+cas: 89511-01-3, name: p-Hexylbenzaldehyde diethyl acetal, formula: C17H28O2
+cas: 1000342-69-2, name: p-Hydroxynonanophenone, formula: C15H22O2
+cas: 4286-23-1, name: p-Isopropenylphenol, formula: C9H10O
+cas: 1000292-65-1, name: p-Methoxybenzoic acid, 2-bromo-4-fluorophenyl ester, formula: C14H10BrFO3
+cas: 23786-13-2, name: p-Methylphenylacetic acid methyl ester, formula: C10H12O2
+cas: 69497-83-2, name: p-Methylsulfonyloxyacetophenone, formula: C9H10O4S
+cas: 114774-79-7, name: p-Nitrophenyl 1-azetidinecarboxylate, formula: C10H10N2O4
+cas: 17374-48-0, name: p-Nitrophenyl salicylate, formula: C13H9NO5
+cas: 10541-56-7, name: p-Octylacetophenone, formula: C16H24O
+cas: 33228-44-3, name: p-Pentylaniline, formula: C11H17N
+cas: 2759-55-9, name: p-Propionotoluidide, formula: C10H13NO
+cas: 1000307-76-8, name: p-Toluic acid, 4-cyanophenyl ester, formula: C15H11NO2
+cas: 1000307-76-7, name: p-Toluic acid, 4-methoxyphenyl ester, formula: C15H14O3
+cas: 1000307-77-0, name: p-Toluic acid, 4-nitrophenyl ester, formula: C14H11NO4
+cas: 1000292-64-6, name: p-Toluic acid, 5-fluoro-2-nitrophenyl ester, formula: C14H10FNO4
+cas: 1000292-21-4, name: p-Toluic acid, cyclobutyl ester, formula: C12H14O2
+cas: 622-47-9, name: p-Tolylacetic acid, formula: C9H10O2
+cas: 66870-89-1, name: p-Tolylpentamethyl-disiloxane, formula: C12H22OSi2
+cas: 347-80-8, name: p-Trifluoromethylbenzanilide, formula: C14H10F3NO
+cas: 3661-73-2, name: p-Vinylbenzamide, formula: C9H9NO
+cas: 1000244-74-9, name: p-Vinylbenzohydrazide, formula: C9H10N2O
+cas: 106-42-3, name: p-Xylene, formula: C8H10
+cas: 1014-99-9, name: p-Xylylene dithiocyanate, formula: C10H8N2S2
+cas: 37920-25-5, name: p-n-Butylacetophenone, formula: C12H16O
+cas: 28122-52-3, name: p-tert-Octylresorcinol, formula: C14H22O2
+cas: 55253-28-6, name: photocitral A, formula: C10H16O
+cas: 38754-94-8, name: s-Indacen-1(2H)-one, 3,5,6,7-tetrahydro-3,3,4,5,5,8-hexamethyl-, formula: C18H24O
+cas: 55591-17-8, name: s-Indacene-1,7-dione, 2,3,5,6-tetrahydro-3,3,5,5-tetramethyl-, formula: C16H18O2
+cas: 19455-91-5, name: s-Tetrazine, 3,6-bis(diisopropylamino)-, formula: C14H28N6
+cas: 877-77-0, name: s-Tetrazine, 3,6-bis(dimethylamino)-, formula: C6H12N6
+cas: 5295-23-8, name: s-Triazole, 3-acetamido-, formula: C4H6N4O
+cas: 7169-92-8, name: s-Triazolo[1,5-a]pyridine, 2-methyl-6-nitro-, formula: C7H6N4O2
+cas: 31052-96-7, name: s-Triazolo[1,5-a]pyridine, 8-amino-2-phenyl-, formula: C12H10N4
+cas: 6415-59-4, name: sedanolide, formula: C12H18O2
+cas: 20396-49-0, name: t-Butyl cyclohexaneperoxycarboxylate, formula: C11H20O3
+cas: 14705-50-1, name: t-Butyl isobutyl ketone, formula: C9H18O
+cas: 1948-33-0, name: t-Butylhydroquinone, formula: C10H14O2
+cas: 1000151-39-9, name: t-butylsulfinate,-O-menthyl-, formula: C14H28O2S
+cas: 1663-39-4, name: tert-Butyl acrylate, formula: C7H12O2
+cas: 558-17-8, name: tert-Butyl iodide, formula: C4H9I
+cas: 30221-21-7, name: tert-Butyl isopropyl carbonate, formula: C8H16O3
+cas: 1000352-09-4, name: tert-Butyl-(2-methoxyethoxy)dimethylsilane, formula: C9H22O2Si
+cas: 37170-48-2, name: tert-Butyldimethylsilyl acetate, formula: C8H18O2Si
+cas: 1000366-61-9, name: tert-Butyldimethylsilyl methanesulfonate, formula: C7H18O3SSi
+cas: 1000352-80-1, name: tert-Butylhydroquinone, diacetate, formula: C14H18O4
+cas: 67875-54-1, name: tert-Butylpentamethyldisiloxane, formula: C9H24OSi2
+cas: 25360-09-2, name: tert-Hexadecanethiol, formula: C16H34S
+cas: 1000112-56-1, name: threo-2,5-Dimethyl-2-(2-methyl-2-tetrahydrofuryl)tetrahydrofuran, formula: C11H20O2
+cas: 1000111-72-9, name: trans,cis-1,8-Dimethylspiro[4.5]decane, formula: C12H22
+cas: 95530-76-0, name: trans,trans-2,8-Dimethylspiro[5.5]undecane, formula: C13H24
+cas: 1000139-71-5, name: trans-(2-Chlorovinyl)dimethylethoxysilane, formula: C6H13ClOSi
+cas: 36258-08-9, name: trans-(2-Ethylcyclopentyl)methanol, formula: C8H16O
+cas: 49601-70-9, name: trans-.beta.-Cyano-3-stilbazole, formula: C14H10N2
+cas: 79-77-6, name: trans-.beta.-Ionone, formula: C13H20O
+cas: 70795-46-9, name: trans-1,2-Bis(aminomethyl)cyclohexane, formula: C8H18N2
+cas: 1121-22-8, name: trans-1,2-Cyclohexanediamine, formula: C6H14N2
+cas: 1000127-85-9, name: trans-1,2-Di-O-benzoylcyclohexan-1,2-diol, formula: C20H20O4
+cas: 932-40-1, name: trans-1,2-Diethyl cyclopentane, formula: C9H18
+cas: 1000365-94-1, name: trans-1,3,3-trimethylbicyclo[3.1.0]hexane-1-carboxaldehyde, formula: C10H16O
+cas: 1000113-87-1, name: trans-1,3-Diethylcyclopentane, formula: C9H18
+cas: 101772-69-4, name: trans-1,3-Dimethylsilacyclohexane, formula: C7H16Si
+cas: 3114-70-3, name: trans-1,4-Cyclohexanediamine, formula: C6H14N2
+cas: 219739-53-4, name: trans-1-Benzoyloxy-cis-3-hydroxy-trans-4,trans-5-isopropylidenedioxycyclohexanecarboxylic gamma-lactone, formula: C17H18O6
+cas: 17082-05-2, name: trans-1-Nitro-1-propene, formula: C3H5NO2
+cas: 693-71-0, name: trans-13-Octadecenoic acid, formula: C18H34O2
+cas: 1000333-61-3, name: trans-13-Octadecenoic acid, methyl ester, formula: C19H36O2
+cas: 1000055-44-8, name: trans-2,3-Di-(.alpha.-phenylethyl)-1-phthalimido-azimine, formula: C24H22N4O2
+cas: 69064-37-5, name: trans-2-Dodecen-1-ol, formula: C12H24O
+cas: 1000376-26-0, name: trans-2-Methylcyclohexanol, chlorodifluoroacetate, formula: C9H13ClF2O2
+cas: 75039-84-8, name: trans-2-Undecen-1-ol, formula: C11H22O
+cas: 19550-73-3, name: trans-3,4-Dimethylcyclopentanone, formula: C7H12O
+cas: 1000299-41-9, name: trans-3-Trifluoromethylcinnamic acid, tridec-2-ynyl ester, formula: C23H29F3O2
+cas: 1000370-41-7, name: trans-3-[2-Hydroxy-4-(2-methyl-2-nonyl) phenyl] cyclohexanol, formula: C22H36O2
+cas: 148806-10-4, name: trans-4-Hydroxy-3-methylundecanoic acid lactone, formula: C12H22O2
+cas: 51731-17-0, name: trans-4-Methoxy-3-buten-2-one, formula: C5H8O2
+cas: 13980-07-9, name: trans-9,10-Epoxyoctadecanoic acid, formula: C18H34O3
+cas: 625-37-6, name: trans-Crotonamide, formula: C4H7NO
+cas: 1000152-47-3, name: trans-Decalin, 2-methyl-, formula: C11H20
+cas: 24034-73-9, name: trans-Geranylgeraniol, formula: C20H34O
+cas: 1000333-55-9, name: trans-Vaccenic acid, tert-butyldimethylsilyl ester, formula: C24H48O2Si
+cas: 2528-38-3, name: tri-n-Amylphosphate, formula: C15H33O4P

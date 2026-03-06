@@ -1,0 +1,793 @@
+Clasifica los siguientes compuestos según su grupo o familia a la que pertenecen, eligiendo una de las opciones de esta lista: 
+grupos_compuestos = {
+    1: "Alcanos",
+    2: "Alquenos y alquinos",
+    3: "Ácidos carboxílicos",
+    4: "Ésteres",
+    5: "Alcoholes",
+    6: "Fenoles",
+    7: "Cetonas",
+    8: "Aldehídos",
+    9: "Éteres",
+    10: "Aminas",
+    11: "Amidas",
+    12: "Nitrilos",
+    13: "Anillos aromáticos",
+    14: "Ésteres de ácido fosfórico",
+    15: "Silanos / Siloxanos",
+    16: "Esteroides / Terpenos",
+    17: "Lactonas y lactamas",
+    18: "Compuestos heterocíclicos",
+    19: "Compuestos halogenados",
+    20: "Otros",
+    21: "Anilinas / Derivados de anilina",
+    22: "Ftalatos",
+    23: "Aldehídos aromáticos",
+    24: "Cetonas aromáticas",
+    25: "Amidas aromáticas",
+    26: "Amidas alifáticas",
+    27: "Alcoholes grasos / largos",
+    28: "Ácidos grasos",
+    29: "Compuestos organosulfurados",
+    30: "Lactonas aromáticas",
+    31: "Compuestos bencénicos sustituidos",
+    32: "Compuestos nitrogenados heterocíclicos",
+    33: "Compuestos con oxígeno cíclico",
+    34: "Éteres de glicoles",
+    35: "Compuestos con grupos TMS (trimetilsililo)",
+    36: "Compuestos con anillos fundidos",
+    37: "Compuestos policíclicos aromáticos (PAHs)",
+    38: "Nitrilos aromáticos",
+    39: "Otros"
+}
+Y devuélveme simplemente el CAS del compuesto y el número de la familia a la que pertenece, en formato cas : numero. Aquí está la lista de compuestos:
+cas: 25740-80-1, name: S-Benzoyl(thiohydroxylamine), formula: C7H7NOS
+cas: 16601-40-4, name: S-Benzyl phenylmethanethiosulfonate, formula: C14H14O2S2
+cas: 55591-16-7, name: S-Indacene-1,7-dione, 2,3,5,6-tetrahydro-3,3,4,5,5,8-hexamethyl-, formula: C18H22O2
+cas: 42075-42-3, name: S-Methyl 2-methylpropanethioate, formula: C5H10OS
+cas: 23747-45-7, name: S-Methyl 3-methylbutanethioate, formula: C6H12OS
+cas: 5925-75-7, name: S-Methyl propanethioate, formula: C4H8OS
+cas: 57537-54-9, name: S-Tetrazine, 3-methyl-6-(2-thienyl)-, formula: C7H6N4S
+cas: 1000375-43-1, name: Salicylic acid, 1-methylpropyl ether, 1-methylpropyl ester, formula: C15H22O3
+cas: 1000375-43-6, name: Salicylic acid, 2-methylpropyl ether, 2-methylpropyl ester, formula: C15H22O3
+cas: 1000375-42-6, name: Salicylic acid, tert.-butyl ester, formula: C11H14O3
+cas: 325837-00-1, name: Salmeterol, N-trifluoroacetyl-O,O,o-tris(trimethylsilyl)deriv., formula: C36H60F3NO5Si3
+cas: 20405-58-7, name: Salsoline, formula: C11H15NO2
+cas: 1000321-46-4, name: Sarcosine, N-(2-thienylcarbonyl)-, butyl ester, formula: C12H17NO3S
+cas: 1000321-50-6, name: Sarcosine, N-(4-trifluoromethylbenzoyl)-, pentyl ester, formula: C16H20F3NO3
+cas: 107-44-8, name: Sarin, formula: C4H10FO2P
+cas: 564-20-5, name: Sclareolide, formula: C16H26O2
+cas: 120-08-1, name: Scoparone, formula: C11H10O4
+cas: 1000354-36-1, name: Sebacic acid, 4-methoxybenzyl propyl ester, formula: C21H32O5
+cas: 1000355-46-4, name: Sebacic acid, di(2-methylpent-3-yl) ester, formula: C22H42O4
+cas: 1000354-54-2, name: Sebacic acid, ethyl 4-(2-phenylpropyl-2)-phenyl ester, formula: C27H36O4
+cas: 1000354-54-8, name: Sebacic acid, nonyl 4-(2-phenylpropyl-2)-phenyl ester, formula: C34H50O4
+cas: 1000130-06-2, name: Sedoheptulosan tetrabenzoate, formula: C35H28O10
+cas: 515-96-8, name: Semioxamazide, formula: C2H5N3O2
+cas: 13909-09-6, name: Semustine, formula: C10H18ClN3O2
+cas: 54077-65-5, name: Silacyclopent-3-ene, 3-methyl-, formula: C5H10Si
+cas: 1000-70-0, name: Silanamine, N,N'-methanetetraylbis[1,1,1-trimethyl-, formula: C7H18N2Si2
+cas: 32713-31-8, name: Silanamine, N-(dimethylsilyl)-1,1,1-trimethyl-, N-methyl., formula: C6H19NSi2
+cas: 1000351-86-1, name: Silane, (1,1-dimethylethyl)(heptadecyloxy)dimethyl-, formula: C23H50OSi
+cas: 61595-80-0, name: Silane, (1,1-dimethylethyl)dimethyl[(6,6,9-trimethyl-3-pentyl-6H-dibenzo[b,d]pyran-1-yl)oxy]-, formula: C27H40O2Si
+cas: 78905-09-6, name: Silane, (2-ethynylphenyl)trimethyl-, formula: C11H14Si
+cas: 18173-74-5, name: Silane, (2-methoxyethoxy)trimethyl-, formula: C6H16O2Si
+cas: 33285-71-1, name: Silane, (3-methoxyphenoxy)trimethyl-, formula: C10H16O2Si
+cas: 17005-59-3, name: Silane, (4-chlorophenoxy)trimethyl-, formula: C9H13ClOSi
+cas: 17988-50-0, name: Silane, (4-ethylphenyl)trimethyl-, formula: C11H18Si
+cas: 6689-38-9, name: Silane, (4-methoxyphenoxy)trimethyl-, formula: C10H16O2Si
+cas: 7570-22-1, name: Silane, (iodomethyl)-, formula: CH5ISi
+cas: 4206-67-1, name: Silane, (iodomethyl)trimethyl-, formula: C4H11ISi
+cas: 76557-76-1, name: Silane, 2-butenylmethoxymethylphenyl-, formula: C12H18OSi
+cas: 77573-01-4, name: Silane, [(6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-6H-dibenzo[b,d]pyran-1,8-diyl)bis(oxy)]bis[tripropyl-, [6aR-(6a.alpha.,8.beta.,10a.beta.)]-, formula: C39H70O3Si2
+cas: 18412-68-5, name: Silane, [4-(1,1-dimethylethyl)phenyl]trimethyl-, formula: C13H22Si
+cas: 56114-62-6, name: Silane, [[4-[1,2-bis[(trimethylsilyl)oxy]ethyl]-1,2-phenylene]bis(oxy)]bis[trimethyl-, formula: C20H42O4Si4
+cas: 1825-65-6, name: Silane, butoxytrimethyl-, formula: C7H18OSi
+cas: 1000363-52-8, name: Silane, diethyl(2-ethoxyethyloxy)octadecyloxy-, formula: C26H56O3Si
+cas: 1000363-42-4, name: Silane, diethyl(2-ethylbutoxy)pentyloxy-, formula: C15H34O2Si
+cas: 1000363-05-1, name: Silane, diethyl(2-ethylhexyloxy)nonyloxy-, formula: C21H46O2Si
+cas: 1000363-54-1, name: Silane, diethyl(2-methoxyethoxy)undecyloxy-, formula: C18H40O3Si
+cas: 1000363-09-9, name: Silane, diethyl(2-methylbutoxy)pentyloxy-, formula: C14H32O2Si
+cas: 1000363-77-2, name: Silane, diethyl(2-methylpent-3-yloxy)propoxy-, formula: C13H30O2Si
+cas: 1000363-22-9, name: Silane, diethyl(pentafluorobenzyloxy)tetradecyloxy-, formula: C25H41F5O2Si
+cas: 1000363-22-6, name: Silane, diethyl(pentafluorobenzyloxy)undecyloxy-, formula: C22H35F5O2Si
+cas: 1000363-22-1, name: Silane, diethylbutoxy(pentafluorobenzyloxy)-, formula: C15H21F5O2Si
+cas: 1000363-73-3, name: Silane, diethylbutoxyhexyloxy-, formula: C14H32O2Si
+cas: 1000363-42-9, name: Silane, diethyldecyloxy(2-ethylbutoxy)-, formula: C20H44O2Si
+cas: 1000362-99-9, name: Silane, diethyldecyloxy(3-methylbutoxy)-, formula: C19H42O2Si
+cas: 1000363-95-4, name: Silane, diethyldecyloxyheptyloxy-, formula: C21H46O2Si
+cas: 1000363-33-1, name: Silane, diethyldecyloxyhexadecyloxy-, formula: C30H64O2Si
+cas: 1000363-06-5, name: Silane, diethyldecyloxyisobutoxy-, formula: C18H40O2Si
+cas: 1000363-09-1, name: Silane, diethyldecyloxynonyloxy-, formula: C23H50O2Si
+cas: 1000363-33-3, name: Silane, diethyldecyloxyoctadecyloxy-, formula: C32H68O2Si
+cas: 1000363-08-0, name: Silane, diethyldecyloxyoctyloxy-, formula: C22H48O2Si
+cas: 1000363-96-6, name: Silane, diethyldecyloxypentadecyloxy-, formula: C29H62O2Si
+cas: 1000363-03-7, name: Silane, diethyldecyloxypentyloxy-, formula: C19H42O2Si
+cas: 1000363-32-9, name: Silane, diethyldecyloxyundecyloxy-, formula: C25H54O2Si
+cas: 1000363-25-7, name: Silane, diethyldi(4-acetylphenoxy)-, formula: C20H24O4Si
+cas: 1000363-15-2, name: Silane, diethyldodecyloxy(3-phenylpropoxy)-, formula: C25H46O2Si
+cas: 1000363-22-7, name: Silane, diethyldodecyloxy(pentafluorobenzyloxy)-, formula: C23H37F5O2Si
+cas: 1000363-03-9, name: Silane, diethyldodecyloxypentyloxy-, formula: C21H46O2Si
+cas: 1000363-04-5, name: Silane, diethylethoxy(2-ethylhexyloxy)-, formula: C14H32O2Si
+cas: 1000363-77-1, name: Silane, diethylethoxy(2-methylpent-3-yloxy)-, formula: C12H28O2Si
+cas: 1000363-93-7, name: Silane, diethylethoxyneopentyloxy-, formula: C11H26O2Si
+cas: 1000363-07-2, name: Silane, diethylethoxyoctyloxy-, formula: C14H32O2Si
+cas: 1000363-02-7, name: Silane, diethylethoxypentyloxy-, formula: C11H26O2Si
+cas: 1000363-51-2, name: Silane, diethylheptadecyloxy(2-hexyloxy)-, formula: C27H58O2Si
+cas: 1000363-54-6, name: Silane, diethylheptadecyloxy(2-methoxyethoxy)-, formula: C24H52O3Si
+cas: 1000363-10-8, name: Silane, diethylheptadecyloxy(2-methylbutoxy)-, formula: C26H56O2Si
+cas: 1000363-96-0, name: Silane, diethylheptyloxyoctadecyloxy-, formula: C29H62O2Si
+cas: 1000363-07-7, name: Silane, diethylheptyloxyoctyloxy-, formula: C19H42O2Si
+cas: 1000363-95-6, name: Silane, diethylheptyloxytridecyloxy-, formula: C24H52O2Si
+cas: 1000363-94-8, name: Silane, diethylhexadecyloxyneopentyloxy-, formula: C25H54O2Si
+cas: 1000363-97-2, name: Silane, diethylhexadecyloxyundecyloxy-, formula: C31H66O2Si
+cas: 1000363-07-6, name: Silane, diethylhexyloxyoctyloxy-, formula: C18H40O2Si
+cas: 1000363-74-3, name: Silane, diethylhexyloxypentadecyloxy-, formula: C25H54O2Si
+cas: 1000363-74-1, name: Silane, diethylhexyloxytridecyloxy-, formula: C23H50O2Si
+cas: 1000363-08-8, name: Silane, diethylisohexyloxynonyloxy-, formula: C19H42O2Si
+cas: 1000363-32-5, name: Silane, diethylisohexyloxyoctadecyloxy-, formula: C28H60O2Si
+cas: 1000363-08-5, name: Silane, diethylnonyloxypropoxy-, formula: C16H36O2Si
+cas: 1000363-54-7, name: Silane, diethyloctadecyloxy(2-methoxyethoxy)-, formula: C25H54O3Si
+cas: 1000363-15-7, name: Silane, diethyloctadecyloxy(3-phenylpropoxy)-, formula: C31H58O2Si
+cas: 1000363-04-3, name: Silane, diethyloctadecyloxypentyloxy-, formula: C27H58O2Si
+cas: 1000363-22-4, name: Silane, diethyloctyloxy(pentafluorobenzyloxy)-, formula: C19H29F5O2Si
+cas: 1000363-03-5, name: Silane, diethyloctyloxypentyloxy-, formula: C17H38O2Si
+cas: 1000363-08-3, name: Silane, diethyloctyloxytetradecyloxy-, formula: C26H56O2Si
+cas: 1000363-96-9, name: Silane, diethylpentadecyloxytetradecyloxy-, formula: C33H70O2Si
+cas: 1000363-03-8, name: Silane, diethylpentyloxyundecyloxy-, formula: C20H44O2Si
+cas: 1000363-56-3, name: Silane, diethylpropoxy(trans-4-methylcyclohexyloxy)-, formula: C14H30O2Si
+cas: 353-66-2, name: Silane, difluorodimethyl-, formula: C2H6F2Si
+cas: 1112-39-6, name: Silane, dimethoxydimethyl-, formula: C4H12O2Si
+cas: 1000346-96-7, name: Silane, dimethyl(2-methylphenoxy)docosyloxy-, formula: C31H58O2Si
+cas: 1000347-22-2, name: Silane, dimethyl(2-naphthoxy)heptadecyloxy-, formula: C29H48O2Si
+cas: 1000347-22-1, name: Silane, dimethyl(2-naphthoxy)hexadecyloxy-, formula: C28H46O2Si
+cas: 1000347-22-3, name: Silane, dimethyl(2-naphthoxy)octadecyloxy-, formula: C30H50O2Si
+cas: 1000347-22-0, name: Silane, dimethyl(2-naphthoxy)tetradecyloxy-, formula: C26H42O2Si
+cas: 1000347-18-8, name: Silane, dimethyl(4-(2-phenylprop-2-yl)phenoxy)butoxy-, formula: C21H30O2Si
+cas: 1000347-19-3, name: Silane, dimethyl(4-(2-phenylprop-2-yl)phenoxy)decyloxy-, formula: C27H42O2Si
+cas: 1000347-19-5, name: Silane, dimethyl(4-(2-phenylprop-2-yl)phenoxy)dodecyloxy-, formula: C29H46O2Si
+cas: 1000347-19-1, name: Silane, dimethyl(4-(2-phenylprop-2-yl)phenoxy)hexyloxy-, formula: C23H34O2Si
+cas: 1000347-19-2, name: Silane, dimethyl(4-(2-phenylprop-2-yl)phenoxy)nonyloxy-, formula: C26H40O2Si
+cas: 1000347-18-9, name: Silane, dimethyl(4-(2-phenylprop-2-yl)phenoxy)pentyloxy-, formula: C22H32O2Si
+cas: 1000347-18-7, name: Silane, dimethyl(4-(2-phenylprop-2-yl)phenoxy)propoxy-, formula: C20H28O2Si
+cas: 1000347-19-4, name: Silane, dimethyl(4-(2-phenylprop-2-yl)phenoxy)undecyloxy-, formula: C28H44O2Si
+cas: 1000347-31-3, name: Silane, dimethyl(4-acetylphenoxy)heptyloxy-, formula: C17H28O3Si
+cas: 1000347-15-0, name: Silane, dimethyl(4-methoxyphenoxy)dodecyloxy-, formula: C21H38O3Si
+cas: 1000347-13-9, name: Silane, dimethyl(4-methoxyphenoxy)ethoxy-, formula: C11H18O3Si
+cas: 1000347-15-4, name: Silane, dimethyl(4-methoxyphenoxy)heptadecyloxy-, formula: C26H48O3Si
+cas: 1000347-15-3, name: Silane, dimethyl(4-methoxyphenoxy)hexadecyloxy-, formula: C25H46O3Si
+cas: 1000347-15-2, name: Silane, dimethyl(4-methoxyphenoxy)pentadecyloxy-, formula: C24H44O3Si
+cas: 1000347-15-1, name: Silane, dimethyl(4-methoxyphenoxy)tridecyloxy-, formula: C22H40O3Si
+cas: 1000347-49-9, name: Silane, dimethyl(4-phenylphenoxy)octadecyloxy-, formula: C32H52O2Si
+cas: 1000347-49-7, name: Silane, dimethyl(4-phenylphenoxy)pentadecyloxy-, formula: C29H46O2Si
+cas: 1000347-67-1, name: Silane, dimethyl(dimethyl(dimethyl(2-hexyloxy)silyloxy)silyloxy)(2-hexyloxy)-, formula: C18H44O4Si3
+cas: 1111-74-6, name: Silane, dimethyl-, formula: C2H8Si
+cas: 1000346-93-1, name: Silane, dimethyldecyloxyhexadecyloxy-, formula: C28H60O2Si
+cas: 1000355-75-2, name: Silane, dimethylnonyloxyheptadecyloxy-, formula: C28H60O2Si
+cas: 1000367-66-8, name: Silane, diphenyl(2-ethoxyethoxy)undecyloxy-, formula: C27H42O3Si
+cas: 18536-91-9, name: Silane, dodecyltriethoxy-, formula: C18H40O3Si
+cas: 18292-29-0, name: Silane, ethenyldiethylmethyl-, formula: C7H16Si
+cas: 17873-23-3, name: Silane, ethyldimethylphenyl-, formula: C10H16Si
+cas: 10132-71-5, name: Silane, ethylfluorodimethyl-, formula: C4H11FSi
+cas: 3439-38-1, name: Silane, ethyltrimethyl-, formula: C5H14Si
+cas: 3439-97-2, name: Silane, methyltriphenoxy-, formula: C19H18O3Si
+cas: 631-36-7, name: Silane, tetraethyl-, formula: C8H20Si
+cas: 75-76-3, name: Silane, tetramethyl-, formula: C4H12Si
+cas: 13107-12-5, name: Silane, tributylvinyl-, formula: C14H30Si
+cas: 7325-84-0, name: Silane, trichlorodocosyl-, formula: C22H45Cl3Si
+cas: 112-04-9, name: Silane, trichlorooctadecyl-, formula: C18H37Cl3Si
+cas: 358-43-0, name: Silane, triethylfluoro-, formula: C6H15FSi
+cas: 17994-05-7, name: Silane, trimethyl(3,5-xylyloxy)-, formula: C11H18OSi
+cas: 18246-56-5, name: Silane, trimethyl(3-methylbutoxy)-, formula: C8H20OSi
+cas: 17902-31-7, name: Silane, trimethyl(3-methylphenoxy)-, formula: C10H16OSi
+cas: 2170-06-1, name: Silane, trimethyl(phenylethynyl)-, formula: C11H14Si
+cas: 768-32-1, name: Silane, trimethylphenyl-, formula: C9H14Si
+cas: 1066-42-8, name: Silanediol, dimethyl-, formula: C2H8O2Si
+cas: 75732-41-1, name: Silanol, (1,1-dimethylethyl)dimethyl-, benzoate, formula: C13H20O2Si
+cas: 5906-73-0, name: Silanol, ethyldimethyl-, formula: C4H12OSi
+cas: 1066-40-6, name: Silanol, trimethyl-, formula: C3H10OSi
+cas: 39981-89-0, name: Silanol, trimethyl-, carbonate (2:1), formula: C7H18O3Si2
+cas: 791-31-1, name: Silanol, triphenyl-, formula: C18H16OSi
+cas: 7783-61-1, name: Silicon tetrafluoride, formula: F4Si
+cas: 33285-85-7, name: Silylamine, 1,1,1-trimethyl-N-[6-(trimethylsiloxy)-2-naphthyl]-, formula: C16H25NOSi2
+cas: 42739-26-4, name: Sorbic acid vinyl ester, formula: C8H10O2
+cas: 23455-44-9, name: Spinasterone, formula: C29H46O
+cas: 1000192-74-9, name: Spirio-10-(2,11-dioxabicyclo[4.4.1]undeca-3,5-diene)-2'-(oxirane), 1,3,7,7-tetramethyl-, formula: C14H20O3
+cas: 55469-37-9, name: Spiro-1-(cyclohex-2-ene)-2'-(5'-oxabicyclo[2.1.0]pentane), 1',4',2,6,6-pentamethyl-, formula: C14H22O
+cas: 1000305-92-8, name: Spiro[1,3,3,7-tetramethylindoline]-2,6'-piperidin-2-one, formula: C16H22N2O
+cas: 765-46-8, name: Spiro[2,4]hepta-4,6-diene, formula: C7H8
+cas: 24308-54-1, name: Spiro[2.4]heptane, 4-methylene-, formula: C8H12
+cas: 1000195-99-9, name: Spiro[2.5]oct-4-ene, 1-acetyl-1,4,8,8-tetramethyl-, formula: C14H22O
+cas: 81532-19-6, name: Spiro[3.6]deca-5,7-dien-1-one,5,9,9-trimethyl, formula: C13H18O
+cas: 61050-91-7, name: Spiro[4.5]decan-7-one, 1,8-dimethyl-8,9-epoxy-4-isopropyl-, formula: C15H24O2
+cas: 4728-90-9, name: Spiro[5.6]dodecan-7-one, formula: C12H20O
+cas: 181-15-7, name: Spiro[5.6]dodecane, formula: C12H22
+cas: 15183-53-6, name: Spiro[azetidine-2,9'-fluoren]-4-one, 3-ethyl-1,3-diphenyl-, formula: C29H23NO
+cas: 1000193-33-4, name: Spirobicyclo[2.2.1]hept-2-ene-5,3'-oxetan-2-'one, 4'.beta.-methyl-, formula: C10H12O2
+cas: 111-01-3, name: Squalane, formula: C30H62
+cas: 111-02-4, name: Squalene, formula: C30H50
+cas: 112-76-5, name: Stearic acid chloride, formula: C18H35ClO
+cas: 1000115-59-0, name: Stigmast-22-en-3-ol, 4-methyl-, (3.alpha.,4.alpha.)-, formula: C30H52O
+cas: 57815-90-4, name: Stigmast-22-en-3-ol, 4-methyl-, (3.beta.,4.alpha.)-, formula: C30H52O
+cas: 1058-61-3, name: Stigmast-4-en-3-one, formula: C29H48O
+cas: 1000154-66-5, name: Stigmast-5-en-3-ol, oleate, formula: C47H82O2
+cas: 18525-35-4, name: Stigmast-7-en-3-ol, (3.beta.,5.alpha.,24S)-, formula: C29H50O
+cas: 57815-94-8, name: Stigmasta-4,22-dien-3.beta.-ol, formula: C29H48O
+cas: 53755-09-2, name: Stigmasta-4,24(28)-dien-3-one, (24E)-, formula: C29H46O
+cas: 4651-48-3, name: Stigmasta-5,22-dien-3-ol, acetate, (3.beta.)-, formula: C31H50O2
+cas: 54482-54-1, name: Stigmasta-5,22-dien-3-ol, acetate, (3.beta.,22Z)-, formula: C31H50O2
+cas: 18472-36-1, name: Stigmasta-5,24(28)-dien-3-ol, (3.beta.)-, formula: C29H48O
+cas: 481-14-1, name: Stigmasta-5,24(28)-dien-3-ol, (3.beta.,24Z)-, formula: C29H48O
+cas: 1000214-18-1, name: Stigmastan-3,5,22-trien, formula: C29H46
+cas: 1000214-16-4, name: Stigmastan-3,5-diene, formula: C29H48
+cas: 107304-12-1, name: Stigmastan-6,22-dien, 3,5-dedihydro-, formula: C29H46
+cas: 19466-47-8, name: Stigmastanol, formula: C29H52O
+cas: 83-48-7, name: Stigmasterol, formula: C29H48O
+cas: 833-81-8, name: Stilbene, .alpha.-methyl-, (E)-, formula: C15H14
+cas: 1000370-89-4, name: Succinic acid, 2,2,3,3,4,4,5,5-octafluoropentyl 2-pentyl ester, formula: C14H18F8O4
+cas: 1000349-08-1, name: Succinic acid, 2,4-dimethylpent-3-yl ethyl ester, formula: C13H24O4
+cas: 1000324-94-9, name: Succinic acid, 3-pentyl propyl ester, formula: C12H22O4
+cas: 1000330-29-0, name: Succinic acid, but-3-yn-2-yl ethyl ester, formula: C10H14O4
+cas: 1000353-40-3, name: Succinic acid, cis-hex-3-enyl ethyl ester, formula: C12H20O4
+cas: 1000330-06-0, name: Succinic acid, cyclobutyl ethyl ester, formula: C10H16O4
+cas: 1000325-81-9, name: Succinic acid, cyclohexylmethyl ethyl ester, formula: C13H22O4
+cas: 1000349-63-4, name: Succinic acid, di(2,3-dimethylphenyl) ester, formula: C20H22O4
+cas: 1000329-92-0, name: Succinic acid, di(2-chloro-4-methylphenyl) ester, formula: C18H16Cl2O4
+cas: 1000324-87-3, name: Succinic acid, di(2-ethylhexyl) ester, formula: C20H38O4
+cas: 1000325-84-2, name: Succinic acid, di(2-tert-butylphenyl) ester, formula: C24H30O4
+cas: 1000358-04-1, name: Succinic acid, di(3,5-difluorophenyl) ester, formula: C16H10F4O4
+cas: 1000349-59-0, name: Succinic acid, di(3-oxobut-2-yl) ester, formula: C12H18O6
+cas: 1000360-71-2, name: Succinic acid, di(4-cyanophenyl) ester, formula: C18H12N2O4
+cas: 1000329-99-2, name: Succinic acid, diamide, N,N'-methyl-N,N'-phenyl, formula: C18H20N2O2
+cas: 1000357-99-6, name: Succinic acid, diphenyl ester, formula: C16H14O4
+cas: 1000349-48-3, name: Succinic acid, ethyl 3-heptyl ester, formula: C13H24O4
+cas: 1000349-44-0, name: Succinic acid, ethyl 3-hexyl ester, formula: C12H22O4
+cas: 1000349-57-8, name: Succinic acid, ethyl 3-oxobut-2-yl ester, formula: C10H16O5
+cas: 1000324-94-8, name: Succinic acid, ethyl 3-pentyl ester, formula: C11H20O4
+cas: 1000353-45-7, name: Succinic acid, ethyl pent-4-en-2-yl ester, formula: C11H18O4
+cas: 1000353-35-3, name: Succinic acid, ethyl tetradec-11-enyl ester, formula: C20H36O4
+cas: 1000353-42-4, name: Succinic acid, ethyl trans-hex-3-enyl ester, formula: C12H20O4
+cas: 1000330-30-2, name: Succinic acid, ethyl tridec-2-ynyl ester, formula: C19H32O4
+cas: 1000349-58-1, name: Succinic acid, hexyl 3-oxobut-2-yl ester, formula: C14H24O5
+cas: 1000325-03-9, name: Succinic acid, octyl 2-phenylethyl ester, formula: C20H30O4
+cas: 1000358-00-7, name: Succinic acid, phenethyl 2,3-dichlorophenyl ester, formula: C18H16Cl2O4
+cas: 108-30-5, name: Succinic anhydride, formula: C4H4O3
+cas: 123-56-8, name: Succinimide, formula: C4H5NO2
+cas: 63-74-1, name: Sulfanilamide, formula: C6H8N2O2S
+cas: 15894-29-8, name: Sulfone, dichloromethyl m-(trifluoromethyl)benzyl, formula: C9H7Cl2F3O2S
+cas: 1000161-73-8, name: Sulfoxide, 2-hydroxypropyl t-butyl (polar diastereoisomer), formula: C7H16O2S
+cas: 7714-32-1, name: Sulfoxide, methyl phenethyl, formula: C9H12OS
+cas: 7446-09-5, name: Sulfur dioxide, formula: O2S
+cas: 3162-58-1, name: Sulfur trioxide trimethylamine complex, formula: C3H9NO3S
+cas: 374-10-7, name: Sulfur, trifluoro(trifluoromethyl)-, formula: CF6S
+cas: 1000309-20-0, name: Sulfurous acid, 2-ethylhexyl heptadecyl ester, formula: C25H52O3S
+cas: 1000309-19-9, name: Sulfurous acid, 2-ethylhexyl hexadecyl ester, formula: C24H50O3S
+cas: 1000309-20-2, name: Sulfurous acid, 2-ethylhexyl hexyl ester, formula: C14H30O3S
+cas: 1000309-18-7, name: Sulfurous acid, 2-ethylhexyl isobutyl ester, formula: C12H26O3S
+cas: 1000309-19-0, name: Sulfurous acid, 2-ethylhexyl isohexyl ester, formula: C14H30O3S
+cas: 1000309-19-2, name: Sulfurous acid, 2-ethylhexyl nonyl ester, formula: C17H36O3S
+cas: 1000309-20-1, name: Sulfurous acid, 2-ethylhexyl octadecyl ester, formula: C26H54O3S
+cas: 1000309-19-8, name: Sulfurous acid, 2-ethylhexyl pentadecyl ester, formula: C23H48O3S
+cas: 1000309-18-9, name: Sulfurous acid, 2-ethylhexyl pentyl ester, formula: C13H28O3S
+cas: 1000309-19-7, name: Sulfurous acid, 2-ethylhexyl tetradecyl ester, formula: C22H46O3S
+cas: 1000309-19-6, name: Sulfurous acid, 2-ethylhexyl tridecyl ester, formula: C21H44O3S
+cas: 1000309-19-4, name: Sulfurous acid, 2-ethylhexyl undecyl ester, formula: C19H40O3S
+cas: 1000309-20-8, name: Sulfurous acid, 2-methyl-4-methoxybutyl octyl ester, formula: C14H30O4S
+cas: 1000309-15-1, name: Sulfurous acid, 2-pentyl propyl ester, formula: C8H18O3S
+cas: 1000309-16-3, name: Sulfurous acid, 2-pentyl tetradecyl ester, formula: C19H40O3S
+cas: 1000309-16-2, name: Sulfurous acid, 2-pentyl tridecyl ester, formula: C18H38O3S
+cas: 1000309-16-0, name: Sulfurous acid, 2-pentyl undecyl ester, formula: C16H34O3S
+cas: 1000309-11-8, name: Sulfurous acid, 2-propyl heptyl ester, formula: C10H22O3S
+cas: 1000309-12-5, name: Sulfurous acid, 2-propyl tetradecyl ester, formula: C17H36O3S
+cas: 1000309-12-4, name: Sulfurous acid, 2-propyl tridecyl ester, formula: C16H34O3S
+cas: 1000309-12-2, name: Sulfurous acid, 2-propyl undecyl ester, formula: C14H30O3S
+cas: 18748-27-1, name: Sulfurous acid, bis(2-methylpropyl) ester, formula: C8H18O3S
+cas: 1000309-11-4, name: Sulfurous acid, butyl 2-propyl ester, formula: C7H16O3S
+cas: 1000309-21-4, name: Sulfurous acid, butyl cyclohexylmethyl ester, formula: C11H22O3S
+cas: 1000309-17-7, name: Sulfurous acid, butyl decyl ester, formula: C14H30O3S
+cas: 1000309-17-9, name: Sulfurous acid, butyl dodecyl ester, formula: C16H34O3S
+cas: 1000309-18-4, name: Sulfurous acid, butyl heptadecyl ester, formula: C21H44O3S
+cas: 1000309-18-3, name: Sulfurous acid, butyl hexadecyl ester, formula: C20H42O3S
+cas: 1000309-17-3, name: Sulfurous acid, butyl hexyl ester, formula: C10H22O3S
+cas: 1000309-17-2, name: Sulfurous acid, butyl isohexyl ester, formula: C10H22O3S
+cas: 1000309-17-6, name: Sulfurous acid, butyl nonyl ester, formula: C13H28O3S
+cas: 1000309-18-5, name: Sulfurous acid, butyl octadecyl ester, formula: C22H46O3S
+cas: 1000309-17-5, name: Sulfurous acid, butyl octyl ester, formula: C12H26O3S
+cas: 1000309-17-1, name: Sulfurous acid, butyl pentyl ester, formula: C9H20O3S
+cas: 1000309-18-1, name: Sulfurous acid, butyl tetradecyl ester, formula: C18H38O3S
+cas: 1000309-18-0, name: Sulfurous acid, butyl tridecyl ester, formula: C17H36O3S
+cas: 1000309-17-8, name: Sulfurous acid, butyl undecyl ester, formula: C15H32O3S
+cas: 1000309-22-5, name: Sulfurous acid, cyclohexylmethyl heptadecyl ester, formula: C24H48O3S
+cas: 1000309-21-7, name: Sulfurous acid, cyclohexylmethyl heptyl ester, formula: C14H28O3S
+cas: 1000309-22-4, name: Sulfurous acid, cyclohexylmethyl hexadecyl ester, formula: C23H46O3S
+cas: 1000309-21-6, name: Sulfurous acid, cyclohexylmethyl hexyl ester, formula: C13H26O3S
+cas: 1000309-21-3, name: Sulfurous acid, cyclohexylmethyl isobutyl ester, formula: C11H22O3S
+cas: 1000309-21-5, name: Sulfurous acid, cyclohexylmethyl isohexyl ester, formula: C13H26O3S
+cas: 1000309-21-8, name: Sulfurous acid, cyclohexylmethyl nonyl ester, formula: C16H32O3S
+cas: 1000309-22-6, name: Sulfurous acid, cyclohexylmethyl octadecyl ester, formula: C25H50O3S
+cas: 1000309-22-3, name: Sulfurous acid, cyclohexylmethyl pentadecyl ester, formula: C22H44O3S
+cas: 1000309-22-2, name: Sulfurous acid, cyclohexylmethyl tetradecyl ester, formula: C21H42O3S
+cas: 1000309-22-1, name: Sulfurous acid, cyclohexylmethyl tridecyl ester, formula: C20H40O3S
+cas: 1000309-19-3, name: Sulfurous acid, decyl 2-ethylhexyl ester, formula: C18H38O3S
+cas: 1000309-15-9, name: Sulfurous acid, decyl 2-pentyl ester, formula: C15H32O3S
+cas: 1000309-12-1, name: Sulfurous acid, decyl 2-propyl ester, formula: C13H28O3S
+cas: 1000309-13-2, name: Sulfurous acid, decyl hexyl ester, formula: C16H34O3S
+cas: 1000309-14-3, name: Sulfurous acid, decyl pentyl ester, formula: C15H32O3S
+cas: 1000309-19-1, name: Sulfurous acid, di(2-ethylhexyl) ester, formula: C16H34O3S
+cas: 1000309-22-7, name: Sulfurous acid, di(cyclohexylmethyl) ester, formula: C14H26O3S
+cas: 1000309-13-9, name: Sulfurous acid, dipentyl ester, formula: C10H22O3S
+cas: 1000309-19-5, name: Sulfurous acid, dodecyl 2-ethylhexyl ester, formula: C20H42O3S
+cas: 1000309-16-1, name: Sulfurous acid, dodecyl 2-pentyl ester, formula: C17H36O3S
+cas: 1000309-12-3, name: Sulfurous acid, dodecyl 2-propyl ester, formula: C15H32O3S
+cas: 1000309-13-4, name: Sulfurous acid, dodecyl hexyl ester, formula: C18H38O3S
+cas: 1000309-14-5, name: Sulfurous acid, dodecyl pentyl ester, formula: C17H36O3S
+cas: 1000309-16-7, name: Sulfurous acid, heptadecyl 2-pentyl ester, formula: C22H46O3S
+cas: 1000309-16-5, name: Sulfurous acid, hexadecyl 2-pentyl ester, formula: C21H44O3S
+cas: 1000309-14-9, name: Sulfurous acid, hexadecyl pentyl ester, formula: C21H44O3S
+cas: 1000309-15-6, name: Sulfurous acid, hexyl 2-pentyl ester, formula: C11H24O3S
+cas: 1000309-11-7, name: Sulfurous acid, hexyl 2-propyl ester, formula: C9H20O3S
+cas: 1000309-12-9, name: Sulfurous acid, hexyl heptyl ester, formula: C13H28O3S
+cas: 1000309-13-1, name: Sulfurous acid, hexyl nonyl ester, formula: C15H32O3S
+cas: 1000309-13-0, name: Sulfurous acid, hexyl octyl ester, formula: C14H30O3S
+cas: 1000309-13-7, name: Sulfurous acid, hexyl pentadecyl ester, formula: C21H44O3S
+cas: 1000309-13-6, name: Sulfurous acid, hexyl tetradecyl ester, formula: C20H42O3S
+cas: 1000309-13-5, name: Sulfurous acid, hexyl tridecyl ester, formula: C19H40O3S
+cas: 1000309-13-3, name: Sulfurous acid, hexyl undecyl ester, formula: C17H36O3S
+cas: 1000309-15-2, name: Sulfurous acid, isobutyl 2-pentyl ester, formula: C9H20O3S
+cas: 1000309-13-8, name: Sulfurous acid, isobutyl pentyl ester, formula: C9H20O3S
+cas: 1000309-15-5, name: Sulfurous acid, isohexyl 2-pentyl ester, formula: C11H24O3S
+cas: 1000309-11-6, name: Sulfurous acid, isohexyl 2-propyl ester, formula: C9H20O3S
+cas: 1000309-14-0, name: Sulfurous acid, isohexyl pentyl ester, formula: C11H24O3S
+cas: 1000309-15-8, name: Sulfurous acid, nonyl 2-pentyl ester, formula: C14H30O3S
+cas: 1000309-12-0, name: Sulfurous acid, nonyl 2-propyl ester, formula: C12H26O3S
+cas: 1000309-14-2, name: Sulfurous acid, nonyl pentyl ester, formula: C14H30O3S
+cas: 1000309-16-6, name: Sulfurous acid, octadecyl 2-pentyl ester, formula: C23H48O3S
+cas: 1000309-12-7, name: Sulfurous acid, octadecyl 2-propyl ester, formula: C21H44O3S
+cas: 1000309-15-0, name: Sulfurous acid, octadecyl pentyl ester, formula: C23H48O3S
+cas: 1000309-11-9, name: Sulfurous acid, octyl 2-propyl ester, formula: C11H24O3S
+cas: 1000309-16-4, name: Sulfurous acid, pentadecyl 2-pentyl ester, formula: C20H42O3S
+cas: 1000309-12-6, name: Sulfurous acid, pentadecyl 2-propyl ester, formula: C18H38O3S
+cas: 1000309-14-8, name: Sulfurous acid, pentadecyl pentyl ester, formula: C20H42O3S
+cas: 1000309-11-5, name: Sulfurous acid, pentyl 2-propyl ester, formula: C8H18O3S
+cas: 1000309-14-7, name: Sulfurous acid, pentyl tetradecyl ester, formula: C19H40O3S
+cas: 1000309-14-6, name: Sulfurous acid, pentyl tridecyl ester, formula: C18H38O3S
+cas: 1000309-14-4, name: Sulfurous acid, pentyl undecyl ester, formula: C16H34O3S
+cas: 7683-64-9, name: Supraene, formula: C30H50
+cas: 4007-18-5, name: Sydnone, 3,4-dimethyl-, formula: C4H6N2O2
+cas: 26537-53-1, name: Sydnone, 3-(carboxymethyl)-, formula: C4H4N2O4
+cas: 69978-11-6, name: Sydnone, 3-(dimethylamino)-4-[(hydroxyimino)methyl]-, formula: C5H8N4O3
+cas: 26537-51-9, name: Sydnone, 3-isopentyl-, formula: C7H12N2O2
+cas: 6939-12-4, name: Sydnone, 3-methyl-, formula: C3H4N2O2
+cas: 80-69-3, name: Tartronic acid, formula: C3H4O5
+cas: 107534-96-3, name: Tebuconazole, formula: C16H22ClN3O
+cas: 325836-92-8, name: Terbutaline, N-trifluoroacetyl-O,O,o-tris(trimethylsilyl)deriv., formula: C23H42F3NO4Si3
+cas: 30125-63-4, name: Terbuthylazine-desethyl, formula: C7H12ClN5
+cas: 886-50-0, name: Terbutryn, formula: C10H19N5S
+cas: 81172-89-6, name: Terephthalaldehyde mono-(diethyl acetal), formula: C12H16O3
+cas: 1000323-71-3, name: Terephthalic acid, 2-bromo-4-fluorophenyl nonyl ester, formula: C23H26BrFO4
+cas: 1000323-71-2, name: Terephthalic acid, 2-bromo-4-fluorophenyl octyl ester, formula: C22H24BrFO4
+cas: 1000324-00-5, name: Terephthalic acid, 2-ethylhexyl octyl ester, formula: C24H38O4
+cas: 1000356-19-9, name: Terephthalic acid, 2-methylpent-3-yl octyl ester, formula: C22H34O4
+cas: 1000323-69-2, name: Terephthalic acid, 3,4-dichlorophenyl octyl ester, formula: C22H24Cl2O4
+cas: 1000323-69-5, name: Terephthalic acid, 3,4-dichlorophenyl undecyl ester, formula: C25H30Cl2O4
+cas: 1000324-05-2, name: Terephthalic acid, 3,5-difluorophenyl octyl ester, formula: C22H24F2O4
+cas: 1000323-64-6, name: Terephthalic acid, 3-chlorophenyl heptyl ester, formula: C21H23ClO4
+cas: 1000323-64-8, name: Terephthalic acid, 3-chlorophenyl nonyl ester, formula: C23H27ClO4
+cas: 1000323-64-7, name: Terephthalic acid, 3-chlorophenyl octyl ester, formula: C22H25ClO4
+cas: 1000356-23-1, name: Terephthalic acid, 3-hexyl octyl ester, formula: C22H34O4
+cas: 1000323-69-6, name: Terephthalic acid, 4-chloro-3-methylphenyl ethyl ester, formula: C17H15ClO4
+cas: 1000323-73-7, name: Terephthalic acid, 4-octyl octyl ester, formula: C24H38O4
+cas: 1000356-19-4, name: Terephthalic acid, butyl 2-methylpent-3-yl ester, formula: C18H26O4
+cas: 1000356-64-0, name: Terephthalic acid, butyl hept-3-yl ester, formula: C19H28O4
+cas: 1000324-06-1, name: Terephthalic acid, butyl phenyl ester, formula: C18H18O4
+cas: 1000323-92-5, name: Terephthalic acid, butyl tridec-2-yn-1-yl ester, formula: C25H36O4
+cas: 1000323-79-7, name: Terephthalic acid, cyclobutyl decyl ester, formula: C22H32O4
+cas: 1000323-98-2, name: Terephthalic acid, di(2-octyl) ester, formula: C24H38O4
+cas: 1000323-74-2, name: Terephthalic acid, di(4-octyl) ester, formula: C24H38O4
+cas: 1000323-80-0, name: Terephthalic acid, dicyclobutyl ester, formula: C16H18O4
+cas: 1000323-74-9, name: Terephthalic acid, dinonyl ester, formula: C26H42O4
+cas: 1000323-54-9, name: Terephthalic acid, ethyl 2-pentyl ester, formula: C15H20O4
+cas: 1000323-84-7, name: Terephthalic acid, ethyl non-5-yn-3-yl ester, formula: C19H24O4
+cas: 1000323-92-7, name: Terephthalic acid, hexyl tridec-2-yn-1-yl ester, formula: C27H40O4
+cas: 1000356-19-3, name: Terephthalic acid, isobutyl 2-methylpent-3-yl ester, formula: C18H26O4
+cas: 1000323-56-2, name: Terephthalic acid, isobutyl butyl ester, formula: C16H22O4
+cas: 1000356-19-6, name: Terephthalic acid, isohexyl 2-methylpent-3-yl ester, formula: C20H30O4
+cas: 1000323-84-8, name: Terephthalic acid, non-5-yn-3-yl propyl ester, formula: C20H26O4
+cas: 1000324-06-7, name: Terephthalic acid, nonyl phenyl ester, formula: C23H28O4
+cas: 1000323-92-6, name: Terephthalic acid, pentyl tridec-2-yn-1-yl ester, formula: C26H38O4
+cas: 1000324-06-9, name: Terephthalic acid, phenyl undecyl ester, formula: C25H32O4
+cas: 1000323-88-9, name: Terephthalic acid, piperidide, propyl ester, formula: C16H21NO3
+cas: 1000323-92-3, name: Terephthalic acid, propyl tridec-2-yn-1-yl ester, formula: C24H34O4
+cas: 1000370-31-3, name: Tert-octyldiphenylamine, formula: C20H27N
+cas: 55162-61-3, name: Tetracontane, 3,5,24-trimethyl-, formula: C43H88
+cas: 18919-94-3, name: Tetracosamethyl-cyclododecasiloxane, formula: C24H72O12Si12
+cas: 646-31-1, name: Tetracosane, formula: C24H50
+cas: 55429-84-0, name: Tetracosane, 11-decyl-, formula: C34H70
+cas: 55282-17-2, name: Tetracosane, 3-ethyl-, formula: C26H54
+cas: 55401-54-2, name: Tetracosane, 9-octyl-, formula: C32H66
+cas: 1000351-83-7, name: Tetracosyl heptafluorobutyrate, formula: C28H49F7O2
+cas: 81787-74-8, name: Tetracyclo[2.2.1.0(2,6).0(3,5)]heptane-7-spiro-2'-cyclopropene, formula: C9H8
+cas: 278-06-8, name: Tetracyclo[3.2.0.0(2,7).0(4,6)]heptane, formula: C7H8
+cas: 124-25-4, name: Tetradecanal, formula: C14H28O
+cas: 638-58-4, name: Tetradecanamide, formula: C14H29NO
+cas: 629-59-4, name: Tetradecane, formula: C14H30
+cas: 2425-54-9, name: Tetradecane, 1-chloro-, formula: C14H29Cl
+cas: 593-33-9, name: Tetradecane, 1-fluoro-, formula: C14H29F
+cas: 19218-94-1, name: Tetradecane, 1-iodo-, formula: C14H29I
+cas: 56292-69-4, name: Tetradecane, 2,5-dimethyl-, formula: C16H34
+cas: 14905-56-7, name: Tetradecane, 2,6,10-trimethyl-, formula: C17H36
+cas: 1560-95-8, name: Tetradecane, 2-methyl-, formula: C15H32
+cas: 18435-22-8, name: Tetradecane, 3-methyl-, formula: C15H32
+cas: 55045-14-2, name: Tetradecane, 4-ethyl-, formula: C16H34
+cas: 25117-24-2, name: Tetradecane, 4-methyl-, formula: C15H32
+cas: 25117-32-2, name: Tetradecane, 5-methyl-, formula: C15H32
+cas: 629-63-0, name: Tetradecanenitrile, formula: C14H27N
+cas: 544-63-8, name: Tetradecanoic acid, formula: C14H28O2
+cas: 3443-83-2, name: Tetradecanoic acid, 2-hydroxy-1-(hydroxymethyl)ethyl ester, formula: C17H34O4
+cas: 2040-64-4, name: Tetradecanoic acid, dodecyl ester, formula: C26H52O2
+cas: 124-06-1, name: Tetradecanoic acid, ethyl ester, formula: C16H32O2
+cas: 2599-01-1, name: Tetradecanoic acid, hexadecyl ester, formula: C30H60O2
+cas: 6222-02-2, name: Tetradecyl trifluoroacetate, formula: C16H29F3O2
+cas: 40923-93-1, name: Tetraethoxyethylene, formula: C10H20O4
+cas: 112-60-7, name: Tetraethylene glycol, formula: C8H18O5
+cas: 4353-28-0, name: Tetraethylene glycol diethyl ether, formula: C12H26O5
+cas: 5274-68-0, name: Tetraethylene glycol monododecyl ether, formula: C20H42O5
+cas: 23783-42-8, name: Tetraethyleneglycol monomethylether, formula: C9H20O5
+cas: 10036-47-2, name: Tetrafluorohydrazine, formula: F4N2
+cas: 1000364-92-9, name: Tetrafluorohydroquinone, diacetate, formula: C10H6F4O4
+cas: 1835-65-0, name: Tetrafluorophthalonitrile, formula: C8F4N2
+cas: 3583-99-1, name: Tetrafluorovinylphosphorane, formula: C2H3F4P
+cas: 19680-00-3, name: Tetrahydro[2,2']bifuranyl-5-one, formula: C8H12O3
+cas: 499-70-7, name: Tetrahydrocarvone, formula: C10H18O
+cas: 109-99-9, name: Tetrahydrofuran, formula: C4H8O
+cas: 1000131-83-9, name: Tetrahydrofuran-2-one, 5-[1-hydroxyhexyl]-, formula: C10H18O3
+cas: 1000192-28-3, name: Tetrahydrofuran-5-on-2-methanol, .alpha.-[.alpha.-methoxy-(tetrahydrofuran-5-on-2-ylmethoxy)]-, formula: C11H16O7
+cas: 1693-74-9, name: Tetrahydrofuran-D8, formula: C4D8O
+cas: 2399-48-6, name: Tetrahydrofurfuryl acrylate, formula: C8H12O3
+cas: 3003-84-7, name: Tetrahydrofurfuryl chloride, formula: C5H9ClO
+cas: 1000130-96-5, name: Tetrahydropyran Z-10-dodecenoate, formula: C17H30O3
+cas: 101250-37-7, name: Tetrahydropyrrolo[2,1-c][1,4]oxazin-4-one, formula: C7H11NO2
+cas: 129918-77-0, name: Tetrakis(pentafluorobenzoyl)-hydrazine, formula: C28F20N2O4
+cas: 1850-14-2, name: Tetramethyl orthocarbonate, formula: C5H12O4
+cas: 3566-61-8, name: Tetramethyl succinimide, formula: C8H13NO2
+cas: 10581-12-1, name: Tetramethylammonium acetate, formula: C6H15NO2
+cas: 58993-59-2, name: Tetramethyldiamidodichloromethylphosphonate, formula: C5H13Cl2N2OP
+cas: 1000156-09-4, name: Tetrapentacontane, 1,54-dibromo-, formula: C54H108Br2
+cas: 141-62-8, name: Tetrasiloxane, decamethyl-, formula: C10H30O3Si4
+cas: 14167-59-0, name: Tetratriacontane, formula: C34H70
+cas: 1000351-84-1, name: Tetratriacontyl heptafluorobutyrate, formula: C38H69F7O2
+cas: 274-89-5, name: Tetrazolo[1,5-b]pyridazine, formula: C4H3N5
+cas: 1000279-69-1, name: Thenoylpivaloylmethane, formula: C11H14O2S
+cas: 19735-74-1, name: Thiazol-2-amine, 4-(1-adamantyl)-, formula: C13H18N2S
+cas: 1000272-79-2, name: Thiazol-2-amine, N-(4-methoxybenzyl)-, formula: C11H12N2OS
+cas: 288-47-1, name: Thiazole, formula: C3H3NS
+cas: 541-58-2, name: Thiazole, 2,4-dimethyl-, formula: C5H7NS
+cas: 41981-70-8, name: Thiazole, 2,4-dimethyl-5-propyl-, formula: C8H13NS
+cas: 4175-66-0, name: Thiazole, 2,5-dimethyl-, formula: C5H7NS
+cas: 25100-91-8, name: Thiazole, 2-(4-chlorophenyl)-4-methyl-, formula: C10H8ClNS
+cas: 33342-67-5, name: Thiazole, 2-(phenylthio)-, formula: C9H7NS2
+cas: 15679-19-3, name: Thiazole, 2-ethoxy-, formula: C5H7NOS
+cas: 3581-87-1, name: Thiazole, 2-methyl-, formula: C4H5NS
+cas: 41981-63-9, name: Thiazole, 2-methyl-4-propyl-, formula: C7H11NS
+cas: 19960-63-5, name: Thiazole, 4-(1,1-dimethylethyl)-2-phenyl-, formula: C13H15NS
+cas: 41981-60-6, name: Thiazole, 4-propyl-, formula: C6H9NS
+cas: 5221-69-2, name: Thiazole, 5-methyl-2-phenyl-, formula: C10H9NS
+cas: 504-78-9, name: Thiazole, tetrahydro-, formula: C3H7NS
+cas: 23003-45-4, name: Thiazolo[3,2-a]pyridinium, 2,3-dihydro-8-hydroxy-, hydroxide, inner salt, formula: C7H7NOS
+cas: 3119-56-0, name: Thiazolo[5,4-f]quinoline, 7-methyl-, formula: C11H8N2S
+cas: 53399-36-3, name: Thieno[2,3-b]pyridine, 3-chloro-, formula: C7H4ClNS
+cas: 53399-37-4, name: Thieno[2,3-b]pyridine, 3-iodo-, formula: C7H4INS
+cas: 13393-75-4, name: Thieno[2,3-b]thiophene,2-methyl-, formula: C7H6S2
+cas: 43044-24-2, name: Thietane, 2,4-dimethyl-, formula: C5H10S
+cas: 19858-14-1, name: Thiirane, (methoxymethyl)-, formula: C4H8OS
+cas: 1000128-90-2, name: Thiocoumarine, 4,4,6,7-tetramethyl-, formula: C13H16OS
+cas: 764-49-8, name: Thiocyanic acid, 2-propenyl ester, formula: C4H5NS
+cas: 24309-48-6, name: Thiocyanic acid, 2-propynyl ester, formula: C4H3NS
+cas: 4251-16-5, name: Thiocyanic acid, propyl ester, formula: C4H7NS
+cas: 5848-75-9, name: Thiodiacetonitrile, formula: C4H4N2S
+cas: 1000310-35-7, name: Thiophen-2-methylamine, N,N-bis(2-ethylhexyl)-, formula: C21H39NS
+cas: 1000310-36-2, name: Thiophen-2-methylamine, N,N-didecyl-, formula: C25H47NS
+cas: 1000310-35-8, name: Thiophen-2-methylamine, N,N-diheptyl-, formula: C19H35NS
+cas: 1000310-35-5, name: Thiophen-2-methylamine, N,N-dihexyl-, formula: C17H31NS
+cas: 1000310-36-1, name: Thiophen-2-methylamine, N,N-dinonyl-, formula: C23H43NS
+cas: 1000310-35-2, name: Thiophen-2-methylamine, N-(2-fluorophenyl)-, formula: C11H10FNS
+cas: 1795-04-6, name: Thiophene, 2,3,4-trimethyl-, formula: C7H10S
+cas: 3140-93-0, name: Thiophene, 2,3-dibromo-, formula: C4H2Br2S
+cas: 632-16-6, name: Thiophene, 2,3-dimethyl-, formula: C6H8S
+cas: 1689-77-6, name: Thiophene, 2,5-bis(1,1-dimethylethyl)-, formula: C12H20S
+cas: 1689-78-7, name: Thiophene, 2-(1,1-dimethylethyl)-, formula: C8H12S
+cas: 5682-00-8, name: Thiophene, 2-(2-ethylbutyl)-, formula: C10H16S
+cas: 32741-05-2, name: Thiophene, 2-(2-methylpropyl)-, formula: C8H12S
+cas: 54411-06-2, name: Thiophene, 2-butyl-5-ethyl-, formula: C10H16S
+cas: 59782-59-1, name: Thiophene, 2-heptadecyl-3-methyl-, formula: C22H40S
+cas: 18794-78-0, name: Thiophene, 2-heptyl-, formula: C11H18S
+cas: 18794-77-9, name: Thiophene, 2-hexyl-, formula: C10H16S
+cas: 554-14-3, name: Thiophene, 2-methyl-, formula: C5H6S
+cas: 4861-58-9, name: Thiophene, 2-pentyl-, formula: C9H14S
+cas: 1551-27-5, name: Thiophene, 2-propyl-, formula: C7H10S
+cas: 120551-34-0, name: Thiophene, 3,4-bis(ethoxymethyl)-, formula: C10H16O2S
+cas: 632-15-5, name: Thiophene, 3,4-dimethyl-, formula: C6H8S
+cas: 69442-33-7, name: Thiophene, 3,5-dimethyl-2-(methylthio)-, formula: C7H10S2
+cas: 1689-79-8, name: Thiophene, 3-(1,1-dimethylethyl)-, formula: C8H12S
+cas: 1795-01-3, name: Thiophene, 3-ethyl-, formula: C6H8S
+cas: 616-44-4, name: Thiophene, 3-methyl-, formula: C5H6S
+cas: 59782-60-4, name: Thiophene, 3-methyl-2-nonadecyl-, formula: C24H44S
+cas: 126-33-0, name: Thiophene, tetrahydro-, 1,1-dioxide, formula: C4H8O2S
+cas: 1000339-21-5, name: Thiophene-2-acetamide, N,N-dimethyl-, formula: C8H11NOS
+cas: 1000330-96-4, name: Thiophene-2-acetic acid, 2-dimethylaminoethyl ester, formula: C10H15NO2S
+cas: 1000330-96-2, name: Thiophene-2-acetic acid, 2-methylbutyl ester, formula: C11H16O2S
+cas: 1000308-19-4, name: Thiophene-2-carboxamide, N,N-bis(2-ethylhexyl)-, formula: C21H37NOS
+cas: 1000308-18-9, name: Thiophene-2-carboxamide, N-(2-fluorophenyl)-, formula: C11H8FNOS
+cas: 1000307-06-9, name: Thiophene-2-carboxamide, N-(3-methylphenyl)-, formula: C12H11NOS
+cas: 1000307-07-4, name: Thiophene-2-carboxamide, N-(3-nitrophenyl)-, formula: C11H8N2O3S
+cas: 1000307-06-8, name: Thiophene-2-carboxamide, N-(4-fluorophenyl)-, formula: C11H8FNOS
+cas: 309281-05-8, name: Thiophene-2-carboxamide, N-(benzo[c][1,2,5]-thiadiazol-5-yl)-, formula: C11H7N3OS2
+cas: 2810-04-0, name: Thiophene-2-carboxylic acid ethyl ester, formula: C7H8O2S
+cas: 1000325-73-2, name: Thiophene-2-carboxylic acid, 2,2,2-trifluoroethyl ester, formula: C7H5F3O2S
+cas: 1000325-73-1, name: Thiophene-2-carboxylic acid, 2,4,6-trichlorophenyl ester, formula: C11H5Cl3O2S
+cas: 1000325-72-8, name: Thiophene-2-carboxylic acid, 3-pentyl ester, formula: C10H14O2S
+cas: 116171-01-8, name: Thiophene-3-carbonitrile, 5-acetyl-4-amino-2-methylthio-, formula: C8H8N2OS2
+cas: 1000322-28-4, name: Thiopropanal sulfoxide, formula: C3H6OS
+cas: 118385-15-2, name: Thiourea, 1-benzoyl-3-(3-methyl-5-isoxazolyl)-, formula: C12H11N3O2S
+cas: 261-31-4, name: Thioxanthene, formula: C13H10S
+cas: 1000288-18-0, name: Threo-2-bromo-3-pentanol, formula: C5H11BrO
+cas: 1000152-20-4, name: Thujopsene-(I2), formula: C15H24
+cas: 25269-17-4, name: Thunbergol, formula: C20H34O
+cas: 89-83-8, name: Thymol, formula: C10H14O
+cas: 2733-27-9, name: Tocopherol-.gamma.-tms-derivative (high mass adjustment=100%), formula: C31H56O2Si
+cas: 64-77-7, name: Tolbutamide, formula: C12H18N2O3S
+cas: 108-88-3, name: Toluene, formula: C7H8
+cas: 82719-54-8, name: Toluene, 4-(1,1-dimethyl-2-propynyloxy)-, formula: C12H14O
+cas: 2037-26-5, name: Toluene-D8, formula: C7D8
+cas: 3686-58-6, name: Tolycaine, formula: C15H22N2O3
+cas: 29878-31-7, name: Tolyltriazole [1H-Benzotriazole, 4-methyl-], formula: C7H7N3
+cas: 21145-77-7, name: Tonalid, formula: C18H26O
+cas: 1506-02-1, name: Tonalide, formula: C18H26O
+cas: 27203-92-5, name: Tramadol, formula: C16H25NO2
+cas: 13990-93-7, name: Trans-1,4-diethylcyclohexane, formula: C10H20
+cas: 1000371-47-8, name: Trans-1-methyl-2-nonyl-cyclohexane, formula: C16H32
+cas: 1000306-15-0, name: Tri(n-butyl)difluorophosphorane, formula: C12H27F2P
+cas: 96077-04-2, name: Tri(propylene glycol) propyl ether, formula: C12H26O4
+cas: 102-76-1, name: Triacetin, formula: C9H14O6
+cas: 638-68-6, name: Triacontane, formula: C30H62
+cas: 4209-22-7, name: Triacontane, 1-bromo-, formula: C30H61Br
+cas: 1000351-83-2, name: Triacontyl heptafluorobutyrate, formula: C34H61F7O2
+cas: 1571-11-5, name: Triallylhydrazine, formula: C9H16N2
+cas: 1112-91-0, name: Triallylmethylsilane, formula: C10H18Si
+cas: 1116-62-7, name: Triallylsilane, formula: C9H16Si
+cas: 77-90-7, name: Tributyl acetylcitrate, formula: C20H34O8
+cas: 126-73-8, name: Tributyl phosphate, formula: C12H27O4P
+cas: 1000282-92-0, name: Trichloroacetic acid, 1-adamantylmethyl ester, formula: C13H17Cl3O2
+cas: 74339-50-7, name: Trichloroacetic acid, dodecyl ester, formula: C14H25Cl3O2
+cas: 74339-54-1, name: Trichloroacetic acid, hexadecyl ester, formula: C18H33Cl3O2
+cas: 1000330-89-1, name: Trichloroacetic acid, pentafluorobenzyl ester, formula: C9H2Cl3F5O2
+cas: 74339-49-4, name: Trichloroacetic acid, undecyl ester, formula: C13H23Cl3O2
+cas: 1928-30-9, name: Tricosane, 2-methyl-, formula: C24H50
+cas: 1000351-83-4, name: Tricosyl heptafluorobutyrate, formula: C27H47F7O2
+cas: 1000351-81-0, name: Tricosyl pentafluoropropionate, formula: C26H47F5O2
+cas: 1000351-75-1, name: Tricosyl trifluoroacetate, formula: C25H47F3O2
+cas: 1000327-37-8, name: Tricyclo[2.2.1.0(2,6)]heptane, 3-chloro-5-iodo-, formula: C7H8ClI
+cas: 29550-55-8, name: Tricyclo[2.2.1.0(2,6)]heptane-3-methanol, 2,3-dimethyl-, formula: C10H16O
+cas: 56781-85-2, name: Tricyclo[3.3.1.1(3,7)]decanone, 4-iodo-, (1.alpha.,3.beta.,4.alpha.,5.alpha.,7.beta.)-, formula: C10H13IO
+cas: 30541-56-1, name: Tricyclo[3.3.1.1<3,7>]decane,tricyclo[3.3.1.1<3,7>]decylidene-, formula: C20H28
+cas: 1000195-06-2, name: Tricyclo[4.2.1.0(2,5)]nonane, formula: C9H14
+cas: 42210-02-6, name: Tricyclo[4.3.1.0(2,5)]decane, formula: C10H16
+cas: 39852-87-4, name: Tricyclo[5.2.1.0(2,6)]dec-3-en-10-ol, formula: C10H14O
+cas: 1000154-22-4, name: Tricyclo[5.2.1.0(2,6)]dec-8-ene, 4-cyclohexylidene-, formula: C16H22
+cas: 1000151-82-9, name: Tricyclo[5.2.1.0(2,6)]decane, 4-cyclohexylidene-, exo, formula: C16H24
+cas: 1000153-99-7, name: Tricyclo[6.3.0.0(1,5)]undec-2-en-4-one, 5,9-dimethyl-, formula: C13H18O
+cas: 1000151-40-9, name: Tricyclo[6.6.0.0(3,6)]tetradeca-1(8),4,11-triene, formula: C14H18
+cas: 1000150-40-2, name: Tricyclo[8.6.0.0(2,9)]hexadeca-3,15-diene, cis-2,9-anti-9,10-cis-1,10-, formula: C16H24
+cas: 1000150-40-3, name: Tricyclo[8.6.0.0(2,9)]hexadeca-3,15-diene, trans-2,9-anti-9,10-cis-1,10, formula: C16H24
+cas: 1000150-40-1, name: Tricyclo[8.6.0.0(2,9)]hexadeca-3,15-diene, trans-2,9-anti-9,10-trans-1,10-, formula: C16H24
+cas: 10486-19-8, name: Tridecanal, formula: C13H26O
+cas: 629-50-5, name: Tridecane, formula: C13H28
+cas: 35599-77-0, name: Tridecane, 1-iodo-, formula: C13H27I
+cas: 3035-75-4, name: Tridecane, 2,2,4,10,12,12-hexamethyl-7-(3,5,5-trimethylhexyl)-, formula: C28H58
+cas: 56292-66-1, name: Tridecane, 2,5-dimethyl-, formula: C15H32
+cas: 1560-96-9, name: Tridecane, 2-methyl-, formula: C14H30
+cas: 6418-41-3, name: Tridecane, 3-methyl-, formula: C14H30
+cas: 55030-62-1, name: Tridecane, 4,8-dimethyl-, formula: C15H32
+cas: 26730-12-1, name: Tridecane, 4-methyl-, formula: C14H30
+cas: 25117-31-1, name: Tridecane, 5-methyl-, formula: C14H30
+cas: 55045-11-9, name: Tridecane, 5-propyl-, formula: C16H34
+cas: 13287-21-3, name: Tridecane, 6-methyl-, formula: C14H30
+cas: 629-60-7, name: Tridecanenitrile, formula: C13H25N
+cas: 638-53-9, name: Tridecanoic acid, formula: C13H26O2
+cas: 1731-88-0, name: Tridecanoic acid, methyl ester, formula: C14H28O2
+cas: 1000115-66-1, name: Tridecanol, 2-ethyl-2-methyl-, formula: C16H34O
+cas: 77-93-0, name: Triethyl citrate, formula: C12H20O7
+cas: 121-44-8, name: Triethylamine, formula: C6H15N
+cas: 112-27-6, name: Triethylene glycol, formula: C6H14O4
+cas: 3055-94-5, name: Triethylene glycol monododecyl ether, formula: C18H38O4
+cas: 20600-87-7, name: Triethylene glycol, mononitrate, formula: C6H13NO6
+cas: 597-50-2, name: Triethylphosphine oxide, formula: C6H15OP
+cas: 1000334-54-6, name: Trifluoroacetamide, N-dimethylaminomethylydene-, formula: C5H7F3N2O
+cas: 17355-83-8, name: Trifluoroacetic acid, 2-methylpropyl ester, formula: C6H9F3O2
+cas: 71239-15-1, name: Trifluoroacetic acid, 2-tetrahydrofurylmethyl ester, formula: C7H9F3O3
+cas: 1000307-65-4, name: Trifluoroacetic acid, 4-cyanophenyl ester, formula: C9H4F3NO2
+cas: 2710-89-6, name: Trifluoroacetic acid, heptyl ester, formula: C9H15F3O2
+cas: 959010-23-2, name: Trifluoroacetic acid, pentadecyl ester, formula: C17H31F3O2
+cas: 53800-02-5, name: Trifluoroacetic acid,n-tridecyl ester, formula: C15H27F3O2
+cas: 6222-03-3, name: Trifluoroacetoxy hexadecane, formula: C18H33F3O2
+cas: 358-23-6, name: Trifluoromethanesulfonic anhydride, formula: C2F6O5S2
+cas: 1112-04-5, name: Trifluoromethyldifluorophosphine, formula: CF5P
+cas: 2665-11-4, name: Trihexadecyl borate, formula: C48H99BO3
+cas: 100-99-2, name: Triisobutylaluminum, formula: C12H27Al
+cas: 513-02-0, name: Triisopropylphosphate, formula: C9H21O4P
+cas: 127-48-0, name: Trimethadione, formula: C6H9NO3
+cas: 10416-73-6, name: Trimethyl(2,6 ditert.-butylphenoxy)silane, formula: C17H30OSi
+cas: 78721-87-6, name: Trimethyl[4-(1,1,3,3,-tetramethylbutyl)phenoxy]silane, formula: C17H30OSi
+cas: 75-24-1, name: Trimethylaluminum, formula: C3H9Al
+cas: 16607-80-0, name: Trimethylamine, 1-cyclohexyl-, formula: C9H19N
+cas: 823-96-1, name: Trimethylboroxine, formula: C3H9B3O3
+cas: 503-30-0, name: Trimethylene oxide, formula: C3H6O
+cas: 676-96-0, name: Trimethylphosphine oxide, formula: C3H9OP
+cas: 420-56-4, name: Trimethylsilyl fluoride, formula: C3H9FSi
+cas: 131929-91-4, name: Trimethylsilyloxycyclobutane, formula: C7H16OSi
+cas: 1718-18-9, name: Trioxide, bis(trifluoromethyl), formula: C2F6O3
+cas: 637-42-3, name: Tripentyl orthoformate, formula: C16H34O3
+cas: 115-86-6, name: Triphenyl phosphate, formula: C18H15O4P
+cas: 791-28-6, name: Triphenylphosphine oxide, formula: C18H15OP
+cas: 621-76-1, name: Tripropyl orthoformate, formula: C10H22O3
+cas: 13674-87-8, name: Tris(1,3-dichloroisopropyl)phosphate, formula: C9H15Cl6O4P
+cas: 78-51-3, name: Tris(2-butoxyethyl) phosphate, formula: C18H39O7P
+cas: 115-96-8, name: Tris(2-chloroethyl) phosphate, formula: C6H12Cl3O4P
+cas: 1000298-93-2, name: Tris(2-hydroxy-3,3,3-trifluoropropyl)amine, formula: C9H12F9NO3
+cas: 1067-98-7, name: Tris(3-chloropropyl) phosphate, formula: C9H18Cl3O4P
+cas: 15750-73-9, name: Tris(3-phenyl-2,4-pentanedionato)aluminum(iii), formula: C33H33AlO6
+cas: 5762-56-1, name: Tris(dimethylamino)methane, formula: C7H19N3
+cas: 23974-29-0, name: Tris(ethylenimino)methane, formula: C7H13N3
+cas: 691-69-0, name: Tris(trifluoromethylthio)methane, formula: C4HF9S3
+cas: 107-51-7, name: Trisiloxane, octamethyl-, formula: C8H24O2Si3
+cas: 1000152-80-8, name: Trispiro[4.2.4.2.4.2.]heneicosane, formula: C21H36
+cas: 532-24-1, name: Tropinone, formula: C8H13NO
+cas: 4839-12-7, name: Tropinone, 6.beta.-methoxy-, (+)-, formula: C9H15NO2
+cas: 526-55-6, name: Tryptophol, formula: C10H11NO
+cas: 13062-78-7, name: Tyramine, N-formyl-, formula: C9H11NO2
+cas: 1000131-21-0, name: Tyrosine, N-carboxy-, cyanomethyl ester, formula: C12H12N2O5
+cas: 112-44-7, name: Undecanal, formula: C11H22O
+cas: 5875-26-3, name: Undecanamide, 11-bromo-, formula: C11H22BrNO
+cas: 1120-21-4, name: Undecane, formula: C11H24
+cas: 17301-27-8, name: Undecane, 2,10-dimethyl-, formula: C13H28
+cas: 17312-77-5, name: Undecane, 2,3-dimethyl-, formula: C13H28
+cas: 17312-80-0, name: Undecane, 2,4-dimethyl-, formula: C13H28
+cas: 17301-22-3, name: Undecane, 2,5-dimethyl-, formula: C13H28
+cas: 17301-23-4, name: Undecane, 2,6-dimethyl-, formula: C13H28
+cas: 17301-24-5, name: Undecane, 2,7-dimethyl-, formula: C13H28
+cas: 17301-25-6, name: Undecane, 2,8-dimethyl-, formula: C13H28
+cas: 17301-26-7, name: Undecane, 2,9-dimethyl-, formula: C13H28
+cas: 13151-77-4, name: Undecane, 2-cyclohexyl-, formula: C17H34
+cas: 7045-71-8, name: Undecane, 2-methyl-, formula: C12H26
+cas: 17312-65-1, name: Undecane, 3,3-dimethyl-, formula: C13H28
+cas: 17312-78-6, name: Undecane, 3,4-dimethyl-, formula: C13H28
+cas: 17312-81-1, name: Undecane, 3,5-dimethyl-, formula: C13H28
+cas: 17301-28-9, name: Undecane, 3,6-dimethyl-, formula: C13H28
+cas: 17301-29-0, name: Undecane, 3,7-dimethyl-, formula: C13H28
+cas: 17301-30-3, name: Undecane, 3,8-dimethyl-, formula: C13H28
+cas: 17301-31-4, name: Undecane, 3,9-dimethyl-, formula: C13H28
+cas: 13151-78-5, name: Undecane, 3-cyclohexyl-, formula: C17H34
+cas: 17312-58-2, name: Undecane, 3-ethyl-, formula: C13H28
+cas: 1002-43-3, name: Undecane, 3-methyl-, formula: C12H26
+cas: 71138-64-2, name: Undecane, 3-methylene-, formula: C12H24
+cas: 17312-68-4, name: Undecane, 4,4-dimethyl-, formula: C13H28
+cas: 17312-79-7, name: Undecane, 4,5-dimethyl-, formula: C13H28
+cas: 17312-82-2, name: Undecane, 4,6-dimethyl-, formula: C13H28
+cas: 17301-32-5, name: Undecane, 4,7-dimethyl-, formula: C13H28
+cas: 17301-33-6, name: Undecane, 4,8-dimethyl-, formula: C13H28
+cas: 17312-59-3, name: Undecane, 4-ethyl-, formula: C13H28
+cas: 2980-69-0, name: Undecane, 4-methyl-, formula: C12H26
+cas: 17312-73-1, name: Undecane, 5,5-dimethyl-, formula: C13H28
+cas: 17312-83-3, name: Undecane, 5,7-dimethyl-, formula: C13H28
+cas: 13151-80-9, name: Undecane, 5-cyclohexyl-, formula: C17H34
+cas: 17453-94-0, name: Undecane, 5-ethyl-, formula: C13H28
+cas: 2755-07-9, name: Undecane, 5-ethyl-5-propyl-, formula: C16H34
+cas: 1632-70-8, name: Undecane, 5-methyl-, formula: C12H26
+cas: 17312-76-4, name: Undecane, 6,6-dimethyl-, formula: C13H28
+cas: 13151-81-0, name: Undecane, 6-cyclohexyl-, formula: C17H34
+cas: 17312-60-6, name: Undecane, 6-ethyl-, formula: C13H28
+cas: 112-37-8, name: Undecanoic acid, formula: C11H22O2
+cas: 1000303-61-4, name: Undecanoic acid, 10-hydroxy-11-piperidin-1-yl-, propyl ester, formula: C19H37NO3
+cas: 17746-05-3, name: Undecanoyl chloride, formula: C11H21ClO
+cas: 1000373-75-4, name: Undecyl (E)-2-methylbut-2-enoate, formula: C16H30O2
+cas: 66-22-8, name: Uracil, formula: C4H4N2O2
+cas: 1000151-99-4, name: Uracil, 3-methyl-1-(tetrahydrofuran-2-yl)-, formula: C9H12N2O3
+cas: 32970-34-6, name: Uracil, 6-acetamido-, formula: C6H7N3O3
+cas: 3232-84-6, name: Urazole, formula: C2H3N3O2
+cas: 2078-71-9, name: Urea, (2-hydroxyethyl)-, formula: C3H8N2O2
+cas: 330-54-1, name: Urea, N'-(3,4-dichlorophenyl)-N,N-dimethyl-, formula: C9H10Cl2N2O
+cas: 598-94-7, name: Urea, N,N-dimethyl-, formula: C3H8N2O
+cas: 684-93-5, name: Urea, N-methyl-N-nitroso-, formula: C2H5N3O2
+cas: 625-52-5, name: Urea, ethyl-, formula: C3H8N2O
+cas: 632-22-4, name: Urea, tetramethyl-, formula: C5H12N2O
+cas: 1000193-33-5, name: Urea, trimethyl-N-(prop-2-en-1-ylideneamino)-, formula: C7H13N3O
+cas: 3475-63-6, name: Urea, trimethylnitroso-, formula: C4H9N3O2
+cas: 66394-74-9, name: Urs-20-en-16-ol, (16.beta.,18.alpha.,19.alpha.)-, formula: C30H50O
+cas: 6134-74-3, name: Valeric acid, 2-benzoyl-2-hydroxy-4-methyl-, ethyl ester, benzoate, formula: C22H24O5
+cas: 5451-86-5, name: Valeric acid, 2-tetrahydrofurylmethyl ester, formula: C10H18O3
+cas: 1000330-98-1, name: Valeric acid, 4-isopropylphenyl ester, formula: C14H20O2
+cas: 1000307-98-9, name: Valeric acid, 4-nitrophenyl ester, formula: C11H13NO4
+cas: 2082-59-9, name: Valeric anhydride, formula: C10H18O3
+cas: 33342-92-6, name: Valerophenone, 4'-(trimethylsiloxy)-, formula: C14H22O2Si
+cas: 1000328-89-4, name: Valine, N-methyl-N-(2-chloroethoxycarbonyl)-, hexadecyl ester, formula: C25H48ClNO4
+cas: 1000328-96-0, name: Valine, N-methyl-n-butoxycarbonyl-, octyl ester, formula: C19H37NO4
+cas: 1000328-91-8, name: Valine, N-methyl-n-propoxycarbonyl-, isohexyl ester, formula: C16H31NO4
+cas: 1000328-91-7, name: Valine, N-methyl-n-propoxycarbonyl-, pentyl ester, formula: C15H29NO4
+cas: 1000328-91-5, name: Valine, N-methyl-n-propoxycarbonyl-, propyl ester, formula: C13H25NO4
+cas: 1000328-82-9, name: Valylvaline, N,N'-dimethyl-N'-(2-methoxyethoxycarbonyl)-, heptyl ester, formula: C23H44N2O6
+cas: 1000328-74-5, name: Valylvaline, N,N'-dimethyl-N'-propargyloxycarbonyl-, isohexyl ester, formula: C22H38N2O5
+cas: 1000329-05-1, name: Valylvaline, N,N'-dimethyl-n-propoxycarbonyl-, ethyl ester, formula: C18H34N2O5
+cas: 1000329-05-3, name: Valylvaline, N,N'-dimethyl-n-propoxycarbonyl-, isobutyl ester, formula: C20H38N2O5
+cas: 121-33-5, name: Vanillin, formula: C8H8O3
+cas: 93413-44-6, name: Venlafaxine, formula: C17H27NO2
+cas: 94-04-2, name: Vinyl 2-ethylhexanoate, formula: C10H18O2
+cas: 769-78-8, name: Vinyl benzoate, formula: C9H8O2
+cas: 123-20-6, name: Vinyl butyrate, formula: C6H10O2
+cas: 818-44-0, name: Vinyl caprylate, formula: C10H18O2
+cas: 14861-06-4, name: Vinyl crotonate, formula: C6H8O2
+cas: 765-14-0, name: Vinyl lauryl ether, formula: C14H28O
+cas: 17719-70-9, name: Vinyl trans-cinnamate, formula: C11H10O2
+cas: 59-02-9, name: Vitamin E, formula: C29H50O2
+cas: 2525-10-7, name: XMC (3,4-Dimethylphenyl N-methylcarbamate), formula: C10H13NO2
+cas: 19814-75-6, name: Xanthene, 9,9-dimethyl-, formula: C15H14O
+cas: 1000130-95-1, name: Z,Z-2,15-Octadecedien-1-ol acetate, formula: C20H36O2
+cas: 1000131-33-2, name: Z-(13,14-Epoxy)tetradec-11-en-1-ol acetate, formula: C16H28O3
+cas: 1000130-99-3, name: Z-10-Tetradecen-1-ol acetate, formula: C16H30O2
+cas: 1000131-36-6, name: Z-11,13-Dimethyl-11-tetradecen-1-ol acetate, formula: C18H34O2
+cas: 1000131-36-7, name: Z-14-Hexadecen-1-ol acetate, formula: C18H34O2
+cas: 1000131-07-9, name: Z-17-Nonadecen-1-ol acetate, formula: C21H40O2
+cas: 1000308-87-2, name: Z-2-Butenoic acid, 3-iodo-, formula: C4H5IO2
+cas: 69064-36-4, name: Z-2-Dodecenol, formula: C12H24O
+cas: 1000308-87-0, name: Z-2-Propenoic acid, 3-iodo-, methyl ester, formula: C4H5IO2
+cas: 1000131-08-3, name: Z-4-Nonadecen-1-ol acetate, formula: C21H40O2
+cas: 1000131-11-8, name: Z-5-Nonadecene, formula: C19H38
+cas: 1000131-08-7, name: Z-7-Octadecen-1-ol acetate, formula: C20H38O2
+cas: 1000130-87-5, name: Z-8-Hexadecene, formula: C16H32
+cas: 1000130-84-5, name: Z-8-Methyl-9-tetradecenoic acid, formula: C15H28O2
+cas: 74793-36-5, name: Zinc, bis[2-(1,1-dimethylethyl)-3,3-dimethylcyclopropyl]-, [1.alpha.(1R*,2R*),2.beta.]-, formula: C18H34Zn
+cas: 82626-48-0, name: Zolpidem, formula: C19H21N3O
+cas: 1000316-76-6, name: [(Furan-2-carbonyl)methylamino]acetic acid, formula: C8H9NO4
+cas: 1000316-76-7, name: [(Methyl)(thiophene-2-carbonyl)amino]acetic acid, formula: C8H9NO3S
+cas: 4341-02-0, name: [1,1'-Biphenyl]-2,2'-dicarbonitrile, formula: C14H8N2
+cas: 1000362-13-2, name: [1,1'-Biphenyl]-2,3'-diol, 3,4',5,6'-tetrakis(1,1-dimethylethyl)-, formula: C28H42O2
+cas: 53905-37-6, name: [1,1'-Biphenyl]-3,3'-diol, 4,4'-dichloro-, formula: C12H8Cl2O2
+cas: 54827-17-7, name: [1,1'-Biphenyl]-4,4'-diamine, 3,3',5,5'-tetramethyl-, formula: C16H20N2
+cas: 4433-09-4, name: [1,1'-Biphenyl]-4,4'-diol, 3,3'-dimethoxy-, formula: C14H14O4
+cas: 3218-36-8, name: [1,1'-Biphenyl]-4-carboxaldehyde, formula: C13H10O
+cas: 53905-28-5, name: [1,1'-Biphenyl]-4-ol, 2',5'-dichloro-, formula: C12H8Cl2O
+cas: 7681-99-4, name: [1,2,4]Triazolo[1,5-a]pyrimidine, 5,7-dimethyl-, formula: C7H8N4
+cas: 1000319-80-2, name: [1,3]Benzimidazo[2,1-a]phthalazine, 5-methyl-9-(1-pyrrolidinyl)-, formula: C19H18N4
+cas: 4362-05-4, name: [1,4]Dioxino[2,3-b]-1,4-dioxin, hexahydro-, formula: C6H10O4
+cas: 1000315-94-9, name: [1,4]Oxathiine-2-carboxylic acid, 5,6-dihydro-, formula: C5H6O3S
+cas: 846-35-5, name: [1]Benzothiopyrano[4,3-b]benzo[e]indole, formula: C19H11NS
+cas: 1000316-40-8, name: [1]Pyrindin-4-ol, 1-methyloctahydro-, formula: C9H17NO
+cas: 5905-01-1, name: [2,2'-Bifuran]-5,5'-dicarboxaldehyde, formula: C10H6O4
+cas: 1000316-47-5, name: [2-(4-Fluorophenyl)oxazol-4-yl]acetic acid, formula: C11H8FNO3
+cas: 1000352-11-0, name: [2-[2-[2-[2-[2-[2-(tert-Butyldimethylsilyloxy)ethoxy]ethoxy]ethoxy]ethoxy]ethoxy]ethanol, formula: C18H40O7Si
+cas: 1000352-10-5, name: [2-[2-[2-[2-[2-[2-[2-[2-(tert-Butyldimethylsilyloxy)ethoxy]ethoxy]ethoxy]ethoxy]ethoxy]ethoxy]ethoxy]ethanol, formula: C22H48O9Si
+cas: 1633-22-3, name: [2.2]Paracyclophane, formula: C16H16
+cas: 1000302-61-1, name: [4-(2,4-Dimethylbenzenesulfonyl)piperazin-1-yl](thiophen-2-yl)methanone, formula: C17H20N2O3S2
+cas: 28735-33-3, name: aS-Triazine, 5,6-diphenyl-3-(methylthio)-, formula: C16H13N3S
+cas: 37858-07-4, name: anti-2-Acetoxyacetaldoxime, formula: C4H7NO3
+cas: 1000365-97-8, name: butylphthalide, formula: C12H14O2
+cas: 1000113-60-0, name: cis,cis,cis-1-Isobutyl-2,5-dimethylcyclohexane, formula: C12H24
+cas: 1000111-72-5, name: cis,cis- and cis,trans-1,9-dimethylspiro[4.5]decane, formula: C12H22
+cas: 95472-51-8, name: cis,cis-2,9-Dimethylspiro[5.5]undecane, formula: C13H24
+cas: 1000111-72-3, name: cis,trans-1,6-Dimethylspiro[4.5]decane, formula: C12H22
+cas: 28973-97-9, name: cis-.beta.-Farnesene, formula: C15H24
+cas: 1000365-94-2, name: cis-1,3,3-trimethylbicyclo[3.1.0]hexane-1-carboxaldehyde, formula: C10H16O
+cas: 1000139-52-7, name: cis-1-Butene,1-butoxy-, formula: C8H16O
+cas: 16507-61-2, name: cis-1-Chloro-9-octadecene, formula: C18H35Cl
+cas: 1000139-43-8, name: cis-1-Ethoxy-1-butene, formula: C6H12O
+cas: 1000333-64-8, name: cis-10-Nonadecenoic acid, tert-butyldimethylsilyl ester, formula: C25H50O2Si
+cas: 34010-15-6, name: cis-11-Tetradecen-1-ol, formula: C14H28O
+cas: 1000333-24-1, name: cis-13-Docosenoic acid, tert-butyldimethylsilyl ester, formula: C28H56O2Si
+cas: 13126-39-1, name: cis-13-Octadecenoic acid, formula: C18H34O2
+cas: 1000191-14-0, name: cis-2-Allylpyrrolidin-5-ol, formula: C7H13NO
+cas: 1000227-83-3, name: cis-2-Butenylene diacetate, formula: C8H12O4
+cas: 1000143-61-2, name: cis-2-Dimethylamino-2-oxo-4-methyl-1,3,2-dioxaphosphorinane, formula: C6H14NO3P
+cas: 74609-73-7, name: cis-2-Nitro-4-t-butylcyclohexanone, formula: C10H17NO3
+cas: 60416-19-5, name: cis-2-Oxabicyclo[4.4.0]decane, formula: C9H16O
+cas: 93779-52-3, name: cis-3-Butyl-4-vinyl-cyclopentene, formula: C11H18
+cas: 68698-58-8, name: cis-3-Hexenyl heptine carbonate, formula: C14H22O2
+cas: 68133-76-6, name: cis-3-Hexenylpyruvate, formula: C9H14O3

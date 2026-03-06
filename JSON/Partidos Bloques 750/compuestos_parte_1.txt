@@ -1,0 +1,793 @@
+Clasifica los siguientes compuestos según su grupo o familia a la que pertenecen, eligiendo una de las opciones de esta lista: 
+grupos_compuestos = {
+    1: "Alcanos",
+    2: "Alquenos y alquinos",
+    3: "Ácidos carboxílicos",
+    4: "Ésteres",
+    5: "Alcoholes",
+    6: "Fenoles",
+    7: "Cetonas",
+    8: "Aldehídos",
+    9: "Éteres",
+    10: "Aminas",
+    11: "Amidas",
+    12: "Nitrilos",
+    13: "Anillos aromáticos",
+    14: "Ésteres de ácido fosfórico",
+    15: "Silanos / Siloxanos",
+    16: "Esteroides / Terpenos",
+    17: "Lactonas y lactamas",
+    18: "Compuestos heterocíclicos",
+    19: "Compuestos halogenados",
+    20: "Otros",
+    21: "Anilinas / Derivados de anilina",
+    22: "Ftalatos",
+    23: "Aldehídos aromáticos",
+    24: "Cetonas aromáticas",
+    25: "Amidas aromáticas",
+    26: "Amidas alifáticas",
+    27: "Alcoholes grasos / largos",
+    28: "Ácidos grasos",
+    29: "Compuestos organosulfurados",
+    30: "Lactonas aromáticas",
+    31: "Compuestos bencénicos sustituidos",
+    32: "Compuestos nitrogenados heterocíclicos",
+    33: "Compuestos con oxígeno cíclico",
+    34: "Éteres de glicoles",
+    35: "Compuestos con grupos TMS (trimetilsililo)",
+    36: "Compuestos con anillos fundidos",
+    37: "Compuestos policíclicos aromáticos (PAHs)",
+    38: "Nitrilos aromáticos",
+    39: "Otros"
+}
+Y devuélveme simplemente el CAS del compuesto y el número de la familia a la que pertenece, en formato cas : numero. Aquí está la lista de compuestos:
+cas: 4547-76-6, name: ((1,2-Diethylethylene)bis(p-phenylene))diacetate, formula: C22H26O4
+cas: 1000156-12-3, name: (+)-(Z)-Longipinane, formula: C15H26
+cas: 1000132-73-7, name: (+)-3,4-Dehydroproline amide, formula: C5H8N2O
+cas: 64339-95-3, name: (+)-Dibenzoyl-L-tartaric acid anhydride, formula: C18H12O7
+cas: 1000240-85-7, name: (+)-N(2)-Ethyl-4-methyl-1,2-pentanediamine, formula: C8H20N2
+cas: 32634-68-7, name: (+)-di-O-4-Toluoyl-D-tartaric acid, formula: C20H18O8
+cas: 86361-10-6, name: (+-)-3-Methyl-1-penten-3-ol, formula: C6H12O
+cas: 6831-16-9, name: (-)-Aristolene, formula: C15H24
+cas: 1000375-69-4, name: (-)-Epinephrine, N,O,O',O''-tetrakis(pentafluoropropionyl)-, formula: C21H9F20NO7
+cas: 79815-20-6, name: (-)-Indoline-2-carboxylic acid, formula: C9H9NO2
+cas: 1000156-14-3, name: (-)-Isoaromadendrene-(V), formula: C15H24
+cas: 1000352-28-0, name: (-)-Isolongifolol, acetate, formula: C17H28O2
+cas: 34444-37-6, name: (-)-Nortrachelogenin, formula: C20H22O7
+cas: 1000156-11-8, name: (-)-delta.-Panasinsine, formula: C15H24
+cas: 7695-91-2, name: (.+/-.)-.alpha.-Tocopherol acetate, formula: C31H52O3
+cas: 1000112-22-5, name: (.eta.(5)-Cyclopentadienyl)(.eta.(4)-5-methyl-1,3-cyclopentadiene)cobalt, formula: C11H13Co
+cas: 1210-05-5, name: (1,1'-Biphenyl)-2,2'-dicarboxaldehyde, formula: C14H10O2
+cas: 1000194-43-7, name: (1-Benzyl-3-phenyl-prop-2-ynyl)-dimethyl-amine, formula: C18H19N
+cas: 1000195-05-6, name: (1-Ethyl-2-methylpropyl)methylamine, formula: C7H17N
+cas: 24008-11-5, name: (1-Fluoro-2,2-bistrifluromethyl)vinyl-diisopropylphosphine, formula: C10H14F7P
+cas: 94883-96-2, name: (1-Methoxy-pentyl)-cyclopropane, formula: C9H18O
+cas: 94883-97-3, name: (1-Propoxy-pentyl)-cyclopropane, formula: C11H22O
+cas: 1000317-83-3, name: (10-Methyl-10H-acridin-9-ylidene)-p-tolyl-amine, formula: C21H18N2
+cas: 26187-27-9, name: (1H)Pyrrole-3-carbonitrile, 2-methyl-, formula: C6H6N2
+cas: 7785-26-4, name: (1S)-2,6,6-Trimethylbicyclo[3.1.1]hept-2-ene, formula: C10H16
+cas: 131758-71-9, name: (2,3-Diphenylcyclopropyl)methyl phenyl sulfoxide, trans-, formula: C22H20OS
+cas: 13702-56-2, name: (2,4,6-Trimethylcyclohexyl) methanol, formula: C10H20O
+cas: 1000374-56-6, name: (2-Fluorophenyl) methanol, 1-methylpropyl ether, formula: C11H15FO
+cas: 1000374-56-5, name: (2-Fluorophenyl) methanol, n-butyl ether, formula: C11H15FO
+cas: 1000374-56-9, name: (2-Fluorophenyl) methanol, n-pentyl ether, formula: C12H17FO
+cas: 1000374-56-8, name: (2-Fluorophenyl) methanol, tert.-butyl ether, formula: C11H15FO
+cas: 78349-00-5, name: (2-Methyl-[1,3]dithian-2-yl)phenylmethanol, formula: C12H16OS2
+cas: 1000192-44-4, name: (2-Nitrocyclohexyl)-benzene, formula: C12H15NO2
+cas: 92491-16-2, name: (2-Phenyl-butanoyl)thiourea, formula: C11H14N2OS
+cas: 1000334-06-3, name: (2E)-Dodec-2-en-1-yl methyl ether, formula: C13H26O
+cas: 123994-04-7, name: (2R,5S)-2-Butyl-5-propylpyrrolidine, formula: C11H23N
+cas: 160095-43-2, name: (2R,6R)-2-Methyl-6-nonylpiperidin-4-one, formula: C15H29NO
+cas: 68365-90-2, name: (2S,4aS,5R,8aR)-2,5-Dipropyldecahydroquinoline, formula: C15H29N
+cas: 121350-26-3, name: (2S,4aS,5S,8aR)-2,5-diallyldecahydroquinoline, formula: C15H25N
+cas: 160095-44-3, name: (2S,6R)-1,2-Dimethyl-6-nonylpiperidin-4-one, formula: C16H31NO
+cas: 1000367-24-3, name: (2S,6R)-2,6-Dipentylpiperidin-4-one, formula: C15H29NO
+cas: 108342-25-2, name: (2S,6R,7S,8E)-(+)-2,7-Epoxy-4,8-megastigmadiene, formula: C13H20O
+cas: 5357-23-3, name: (3-Aminopropyl)dibutylborane, formula: C11H26BN
+cas: 72863-68-4, name: (3-Ethylaminopropyl)dibutylborane, formula: C13H30BN
+cas: 1000374-62-5, name: (3-Fluorophenyl) methanol, 2-methylpropyl ether, formula: C11H15FO
+cas: 1000374-62-8, name: (3-Fluorophenyl) methanol, n-butyl ether, formula: C11H15FO
+cas: 1000317-62-7, name: (3-Methoxy-phenyl)-(6-methyl-4-phenyl-quinazolin-2-yl)-amine, formula: C22H19N3O
+cas: 1000374-58-5, name: (3-Methylphenyl) methanol, 1-methylpropyl ether, formula: C12H18O
+cas: 1000374-43-9, name: (3-Methylphenyl) methanol, 2-methylbutyl ether, formula: C13H20O
+cas: 1000366-96-1, name: (3-Phenyloxiran-2-yl)methyl benzoate, formula: C16H14O3
+cas: 1000136-85-4, name: (3R)-(+)-3-Acetamidopyrrolidine, formula: C6H12N2O
+cas: 1000367-15-6, name: (3S,5R,8aR)-3-(But-3-en-1-yl)-5-(pent-4-en-1-yl)octahydroindolizine, formula: C17H29N
+cas: 1000367-30-7, name: (3S,5R,8aR)-3-(Hex-5-en-1-yl)-5-propyloctahydroindolizine, formula: C17H31N
+cas: 1000327-08-2, name: (3Z)-1H-Benzo[g]indole-2,3-dione 3-oxime, formula: C12H8N2O2
+cas: 1000374-63-9, name: (4-Fluorophenyl) methanol, 1-methylpropyl ether, formula: C11H15FO
+cas: 1000374-64-0, name: (4-Fluorophenyl) methanol, 2-methylbutyl ether, formula: C12H17FO
+cas: 1000189-19-6, name: (4-Methoxy-3-nitro-phenyl)-naphthalen-2-yl-diazene, formula: C17H13N3O3
+cas: 103077-68-5, name: (4-Methoxy-phenyl)-(2-nitrocyclohexyl)-methanol, formula: C14H19NO4
+cas: 1000191-91-2, name: (4-Methoxyphenyl)(2-methylenecyclohexyl)methanol, formula: C15H20O2
+cas: 1000318-45-3, name: (4-Methyl-piperidin-1-yl)-acetic acid, (2-oxo-2,3-dihydro-benzo[e]indol-1-ylidene)- hydrazide, formula: C20H22N4O2
+cas: 120037-60-7, name: (4S,6R,9aR)-4-Methyl-6-propyloctahydro-1H-quinolizine, formula: C13H25N
+cas: 1000318-40-9, name: (5-Methyl-[1,3,4]oxadiazol-2-yl)-phenyl-methanone, formula: C10H8N2O2
+cas: 847459-59-0, name: (5R,8R,8aS)-5-Heptyl-8-methyloctahydroindolizine, formula: C16H31N
+cas: 934186-48-8, name: (5R,8R,8aS)-8-Butyl-5-pentyloctahydroindolizine, formula: C17H33N
+cas: 1000367-16-3, name: (5R,8R,8aS)-8-Ethyl-5-((Z)-pent-3-en-1-yl)octahydroindolizine, formula: C15H27N
+cas: 1000367-15-7, name: (5R,8R,8aS)-8-Ethyl-5-(hept-6-yn-1-yl)octahydroindolizine, formula: C17H29N
+cas: 120057-35-4, name: (5R,8aR)-5-Propyloctahydroindolizine, formula: C11H21N
+cas: 934186-49-9, name: (5S,8R,8aS)-5-Allyl-8-butyloctahydroindolizine, formula: C15H27N
+cas: 50763-51-4, name: (5Z)-3-Methyl-1,5-heptadiene, formula: C8H14
+cas: 1000373-80-4, name: (6,6-Dimethylbicyclo[3.1.1]hept-2-en-2-yl)methyl ethyl carbonate, formula: C13H20O3
+cas: 259869-55-1, name: (6aR,10aR)-3-(1,1-Dimethylbutyl)-6a,7,10,10a-tetrahydro-6,6,9-trimethyl-6H-dibenzo[b,d]pyran, formula: C22H32O
+cas: 1606-17-3, name: (7-Methylbenzo(b)thien-3-yl)acetic acid, formula: C11H10O2S
+cas: 1000187-02-9, name: (7a-Isopropenyl-4,5-dimethyloctahydroinden-4-yl)methanol, formula: C15H26O
+cas: 1000144-50-1, name: (9S,10R)-9,10-Epoxy-3Z,6Z-heneicosadiene, formula: C21H38O
+cas: 3010-04-6, name: (Butylamino)acetonitrile, formula: C6H12N2
+cas: 18794-84-8, name: (E)-.beta.-Famesene, formula: C15H24
+cas: 1000143-27-1, name: (E)-4-Hydroxy-2-methyl-pent-2-enoic acid, formula: C6H10O3
+cas: 1000374-04-2, name: (E)-4-Oxohex-2-enal, formula: C6H8O2
+cas: 1000373-74-1, name: (E)-Hex-3-enyl (E)-2-methylbut-2-enoate, formula: C11H18O2
+cas: 19883-29-5, name: (E,E)-1,3,5-Undecatriene, formula: C11H18
+cas: 70901-63-2, name: (E,E)-7,11,15-Trimethyl-3-methylene-hexadeca-1,6,10,14-tetraene, formula: C20H32
+cas: 77898-97-6, name: (E,E,E)-3,7,11,15-Tetramethylhexadeca-1,3,6,10,14-pentaene, formula: C20H32
+cas: 5582-62-7, name: (Propargyloxy)trimethylsilane, formula: C6H12OSi
+cas: 31087-44-2, name: (R)-(-)-2-Pentanol, formula: C5H12O
+cas: 68832-13-3, name: (R)-(-)-2-Pyrrolidinemethanol, formula: C5H11NO
+cas: 22038-87-5, name: (R)-(-)-Alpha-methyl-4-nitrobenzylamine, formula: C8H10N2O2
+cas: 57283-79-1, name: (R,S)-5-Ethyl-6-methyl-3E-hepten-2-one, formula: C10H18O
+cas: 51207-66-0, name: (S)-(+)-1-(2-Pyrrolidinylmethyl)-pyrrolidine, formula: C9H18N2
+cas: 63126-47-6, name: (S)-(+)-2-(Methoxymethyl)pyrrolidine, formula: C6H13NO
+cas: 57803-73-3, name: (S)-(+)-5-Methyl-1-heptanol, formula: C8H18O
+cas: 110453-78-6, name: (S)-(+)-6-Methyl-1-octanol, formula: C9H20O
+cas: 59983-39-0, name: (S)-(-)-1-Amino-2-(methoxymethyl)-pyrrolidine, formula: C6H14N2O
+cas: 63126-45-4, name: (S)-(-)-2-(Methoxymethyl)-1-pyrrolidinecarboxaldehyde, formula: C7H13NO2
+cas: 63697-00-7, name: (S)-Isopropyl lactate, formula: C6H12O3
+cas: 1000300-74-1, name: (Tetrahydro-furan-2-ylmethyl)-thiophen-2-ylmethyl-amine, formula: C10H15NOS
+cas: 1000372-72-3, name: (Z)-Dec-4-en-1-yl 2-methylbutanoate, formula: C15H28O2
+cas: 1000372-79-2, name: (Z)-Dec-4-enyl isobutyl carbonate, formula: C15H28O3
+cas: 1000372-80-4, name: (Z)-Non-3-en-1-yl propyl carbonate, formula: C13H24O3
+cas: 110823-80-8, name: (Z,Z)-3-Methyl-3H-cyclonona(def)biphenylene, formula: C18H14
+cas: 86167-21-7, name: (p-Butylphenoxy)acetic acid, formula: C12H16O3
+cas: 1141-96-4, name: (p-Butyrylphenoxy)acetic acid, formula: C12H14O4
+cas: 14356-77-5, name: (p-Decanoylphenoxy)acetic acid, formula: C18H26O4
+cas: 1000304-62-9, name: (tert-Butyl)(4,6-diimidazol-1-yl-[1,3,5]triazin-2-yl)amine, formula: C13H16N8
+cas: 35496-19-6, name: -(4-Tolyl)-3-methyl-pyrazol-5-one, formula: C11H12N2O
+cas: 52210-18-1, name: .alpha. Ionyl acetate, formula: C15H24O2
+cas: 2948-46-1, name: .alpha.,.alpha.,.alpha.',.alpha.'-Tetramethyl-1,4-benzenedimethanol, formula: C12H18O2
+cas: 2648-61-5, name: .alpha.,.alpha.-Dichloroacetophenone, formula: C8H6Cl2O
+cas: 61748-86-5, name: .alpha.,.alpha.-Dimethyl-.beta.-methylsuccinimide, formula: C7H11NO2
+cas: 638-95-9, name: .alpha.-Amyrin, formula: C30H50O
+cas: 1000223-61-7, name: .alpha.-Benzamido-2-hydroxycinnamic acid, formula: C16H13NO4
+cas: 481-34-5, name: .alpha.-Cadinol, formula: C15H26O
+cas: 21391-99-1, name: .alpha.-Calacorene, formula: C15H20
+cas: 492-94-4, name: .alpha.-Furil, formula: C10H6O4
+cas: 5623-26-7, name: .alpha.-Hydroxy-.alpha.-methylbenzyl phenyl ketone, formula: C15H14O2
+cas: 1000374-31-3, name: .alpha.-Hydroxyisobutyric acid, acetate, formula: C6H10O4
+cas: 1000374-33-0, name: .alpha.-Hydroxyisobutyric acid, trifluoroacetate, formula: C6H7F3O4
+cas: 127-41-3, name: .alpha.-Ionone, formula: C13H20O
+cas: 1497-17-2, name: .alpha.-Methyl-.alpha.-phenylsuccinimide, formula: C11H11NO2
+cas: 7228-47-9, name: .alpha.-Methyl-2-naphthalenemethanol, formula: C12H12O
+cas: 779-51-1, name: .alpha.-Methylstilbene, formula: C15H14
+cas: 6047-91-2, name: .alpha.-Oxo-furan-2-acetonitrile, formula: C6H3NO2
+cas: 1000156-68-2, name: .alpha.-Tocopherol-.beta.-D-mannoside, formula: C35H60O7
+cas: 1000129-77-7, name: .alpha.-d-Arabinose tetrabenzoate, formula: C33H26O9
+cas: 1000150-11-0, name: .alpha.-l-Rhamnopyranose, 1,4-di-O-acetyl-2,3-O-(ethylboranediyl)-, formula: C12H19BO7
+cas: 23651-62-9, name: .beta.-Alanine, N-ethyl-, ethyl ester, formula: C7H15NO2
+cas: 1000320-96-2, name: .beta.-Alanine, n-pentafluoropropionyl-, octadecyl ester, formula: C24H42F5NO3
+cas: 559-70-6, name: .beta.-Amyrin, formula: C30H50O
+cas: 30684-42-5, name: .beta.-Carboline, 6-methoxy-, formula: C12H10N2O
+cas: 1000117-57-5, name: .beta.-Carboline, 6-methoxy-2-methyl-, formula: C13H12N2O
+cas: 212332-24-6, name: .beta.-Carboline, 8-methoxy-1-methyl-, formula: C13H12N2O
+cas: 20880-92-6, name: .beta.-D-Fructopyranose, 2,3:4,5-bis-O-(1-methylethylidene)-, formula: C12H20O6
+cas: 15572-30-2, name: .beta.-D-Galactopyranoside, 6-bromo-2-naphthalenyl, formula: C16H17BrO6
+cas: 353-09-3, name: .beta.-Guanidinopropionic acid, formula: C4H9N3O2
+cas: 58176-63-9, name: .beta.-Methoxy-.alpha.-phenylphenethyl alcohol, formula: C15H16O2
+cas: 1083-30-3, name: .beta.-Phenylpropiophenone, formula: C15H14O
+cas: 77-42-9, name: .beta.-Santalol, formula: C15H24O
+cas: 83-46-5, name: .beta.-Sitosterol, formula: C29H50O
+cas: 148-03-8, name: .beta.-Tocopherol, formula: C28H48O2
+cas: 1000285-40-2, name: .beta.-iso-Methyl ionone, formula: C14H22O
+cas: 1000128-44-8, name: .beta.-n-Propylether of 11-epi-dihydroartemisinin, formula: C18H30O5
+cas: 3301-94-8, name: .delta.-Nonalactone, formula: C9H16O2
+cas: 1000374-72-8, name: .delta.-Tocopherol, O-methyl-, formula: C28H48O2
+cas: 2845-82-1, name: .delta.2-1,3,4-Oxadiazolin-5-one, 2-(4-pyridyl)-, formula: C7H5N3O2
+cas: 20534-01-4, name: .delta.2-Tetrazaboroline, 5-ethyl-1,4-dimethyl-, formula: C4H11BN4
+cas: 2305-05-7, name: .gamma.-Dodecalactone, formula: C12H22O2
+cas: 516-78-9, name: .gamma.-Ergostenol, formula: C28H48O
+cas: 1000140-08-0, name: .gamma.-HIMACHALENE, formula: C15H24
+cas: 83-47-6, name: .gamma.-Sitosterol, formula: C29H50O
+cas: 7616-22-0, name: .gamma.-Tocopherol, formula: C28H48O2
+cas: 5937-11-1, name: .tau.-Cadinol, formula: C15H26O
+cas: 55493-86-2, name: 1'H-Cholest-2-eno[3,2-b]indole, 5'-methoxy-, (5.alpha.)-, formula: C34H51NO
+cas: 38389-21-8, name: 1'H-Cholesta-3,5-dieno[3,4-b]indole, formula: C33H47N
+cas: 529-34-0, name: 1(2H)-Naphthalenone, 3,4-dihydro-, formula: C10H10O
+cas: 14944-26-4, name: 1(2H)-Naphthalenone, 3,4-dihydro-3-phenyl-, formula: C16H14O
+cas: 1000337-94-1, name: 1(2H)-Naphthalenone, 3,4-dihydro-4-phenyl-, formula: C16H14O
+cas: 2739-16-4, name: 1(2H)-Quinolinecarboxaldehyde, 3,4-dihydro-, formula: C10H11NO
+cas: 87-41-2, name: 1(3H)-Isobenzofuranone, formula: C8H6O2
+cas: 1689-09-4, name: 1(3H)-Isobenzofuranone, 3,3-dimethyl-, formula: C10H10O2
+cas: 16824-02-5, name: 1(3H)-Isobenzofuranone, 3-ethoxy-, formula: C10H10O3
+cas: 1000357-25-8, name: 1, 1, 5-Trimethyl-1, 2-dihydronaphthalene, formula: C13H16
+cas: 7051-52-7, name: 1,1'-Bicyclobutyl, formula: C8H14
+cas: 23183-11-1, name: 1,1'-Bicycloheptyl, formula: C14H26
+cas: 92-51-3, name: 1,1'-Bicyclohexyl, formula: C12H22
+cas: 50991-08-7, name: 1,1'-Bicyclohexyl, 2-methyl-, cis-, formula: C13H24
+cas: 50991-09-8, name: 1,1'-Bicyclohexyl, 2-methyl-, trans-, formula: C13H24
+cas: 88416-84-6, name: 1,1'-Bicyclohexyl, 4-(methoxymethyl)-4'-propyl-, formula: C17H32O
+cas: 2888-11-1, name: 1,1'-Bicyclohexyl-1,1'-diol, formula: C12H22O2
+cas: 6708-17-4, name: 1,1'-Bicyclooctyl, formula: C16H30
+cas: 1636-39-1, name: 1,1'-Bicyclopentyl, formula: C10H18
+cas: 3075-84-1, name: 1,1'-Biphenyl, 2,2',5,5'-tetramethyl-, formula: C16H18
+cas: 13049-35-9, name: 1,1'-Biphenyl, 2,2'-diethyl-, formula: C16H18
+cas: 4920-95-0, name: 1,1'-Biphenyl, 3,3',4,4'-tetramethyl-, formula: C16H18
+cas: 84591-12-8, name: 1,1'-Biphenyl, 3,4'-dimethoxy-, formula: C14H14O2
+cas: 6271-59-6, name: 1,1'-Biphenyl, 4,4',5',6'-tetramethoxy-, formula: C16H18O4
+cas: 613-37-6, name: 1,1'-Biphenyl, 4-methoxy-, formula: C13H12O
+cas: 119101-26-7, name: 1,1'-Biphenyl, 5-hydroxy-3,4'-dimethoxy-, formula: C14H14O3
+cas: 145068-57-1, name: 1,1'-Biphenyl-3,4,4'-trimethoxy-6'-formyl-, formula: C16H16O4
+cas: 93767-87-4, name: 1,1'-Diethyl-2,3,2',3'-tetrahydro-2,2'-diperimidine, formula: C26H26N4
+cas: 1000223-22-4, name: 1,1'-Methylenebis[2-(4-butoxybenzoyloxy)naphthalene], formula: C43H40O6
+cas: 53517-77-4, name: 1,1,1,3,3,3-Hexafluoropropan-2-one, o-1,1,2,3,3,3-hexafluoropropyloxime, formula: C6HF12NO
+cas: 38147-00-1, name: 1,1,1,5,7,7,7-Heptamethyl-3,3-bis(trimethylsiloxy)tetrasiloxane, formula: C13H40O5Si6
+cas: 141022-99-3, name: 1,1,1-Trifluoroheptadecen-2-one, formula: C17H31F3O
+cas: 91324-94-6, name: 1,1,2,2,3,3-Hexamethylindane, formula: C15H22
+cas: 16646-44-9, name: 1,1,2,2-Tetrakis(allyloxy)ethane, formula: C14H22O4
+cas: 91521-59-4, name: 1,1,3,3,5,5-Hexamethyl-2-thia-1,3,5-trisilacyclohexane, formula: C8H22SSi3
+cas: 32538-51-5, name: 1,1,3,3-Tetramethyl-1,3-disilaphenalane, formula: C15H20Si2
+cas: 2295-13-8, name: 1,1,3-Trimethyl-1-silacyclobutane, formula: C6H14Si
+cas: 1000374-13-8, name: 1,1,4,5,6-pentamethyl-2,3-dihydro-1H-indene, formula: C14H20
+cas: 7094-27-1, name: 1,1,4-Trimethylcyclohexane, formula: C9H18
+cas: 101772-54-7, name: 1,1,4-Trimethylsilacyclohexane, formula: C8H18Si
+cas: 1000186-63-1, name: 1,1,6,8-Tetramethyl-1,2-dihydro-naphthalene, formula: C14H18
+cas: 1000373-94-5, name: 1,1,6-trimethyl-3-methylene-2-(3,6,9,13-tetramethyl-6-ethenye-10,14-dimethylene-pentadec-4-enyl)cyclohexane, formula: C33H56
+cas: 54833-30-6, name: 1,1-Dicyclohexylpentane, formula: C17H32
+cas: 7159-98-0, name: 1,1-Dimethyl-3-(3-nitrophenyl)urea, formula: C9H11N3O3
+cas: 1000099-99-2, name: 1,1-Dimethylpropyl 2-ethylhexanoate, formula: C13H26O2
+cas: 1000298-34-3, name: 1,1-Dimethylpropyl ethylphosphonofluoridate, formula: C7H16FO2P
+cas: 3282-18-6, name: 1,1-Diphenylcyclopropane, formula: C15H14
+cas: 56438-07-4, name: 1,1-Dodecanediol, diacetate, formula: C16H30O4
+cas: 542-10-9, name: 1,1-Ethanediol, diacetate, formula: C6H10O4
+cas: 112-47-0, name: 1,10-Decanediol, formula: C10H22O2
+cas: 1662-01-7, name: 1,10-Phenanthroline, 4,7-diphenyl-, formula: C24H16N2
+cas: 5876-87-9, name: 1,11-Dodecadiene, formula: C12H22
+cas: 765-04-8, name: 1,11-Undecanediol, formula: C11H24O2
+cas: 5675-51-4, name: 1,12-Dodecanediol, formula: C12H26O2
+cas: 58879-40-6, name: 1,13-Tetradecadien-3-one, formula: C14H24O
+cas: 21964-49-8, name: 1,13-Tetradecadiene, formula: C14H26
+cas: 42236-70-4, name: 1,13-Tridecanediol, diacetate, formula: C17H32O4
+cas: 19812-64-7, name: 1,14-Tetradecanediol, formula: C14H30O2
+cas: 21964-51-2, name: 1,15-Hexadecadiene, formula: C16H30
+cas: 1460-18-0, name: 1,15-Pentadecanedioic acid, formula: C15H28O4
+cas: 14722-40-8, name: 1,15-Pentadecanediol, formula: C15H32O2
+cas: 7735-42-4, name: 1,16-Hexadecanediol, formula: C16H34O2
+cas: 14811-95-1, name: 1,19-Eicosadiene, formula: C20H38
+cas: 1000253-25-6, name: 1,2(4H)-Oxazine-3-ol, 5,6-dihydro-6-oxo-, benzoate, formula: C11H9NO4
+cas: 23747-14-0, name: 1,2,3,4,5,6-Hexahydro-1,1,5,5-tetramethyl-2,4a-methanonaphthalen-7(4aH)-one, formula: C15H22O
+cas: 13909-75-6, name: 1,2,3,4,5-Pentamethoxybenzene, formula: C11H16O5
+cas: 111303-60-7, name: 1,2,3,4,6,7,8,9-Octahydrodipyrido[1,2-a:4,3-d]pyrimidin-11-one, formula: C11H15N3O
+cas: 102830-22-8, name: 1,2,3,4-Tetrahydro-1,2-dimethyl-4,7,8-isoquinolinetriol, formula: C11H15NO3
+cas: 1000243-22-5, name: 1,2,3,4-Tetrahydro-3-(phenylacetamido)quinoline, formula: C17H18N2O
+cas: 1000128-00-6, name: 1,2,3,4-Tetrahydroisoquinoline, 6,7,8-trimethoxy-1,2-dimethyl-, formula: C14H21NO3
+cas: 1000125-87-6, name: 1,2,3,4-Tetrahydronaphthalen-1,2-diol, 5,6-dimethoxy-, formula: C12H16O4
+cas: 3034-97-7, name: 1,2,3,5-Benzenetetracarboxylic acid, tetramethyl ester, formula: C14H14O8
+cas: 102254-60-4, name: 1,2,3,6,7,8-Hexahydro-10H-cyclopenta[4,5]thieno[2,3-d]pyrrolo[1,2-a]pyrimidine-10-thione, formula: C12H12N2S2
+cas: 1076-17-1, name: 1,2,3,6,7,8-Hexahydro-as-indacene, formula: C12H14
+cas: 525-52-0, name: 1,2,3-Benzenetriol, triacetate, formula: C12H12O6
+cas: 32796-72-8, name: 1,2,3-Butanetrione, 1-phenyl-, 2,3-dioxime, formula: C10H10N2O3
+cas: 321195-23-7, name: 1,2,3-Oxadiazol-3-ium, 5-trifluoroacetylamidato-3-methyl-, formula: C5H4F3N3O2
+cas: 139-45-7, name: 1,2,3-Propanetriol, tripropanoate, formula: C12H20O6
+cas: 50406-54-7, name: 1,2,3-Thiadiazole, 5-methyl-, formula: C3H4N2S
+cas: 113604-56-1, name: 1,2,3-Trimethyldiaziridine, formula: C4H10N2
+cas: 58310-19-3, name: 1,2,3-Triphenyl-3-methyl-cyclopropene, formula: C22H18
+cas: 100537-15-3, name: 1,2,3-Undecanetriol, formula: C11H24O3
+cas: 712-74-3, name: 1,2,4,5-Benzenetetracarbonitrile, formula: C10H2N4
+cas: 79329-74-1, name: 1,2,4,5-Tetrazin-3-amine, formula: C2H3N5
+cas: 14418-27-0, name: 1,2,4,5-Tetrazin-3-amine, 6-methyl-, formula: C3H5N5
+cas: 290-96-0, name: 1,2,4,5-Tetrazine, formula: C2H2N4
+cas: 35035-69-9, name: 1,2,4,5-Tetrazine, 1,4-diethylhexahydro-, formula: C6H16N4
+cas: 37454-64-1, name: 1,2,4,5-Tetrazine, 1,4-dihydro-3,6-dimethyl-, formula: C4H8N4
+cas: 19455-88-0, name: 1,2,4,5-Tetrazine, 3,6-bis(1,1-dimethylethyl)-, formula: C10H18N4
+cas: 13717-91-4, name: 1,2,4,5-Tetrazine, 3,6-diethyl-, formula: C6H10N4
+cas: 1558-23-2, name: 1,2,4,5-Tetrazine, 3,6-dimethyl-, formula: C4H6N4
+cas: 13717-92-5, name: 1,2,4,5-Tetrazine, 3,6-dipropyl-, formula: C8H14N4
+cas: 19617-90-4, name: 1,2,4,5-Tetrazine-3,6-diamine, formula: C2H4N6
+cas: 1073-91-2, name: 1,2,4,5-Tetroxane, 3,3,6,6-tetramethyl-, formula: C6H12O4
+cas: 54699-35-3, name: 1,2,4-Benzenetricarboxylic acid, 1,2-dimethyl ester, formula: C11H10O6
+cas: 14230-18-3, name: 1,2,4-Benzenetricarboxylic acid, triethyl ester, formula: C15H18O6
+cas: 21084-84-4, name: 1,2,4-Oxadiazol-3(2H)-one, 5-phenyl-, formula: C8H6N2O2
+cas: 1000277-36-2, name: 1,2,4-Oxadiazole-3-carboximidamide, N'-(1-propionyloxy)-, formula: C6H8N4O3
+cas: 34283-30-2, name: 1,2,4-Thiadiazole-3,5-diamine, formula: C2H4N4S
+cas: 17584-12-2, name: 1,2,4-Triazin-3-amine, 5,6-dimethyl-, formula: C5H8N4
+cas: 461-89-2, name: 1,2,4-Triazine-3,5(2H,4H)-dione, formula: C3H3N3O2
+cas: 33449-36-4, name: 1,2,4-Triazine-5-ol, 3,6-dimethyl-, formula: C5H7N3O
+cas: 308288-21-3, name: 1,2,4-Triazol-4-amine, N-(2-thienylmethyl)-, formula: C7H8N4S
+cas: 21051-17-2, name: 1,2,4-Triazole, 5-cyclohexanecarboxamido-, formula: C9H14N4O
+cas: 53975-71-6, name: 1,2,4-Triazolo[4,3-a]pyridine-8-carboxylic acid, 2,3-dihydro-3-oxo-, methyl ester, formula: C8H7N3O3
+cas: 289-14-5, name: 1,2,4-Trioxolane, formula: C2H4O3
+cas: 1000150-02-2, name: 1,2,5,6-Hexanetetrol, tetrakis-O-(trimethylsilyl)-, formula: C18H46O4Si4
+cas: 1000317-27-7, name: 1,2,5-Oxadiazol-3-amine, 4-[(2,4-dichlorophenyl)methoxy]-, formula: C9H7Cl2N3O2
+cas: 288-37-9, name: 1,2,5-Oxadiazole, formula: C2H2N2O
+cas: 1000319-53-8, name: 1,2,5-Oxadiazole-3-carboxamide, 4-amino-N-[2-[[(2-fluorophenyl)methyl]amino]ethyl]-, formula: C12H14FN5O2
+cas: 288-39-1, name: 1,2,5-Thiadiazole, formula: C2H2N2S
+cas: 930-87-0, name: 1,2,5-Trimethylpyrrole, formula: C7H11N
+cas: 52894-25-4, name: 1,2,7,8-Octanetetrol, formula: C8H18O4
+cas: 1000192-65-0, name: 1,2-15,16-Diepoxyhexadecane, formula: C16H30O2
+cas: 1000330-10-1, name: 1,2-Benzendiol, O,O'-di(cyclopentanecarbonyl)-, formula: C18H22O4
+cas: 1000330-11-5, name: 1,2-Benzendiol, O,O'-di(trans-3-trifluoromethylcinnamoyl)-, formula: C26H16F6O4
+cas: 88-99-3, name: 1,2-Benzenedicarboxylic acid, formula: C8H6O4
+cas: 69094-40-2, name: 1,2-Benzenedicarboxylic acid, 4,5-dimethyl-, diethyl ester, formula: C14H18O4
+cas: 20116-65-8, name: 1,2-Benzenedicarboxylic acid, 4-methyl-, dimethyl ester, formula: C11H12O4
+cas: 610-22-0, name: 1,2-Benzenedicarboxylic acid, 4-nitro-, dimethyl ester, formula: C10H9NO6
+cas: 605-45-8, name: 1,2-Benzenedicarboxylic acid, bis(1-methylethyl) ester, formula: C14H18O4
+cas: 89-16-7, name: 1,2-Benzenedicarboxylic acid, bis(8-methylnonyl) ester, formula: C28H46O4
+cas: 85-69-8, name: 1,2-Benzenedicarboxylic acid, butyl 2-ethylhexyl ester, formula: C20H30O4
+cas: 17851-53-5, name: 1,2-Benzenedicarboxylic acid, butyl 2-methylpropyl ester, formula: C16H22O4
+cas: 89-18-9, name: 1,2-Benzenedicarboxylic acid, butyl 8-methylnonyl ester, formula: C22H34O4
+cas: 84-64-0, name: 1,2-Benzenedicarboxylic acid, butyl cyclohexyl ester, formula: C18H24O4
+cas: 3648-21-3, name: 1,2-Benzenedicarboxylic acid, diheptyl ester, formula: C22H34O4
+cas: 84-76-4, name: 1,2-Benzenedicarboxylic acid, dinonyl ester, formula: C26H42O4
+cas: 84-62-8, name: 1,2-Benzenedicarboxylic acid, diphenyl ester, formula: C20H14O4
+cas: 3648-20-2, name: 1,2-Benzenedicarboxylic acid, diundecyl ester, formula: C30H50O4
+cas: 34006-77-4, name: 1,2-Benzenedicarboxylic acid, ethyl methyl ester, formula: C11H12O4
+cas: 4376-20-9, name: 1,2-Benzenedicarboxylic acid, mono(2-ethylhexyl) ester, formula: C16H22O4
+cas: 1020-31-1, name: 1,2-Benzenediol, 3,5-bis(1,1-dimethylethyl)-, formula: C14H22O2
+cas: 1000330-49-7, name: 1,2-Benzenediol, O,O'-di(4-butylbenzoyl)-, formula: C28H30O4
+cas: 1000325-87-2, name: 1,2-Benzenediol, O,O'-di(thiophen-2-acetyl)-, formula: C18H14O4S2
+cas: 1000325-94-2, name: 1,2-Benzenediol, O-(1-naphthoyl)-, formula: C17H12O3
+cas: 1000329-74-5, name: 1,2-Benzenediol, O-(2,6-difluorobenzoyl)-O'-(1-naphthoyl)-, formula: C24H14F2O4
+cas: 1000329-73-5, name: 1,2-Benzenediol, O-(2-furoyl)-O'-(butoxycarbonyl)-, formula: C16H16O6
+cas: 1000329-74-7, name: 1,2-Benzenediol, O-(2-furoyl)-O'-(pentafluoropropionyl)-, formula: C14H7F5O5
+cas: 1000329-71-0, name: 1,2-Benzenediol, O-(2-methoxybenzoyl)-O'-(methoxycarbonyl)-, formula: C16H14O6
+cas: 1000329-71-2, name: 1,2-Benzenediol, O-(2-methoxybenzoyl)-O'-(propargyloxycarbonyl)-, formula: C18H14O6
+cas: 1000329-79-2, name: 1,2-Benzenediol, O-(3-methylbut-2-enoyl)-O'-(pivaloyl)-, formula: C16H20O4
+cas: 1000329-73-7, name: 1,2-Benzenediol, O-(4-butylbenzoyl)-O'-(butoxycarbonyl)-, formula: C22H26O5
+cas: 1000329-73-6, name: 1,2-Benzenediol, O-(4-butylbenzoyl)-O'-(isobutoxycarbonyl)-, formula: C22H26O5
+cas: 1000330-50-2, name: 1,2-Benzenediol, O-(4-ethylbenzoyl)-O'-methoxycarbonyl-, formula: C17H16O5
+cas: 1000329-75-1, name: 1,2-Benzenediol, O-(4-ethylbenzoyl)-O'-propargyloxycarbonyl-, formula: C19H16O5
+cas: 1000329-72-1, name: 1,2-Benzenediol, O-(4-methoxybenzoyl )-O'-(2-furoyl)-, formula: C19H14O6
+cas: 1000329-72-2, name: 1,2-Benzenediol, O-(4-methoxybenzoyl)-O'-(2-trifluoromethylbenzoyl)-, formula: C22H15F3O5
+cas: 1000329-76-1, name: 1,2-Benzenediol, O-(4-methylbenzoyl)-O'-(2-(trifluoromethyl)benzoyl)-, formula: C22H15F3O4
+cas: 1000329-75-8, name: 1,2-Benzenediol, O-(4-methylbenzoyl)-O'-propoxycarbonyl-, formula: C18H18O5
+cas: 1000325-94-9, name: 1,2-Benzenediol, O-(5-bromovaleryl)-O'-(1-naphthoyl)-, formula: C22H19BrO4
+cas: 1000325-94-8, name: 1,2-Benzenediol, O-(5-chlorovaleryl)-O'-(1-naphthoyl)-, formula: C22H19ClO4
+cas: 1000329-74-2, name: 1,2-Benzenediol, O-(5-chlorovaleryl)-O-(2-methylbenzoyl)-, formula: C19H19ClO4
+cas: 1000330-49-5, name: 1,2-Benzenediol, O-acetoxyacetyl-O'-(4-butylbenzoyl)-, formula: C21H22O6
+cas: 1000329-77-2, name: 1,2-Benzenediol, O-acryloyl-O'-octanoyl-, formula: C17H22O4
+cas: 1000329-72-3, name: 1,2-Benzenediol, O-cyclopentanecarbonyl-O'-cyclopropanecarbonyl-, formula: C16H18O4
+cas: 1000330-46-9, name: 1,2-Benzenediol, O-dichloroacetyl-O'-(3-methylbut-2-enoyl)-, formula: C13H12Cl2O4
+cas: 1000329-75-6, name: 1,2-Benzenediol, O-propoxycarbonyl-O'-(2-(trifluoromethyl)benzoyl)-, formula: C18H15F3O5
+cas: 1000325-97-0, name: 1,2-Benzenediol, o-(2-bromopropionyl)-o'-(4-ethylbenzoyl)-, formula: C18H17BrO4
+cas: 1000325-96-7, name: 1,2-Benzenediol, o-(2-chloropropionyl)-o'-(2,6-difluorobenzoyl)-, formula: C16H11ClF2O4
+cas: 1000325-96-9, name: 1,2-Benzenediol, o-(2-chloropropionyl)-o'-(4-ethylbenzoyl)-, formula: C18H17ClO4
+cas: 1000325-96-4, name: 1,2-Benzenediol, o-(3-methylbenzoyl)-, formula: C14H12O3
+cas: 1000325-91-0, name: 1,2-Benzenediol, o-(3-methylbut-2-enoyl)-o'-(6-bromohexanoyl)-, formula: C17H21BrO4
+cas: 1000325-96-0, name: 1,2-Benzenediol, o-(4-butylbenzoyl)-o'-(2-methylbenzoyl)-, formula: C25H24O4
+cas: 1000325-96-2, name: 1,2-Benzenediol, o-(4-butylbenzoyl)-o'-(trans-3-trifluoromethylcinnamoyl)-, formula: C27H23F3O4
+cas: 1000325-97-9, name: 1,2-Benzenediol, o-(4-methoxybenzoyl)-o'-(2,2,3,3,4,4,4-heptafluorobutyryl)-, formula: C18H11F7O5
+cas: 1000325-98-7, name: 1,2-Benzenediol, o-(4-methoxybezoyl)-o'-(5-chlorovaleryl)-, formula: C19H19ClO5
+cas: 1000325-87-4, name: 1,2-Benzenediol, o-(thiophen-2-acetyl)-, formula: C12H10O3S
+cas: 1000325-88-0, name: 1,2-Benzenediol, o-isonicotinoyl-o'-(thiophene-2-carbonyl)-, formula: C17H11NO4S
+cas: 272-16-2, name: 1,2-Benzisothiazole, formula: C7H5NS
+cas: 55712-48-6, name: 1,2-Benzisothiazole-3-ethanol, acetate (ester), formula: C11H11NO2S
+cas: 93999-18-9, name: 1,2-Bis(3,5,5-trimethyl-2-cyclohexenylidene)hydrazine, formula: C18H28N2
+cas: 64857-67-6, name: 1,2-Bis(3,5-dimethylphenyl)-diazene 1-oxide, formula: C16H18N2O
+cas: 1000192-85-9, name: 1,2-Bis(4-methoxyphenyl)-N,N,N',N'-tetramethylethane-1,2-diamine, formula: C20H28N2O2
+cas: 51208-43-6, name: 1,2-Bis(4-methoxyphenyl)ethane-1,2-diamine, formula: C16H20N2O2
+cas: 93655-79-9, name: 1,2-Bis(p-acetoxyphenyl)ethanedione, formula: C18H14O6
+cas: 30834-74-3, name: 1,2-Bis(tert-butylimino)ethane, formula: C10H20N2
+cas: 1000192-38-3, name: 1,2-Bis-(4-bromophenyl)-N,N,N',N'-tetramethyl-ethane-1,2-diamine, formula: C18H22Br2N2
+cas: 1000339-84-0, name: 1,2-Cyclohexanedicarboxylic acid, di(3-methylphenyl) ester, formula: C22H24O4
+cas: 1000339-58-2, name: 1,2-Cyclohexanedicarboxylic acid, di(4-isopropyloxyphenyl) diester, formula: C26H32O6
+cas: 1119-86-4, name: 1,2-Decanediol, formula: C10H22O2
+cas: 96508-75-7, name: 1,2-Dehydro-as-hydrindacene, formula: C13H14
+cas: 15656-75-4, name: 1,2-Di-n-butyl-3-methyldiaziridine, formula: C10H22N2
+cas: 21392-67-6, name: 1,2-Dibenzoyl-3-methyldiaziridine, formula: C16H14N2O2
+cas: 624-72-6, name: 1,2-Difluoroethane, formula: C2H4F2
+cas: 35365-52-7, name: 1,2-Dihexylcyclopropene, formula: C15H28
+cas: 15054-64-5, name: 1,2-Dihydro-3-isopropyl-2-oxoquinoxaline, formula: C11H12N2O
+cas: 100516-13-0, name: 1,2-Dihydrobenzo[b]fluoranthene, formula: C20H14
+cas: 7336-61-0, name: 1,2-Dihydroxyanthraquinone, O,O'-bis(trimethylsilyl)-, formula: C20H24O4Si2
+cas: 73861-74-2, name: 1,2-Dimethoxy-4-(adamantyl-1)benzene, formula: C18H24O2
+cas: 1000194-22-7, name: 1,2-Dimethoxy-ethene, formula: C4H8O2
+cas: 100325-69-7, name: 1,2-Dimethyl-4-tertbutyl-6-cyclopentylbenzene, formula: C17H26
+cas: 1000298-40-6, name: 1,2-Dimethylbutyl isopropylphosphonofluoridate, formula: C9H20FO2P
+cas: 6794-95-2, name: 1,2-Dimethyldiaziridine, formula: C3H8N2
+cas: 1000194-44-5, name: 1,2-Diphenyl-1,2-di(morpholin-4-yl)ethane (threo), formula: C22H28N2O2
+cas: 6415-70-9, name: 1,2-Diphenyl-3-aminocarbonyl-cyclopropene, formula: C16H13NO
+cas: 29881-14-9, name: 1,2-Diphenylcyclopropane, formula: C15H14
+cas: 3682-07-3, name: 1,2-Diphenylethylene diacetate, formula: C18H18O4
+cas: 505-20-4, name: 1,2-Dithiane, formula: C4H8S2
+cas: 123-83-1, name: 1,2-Ethanediamine, N'-ethyl-N,N-dimethyl-, formula: C6H16N2
+cas: 102-18-1, name: 1,2-Ethanediamine, N,N'-dimethyl-N,N'-bis(phenylmethyl)-, formula: C18H24N2
+cas: 150-77-6, name: 1,2-Ethanediamine, N,N,N',N'-tetraethyl-, formula: C10H24N2
+cas: 121-05-1, name: 1,2-Ethanediamine, N,N-bis(1-methylethyl)-, formula: C8H20N2
+cas: 111-40-0, name: 1,2-Ethanediamine, N-(2-aminoethyl)-, formula: C4H13N3
+cas: 94-49-5, name: 1,2-Ethanediol, dibenzoate, formula: C16H14O4
+cas: 629-15-2, name: 1,2-Ethanediol, diformate, formula: C4H6O4
+cas: 94-33-7, name: 1,2-Ethanediol, monobenzoate, formula: C9H10O3
+cas: 4439-95-6, name: 1,2-Longidione, formula: C15H22O2
+cas: 5574-34-5, name: 1,2-Naphthalenedione, 3,8-dimethyl-5-(1-methylethyl)-, formula: C15H16O2
+cas: 20294-76-2, name: 1,2-Octadecanediol, formula: C18H38O2
+cas: 56248-43-2, name: 1,2-Oxaphosphole, 3,5-bis(1,1-dimethylethyl)-2,5-dihydro-2-hydroxy-, 2-oxide, formula: C11H21O3P
+cas: 1633-83-6, name: 1,2-Oxathiane, 2,2-dioxide, formula: C4H8O3S
+cas: 15224-88-1, name: 1,2-Oxathiane, 6-dodecyl-, 2,2-dioxide, formula: C16H32O3S
+cas: 5343-92-0, name: 1,2-Pentanediol, formula: C5H12O2
+cas: 78-90-0, name: 1,2-Propanediamine, formula: C3H10N2
+cas: 6214-01-3, name: 1,2-Propanediol, 2-acetate, formula: C5H10O3
+cas: 623-57-4, name: 1,2-Propanediol, 3-(dimethylamino)-, formula: C5H13NO2
+cas: 13754-10-4, name: 1,2-Propanediol, 3-benzyloxy-1,2-diacetyl-, formula: C14H18O5
+cas: 13678-69-8, name: 1,2-Propanedione, 1-(2-thienyl)-, formula: C7H6O2S
+cas: 579-07-7, name: 1,2-Propanedione, 1-phenyl-, formula: C9H8O2
+cas: 21129-09-9, name: 1,2-Tetradecanediol, formula: C14H30O2
+cas: 1000378-93-0, name: 1,2-propanedione,1-(3,4-methylenedioxy)phenyl, formula: C10H8O4
+cas: 53057-53-7, name: 1,21-Docosadiene, formula: C22H42
+cas: 22513-81-1, name: 1,22-Docosanediol, formula: C22H46O2
+cas: 74744-57-3, name: 1,3,2-Dioxaborinane, 2,4-diethyl-5-methyl-6-propyl-, formula: C11H23BO2
+cas: 74646-14-3, name: 1,3,2-Dioxaborolan-4-one, 2-ethyl-5-methyl-, formula: C5H9BO3
+cas: 57633-64-4, name: 1,3,2-Dioxaborolane, 2-ethyl-4,5-dimethyl-, formula: C6H13BO2
+cas: 35610-28-7, name: 1,3,2-Dioxaphosphorinan-2-amine, 4-methyl-N-phenyl-, 2-oxide, trans-, formula: C10H14NO3P
+cas: 24635-97-0, name: 1,3,2-Dioxarsenane, 2-methyl-, formula: C4H9AsO2
+cas: 31748-10-4, name: 1,3,2-Oxazaborolane, 2-butyl-, formula: C6H14BNO
+cas: 31970-40-8, name: 1,3,2-Oxazaborolane-4-carboxylic acid, 2-butyl-, methyl ester, L-, formula: C8H16BNO3
+cas: 155726-93-5, name: 1,3,3-Trimethyl-1-(2'-trimethylsilyloxyphenyl)-6-trimethylsilyloxyindane, formula: C24H36O2Si2
+cas: 1000306-00-0, name: 1,3,3-Triphenylazetidin-2,4-dione, formula: C21H15NO2
+cas: 24660-41-1, name: 1,3,4-Oxadiazolium, 5-hydroxy-2,3-diphenyl-, hydroxide, inner salt, formula: C14H10N2O2
+cas: 1072-71-5, name: 1,3,4-Thiadiazolidine-2,5-dithione, formula: C2H2N2S3
+cas: 19703-85-6, name: 1,3,4-Thiadiazolium, 5-hydroxy-2-(4-methoxyphenyl)-3-methyl-, hydroxide, inner salt, formula: C10H10N2O2S
+cas: 1000102-78-4, name: 1,3,5,7,9,11-Hexaethyl-5,9-dioxytricyclo[5.5.1.1(3,11)]hexasiloxane, formula: C12H32O10Si6
+cas: 1000153-69-4, name: 1,3,5,7=Tetrazaadamantane borane, formula: C6H15BN4
+cas: 50277-31-1, name: 1,3,5,8-Undecatetraene, formula: C11H16
+cas: 2672-58-4, name: 1,3,5-Benzenetricarboxylic acid, trimethyl ester, formula: C12H12O6
+cas: 544-25-2, name: 1,3,5-Cycloheptatriene, formula: C7H8
+cas: 1000156-99-6, name: 1,3,5-Cycloheptatriene, 2,4-diethyl-7,7-dimethyl-, formula: C13H20
+cas: 1000129-74-8, name: 1,3,5-Tri-O-benzoyl-.alpha.-d-ribofuranose, formula: C26H22O8
+cas: 6281-14-7, name: 1,3,5-Triazine, 1,3,5-tricyclohexylhexahydro-, formula: C21H39N3
+cas: 675-14-9, name: 1,3,5-Triazine, 2,4,6-trifluoro-, formula: C3F3N3
+cas: 823-94-9, name: 1,3,5-Triazine, 2,4,6-trimethyl-, formula: C6H9N3
+cas: 493-77-6, name: 1,3,5-Triazine, 2,4,6-triphenyl-, formula: C21H15N3
+cas: 337342-30-0, name: 1,3,5-Triazine, 2-ethylamino-4-isopropylamino-6-(4-morpholyl)-, formula: C12H22N6O
+cas: 71-33-0, name: 1,3,5-Triazine-2,4(1H,3H)-dione, formula: C3H3N3O2
+cas: 1025-15-6, name: 1,3,5-Triazine-2,4,6(1H,3H,5H)-trione, 1,3,5-tri-2-propenyl-, formula: C12H15N3O3
+cas: 108-78-1, name: 1,3,5-Triazine-2,4,6-triamine, formula: C3H6N6
+cas: 1007-28-9, name: 1,3,5-Triazine-2,4-diamine, 6-chloro-N-ethyl-, formula: C5H8ClN5
+cas: 1467-72-7, name: 1,3,5-Triazine-2,4-diamine, 6-phenoxy-, formula: C9H9N5O
+cas: 13055-81-7, name: 1,3,5-Triazine-2-carboxylic acid, 4,6-diamino-, formula: C4H5N5O2
+cas: 110-88-3, name: 1,3,5-Trioxane, formula: C3H6O3
+cas: 2396-43-2, name: 1,3,5-Trioxane, 2,4,6-tripropyl-, formula: C12H24O3
+cas: 5981-06-6, name: 1,3,5-Trioxepane, formula: C4H8O3
+cas: 6263-84-9, name: 1,3,5-Triphenyl-1,5-pentanedione, formula: C23H20O2
+cas: 1000214-96-9, name: 1,3,5-tris(cyclohexyl)pent-1-ene, formula: C23H40
+cas: 37160-08-0, name: 1,3,6,9b-Tetraazaphenalene-4-carbonitrile, 2-methyl-, formula: C11H7N5
+cas: 1000376-38-1, name: 1,3,6-Trioxa-2-silacyclooctane, 2,2,-dimethylsilyl-, formula: C6H14O3Si
+cas: 615-05-4, name: 1,3-Benzenediamine, 4-methoxy-, formula: C7H10N2O
+cas: 2359-09-3, name: 1,3-Benzenedicarboxylic acid, 5-(1,1-dimethylethyl)-, formula: C12H14O4
+cas: 618-83-7, name: 1,3-Benzenedicarboxylic acid, 5-hydroxy-, formula: C8H6O5
+cas: 137-89-3, name: 1,3-Benzenedicarboxylic acid, bis(2-ethylhexyl) ester, formula: C24H38O4
+cas: 40248-00-8, name: 1,3-Benzenediol, 5-(dimethylamino)-, formula: C8H11NO2
+cas: 64339-43-1, name: 1,3-Benzenediol, 5-iodo-, formula: C6H5IO2
+cas: 500-66-3, name: 1,3-Benzenediol, 5-pentyl-, formula: C11H16O2
+cas: 1000330-75-5, name: 1,3-Benzenediol, O,O'-di(2-furoyl)-, formula: C16H10O6
+cas: 1000330-74-0, name: 1,3-Benzenediol, O,O'-di(2-methylbenzoyl)-, formula: C22H18O4
+cas: 1000330-70-4, name: 1,3-Benzenediol, O,O'-di(3-methylbut-2-enoyl)-, formula: C16H18O4
+cas: 1000345-57-1, name: 1,3-Benzenediol, O-(2,3,4-trifluorobenzoyl)-, formula: C13H7F3O3
+cas: 1000345-52-7, name: 1,3-Benzenediol, O-(2,6-difluorobenzoyl)-O'-(1-naphthoyl)-, formula: C24H14F2O4
+cas: 1000345-48-6, name: 1,3-Benzenediol, O-(3-methylbut-2-enoyl)-O'-(2-thiophenecarbonyl)-, formula: C16H14O4S
+cas: 1000345-61-1, name: 1,3-Benzenediol, O-(4-butylbenzoyl)-O'-(4-fluorobenzoyl)-, formula: C24H21FO4
+cas: 1000330-69-7, name: 1,3-Benzenediol, O-(thiophene-2-carbonyl)-O'-hexanoyl-, formula: C17H18O4S
+cas: 1000345-50-2, name: 1,3-Benzenediol, O-isobutyryl-O'-methoxyacetyl-, formula: C13H16O5
+cas: 1000345-54-8, name: 1,3-Benzenediol, O-methoxycarbonyl-O'-(2-trifluoromethylbenzoyl)-, formula: C16H11F3O5
+cas: 1000345-54-6, name: 1,3-Benzenediol, O-propoxycarbonyl-, formula: C10H12O4
+cas: 108-58-7, name: 1,3-Benzenediol, diacetate, formula: C10H10O4
+cas: 136-36-7, name: 1,3-Benzenediol, monobenzoate, formula: C13H10O3
+cas: 1000330-75-3, name: 1,3-Benzenediol, o-(2-furoyl)-, formula: C11H8O4
+cas: 1000330-77-5, name: 1,3-Benzenediol, o-(2-furoyl)-o'-(2-methoxybenzoyl)-, formula: C19H14O6
+cas: 1000330-77-1, name: 1,3-Benzenediol, o-(2-methoxybenzoyl)-o'-ethoxycarbonyl-, formula: C17H16O6
+cas: 1000330-77-3, name: 1,3-Benzenediol, o-(2-methoxybenzoyl)-o'-propargyloxycarbonyl-, formula: C18H14O6
+cas: 1000330-77-6, name: 1,3-Benzenediol, o-(2-trifluoromethylbenzoyl)-o'-(2-methoxybenzoyl)-, formula: C22H15F3O5
+cas: 1000330-70-9, name: 1,3-Benzenediol, o-(3-methylbut-2-enoyl)-o'-(2-fluorobenzoyl)-, formula: C18H15FO4
+cas: 1000330-74-3, name: 1,3-Benzenediol, o-(4-butylbenzoyl)-o'-(3-cyclopentylpropionyl)-, formula: C25H30O4
+cas: 1000330-81-1, name: 1,3-Benzenediol, o-(4-butylbenzoyl)-o'-methoxycarbonyl-, formula: C19H20O5
+cas: 1000330-81-2, name: 1,3-Benzenediol, o-(4-butylbenzoyl)-o'-propargyloxycarbonyl-, formula: C21H20O5
+cas: 1000330-83-6, name: 1,3-Benzenediol, o-(4-ethylbenzoyl)-o'-(3-methylbenzoyl)-, formula: C23H20O4
+cas: 1000330-82-9, name: 1,3-Benzenediol, o-(4-ethylbenzoyl)-o'-propionyl-, formula: C18H18O4
+cas: 1000330-77-7, name: 1,3-Benzenediol, o-(4-methylbenzoyl)-o'-(2-methoxybenzoyl)-, formula: C22H18O5
+cas: 1000330-81-4, name: 1,3-Benzenediol, o-butoxycarbonyl-O-(4-butylbenzoyl)-, formula: C22H26O5
+cas: 1000330-67-0, name: 1,3-Benzenediol, o-chloroacetyl-o'-cyclohexanecarbonyl-, formula: C15H17ClO4
+cas: 1000330-66-1, name: 1,3-Benzenediol, o-chloroacetyl-o'-heptafluorobutyryl-, formula: C12H6ClF7O4
+cas: 1000330-72-1, name: 1,3-Benzenediol, o-cyclopentanecarbonyl-o'-methoxyacetyl-, formula: C15H18O5
+cas: 1000330-78-1, name: 1,3-Benzenediol, o-cyclopropanecarbonyl-, formula: C10H10O3
+cas: 1000330-70-5, name: 1,3-Benzenediol, o-cyclopropanecarbonyl-o'-(3-methylbut-2-enoyl)-, formula: C15H16O4
+cas: 1000330-76-5, name: 1,3-Benzenediol, o-methoxycarbonyl-o'-(2-furoyl)-, formula: C13H10O6
+cas: 1000330-76-6, name: 1,3-Benzenediol, o-methoxycarbonyl-o'-(2-methoxybenzoyl)-, formula: C16H14O6
+cas: 1000330-72-6, name: 1,3-Benzenediol, o-pentafluorobenzoyl-o'-(3-trifluoromethylbenzoyl)-, formula: C21H8F8O4
+cas: 20192-66-9, name: 1,3-Benzodioxol-2-one, hexahydro-, trans-, formula: C7H10O3
+cas: 91057-65-7, name: 1,3-Benzodioxole, 2-acetyl-4-methoxy-2-methyl-, formula: C11H12O4
+cas: 831-45-8, name: 1,3-Benzodioxole-2-carboxylic acid, ethyl ester, formula: C10H10O4
+cas: 41764-07-2, name: 1,3-Benzodioxole-5-(4-keto-butyric acid), formula: C11H10O5
+cas: 326-59-0, name: 1,3-Benzodioxole-5-acetic acid, methyl ester, formula: C10H10O4
+cas: 99185-29-2, name: 1,3-Benzodioxole-5-carboxylic acid, 6-acetamino-, formula: C10H9NO5
+cas: 326-56-7, name: 1,3-Benzodioxole-5-carboxylic acid, methyl ester, formula: C9H8O4
+cas: 1000338-39-5, name: 1,3-Benzoxazole-5-carboxylic acid, 7-amino-2-(phenylmethyl)-, methyl ester, formula: C16H14N2O3
+cas: 538-81-8, name: 1,3-Butadiene, 1,4-diphenyl-, (E,E)-, formula: C16H14
+cas: 10574-85-3, name: 1,3-Butadiene, 1-(ethylthio)-, formula: C6H10S
+cas: 460-12-8, name: 1,3-Butadiyne, formula: C4H2
+cas: 64788-23-4, name: 1,3-Butadiyne, 1,4-difluoro-, formula: C4F2
+cas: 590-88-5, name: 1,3-Butanediamine, formula: C4H12N2
+cas: 39900-12-4, name: 1,3-Butanedione, 1-(2,6,6-trimethyl-1-cyclohexen-1-yl)-, formula: C13H20O2
+cas: 933-52-8, name: 1,3-Cyclobutanedione, 2,2,4,4-tetramethyl-, formula: C8H12O2
+cas: 116-26-7, name: 1,3-Cyclohexadiene-1-carboxaldehyde, 2,6,6-trimethyl-, formula: C10H14O
+cas: 3385-21-5, name: 1,3-Cyclohexanediamine, formula: C6H14N2
+cas: 504-02-9, name: 1,3-Cyclohexanedione, formula: C6H8O2
+cas: 702-50-1, name: 1,3-Cyclohexanedione, 2,2,5,5-tetramethyl-, formula: C10H16O2
+cas: 1125-11-7, name: 1,3-Cyclohexanedione, 2,5,5-trimethyl-, formula: C9H14O2
+cas: 54644-26-7, name: 1,3-Cyclohexanedione, 2-butyl-2-methyl-, formula: C11H18O2
+cas: 54244-73-4, name: 1,3-Cyclohexanedione, 2-propyl-, formula: C9H14O2
+cas: 18456-87-6, name: 1,3-Cyclohexanedione, 5-isopropyl-, formula: C9H14O2
+cas: 4125-18-2, name: 1,3-Cyclopentadiene, 5,5-dimethyl-, formula: C7H10
+cas: 1000163-88-0, name: 1,3-Cyclopentadiene, 5,5-dimethyl-1,2-Dipropyl-, formula: C13H22
+cas: 34598-80-6, name: 1,3-Cyclopentanedione, 2,4-dimethyl-, formula: C7H10O2
+cas: 825-31-0, name: 1,3-Cyclopentanedione, 2-butyl-, formula: C9H14O2
+cas: 827-03-2, name: 1,3-Cyclopentanedione, 2-isopentyl-, formula: C10H16O2
+cas: 4683-51-6, name: 1,3-Cyclopentanedione, 4,4-dimethyl-, formula: C7H10O2
+cas: 35029-03-9, name: 1,3-Cyclopentanedione, 4-methyl-, formula: C6H8O2
+cas: 37598-81-5, name: 1,3-Diamino-5,6-dihydro-8,9-dimethylbenzo[f]quinazoline, formula: C14H16N4
+cas: 37521-61-2, name: 1,3-Diamino-8-methoxybenzo[f]quinazoline, formula: C13H12N4O
+cas: 37521-51-0, name: 1,3-Diamino-8-n-propylbenzo[f]quinazoline, formula: C15H16N4
+cas: 4364-78-7, name: 1,3-Diaminoguanidine, formula: CH7N5
+cas: 17038-28-7, name: 1,3-Diazabicyclo[3.1.0]hexane, formula: C4H8N2
+cas: 83800-62-8, name: 1,3-Dibenzoyl-4-benzylidene-5-oxo-2-thiocarbonylimidazolidine, formula: C24H16N2O3S
+cas: 1435-48-9, name: 1,3-Dichloro-4-fluorobenzene, formula: C6H3Cl2F
+cas: 2387-23-7, name: 1,3-Dicyclohexylurea, formula: C13H24N2O
+cas: 453-13-4, name: 1,3-Difluoro-2-propanol, formula: C3H6F2O
+cas: 76697-63-7, name: 1,3-Dihydro-4,6-dimethoxy-1-oxoisobenzofuran-3-carboxylic acid, formula: C11H10O6
+cas: 2898-08-0, name: 1,3-Dihydro-5-phenyl-2H-1,4-benzodiazepin-2-one, formula: C15H12N2O
+cas: 7336-62-1, name: 1,3-Dihydroxyanthraquinone , O,O'-bis(trimethylsilyl)-, formula: C20H24O4Si2
+cas: 1000113-02-4, name: 1,3-Dimethyl-(3,7-dimethyloctyl)cyclohexane, formula: C18H36
+cas: 1000215-00-5, name: 1,3-Dimethyl-5,7-di-n-propyladamantane, formula: C18H32
+cas: 1000306-48-4, name: 1,3-Dimethyl-5-ethoxypyrazole, formula: C7H12N2O
+cas: 1687-35-0, name: 1,3-Dimethyl-5-ethyladamantane, formula: C14H24
+cas: 86710-36-3, name: 1,3-Dimethyl-5-n-decylcyclohexane, formula: C18H36
+cas: 52873-50-4, name: 1,3-Dimethyl-5-n-hexyladamantane, formula: C18H32
+cas: 63263-09-2, name: 1,3-Dimethyladamantan-5-carboxylic acid, ethyl ester, formula: C15H24O2
+cas: 107995-66-4, name: 1,3-Dimethyladamantan-5-carboxylic acid, n-hexyl ester, formula: C19H32O2
+cas: 769-42-6, name: 1,3-Dimethylbarbituric acid, formula: C6H8N2O3
+cas: 1000298-25-6, name: 1,3-Dimethylbutyl isopropylphosphonofluoridate, formula: C9H20FO2P
+cas: 26177-36-6, name: 1,3-Dimethyldiaziridine, formula: C3H8N2
+cas: 505-22-6, name: 1,3-Dioxane, formula: C4H8O2
+cas: 766-20-1, name: 1,3-Dioxane, 2,4-dimethyl-, formula: C6H12O2
+cas: 626-68-6, name: 1,3-Dioxane, 2-methyl-, formula: C5H10O2
+cas: 772-01-0, name: 1,3-Dioxane, 2-phenyl-, formula: C10H12O2
+cas: 35878-04-7, name: 1,3-Dioxane, 5-fluoro-2-methyl-, cis-, formula: C5H9FO2
+cas: 4858-67-7, name: 1,3-Dioxane-4,6-dione, 5,5-dimethyl-2-(1-methylethylidene)-, formula: C9H12O4
+cas: 872-36-6, name: 1,3-Dioxol-2-one, formula: C3H2O3
+cas: 96-49-1, name: 1,3-Dioxolan-2-one, formula: C3H4O3
+cas: 62458-20-2, name: 1,3-Dioxolan-2-one, 4,5-bis(methylene)-, formula: C5H4O3
+cas: 88794-76-7, name: 1,3-Dioxolan-4-one, 2-t-butyl-5-methyl-5-(4,4-dimethoxypentyl)-, formula: C15H28O5
+cas: 646-06-0, name: 1,3-Dioxolane, formula: C3H6O2
+cas: 1193-11-9, name: 1,3-Dioxolane, 2,2,4-trimethyl-, formula: C6H12O2
+cas: 2916-31-6, name: 1,3-Dioxolane, 2,2-dimethyl-, formula: C5H10O2
+cas: 5267-73-2, name: 1,3-Dioxolane, 2-(1-bromoethyl)-, formula: C5H9BrO2
+cas: 1000156-71-2, name: 1,3-Dioxolane, 2-(methoxymethyl)-2-phenyl-, formula: C11H14O3
+cas: 935-49-9, name: 1,3-Dioxolane, 2-butyl-2-ethyl-, formula: C9H18O2
+cas: 3984-22-3, name: 1,3-Dioxolane, 2-ethenyl-, formula: C5H8O2
+cas: 1708-34-5, name: 1,3-Dioxolane, 2-hexyl-, formula: C9H18O2
+cas: 497-26-7, name: 1,3-Dioxolane, 2-methyl-, formula: C4H8O2
+cas: 3674-77-9, name: 1,3-Dioxolane, 2-methyl-2-phenyl-, formula: C10H12O2
+cas: 4353-03-1, name: 1,3-Dioxolane, 2-methyl-2-tridecyl-, formula: C17H34O2
+cas: 4362-19-0, name: 1,3-Dioxolane, 2-phenyl-2-(phenylmethyl)-, formula: C16H16O2
+cas: 6135-60-0, name: 1,3-Dioxolane, 2-tert-butyl-2-phenyl-, formula: C13H18O2
+cas: 56599-60-1, name: 1,3-Dioxolane, 4-ethyl-2-pentadecyl-, formula: C20H40O2
+cas: 56599-78-1, name: 1,3-Dioxolane, 4-ethyl-4-methyl-2-pentadecyl-, formula: C21H42O2
+cas: 58422-90-5, name: 1,3-Dioxolane-2-heptanenitrile, .alpha.-methyl-.delta.-oxo-2-phenyl-, formula: C17H21NO3
+cas: 5694-68-8, name: 1,3-Dioxolane-2-methanol, formula: C4H8O3
+cas: 36651-17-9, name: 1,3-Dioxolane-2-pentanoic acid, 2-methyl-, ethyl ester, formula: C11H20O4
+cas: 15186-48-8, name: 1,3-Dioxolane-4-carboxaldehyde, 2,2-dimethyl-, (R)-, formula: C6H10O3
+cas: 5464-28-8, name: 1,3-Dioxolane-4-methanol, formula: C4H8O3
+cas: 1000196-21-3, name: 1,3-Dioxolo[4,5-c]pyran, tetrahydro-, 7-(2-acetoxyethyl)-7-hydroxy-2,2-dimethyl-4-(3-methoxycarbonyl-2-methylallyl)-, formula: C18H28O8
+cas: 1000100-95-1, name: 1,3-Dipentyl-heptabarbital, formula: C23H38N2O3
+cas: 108971-44-4, name: 1,3-Diphenyl-1-dimethylaminopropane, formula: C17H21N
+cas: 6488-59-1, name: 1,3-Diphenyl-2,4,5-trioxoimidazolidine, formula: C15H10N2O3
+cas: 57162-74-0, name: 1,3-Diphenyl-2-azafluorene, formula: C24H17N
+cas: 5055-73-2, name: 1,3-Diphenyl-4H-1,2,4-triazoline-5-thione, formula: C14H11N3S
+cas: 559-94-4, name: 1,3-Hexanedione, 4,4,5,5,6,6,6-heptafluoro-1-(2-thienyl)-, formula: C10H5F7O2S
+cas: 1133-72-8, name: 1,3-Indandione, 2-acetyl-, formula: C11H8O3
+cas: 13913-22-9, name: 1,3-Methanopentalene, octahydro-, formula: C9H14
+cas: 6712-26-1, name: 1,3-Oxathiolane, 2-ethyl-2-methyl-, formula: C6H12OS
+cas: 24254-54-4, name: 1,3-Oxathiolane, 4-methyl-, formula: C4H8OS
+cas: 16877-22-8, name: 1,3-Oxazetidin-2-one, 3-phenyl-, formula: C8H7NO2
+cas: 1000138-86-0, name: 1,3-Oxazolidine, 2,5-diphenyl-4-methyl-, cis-, formula: C16H17NO
+cas: 1000138-86-5, name: 1,3-Oxazolidine, 4-methyl-5-cis-phenyl-2-(4-methoxyphenyl)-, formula: C17H19NO2
+cas: 1000196-90-4, name: 1,3-Oxazolidine-4-carboxylic acid, 3-benzoyl-2-(1,1-dimethylethyl)-5-methyl, formula: C16H21NO4
+cas: 34645-17-5, name: 1,3-Pentadien-2-ol, 4-methyl-, acetate, formula: C8H12O2
+cas: 92115-31-6, name: 1,3-Pentanedione, 2,4-dimethyl-1-phenyl-, formula: C13H16O2
+cas: 1000374-68-2, name: 1,3-Phenylenediamine, N,N,N'-tri(trimethylsilyl)-, formula: C15H32N2Si3
+cas: 109-76-2, name: 1,3-Propanediamine, formula: C3H10N2
+cas: 31892-15-6, name: 1,3-Propanediamine, N,N',2,2-tetramethyl-, formula: C7H18N2
+cas: 10061-68-4, name: 1,3-Propanediamine, N,N'-diethyl-, formula: C7H18N2
+cas: 6291-84-5, name: 1,3-Propanediamine, N-methyl-, formula: C4H12N2
+cas: 504-63-2, name: 1,3-Propanediol, formula: C3H8O2
+cas: 10395-09-2, name: 1,3-Propanediol, 2-dodecyl, formula: C15H32O2
+cas: 728-84-7, name: 1,3-Propanedione, 2-bromo-1,3-diphenyl-, formula: C15H11BrO2
+cas: 1000374-05-2, name: 1,3-di-iso-propylnaphthalene, formula: C16H20
+cas: 1000214-96-8, name: 1,3-dicyclohexylpropene, formula: C15H26
+cas: 60682-72-6, name: 1,4(axial)Diethyl-trans-decahydroquinol-4(equat)-ol, formula: C13H25NO
+cas: 78365-50-1, name: 1,4,5,6-Tetramethyl-2-pyrimidone, formula: C8H12N2O
+cas: 231-23-2, name: 1,4,5,8-Tetraaza-phenanthrene, formula: C10H6N4
+cas: 17455-13-9, name: 1,4,7,10,13,16-Hexaoxacyclooctadecane, formula: C12H24O6
+cas: 68130-08-5, name: 1,4,7-Trioxaspiro[4.5]decane, formula: C7H12O3
+cas: 24252-85-5, name: 1,4,8-Dodecatriene, (E,E,E)-, formula: C12H18
+cas: 54889-74-6, name: 1,4-Anthracenedione, 5,6,7,8-tetrahydro-2-methoxy-5,5-dimethyl-, formula: C17H18O3
+cas: 4251-01-8, name: 1,4-Benzenediamine, N,N'-bis(1-methylethyl)-, formula: C12H20N2
+cas: 93-05-0, name: 1,4-Benzenediamine, N,N-diethyl-, formula: C10H16N2
+cas: 793-24-8, name: 1,4-Benzenediamine, N-(1,3-dimethylbutyl)-N'-phenyl-, formula: C18H24N2
+cas: 101-72-4, name: 1,4-Benzenediamine, N-(1-methylethyl)-N'-phenyl-, formula: C15H18N2
+cas: 101-64-4, name: 1,4-Benzenediamine, N-(4-methoxyphenyl)-, formula: C13H14N2O
+cas: 623-27-8, name: 1,4-Benzenedicarboxaldehyde, formula: C8H6O2
+cas: 6422-86-2, name: 1,4-Benzenedicarboxylic acid, bis(2-ethylhexyl) ester, formula: C24H38O4
+cas: 959-26-2, name: 1,4-Benzenedicarboxylic acid, bis(2-hydroxyethyl) ester, formula: C12H14O6
+cas: 18699-48-4, name: 1,4-Benzenedicarboxylic acid, bis(2-methylpropyl) ester, formula: C16H22O4
+cas: 120-61-6, name: 1,4-Benzenedicarboxylic acid, dimethyl ester, formula: C10H10O4
+cas: 88-58-4, name: 1,4-Benzenediol, 2,5-bis(1,1-dimethylethyl)-, formula: C14H22O2
+cas: 2444-28-2, name: 1,4-Benzenediol, 2,6-bis(1,1-dimethylethyl)-, formula: C14H22O2
+cas: 1205-91-0, name: 1,4-Benzenediol, diacetate, formula: C10H10O4
+cas: 332148-91-1, name: 1,4-Bis-(4-fluorophenylethynyl)-2,3,5,6-tetrafluorobenzene, formula: C22H8F6
+cas: 495-71-6, name: 1,4-Butanedione, 1,4-diphenyl-, formula: C16H14O2
+cas: 105-08-8, name: 1,4-Cyclohexanedimethanol, formula: C8H16O2
+cas: 183-97-1, name: 1,4-Cyclohexanedione bis(ethylene ketal), formula: C10H16O4
+cas: 60389-44-8, name: 1,4-Diacetyl-1,4-dihydroquinoxaline, formula: C12H12N2O2
+cas: 1000364-70-1, name: 1,4-Diazabicyclo[4.3.0]nonan-2,5-dione, N-acetyl-, formula: C9H12N2O3
+cas: 70231-37-7, name: 1,4-Dihydro-2-isopropyl-6-phenylnicotinonitrile, formula: C15H16N2
+cas: 39021-83-5, name: 1,4-Dimethoxy-2,3-dimethylbenzene, formula: C10H14O2
+cas: 27422-98-6, name: 1,4-Dimethyl-1,2,4-triazol-3-thione-5-one, formula: C4H7N3OS
+cas: 51036-91-0, name: 1,4-Dimethyl-2-phenyl-naphthalene, formula: C18H16
+cas: 502-97-6, name: 1,4-Dioxane-2,5-dione, formula: C4H4O4
+cas: 6713-72-0, name: 1,4-Dioxane-2,5-dione, 3,3,6,6-tetramethyl-, formula: C8H12O4
+cas: 4480-83-5, name: 1,4-Dioxane-2,6-dione, formula: C4H4O4
+cas: 22428-87-1, name: 1,4-Dioxaspiro[4.5]decan-8-ol, formula: C8H14O3
+cas: 4746-97-8, name: 1,4-Dioxaspiro[4.5]decan-8-one, formula: C8H12O3
+cas: 177-10-6, name: 1,4-Dioxaspiro[4.5]decane, formula: C8H14O2
+cas: 935-46-6, name: 1,4-Dioxaspiro[4.5]decane, 7-methyl-, formula: C9H16O2
+cas: 55724-03-3, name: 1,4-Dioxaspiro[4.5]decane, 8-chloro-, formula: C8H13ClO2
+cas: 55103-52-1, name: 1,4-Dioxaspiro[4.5]decane, 8-ethoxy-, formula: C10H18O3
+cas: 65005-14-3, name: 1,4-Dioxaspiro[4.5]decane-7-carboxaldehyde, formula: C9H14O3
+cas: 543-75-9, name: 1,4-Dioxin, 2,3-dihydro-, formula: C4H6O2
+cas: 74753-00-7, name: 1,4-Hexadiene, 3,3,5-trimethyl-, formula: C9H16
+cas: 3650-28-0, name: 1,4-Methano-1H-indene, octahydro-4-methyl-8-methylene-7-(1-methylethyl)-, [1S-(1.alpha.,3a.beta.,4.alpha.,7.alpha.,7a.beta.)]-, formula: C15H24
+cas: 74708-73-9, name: 1,4-Methanobenzocyclodecene, 1,2,3,4,4a,5,8,9,12,12a-decahydro-, formula: C15H22
+cas: 1198-20-5, name: 1,4-Methanonaphthalen-9-ol, 1,2,3,4-tetrahydro-, stereoisomer, formula: C11H12O
+cas: 4042-39-1, name: 1,4-Naphthalenedione, 2-hydroxy-3-(3-methyl-1-butenyl)-, formula: C15H14O3
+cas: 13378-90-0, name: 1,4-Naphthoquinone, 6-acetyl-2,5-dihydroxy-, formula: C12H8O5
+cas: 3643-97-8, name: 1,4-Oxathiin, 2,3-dihydro-6-methyl-, formula: C5H8OS
+cas: 922-65-6, name: 1,4-Pentadien-3-ol, formula: C5H8O
+cas: 1890-28-4, name: 1,4-Pentadien-3-one, formula: C5H6O
+cas: 583-05-1, name: 1,4-Pentanedione, 1-phenyl-, formula: C11H12O2
+cas: 1000374-05-7, name: 1,4-di-iso-propylnaphthalene, formula: C16H20
+cas: 56763-66-7, name: 1,5,5-Trimethyl-6-(3-methyl-buta-1,3-dienyl)-cyclohexene, formula: C14H22
+cas: 126584-00-7, name: 1,5,6,7-Tetramethyl-3-phenylbicyclo[3.2.0]hepta-2,6-diene, formula: C17H20
+cas: 29957-43-5, name: 1,5,7-Octatrien-3-ol, 3,7-dimethyl-, formula: C10H16O
+cas: 1000186-71-7, name: 1,5,9,9-Tetramethyl-2-methylene-spiro[3.5]non-5-ene, formula: C14H22
+cas: 62951-96-6, name: 1,5,9-Undecatriene, 2,6,10-trimethyl-, (Z)-, formula: C14H24
+cas: 4609-11-4, name: 1,5-Bis(4-methoxyphenyl)pentane-1,5-dione, formula: C19H20O4
+cas: 16538-88-8, name: 1,5-Cyclooctadiene, 3-(1-methyl-2-propenyl)-, formula: C12H18
+cas: 15895-92-8, name: 1,5-Di(trimethylsilyl)pentane, formula: C11H28Si2
+cas: 3027-43-8, name: 1,5-Diacetylnaphthalene, formula: C14H12O2
+cas: 13090-31-8, name: 1,5-Diazabicyclo[3.1.0]hexane, formula: C4H8N2
+cas: 3001-72-7, name: 1,5-Diazabicyclo[4.3.0]non-5-ene, formula: C7H12N2
+cas: 1000289-23-5, name: 1,5-Dicyano-2,4-dimethyl-2,4-diazapentane, formula: C7H12N4
+cas: 110038-58-9, name: 1,5-Diformyl-2,6-dimethoxy-anthracene, formula: C18H14O4
+cas: 181307-35-7, name: 1,5-Dihydroxy-6-methoxyxanthone, formula: C14H10O5
+cas: 82461-31-2, name: 1,5-Dimethyl-6-oxa-bicyclo[3.1.0]hexane, formula: C7H12O
+cas: 7391-67-5, name: 1,5-Dimethylbarbituric acid, formula: C6H8N2O3
+cas: 6263-83-8, name: 1,5-Diphenyl-1,5-pentanedione, formula: C17H16O2
+cas: 546-49-6, name: 1,5-Heptadien-4-one, 3,3,6-trimethyl-, formula: C10H16O
+cas: 7736-22-3, name: 1,5-Heptadiene, (E)-, formula: C7H12
+cas: 33501-88-1, name: 1,5-Heptadiene, 2,3,6-trimethyl-, formula: C10H18
+cas: 67682-47-7, name: 1,5-Heptadiene, 3,3-dimethyl-, (E)-, formula: C9H16
+cas: 1763-21-9, name: 1,5-Hexadiene, 3,3,4,4-tetrafluoro-, formula: C6H6F4
+cas: 1541-33-9, name: 1,5-Hexadiene, 3-methyl-, formula: C7H12
+cas: 4723-10-8, name: 1,5-Hexadiene-3,4-diol, 2,5-dimethyl-, formula: C8H14O2
+cas: 1000331-15-6, name: 1,5-Pentanediol, O,O'-di(3-methylbut-2-enoyl)-, formula: C15H24O4
+cas: 142-50-7, name: 1,6,10-Dodecatrien-3-ol, 3,7,11-trimethyl-, [S-(Z)]-, formula: C15H26O
+cas: 59204-83-0, name: 1,6-Diazabicyclo[4.1.0]heptane, formula: C5H10N2
+cas: 91701-23-4, name: 1,6-Dihydroxy-8-methoxy-3-methylanthraquinone, O,O'-bis(trimethylsilyl)-, formula: C22H28O5Si2
+cas: 26955-13-5, name: 1,6-Dimethyl-5-oxo-1,2,3,5-tetrahydroimidazo[1,2-a]pyrimidine, formula: C8H11N3O
+cas: 61402-35-5, name: 1,6-Dimethyl-7-oxo-1,7-dihydro-[1,2,4]-triazolo(4,3-b)-[1,2,4]-triazine, formula: C6H7N5O
+cas: 777-95-7, name: 1,6-Dioxacyclododecane-7,12-dione, formula: C10H16O4
+cas: 17089-43-9, name: 1,6-Dioxaspiro[4.4]nona-2,8-diene, 7-(2,4-hexadiynylidene)-, formula: C13H10O2
+cas: 68701-90-6, name: 1,6-Heptadiene, 2,5-dimethyl-, formula: C9H16
+cas: 13643-06-6, name: 1,6-Heptadiene, 2-methyl-, formula: C8H14
+cas: 43000-53-9, name: 1,6-Methanonaphthalene, decahydro-, formula: C11H18
+cas: 7675-30-1, name: 1,6-Naphthyridine, 4-methyl-, formula: C9H8N2
+cas: 85006-04-8, name: 1,6-Octadiene, 5,7-dimethyl-, (R)-, formula: C10H18
+cas: 50767-53-8, name: 1,6:3,4-Dianhydro-2-deoxy-.beta.-d-lyxo-hexopyranose, formula: C6H8O3
+cas: 50767-52-7, name: 1,6:3,4-Dianhydro-2-deoxy-.beta.-d-ribo-hexopyranose, formula: C6H8O3
+cas: 22516-10-5, name: 1,7,7-Trimethylbicyclo[2.2.1]hept-5-en-2-one, formula: C10H14O
+cas: 645-10-3, name: 1,7-Dimethyl-4-(1-methylethyl)cyclodecane, formula: C15H30
+cas: 17920-92-2, name: 1,7-Nonadien-4-ol, 4,8-dimethyl-, formula: C11H20O
+cas: 3710-30-3, name: 1,7-Octadiene, formula: C8H14
+cas: 3382-59-0, name: 1,7-Octadiene, 3,6-dimethylene-, formula: C10H14
+cas: 7336-72-3, name: 1,8-Dihydroxy-3-methylanthraquinone, O,O'-bis(trimethylsilyl-), formula: C21H26O4Si2
+cas: 7336-68-7, name: 1,8-Dihydroxyanthraquinone, O,O'-bis(trimethylsilyl)-, formula: C20H24O4Si2
+cas: 14757-44-9, name: 1,8-Naphthyridine, 2,4,7-trimethyl-, formula: C11H12N2
+cas: 3937-56-2, name: 1,9-Nonanediol, formula: C9H20O2
+cas: 36140-83-7, name: 1,Cyanoacetyl-3,5-dimethylpyrazole, formula: C8H9N3O
+cas: 121478-20-4, name: 1,N-Dimethyl-2-phenylethylamine, pentafluorobenzoyl-, formula: C17H14F5NO
+cas: 83085-83-0, name: 1,Z-5,E-7-Dodecatriene, formula: C12H20
+cas: 1000378-29-1, name: 1-((1-Butoxypropan-2-yl)oxy)propan-2-yl 2,3,4,5,6-pentafluorobenzoate, formula: C17H21F5O4
+cas: 1000378-29-0, name: 1-((1-Methoxypropan-2-yl)oxy)propan-2-yl 2,3,4,5,6-pentafluorobenzoate, formula: C14H15F5O4
+cas: 1000366-03-8, name: 1-(1'-pyrrolidinyl)-2-butanone, formula: C8H15NO
+cas: 1000378-90-9, name: 1-(1,3-benzodioxol-5-yl)-N-(1,3-benzodioxol-4-ylmethyl)-N-methylpropan-2-amine, formula: C19H21NO4
+cas: 1000283-14-8, name: 1-(1-Adamantylmethyloxy)-1-ethyl-1-silacylopentane, formula: C17H30OSi
+cas: 89110-28-1, name: 1-(1-Cyclopropyl-pentyl)piperidine, formula: C13H25N
+cas: 53981-69-4, name: 1-(1H-Imidazol-2-yl)-ethanone, formula: C5H6N2O
+cas: 34764-71-1, name: 1-(2,3,4,5-Tetramethylphenyl)ethanone, formula: C12H16O
+cas: 55507-79-4, name: 1-(2,3-Dichloro-4-hydroxy-phenyl)-pentan-1-one, formula: C11H12Cl2O2
+cas: 1000194-34-3, name: 1-(2,3-Dimethyl-phenyl)-3-methyl-butylamine, formula: C13H21N
+cas: 2142-71-4, name: 1-(2,3-Dimethylphenyl)ethanone, formula: C10H12O
+cas: 1000241-49-7, name: 1-(2,4-Dihydroxyphenyl)-2-(4-methoxy-3-nitrophenyl)ethanone, formula: C15H13NO6
+cas: 1000190-22-0, name: 1-(2,6-Dimethyl-4-propoxy-phenyl)-2-methyl-propan-1-one, formula: C15H22O2
+cas: 1000190-22-3, name: 1-(2,6-Dimethyl-4-propoxyphenyl)propan-1-one, formula: C14H20O2
+cas: 6025-60-1, name: 1-(2-Aminophenyl)pyrrole, formula: C10H10N2
+cas: 1000305-50-1, name: 1-(2-Benzyloxy-1-phenylethyl)-3,4-piperidinediol, formula: C20H25NO3
+cas: 1000110-79-6, name: 1-(2-Chloroethyl)-2,6-difluorobenzene, formula: C8H7ClF2
+cas: 1000114-89-8, name: 1-(2-Ethyl-3-cyclohexenyl)ethanol, formula: C10H18O
+cas: 3273-14-1, name: 1-(2-Hydroxyethyl)-1,2,4-triazole, formula: C4H7N3O
+cas: 1000192-83-2, name: 1-(2-Hydroxymethylpyrrolidin-1-yl)ethanone, formula: C7H13NO2
+cas: 1000187-58-2, name: 1-(2-Methyl-4-propoxy-phenyl)-ethanone, formula: C12H16O2
+cas: 6498-86-8, name: 1-(2-Methylallyl)-aziridine, formula: C6H11N
+cas: 1000194-99-1, name: 1-(2-Methylallyl)azetidine, formula: C7H13N
+cas: 1000259-72-5, name: 1-(2-Methylthio-[1,2,4]triazolo[1,5-a]pyrimidin-6-yl)propan-2-one, formula: C9H10N4OS
+cas: 37689-19-3, name: 1-(2-Propenyl)cyclopentene, formula: C8H12
+cas: 34803-66-2, name: 1-(2-Pyridyl)piperazine, formula: C9H13N3
+cas: 13679-75-9, name: 1-(2-Thienyl)-1-propanone, formula: C7H8OS
+cas: 1000194-97-2, name: 1-(3,6,6-Trimethyl-1,6,7,7a-tetrahydrocyclopenta[c]pyran-1-yl)ethanone, formula: C13H18O2
+cas: 328565-17-9, name: 1-(3-Aminophenylcarboxamido)naphthalene, formula: C17H14N2O
+cas: 1000188-24-4, name: 1-(3-Ethoxy-2-methyl-acryloyl)-3-(2-hydroxy-ethyl)-urea, formula: C9H16N2O4
+cas: 107535-11-5, name: 1-(3-Hydroxy-4-methylphenyl)-1,3,3,6-tetramethylindan-5-ol, formula: C20H24O2
+cas: 61985-25-9, name: 1-(3H-Imidazol-4-yl)-ethanone, formula: C5H6N2O
+cas: 1000190-22-9, name: 1-(4-Butoxy-2,6-dimethylphenyl)ethanone, formula: C14H20O2
+cas: 37717-74-1, name: 1-(4-Chlorophenylcarbamoyl)succinimido, formula: C11H9ClN2O3
+cas: 144818-72-4, name: 1-(4-Ethoxyphenyl)acetone, formula: C11H14O2
+cas: 75633-63-5, name: 1-(4-Hydroxymethylphenyl)ethanone, formula: C9H10O2
+cas: 1000149-11-7, name: 1-(4-Methyl-6-methoxy-2-quinolyl)1'-phenyl-3,3'-dimethyl-(4,5'-bipyrazol)-5-ol, formula: C25H23N5O2
+cas: 81561-77-5, name: 1-(4-tert-Butylphenyl)propan-2-one, formula: C13H18O
+cas: 1000366-03-9, name: 1-(5'-methylfurfuryl)pyrrolidine, formula: C10H15NO
+cas: 182306-61-2, name: 1-(5-Dimethylethyl)pyrazin-2-yl-ethan-1-one, formula: C10H14N2O
+cas: 22047-27-4, name: 1-(5-Methyl-2-pyrazinyl)-1-ethanone, formula: C7H8N2O
+cas: 1000148-56-8, name: 1-(6-Methoxy-4-methyl-3-quinolinyl)-3,4-dimethyl-1H-pyrazol-5-ol, formula: C16H17N3O2
+cas: 83285-66-9, name: 1-(6-Methyl-2-piperidyl)propan-2-one, formula: C9H17NO
+cas: 90165-01-8, name: 1-(7-Hydroxy-1,6,6-trimethyl-10-oxatricyclo[5.2.1.0(2,4)]dec-9-yl)ethanone, formula: C14H22O3
+cas: 1000299-99-5, name: 1-(Dimethyldodecylsilyloxy)dodecane, formula: C26H56OSi
+cas: 1000299-99-6, name: 1-(Dimethyldodecylsilyloxy)tetradecane, formula: C28H60OSi
+cas: 1000185-68-2, name: 1-(Hexahydro-pyrrolizin-3-ylidene)-propan-2-one, formula: C10H15NO
+cas: 1000194-96-3, name: 1-(Hexahydropyrrolizin-3-ylidene)-3,3-dimethyl-butan-2-one, formula: C13H21NO
+cas: 81310-55-6, name: 1-(Piperidin-2-ylmethyl)piperidine, formula: C11H22N2
+cas: 67646-18-8, name: 1-(S-Triazin-3-yl)-hexane, formula: C8H15N3
+cas: 1000308-32-2, name: 1-(Trihexylsilyloxy)pentane, formula: C23H50OSi
+cas: 6224-91-5, name: 1-(Trimethylsilyl)-1-propyne, formula: C6H12Si
+cas: 80677-13-0, name: 1-(p-Tolyl)-3,4,5,6-tetrahydro-2(1H)-pyrimidinone, formula: C11H14N2O
+cas: 83717-11-7, name: 1-.alpha.-Naphthyl-1-silacyclobutane, formula: C13H14Si
+cas: 1000241-64-8, name: 1-Acetamidobicyclo(3.2.0)heptan-2-one, formula: C9H13NO2
+cas: 22755-15-3, name: 1-Acetamidopyrene, formula: C18H13NO
+cas: 14031-09-5, name: 1-Acetoxy-6-methylphenazine, formula: C15H12N2O2
+cas: 86358-83-0, name: 1-Acetyl-2,7-naphthalenediol, formula: C12H10O3
+cas: 50610-11-2, name: 1-Acetyl-3-(4-pyridyl)-pyrazoline, formula: C10H11N3O
+cas: 1000071-34-7, name: 1-Acetyl-3-(6-methyl-3-pyridyl)-pyrazoline, formula: C11H13N3O
+cas: 1000373-42-6, name: 1-Acetyl-4,5-dihydro-1H-pyrazole, formula: C5H8N2O
+cas: 834-97-9, name: 1-Acetyl-4,6,8-trimethylazulene, formula: C15H16O
+cas: 32161-06-1, name: 1-Acetyl-4-piperidone, formula: C7H11NO2
+cas: 18528-55-7, name: 1-Acetylnaphthalen-8-ol, formula: C12H10O2
+cas: 3264-21-9, name: 1-Acetylpyrene, formula: C18H12O
+cas: 1000282-94-3, name: 1-Adamantanecarboxylic acid, 2-adamantyl ester, formula: C21H30O2
+cas: 1000282-16-9, name: 1-Adamantanecarboxylic acid, 3-tetradecyl ester, formula: C25H44O2
+cas: 1000307-66-0, name: 1-Adamantanecarboxylic acid, 4-chlorophenyl ester, formula: C17H19ClO2
+cas: 1000307-66-3, name: 1-Adamantanecarboxylic acid, 4-cyanophenyl ester, formula: C18H19NO2
+cas: 1000282-17-0, name: 1-Adamantanecarboxylic acid, 4-tetradecyl ester, formula: C25H44O2
+cas: 1000282-94-7, name: 1-Adamantanecarboxylic acid, dodec-9-ynyl ester, formula: C23H36O2
+cas: 24556-18-1, name: 1-Adamantanecarboxylic acid, isobutyl ester, formula: C15H24O2
+cas: 94763-09-4, name: 1-Adamantanecarboxylic acid, nonyl ester, formula: C20H34O2
+cas: 127597-51-7, name: 1-Allyl-1-but-3-enyl-1-silacyclobutane, formula: C10H18Si
+cas: 1000195-02-5, name: 1-Allylazetidine, formula: C6H11N
+cas: 1000329-15-6, name: 1-Aminocyclopentanecarboxylic acid, N-(2-methoxyethoxycarbonyl)-, pentyl ester, formula: C15H27NO5
+cas: 1000328-97-1, name: 1-Aminocyclopentanecarboxylic acid, N-ethoxycarbonyl-, butyl ester, formula: C13H23NO4
+cas: 1000329-09-9, name: 1-Aminocyclopentanecarboxylic acid, N-isobutoxycarbonyl-, ethyl ester, formula: C13H23NO4
+cas: 1000329-10-1, name: 1-Aminocyclopentanecarboxylic acid, N-isobutoxycarbonyl-, isohexyl ester, formula: C17H31NO4
+cas: 1000328-90-4, name: 1-Aminocyclopentanecarboxylic acid, N-methoxycarbonyl-, octyl ester, formula: C16H29NO4
+cas: 1000328-90-6, name: 1-Aminocyclopentanecarboxylic acid, N-methoxycarbonyl-, undecyl ester, formula: C19H35NO4
+cas: 1000329-09-1, name: 1-Aminocyclopentanecarboxylic acid, n-butoxycarbonyl-, hexyl ester, formula: C17H31NO4
+cas: 1000329-09-0, name: 1-Aminocyclopentanecarboxylic acid, n-butoxycarbonyl-, isohexyl ester, formula: C17H31NO4
+cas: 1000329-00-8, name: 1-Aminocyclopentanecarboxylic acid, n-propargyloxycarbonyl-, decyl ester, formula: C20H33NO4
+cas: 1000329-00-7, name: 1-Aminocyclopentanecarboxylic acid, n-propargyloxycarbonyl-, nonyl ester, formula: C19H31NO4

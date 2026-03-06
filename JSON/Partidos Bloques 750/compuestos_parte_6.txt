@@ -1,0 +1,793 @@
+Clasifica los siguientes compuestos según su grupo o familia a la que pertenecen, eligiendo una de las opciones de esta lista: 
+grupos_compuestos = {
+    1: "Alcanos",
+    2: "Alquenos y alquinos",
+    3: "Ácidos carboxílicos",
+    4: "Ésteres",
+    5: "Alcoholes",
+    6: "Fenoles",
+    7: "Cetonas",
+    8: "Aldehídos",
+    9: "Éteres",
+    10: "Aminas",
+    11: "Amidas",
+    12: "Nitrilos",
+    13: "Anillos aromáticos",
+    14: "Ésteres de ácido fosfórico",
+    15: "Silanos / Siloxanos",
+    16: "Esteroides / Terpenos",
+    17: "Lactonas y lactamas",
+    18: "Compuestos heterocíclicos",
+    19: "Compuestos halogenados",
+    20: "Otros",
+    21: "Anilinas / Derivados de anilina",
+    22: "Ftalatos",
+    23: "Aldehídos aromáticos",
+    24: "Cetonas aromáticas",
+    25: "Amidas aromáticas",
+    26: "Amidas alifáticas",
+    27: "Alcoholes grasos / largos",
+    28: "Ácidos grasos",
+    29: "Compuestos organosulfurados",
+    30: "Lactonas aromáticas",
+    31: "Compuestos bencénicos sustituidos",
+    32: "Compuestos nitrogenados heterocíclicos",
+    33: "Compuestos con oxígeno cíclico",
+    34: "Éteres de glicoles",
+    35: "Compuestos con grupos TMS (trimetilsililo)",
+    36: "Compuestos con anillos fundidos",
+    37: "Compuestos policíclicos aromáticos (PAHs)",
+    38: "Nitrilos aromáticos",
+    39: "Otros"
+}
+Y devuélveme simplemente el CAS del compuesto y el número de la familia a la que pertenece, en formato cas : numero. Aquí está la lista de compuestos:
+cas: 50890-67-0, name: 5H-Cyclopenta[2,1-b:3,4-b']dipyridin-5-one, formula: C11H6N2O
+cas: 256-81-5, name: 5H-Dibenzo[a,d]cycloheptene, formula: C15H12
+cas: 478-42-2, name: 5H-Furo[3,2-g][1]benzopyran-5-one, 4-hydroxy-9-methoxy-7-methyl-, formula: C13H10O5
+cas: 1000303-41-6, name: 5H-Indeno[1,2-b]pyridin-4-ylamine, formula: C12H10N2
+cas: 244-99-5, name: 5H-Indeno[1,2-b]pyridine, formula: C12H9N
+cas: 64292-01-9, name: 5H-Indeno[1,2-b]pyridine, 4-methyl-, formula: C13H11N
+cas: 198-96-9, name: 5H-Naphtho[2,3-c]carbazole, formula: C20H13N
+cas: 1000337-58-3, name: 5H-Oxazolo[3,2-a]pyridine-8-carbonitrile, 6-ethyl-2,3-dihydro-2,7-dimethyl-5-oxo-, formula: C12H14N2O2
+cas: 1000362-40-8, name: 5H-Pyrazolo[3,4-b]quinolin-3-amine, 6,7,8,9-tetrahydro-, formula: C10H12N4
+cas: 1000244-21-4, name: 5H-Pyrrolo(3,2-d)pyrimidine-2,4-diamine, formula: C6H7N5
+cas: 1000273-02-0, name: 5H-Tetrazol-5-amine, formula: CH3N5
+cas: 61607-68-9, name: 5H-Tetrazole-5-thione, 1-[2-(dimethylamino)ethyl]-1,2-dihydro-, formula: C5H11N5S
+cas: 1000131-71-0, name: 6,10,13-Trimethyltetradecanol, formula: C17H36O
+cas: 1000143-49-8, name: 6,10,14-Trimethyl-pentadecan-2-ol, formula: C18H38O
+cas: 1000196-53-3, name: 6,11-Dimethyl-2,6,10-dodecatrien-1-ol, formula: C14H24O
+cas: 1000187-31-5, name: 6,6,7-Trimethyl-octane-2,5-dione, formula: C11H20O2
+cas: 1000360-41-8, name: 6,6-Diethylhoctadecane, formula: C22H46
+cas: 81912-03-0, name: 6,6-Dimethyl-1,3-heptadien-5-ol, formula: C9H16O
+cas: 104518-69-6, name: 6,6-Dimethyl-1,5-diazabicyclo[3.1.0]hexane, formula: C6H12N2
+cas: 7307-05-3, name: 6,6-Dimethylheptane-2,4-dione, enol form, formula: C9H16O2
+cas: 52333-20-7, name: 6,7,8,9-Tetrahydro-5H-[1,2,4]triazolo[1,5-a]azepin-2-ylamine, formula: C7H12N4
+cas: 56015-29-3, name: 6,7,8,9-Tetrahydro-5H-pyrzolo(2,3-b)indole, formula: C10H11N3
+cas: 1000276-07-7, name: 6,7-Dihydro-5H-benzo[1,2,5]oxadiazol-4-one o-(6-chloro-benzo[1,3]dioxol-5-ylmethyl)-oxime, formula: C14H12ClN3O4
+cas: 1000296-76-1, name: 6,7-Dihydro-5H-pyrrolo[2,1-c][1,2,4]triazole-3-carboxylic acid, formula: C6H7N3O2
+cas: 4430-77-7, name: 6,7-Dihydropyrido(2,3-d)pyridazine-5,8-dione, formula: C7H5N3O2
+cas: 1000108-96-3, name: 6,7-Dihydroxycoumarin, bis(trimethylsilyl) ether, formula: C15H22O4Si2
+cas: 343852-50-6, name: 6,7-Dimethyl-3H-isobenzofuran-1-one, formula: C10H10O2
+cas: 13757-90-9, name: 6,7-Dodecanedione, formula: C12H22O2
+cas: 26955-15-7, name: 6,8-Dimethyl-5-oxo-2,3,5,8-tetrahydroimidazo[1,2-a]pyrimidine, formula: C8H11N3O
+cas: 25623-67-0, name: 6,8-Dimethyl[1,2,4]triazolo[4,3-b][1,2,4]triazin-7(8H)-one, formula: C6H7N5O
+cas: 1000334-82-9, name: 6,8-Dioxapentadecane, formula: C13H28O2
+cas: 60714-16-1, name: 6,8-Nonadien-2-one, 6-methyl-5-(1-methylethylidene)-, formula: C13H20O
+cas: 81265-03-4, name: 6,9-Heptadecadiene, formula: C17H32
+cas: 71732-70-2, name: 6,9-Pentadecadione, formula: C15H28O2
+cas: 1000360-29-0, name: 6-(1'-Hydroxyethyl)-2,2-dimethylchromene, formula: C13H16O2
+cas: 1000331-94-3, name: 6-(2-Aminophenyl)-1,2,4-triazine-3,5(2H,4H)-dione tetratms, formula: C21H40N4O2Si4
+cas: 1000331-96-5, name: 6-(2-Aminophenyl)-1,2,4-triazine-3,5(2H,4H)-dione tritbdms, formula: C27H50N4O2Si3
+cas: 70371-91-4, name: 6-(4-Fluoro-phenyl)-benzo[4,5]imidazo[1,2-c]quinazoline, formula: C20H12FN3
+cas: 68867-19-6, name: 6-Acetamido-2-methylbenzothiazole, formula: C10H10N2OS
+cas: 72793-12-5, name: 6-Acetyl-1,3,8-trimethyl-7-phenyl-1H-imidazo[2,1-f]-purine-2,2(3H,8H)-dione, formula: C18H17N5O3
+cas: 1000194-36-0, name: 6-Acetyl-4,4,7-trimethylbicyclo[4.1.0]heptan-2-one, formula: C12H18O2
+cas: 55463-65-5, name: 6-Amino-2,3-dimethyl-1H-pyrrolo[2,3-b]pyridine, formula: C9H11N3
+cas: 55463-74-6, name: 6-Amino-2,3-diphenyl-1H-pyrrolo[2,3-b]pyridine, formula: C19H15N3
+cas: 279-85-6, name: 6-Azabicyclo[3.2.1]octane, formula: C7H13N
+cas: 24173-54-4, name: 6-Azabicyclo[3.2.1]octane, 6-methyl-, formula: C8H15N
+cas: 932-53-6, name: 6-Azathymine, formula: C4H5N3O2
+cas: 1000224-14-0, name: 6-Benzamido-4-benzoyl-1,2,4-triazine-3,5(2H,4H)-dione, formula: C17H12N4O4
+cas: 1000301-98-1, name: 6-Benzofuranylacetaldehyde, formula: C10H8O2
+cas: 1000331-03-9, name: 6-Bromohexanoic acid, 3,4-dimethylphenyl ester, formula: C14H19BrO2
+cas: 1000331-04-0, name: 6-Bromohexanoic acid, 4-isopropylphenyl ester, formula: C15H21BrO2
+cas: 22735-58-6, name: 6-Butyl-1,4-cycloheptadiene, formula: C11H18
+cas: 299929-71-8, name: 6-Chloro-2-tert.-butylamino-4-dimethylamino-[1,3,5]-triazine, formula: C9H16ClN5
+cas: 1000307-62-2, name: 6-Chlorohexanoic acid, 4-methoxyphenyl ester, formula: C13H17ClO3
+cas: 1000193-15-2, name: 6-Cyanonaphthalene-2-carboxylic acid, 4-pentyl-phenyl ester, formula: C23H21NO2
+cas: 23395-72-4, name: 6-Cyanoquinoline, formula: C10H6N2
+cas: 32064-79-2, name: 6-Decen-5-one, formula: C10H18O
+cas: 6836-38-0, name: 6-Dodecanol, formula: C12H26O
+cas: 60826-23-5, name: 6-Dodecanol acetate, formula: C14H28O2
+cas: 6064-27-3, name: 6-Dodecanone, formula: C12H24O
+cas: 16489-90-0, name: 6-Ethoxy-1,2,3,4-tetrahydro-2,2,4-trimethylquinoline, formula: C14H21NO
+cas: 4435-30-7, name: 6-Ethyl-2,3-dihydropyran-2,4-dione, formula: C7H8O3
+cas: 1000343-74-3, name: 6-Fluoro-2-trifluoromethylbenzoic acid, 2,3-dichlorophenyl ester, formula: C14H6Cl2F4O2
+cas: 1000343-74-4, name: 6-Fluoro-2-trifluoromethylbenzoic acid, 2-formyl-4,6-dichlorophenyl ester, formula: C15H6Cl2F4O3
+cas: 1000343-73-5, name: 6-Fluoro-2-trifluoromethylbenzoic acid, 2-methoxyethyl ester, formula: C11H10F4O3
+cas: 1000343-73-7, name: 6-Fluoro-2-trifluoromethylbenzoic acid, 3-fluorophenyl ester, formula: C14H7F5O2
+cas: 1000343-74-1, name: 6-Fluoro-2-trifluoromethylbenzoic acid,4-chloro-2-methylphenyl ester, formula: C15H9ClF4O2
+cas: 1000343-79-0, name: 6-Fluoro-3-trifluoromethylbenzoic acid,  2-formyl-4,6-dichlorophenyl ester, formula: C15H6Cl2F4O3
+cas: 26118-97-8, name: 6-Hepten-3-one, 4-methyl-, formula: C8H14O
+cas: 62338-59-4, name: 6-Hepten-3-one, 5-hydroxy-4,6-dimethyl-, formula: C9H16O2
+cas: 61141-71-7, name: 6-Hepten-3-one, 5-hydroxy-4-methyl-, formula: C8H14O2
+cas: 138510-19-7, name: 6-Hydroxy-2,2,4,4-tetramethyl-1,2,3,4-tetrahydro-.gamma.-carboline, formula: C15H20N2O
+cas: 109338-95-6, name: 6-Hydroxy-2-methylcyclohepta(b)pyridin-7-one, formula: C11H9NO2
+cas: 1000317-62-4, name: 6-Hydroxy-5-(3-methyl-butyl)-2-(2-morpholin-4-yl-ethylsulfanyl)-3-phenyl-3H-pyrimidin-4-one, formula: C21H29N3O3S
+cas: 1000317-89-7, name: 6-Hydroxyamino-1H-pyrimidine-2,4-dione, formula: C4H5N3O3
+cas: 5932-53-6, name: 6-Hydroxytropinone, formula: C8H13NO2
+cas: 86917-79-5, name: 6-Isopropenyl-4,8a-dimethyl-4a,5,6,7,8,8a-hexahydro-1H-naphthalen-2-one, formula: C15H22O
+cas: 489-77-0, name: 6-Isopropyl-1,4-dimethylnaphthalene, formula: C15H18
+cas: 35236-83-0, name: 6-Isopropyl-2,3-dihydropyran-2,4-dione, formula: C8H10O3
+cas: 77764-98-8, name: 6-Methoxy-2-(2-naphthylmethylene)-3(2H)-benzofuranone, formula: C20H14O3
+cas: 10410-28-3, name: 6-Methoxy-3-methyl-2-benzofurancarbaldehyde, formula: C11H10O3
+cas: 10410-29-4, name: 6-Methoxy-3-methyl-2-benzofurancarboxylic acid, formula: C11H10O4
+cas: 29040-52-6, name: 6-Methoxy-3-methylbenzofuran, formula: C10H10O2
+cas: 483-66-9, name: 6-Methoxyfuro[2,3-h]chromen-2-one, formula: C12H8O4
+cas: 100463-00-1, name: 6-Methyl-1,5-diazabicyclo[3.1.0]hexane, formula: C5H10N2
+cas: 1791-73-7, name: 6-Methyl-2,4-pyrimidinediamine, formula: C5H8N4
+cas: 112860-60-3, name: 6-Methyl-2-(piperidin-1-ylmethyl)-4-pyrimidinylamine, formula: C11H18N4
+cas: 50464-95-4, name: 6-Methyl-6-(5-methylfuran-2-yl)heptan-2-one, formula: C13H20O2
+cas: 1000144-03-4, name: 6-Methylbicyclo[2.2.1]hept-2-ene-5-carboxylic acid, formula: C9H12O2
+cas: 96963-10-9, name: 6-Methylcyclohexathiazole, formula: C8H11NS
+cas: 626-48-2, name: 6-Methyluracil, formula: C5H6N2O2
+cas: 31502-19-9, name: 6-Nonen-1-ol, (E)-, formula: C9H18O
+cas: 76238-22-7, name: 6-Nonen-1-ol, acetate, (Z)-, formula: C11H20O2
+cas: 593-39-5, name: 6-Octadecenoic acid, (Z)-, formula: C18H34O2
+cas: 1117-61-9, name: 6-Octen-1-ol, 3,7-dimethyl-, (R)-, formula: C10H20O
+cas: 105-85-1, name: 6-Octen-1-ol, 3,7-dimethyl-, formate, formula: C11H20O2
+cas: 141-14-0, name: 6-Octen-1-ol, 3,7-dimethyl-, propanoate, formula: C13H24O2
+cas: 6836-40-4, name: 6-Pentadecanol, formula: C15H32O
+cas: 28381-92-2, name: 6-Phenylbenzo[4,5]imidazo[1,2-c]-quinazoline, formula: C20H13N3
+cas: 70125-61-0, name: 6-Phenylisoquinoline, formula: C15H11N
+cas: 1000317-79-4, name: 6-Piperidin-1-ylmethyl-benzo[4,5]imidazo[1,2-c]quinazoline, formula: C20H20N4
+cas: 5698-53-3, name: 6-Propyl-2,3-dihydropyran-2,4-dione, formula: C8H10O3
+cas: 1000319-89-4, name: 6-Quinoxalinecarboxamide, N-[2-chloro-5-(trifluoromethyl)phenyl]-, formula: C16H9ClF3N3O
+cas: 96555-42-9, name: 6-Thiopyrazolo[3,4-d]pyrimidin-4,6(5H,7H)-dione-3-carboxamide, formula: C6H5N5O2S
+cas: 5770-03-6, name: 6-Tridecanol, formula: C13H28O
+cas: 24949-42-6, name: 6-Tridecene, 7-methyl-, formula: C14H28
+cas: 23708-56-7, name: 6-Undecanol, formula: C11H24O
+cas: 33788-00-0, name: 6-Undecylamine, formula: C11H25N
+cas: 33526-41-9, name: 6.beta.-Hydroxymethandienone, formula: C20H28O3
+cas: 18428-89-2, name: 6H,12H-Indazolo[2,1-a]indazole-6,12-dione, formula: C14H8N2O2
+cas: 1433-08-5, name: 6H-Benzofuro[3,2-c][1]benzopyran, 3,9-dimethoxy-, formula: C17H14O4
+cas: 117-51-1, name: 6H-Dibenzo(b,d)pyran-1-ol, 3-hexyl-7,8,9,10-tetrahydro-6,6,9-trimethyl-, formula: C22H32O2
+cas: 479-43-6, name: 6H-Indolo[3,2,1-de][1,5]naphthyridin-6-one, formula: C14H8N2O
+cas: 2432-27-1, name: 7(1H)-Pteridinone, formula: C6H4N4O
+cas: 125529-10-4, name: 7,11-Dimethyldodeca-2,6,10-trien-1-ol, formula: C14H24O
+cas: 1000292-80-2, name: 7,15-Dihydroxydehydroabietic acid, methyl ester,di(trimethylsilyl)ether, formula: C27H46O4Si2
+cas: 1000253-06-7, name: 7,22-Ergostadienol, formula: C28H46O
+cas: 1000360-41-5, name: 7,7-Diethylheptadecane, formula: C21H44
+cas: 306730-86-9, name: 7,7-Dimethyl-4-(2-methyl-4-thiazolyl)-1,8-dioxaspiro[4.5]decan-2-one, formula: C14H19NO3S
+cas: 29782-28-3, name: 7,7-Norcaranedicarbonitrile, cis-, formula: C9H10N2
+cas: 37079-64-4, name: 7,8-Epoxy-.alpha.-ionone, formula: C13H20O2
+cas: 1000253-06-9, name: 7,9(11),22-Ergostatriene, formula: C28H44
+cas: 82304-66-3, name: 7,9-Di-tert-butyl-1-oxaspiro(4,5)deca-6,9-diene-2,8-dione, formula: C17H24O3
+cas: 1000190-22-7, name: 7-(1,3-Dimethylbuta-1,3-dienyl)-1,6,6-trimethyl-3,8-dioxatricyclo[5.1.0.0(2,4)]octane, formula: C15H22O2
+cas: 2747-05-9, name: 7-Acetoxy-4-methylcoumarin, formula: C12H10O4
+cas: 88-29-9, name: 7-Acetyl-6-ethyl-1,1,4,4-tetramethyltetralin, formula: C18H26O
+cas: 4928-02-3, name: 7-Amino-2,3-dihydro-5-phenyl-1H-1,4-benzodiazepin-2-one, formula: C15H13N3O
+cas: 1000144-04-3, name: 7-Azabicyclo[4,2,0]octan-8-one, formula: C7H11NO
+cas: 286-18-0, name: 7-Azabicyclo[4.1.0]heptane, formula: C6H11N
+cas: 25022-25-7, name: 7-Azabicyclo[4.1.0]heptane, 1-methyl-, formula: C7H13N
+cas: 3338-06-5, name: 7-Butyl-3,4,5,6(2H)-tetrahydroazepine, formula: C10H19N
+cas: 18868-65-0, name: 7-Butylbenz[a]anthracene, formula: C22H20
+cas: 55056-35-4, name: 7-Chloro-2,3-dihydro-3-(4-N,N-dimethylaminobenzylidene)-5-phenyl-1H-1,4-benzodiazepin-2-one, formula: C24H20ClN3O
+cas: 32064-76-9, name: 7-Dodecen-6-one, formula: C12H22O
+cas: 31005-02-4, name: 7-Ethoxycoumarin, formula: C11H10O3
+cas: 1000374-07-1, name: 7-Ethyl-4-tridecen-6-one, formula: C15H28O
+cas: 1000374-10-9, name: 7-Ethyl-6-tridecanone, formula: C15H30O
+cas: 56797-40-1, name: 7-Hexadecenal, (Z)-, formula: C16H30O
+cas: 35507-09-6, name: 7-Hexadecene, (Z)-, formula: C16H32
+cas: 1000197-13-2, name: 7-Hexyltridecan-1-ol, formula: C19H40O
+cas: 1000326-74-9, name: 7-Hydroxy-1-naphthalenecarbonitrile, formula: C11H7NO
+cas: 20575-57-9, name: 7-Hydroxy-2-(3-hydroxy-4-methoxyphenyl)-4H-chromen-4-one, formula: C16H12O5
+cas: 1000110-34-9, name: 7-Hydroxy-7,8,9,10-tetramethyl-7,8-dihydrocyclohepta[d,e]naphthalene, formula: C18H20O
+cas: 93-35-6, name: 7-Hydroxycoumarin, formula: C9H6O3
+cas: 24656-61-9, name: 7-Isoquinolinol, 1,2,3,4-tetrahydro-6-methoxy-1-salicyl-, formula: C17H19NO3
+cas: 1000140-32-8, name: 7-Methoxy-2,2,4,8-tetramethyltricyclo[5.3.1.0(4,11)]undecane, formula: C16H28O
+cas: 53918-89-1, name: 7-Methoxy-2,3-dimethylindole, formula: C11H13NO
+cas: 18720-69-9, name: 7-Methoxy-2,3-diphenyl-4H-chromen-4-one, formula: C22H16O3
+cas: 55766-74-0, name: 7-Methoxy-8-aminoisoquinoline, formula: C10H10N2O
+cas: 1000130-99-6, name: 7-Methyl-Z-tetradecen-1-ol acetate, formula: C17H32O2
+cas: 1000192-63-3, name: 7-Methyl-octadecane, formula: C19H40
+cas: 1000185-68-5, name: 7-Methylene-bicyclo[3.3.1]nonan-3-one oxime, formula: C10H15NO
+cas: 90949-53-4, name: 7-Nonenamide, formula: C9H17NO
+cas: 35354-38-2, name: 7-Octadecyne, 2-methyl-, formula: C19H36
+cas: 18479-58-8, name: 7-Octen-2-ol, 2,6-dimethyl-, formula: C10H20O
+cas: 141-26-4, name: 7-Octenal, 3,7-dimethyl-, formula: C10H18O
+cas: 470-67-7, name: 7-Oxabicyclo[2.2.1]heptane, 1-methyl-4-(1-methylethyl)-, formula: C10H18O
+cas: 6705-49-3, name: 7-Oxabicyclo[4.1.0]heptan-2-one, formula: C6H8O2
+cas: 10276-21-8, name: 7-Oxabicyclo[4.1.0]heptan-2-one, 4,4,6-trimethyl-, formula: C9H14O2
+cas: 96-08-2, name: 7-Oxabicyclo[4.1.0]heptane, 1-methyl-4-(2-methyloxiranyl)-, formula: C10H16O2
+cas: 70038-20-9, name: 7-Oxabicyclo[4.1.0]heptane, 2,2,6-trimethyl-1-(3-methyl-1,3-butadienyl)-5-methylene-, formula: C15H22O
+cas: 934-19-0, name: 7-Oxo-1,3,5-cycloheptatriene-1-carbonitrile, formula: C8H5NO
+cas: 110936-78-2, name: 7-Oxodehydroabietic acid, methyl ester, formula: C21H28O3
+cas: 10374-74-0, name: 7-Tetradecene, formula: C14H28
+cas: 41446-63-3, name: 7-Tetradecene, (E)-, formula: C14H28
+cas: 927-45-7, name: 7-Tridecanol, formula: C13H28O
+cas: 484-20-8, name: 7H-Furo[3,2-g][1]benzopyran-7-one, 4-methoxy-, formula: C12H8O4
+cas: 1000194-25-9, name: 8,8,9-Trimethyl-deca-3,5-diene-2,7-dione, formula: C13H20O2
+cas: 27410-55-5, name: 8,9-Dihydrocyclopenta[def]phenanthrene, formula: C15H12
+cas: 1468-26-4, name: 8-Azaxanthine, formula: C4H3N5O2
+cas: 28748-19-8, name: 8-Benzylquinoline, formula: C16H13N
+cas: 28079-04-1, name: 8-Dodecen-1-ol, acetate, (Z)-, formula: C14H26O2
+cas: 2579-04-6, name: 8-Heptadecene, formula: C17H34
+cas: 60609-53-2, name: 8-Hexadecenal, 14-methyl-, (Z)-, formula: C17H32O
+cas: 148-24-3, name: 8-Hydroxyquinoline, formula: C9H7NO
+cas: 63498-93-1, name: 8-Isopropyl-5-methyl-5,6,7,8-tetrahydro-2,4-quinazolinedione, formula: C12H18N2O2
+cas: 1000211-20-0, name: 8-Methylenebicyclo[4.2.0]oct-2-ene, formula: C9H12
+cas: 58795-43-0, name: 8-Oxabicyclo[5.1.0]oct-5-en-2-ol, 1,4,4-trimethyl-, formula: C10H16O2
+cas: 1653-35-6, name: 8-Pentadecanol, formula: C15H32O
+cas: 1000241-69-9, name: 8-Phenyl-5,5a,6,10,10a,11-hexahydro-5,11-(O-benzeno)-6,10-ethenocyclohepta(b)naphthalen-7-one, formula: C29H22O
+cas: 70125-67-6, name: 8-Phenylisoquinoline, formula: C15H11N
+cas: 36972-87-9, name: 8-Quinolinamine, N-(trimethylsilyl)-6-[(trimethylsilyl)oxy]-, formula: C15H24N2OSi2
+cas: 13207-66-4, name: 8-Quinolinol, 5-amino-, formula: C9H8N2O
+cas: 5541-68-4, name: 8-Quinolinol, 7-methyl-, formula: C10H9NO
+cas: 241-28-1, name: 8H-Indeno[2,1-b]phenanthrene, formula: C21H14
+cas: 128-80-3, name: 9,10-Anthracenedione, 1,4-bis[(4-methylphenyl)amino]-, formula: C28H22N2O2
+cas: 81-63-0, name: 9,10-Anthracenedione, 1,4-diamino-2,3-dihydro-, formula: C14H12N2O2
+cas: 25060-18-8, name: 9,10-Anthracenedione, 1,4-dihydroxy-2,3-dimethyl-, formula: C16H12O4
+cas: 84-54-8, name: 9,10-Anthracenedione, 2-methyl-, formula: C15H10O2
+cas: 7336-74-5, name: 9,10-Anthracenedione, 3-methyl-1,6,8-tris[(trimethylsilyl)oxy]-, formula: C24H34O5Si3
+cas: 84-65-1, name: 9,10-Anthraquinone, formula: C14H8O2
+cas: 5675-64-9, name: 9,10-Ethanoanthracene, 9,10-dihydro-, formula: C16H14
+cas: 477-75-8, name: 9,10[1',2']-Benzenoanthracene, 9,10-dihydro-, formula: C20H14
+cas: 506-44-5, name: 9,12,15-Octadecatrien-1-ol, (Z,Z,Z)-, formula: C18H32O
+cas: 463-40-1, name: 9,12,15-Octadecatrienoic acid, (Z,Z,Z)-, formula: C18H30O2
+cas: 1191-41-9, name: 9,12,15-Octadecatrienoic acid, ethyl ester, (Z,Z,Z)-, formula: C20H34O2
+cas: 506-43-4, name: 9,12-Octadecadien-1-ol, (Z,Z)-, formula: C18H34O
+cas: 7459-33-8, name: 9,12-Octadecadienoyl chloride, (Z,Z)-, formula: C18H31ClO
+cas: 56554-35-9, name: 9,17-Octadecadienal, (Z)-, formula: C18H32O
+cas: 10376-42-8, name: 9,19-Cycloergost-24(28)-en-3-ol, 4,14-dimethyl-, acetate, (3.beta.,4.alpha.,5.alpha.)-, formula: C32H52O2
+cas: 469-38-5, name: 9,19-Cyclolanost-24-en-3-ol, (3.beta.)-, formula: C30H50O
+cas: 1259-10-5, name: 9,19-Cyclolanost-24-en-3-ol, acetate, (3.beta.)-, formula: C32H52O2
+cas: 511-61-5, name: 9,19-Cyclolanost-25-en-3-ol, 24-methyl-, (3.beta.,24S)-, formula: C31H52O
+cas: 1449-09-8, name: 9,19-Cyclolanostan-3-ol, 24-methylene-, (3.beta.)-, formula: C31H52O
+cas: 4575-74-0, name: 9,19-Cyclolanostan-3-ol, acetate, (3.beta.)-, formula: C32H54O2
+cas: 1530-12-7, name: 9,9'-Bi-9H-fluorene, formula: C26H18
+cas: 50616-99-4, name: 9,9'-Bi-9H-fluorene, 9,9'-dimethoxy-, formula: C28H22O2
+cas: 32962-42-8, name: 9,9,10,10-Tetrafluoro-9,10-disila-9,10-dihydroanthracene, formula: C12H8F4Si2
+cas: 13688-68-1, name: 9,9-Dimethyl-9-silafluorene, formula: C14H14Si
+cas: 1000071-43-1, name: 9-(2-Carboxyethyl)-2,2,4,4-tetramethyl-1,2,3,4-tetrahydro-.gamma.-carboline, formula: C18H24N2O2
+cas: 299945-39-4, name: 9-(2-p-Tolylethyl)-3,4,5,6,7,9-hexahydro-2H-xanthene-1,8-dione, formula: C22H24O3
+cas: 1000192-15-6, name: 9-(3,3-Dimethyloxiran-2-yl)-2,7-dimethylnona-2,6-dien-1-ol, formula: C15H26O2
+cas: 1000255-16-9, name: 9-Acetyl-S-octahydrophenanthrene, formula: C16H20O
+cas: 1000285-78-9, name: 9-Acetylhydrazono-3,6-dichloro-2,7-bis-[2-(diethylamino)ethoxy]fluorene, formula: C27H36Cl2N4O3
+cas: 130186-64-0, name: 9-Amino-3,3-dimethyl-3,4-dihydro-1(2H)-acridone, formula: C15H16N2O
+cas: 20914-61-8, name: 9-Amino-6-[methylthio]-9H-purine, formula: C6H7N5S
+cas: 45977-26-2, name: 9-Aza-1-methylbicyclo[3.3.1]nonan-3-one, formula: C9H15NO
+cas: 66387-81-3, name: 9-Azabicyclo[6.1.0]nonane, 9,9'-azobis-, [1.alpha.,8.alpha.,9[E(1'R*,8'S*)]]-, formula: C16H28N4
+cas: 139642-81-2, name: 9-Butyl-9-cyano-9,10-dihydroanthracene, formula: C19H19N
+cas: 21915-40-2, name: 9-Cyclohexylbicyclo(3.3.1)nonan-9-ol, formula: C15H26O
+cas: 1000142-95-6, name: 9-Decen-2-one, 5-methylene-, formula: C11H18O
+cas: 71084-08-7, name: 9-Dodecyn-1-ol, formula: C12H22O
+cas: 74685-29-3, name: 9-Eicosene, (E)-, formula: C20H40
+cas: 71899-38-2, name: 9-Eicosyne, formula: C20H38
+cas: 21915-33-3, name: 9-Ethylbicyclo(3.3.1)nonan-9-ol, formula: C11H20O
+cas: 10378-01-5, name: 9-Hexadecen-1-ol, (Z)-, formula: C16H32O
+cas: 2091-29-4, name: 9-Hexadecenoic acid, formula: C16H30O2
+cas: 22393-97-1, name: 9-Hexadecenoic acid, 9-hexadecenyl ester, (Z,Z)-, formula: C32H60O2
+cas: 1120-25-8, name: 9-Hexadecenoic acid, methyl ester, (Z)-, formula: C17H32O2
+cas: 22393-84-6, name: 9-Hexadecenoic acid, octadecyl ester, (Z)-, formula: C34H66O2
+cas: 10228-90-7, name: 9-Methoxyacridine, formula: C14H11NO
+cas: 506-42-3, name: 9-Octadecen-1-ol, (E)-, formula: C18H36O
+cas: 143-28-2, name: 9-Octadecen-1-ol, (Z)-, formula: C18H36O
+cas: 301-02-0, name: 9-Octadecenamide, (Z)-, formula: C18H35NO
+cas: 7206-25-9, name: 9-Octadecene, (E)-, formula: C18H36
+cas: 15677-71-1, name: 9-Octadecene, 1,1-dimethoxy-, (Z)-, formula: C20H40O2
+cas: 111-03-5, name: 9-Octadecenoic acid (Z)-, 2,3-dihydroxypropyl ester, formula: C21H40O4
+cas: 112-62-9, name: 9-Octadecenoic acid (Z)-, methyl ester, formula: C19H36O2
+cas: 112-79-8, name: 9-Octadecenoic acid, (E)-, formula: C18H34O2
+cas: 6512-99-8, name: 9-Octadecenoic acid, ethyl ester, formula: C20H38O2
+cas: 92174-46-4, name: 9-Phenanthrenemethyl 2,6-dimethylbenzoate, formula: C24H20O2
+cas: 484-17-3, name: 9-Phenanthrenol, formula: C14H10O
+cas: 16725-53-4, name: 9-Tetradecen-1-ol, acetate, (Z)-, formula: C16H30O2
+cas: 27519-02-4, name: 9-Tricosene, (Z)-, formula: C23H46
+cas: 1000131-85-9, name: 9-Undecenal, 2,10-dimethyl-, formula: C13H24O
+cas: 132034-75-4, name: 9-Undecylanthracene, formula: C25H32
+cas: 1000326-80-1, name: 9-[2-Ethoxycarbonyl)ethyl]-1,2,3,4-tetrahydro-2,2,4,4-tetramethyl-9H-pyrido[3,4-b]undole, formula: C20H28N2O2
+cas: 1000214-46-0, name: 9-[4-[1,3-Diphenyl-2-imidazolidinyl]-2,3-O-[1-methylethylidene]-.beta.-d-, formula: C28H30N8O4
+cas: 1000376-54-3, name: 9-octadecenoic acid, 2,2,2-trifluoroethyl ester, formula: C20H35F3O2
+cas: 1000137-90-4, name: 9H,11H-Pyrrolo[2,1-a]pyrido[3,4-b]indole-3-one, 1,2,3,5,6,11b-hexahydro-11b-methyl-, formula: C15H16N2O
+cas: 132-32-1, name: 9H-Carbazol-3-amine, 9-ethyl-, formula: C14H14N2
+cas: 19836-48-7, name: 9H-Carbazole, 9-(1-naphthalenylmethyl)-, formula: C23H17N
+cas: 34292-03-0, name: 9H-Carbazole, 9-(2-naphthalenyl)-, formula: C22H15N
+cas: 86-28-2, name: 9H-Carbazole, 9-ethyl-, formula: C14H13N
+cas: 1484-12-4, name: 9H-Carbazole, 9-methyl-, formula: C13H11N
+cas: 77828-60-5, name: 9H-Carbazole-1-carboxylic acid, 4-(1H-indol-3-yl)-, methyl ester, formula: C22H16N2O2
+cas: 21240-56-2, name: 9H-Carbazole-3-carboxaldehyde, 9-methyl-, formula: C14H11NO
+cas: 1000155-43-0, name: 9H-Cycloisolongifolene, 8-oxo-, formula: C15H22O
+cas: 50861-05-7, name: 9H-Cyclopenta[a]pyrene, formula: C19H12
+cas: 1000141-55-1, name: 9H-Fluoren-3-ol, 9,9-dimethyl-, formula: C15H14O
+cas: 486-25-9, name: 9H-Fluoren-9-one, formula: C13H8O
+cas: 42523-22-8, name: 9H-Fluoren-9-one, 1,4-dihydroxy-, formula: C13H8O3
+cas: 17057-98-6, name: 9H-Fluorene, 1,9-dimethyl-, formula: C15H14
+cas: 1207-20-1, name: 9H-Fluorene, 2-ethyl-, formula: C15H14
+cas: 1940-57-4, name: 9H-Fluorene, 9-bromo-, formula: C13H9Br
+cas: 4425-82-5, name: 9H-Fluorene, 9-methylene-, formula: C14H10
+cas: 1529-40-4, name: 9H-Fluorene-9-carbonitrile, formula: C14H9N
+cas: 63839-86-1, name: 9H-Fluorene-9-methanol, acetate, formula: C16H14O2
+cas: 78750-82-0, name: 9H-Pyrido[2,3-b]indole, 6-methoxy-, formula: C12H10N2O
+cas: 1000319-19-7, name: 9H-Pyrrolo[1,2-a]indol-9-one, 2-methyl-, formula: C12H9NO
+cas: 719-41-5, name: 9H-Xanthen-9-one, 1-hydroxy-, formula: C13H8O3
+cas: 6702-58-5, name: 9H-Xanthen-9-one, 4-methoxy-, formula: C14H10O3
+cas: 92-83-1, name: 9H-Xanthene, formula: C13H10O
+cas: 1000304-08-3, name: 9H-Xanthene-9-carboxylic acid, (pyridin-4-yl)amide, formula: C19H14N2O2
+cas: 1615-91-4, name: A'-Neogammacer-22(29)-ene, formula: C30H50
+cas: 514-10-3, name: Abietic acid, formula: C20H30O2
+cas: 83-32-9, name: Acenaphthene, formula: C12H10
+cas: 26832-43-9, name: Acenaphtho[1,2-b]quinoxaline, 9-methoxy-, formula: C19H12N2O
+cas: 208-96-8, name: Acenaphthylene, formula: C12H8
+cas: 55334-13-9, name: Acenaphthylene, 1,2-dihydro-5-pentadecyl-, formula: C27H40
+cas: 75268-07-4, name: Acetaldehyde, 2-butenylhydrazone, formula: C6H12N2
+cas: 33581-43-0, name: Acetaldehyde, O-methyloxime, formula: C3H7NO
+cas: 67660-50-8, name: Acetaldehyde, bis(1-methylethyl)hydrazone, formula: C8H18N2
+cas: 7422-90-4, name: Acetaldehyde, dimethylhydrazone, formula: C4H10N2
+cas: 75268-00-7, name: Acetaldehyde, ethyl(1-methylethyl)hydrazone, formula: C7H16N2
+cas: 20487-02-9, name: Acetaldehyde, ethylhydrazone, formula: C4H10N2
+cas: 592-56-3, name: Acetaldehyde, ethylidenehydrazone, formula: C4H8N2
+cas: 10312-83-1, name: Acetaldehyde, methoxy-, formula: C3H6O2
+cas: 66075-10-3, name: Acetaldehyde, methyl(2-propenyl)hydrazone, formula: C6H12N2
+cas: 17167-73-6, name: Acetaldehyde, methylhydrazone, formula: C3H8N2
+cas: 108-62-3, name: Acetaldehyde, tetramer, formula: C8H16O4
+cas: 60-35-5, name: Acetamide, formula: C2H5NO
+cas: 14618-65-6, name: Acetamide, 2,2'-thiobis-, formula: C4H8N2O2S
+cas: 685-27-8, name: Acetamide, 2,2,2-trifluoro-N-methyl-N-(trifluoroacetyl)-, formula: C5H3F6NO2
+cas: 1000263-69-5, name: Acetamide, 2-(1-piperidyl)-N-(6-chloropyrazin-2-yl)-, formula: C11H15ClN4O
+cas: 598-41-4, name: Acetamide, 2-amino-, formula: C2H6N2O
+cas: 14307-89-2, name: Acetamide, 2-anilino-N,N-dimethyl-, formula: C10H14N2O
+cas: 79-07-2, name: Acetamide, 2-chloro-, formula: C2H4ClNO
+cas: 107-91-5, name: Acetamide, 2-cyano-, formula: C3H4N2O
+cas: 1000303-58-4, name: Acetamide, 2-diethylamino-N-[1-(4-hydroxybenzyl)cyclohexyl]-, formula: C19H30N2O2
+cas: 640-19-7, name: Acetamide, 2-fluoro-, formula: C2H4FNO
+cas: 330-68-7, name: Acetamide, 2-fluoro-N-phenyl-, formula: C8H8FNO
+cas: 10268-78-7, name: Acetamide, N,N'-1,3-phenylenebis-, formula: C10H12N2O2
+cas: 759-22-8, name: Acetamide, N,N-bis(1-methylethyl)-, formula: C8H17NO
+cas: 2113-47-5, name: Acetamide, N-(1,1'-biphenyl)-2-yl-, formula: C14H13NO
+cas: 1000304-54-6, name: Acetamide, N-(1,1-dioxo-2,3-dihydro-1H-1.lambda.(6)-thiophen-3-yl)-2-(4-methoxyphenoxy)-, formula: C13H15NO5S
+cas: 75092-37-4, name: Acetamide, N-(1,3-dimethyl-1H-5-pyrazolyl)-, formula: C7H11N3O
+cas: 1000338-09-7, name: Acetamide, N-(1,6-dihydro-2-methyl-6-oxo-4-pyrimidinyl)-, formula: C7H9N3O2
+cas: 58216-76-5, name: Acetamide, N-(1-acetyl-2-methyl-4-imidazolyl)-, formula: C8H11N3O2
+cas: 71516-07-9, name: Acetamide, N-(2,4-dihydroxyphenyl)-, formula: C8H9NO3
+cas: 3467-59-2, name: Acetamide, N-(2,5-dimethoxyphenyl)-, formula: C10H13NO3
+cas: 56248-08-9, name: Acetamide, N-(2-ethoxy-3,6-dihydro-6-methyl-2H-pyran-3-yl)-, formula: C10H17NO3
+cas: 399-31-5, name: Acetamide, N-(2-fluorophenyl)-, formula: C8H8FNO
+cas: 833-68-1, name: Acetamide, N-(2-oxo-2H-1-benzopyran-6-yl)-, formula: C11H9NO3
+cas: 877-95-2, name: Acetamide, N-(2-phenylethyl)-, formula: C10H13NO
+cas: 588-07-8, name: Acetamide, N-(3-chlorophenyl)-, formula: C8H8ClNO
+cas: 82479-25-2, name: Acetamide, N-(3-methyl-2-oxobutyl)-, formula: C7H13NO2
+cas: 1000307-09-1, name: Acetamide, N-(3-methylphenyl)-2-acetoxy-, formula: C11H13NO3
+cas: 1000319-15-2, name: Acetamide, N-(5-ethoxy-2-pyrimidinyl)-, formula: C8H11N3O2
+cas: 1000319-28-1, name: Acetamide, N-(5-methoxy-2-pyrimidinyl)-, formula: C7H9N3O2
+cas: 692-33-1, name: Acetamide, N-2-propenyl-, formula: C5H9NO
+cas: 13053-81-1, name: Acetamide, N-2-thienyl-, formula: C6H7NOS
+cas: 4235-09-0, name: Acetamide, N-9-phenanthrenyl-, formula: C16H13NO
+cas: 1000197-09-8, name: Acetamide, N-[(dimethylamino)methylidene]-, formula: C5H10N2O
+cas: 1000260-23-7, name: Acetamide, N-[1-(4-propyl-4H-[1,2,4]triazol-3-yl)ethyl]-, formula: C9H16N4O
+cas: 1016-47-3, name: Acetamide, N-[2-(1H-indol-3-yl)ethyl]-, formula: C12H14N2O
+cas: 6375-46-8, name: Acetamide, N-[3-(diethylamino)phenyl]-, formula: C12H18N2O
+cas: 309742-07-2, name: Acetamide, N-[4-(1-tetrazolyl)phenyl]-, formula: C9H9N5O
+cas: 137706-80-0, name: Acetamide, N-acetyl-N,N'-1,2-ethanediylbis-, formula: C8H14N2O3
+cas: 83-15-8, name: Acetamide, N-antipyrinyl-, formula: C13H15N3O2
+cas: 1119-49-9, name: Acetamide, N-butyl-, formula: C6H13NO
+cas: 3195-78-6, name: Acetamide, N-ethenyl-N-methyl-, formula: C5H9NO
+cas: 625-50-3, name: Acetamide, N-ethyl-, formula: C4H9NO
+cas: 79-16-3, name: Acetamide, N-methyl-, formula: C3H7NO
+cas: 579-10-2, name: Acetamide, N-methyl-N-phenyl-, formula: C9H11NO
+cas: 1000307-30-7, name: Acetamide, N-tetrahydrofurfuryl-2,2,2-trifluoro-, formula: C7H10F3NO2
+cas: 22059-22-9, name: Acetamide, oxime, formula: C2H6N2O
+cas: 64790-08-5, name: Acetamidoacetaldehyde, formula: C4H7NO2
+cas: 351-83-7, name: Acetanilide, 4'-fluoro-, formula: C8H8FNO
+cas: 101447-86-3, name: Acetate, (2,5,5,8a-tetramethyl-1,2,3,5,6,7,8,8a-octahydro-1-naphthalenyl) ester, formula: C16H26O2
+cas: 1000197-87-3, name: Acetate, (2,5,5,8a-tetramethyl-3,4,4a,5,6,7,8,8a-octahydro-1-naphthalenyl) ester, formula: C16H26O2
+cas: 1000137-18-3, name: Acetazolamide tri-methyl derivative, formula: C7H12N4O3S2
+cas: 3762-96-7, name: Acetic acid benzo[1,2,5]thiadiazol-5-yl ester, formula: C8H6N2O2S
+cas: 108-05-4, name: Acetic acid ethenyl ester, formula: C4H6O2
+cas: 3814-41-3, name: Acetic acid, (1,2-dimethyl-1-propenyl) ester, formula: C7H12O2
+cas: 13831-30-6, name: Acetic acid, (acetyloxy)-, formula: C4H6O4
+cas: 645-88-5, name: Acetic acid, (aminooxy)-, formula: C2H5NO3
+cas: 16555-77-4, name: Acetic acid, (benzoylamino)hydroxy-, formula: C9H9NO4
+cas: 1000143-97-2, name: Acetic acid, (dodecahydro-7-hydroxy-1,4b,8,8-tetramethyl-10-oxo-2(1H)-phenanthrenylidene)-,2-(dimethylamino)ethyl ester, formula: C24H39NO4
+cas: 115150-49-7, name: Acetic acid, 1,4-dihydroxy-9,10-dioxo-2-anthracenyl ester, formula: C16H10O6
+cas: 1000210-60-7, name: Acetic acid, 1-(1,5-dimethylhexyl)-7-hydroxy-9a,11a-dimethylhexadecahydrocyclopenta[a]phenanthren-8-yl ester, formula: C29H50O3
+cas: 152028-15-4, name: Acetic acid, 1-(2-methyltetrazol-5-yl)ethenyl ester, formula: C6H8N4O2
+cas: 86756-12-9, name: Acetic acid, 1-methyl-3-(2,6,6-trimethylcyclohex-1-enyl)propyl ester, formula: C15H26O2
+cas: 1000192-15-8, name: Acetic acid, 1-methyl-3-(2,6,6-trimethylcyclohex-2-enyl)propyl ester, formula: C15H26O2
+cas: 79984-63-7, name: Acetic acid, 2-(2-methoxyphenyl)hydrazide, formula: C9H12N2O2
+cas: 1000362-70-7, name: Acetic acid, 2-(5-methyl-1,3,4-oxadiazol-2-yl)phenyl ester, formula: C11H10N2O3
+cas: 1000317-55-4, name: Acetic acid, 2-[2-(2-acetoxy-ethoxy)-phenoxy]-ethyl ester, formula: C14H18O6
+cas: 35085-58-6, name: Acetic acid, 2-acetyl-1-naphthalenyl ester, formula: C14H12O3
+cas: 1000263-39-3, name: Acetic acid, 2-benzoylamino-2-phenyl-, propyl ester, formula: C18H19NO3
+cas: 103-09-3, name: Acetic acid, 2-ethylhexyl ester, formula: C10H20O2
+cas: 1000367-87-9, name: Acetic acid, 2-fluoroethyl ester, formula: C4H7FO2
+cas: 102706-04-7, name: Acetic acid, 2-hydroxy-2,2-diphenyl-, (2-oxo-2-phenylethyl) ester, formula: C22H18O4
+cas: 1000368-20-6, name: Acetic acid, 3,3-dimethylbut-2-yl ester, formula: C8H16O2
+cas: 1000193-63-0, name: Acetic acid, 3,7,11,15-tetramethyl-hexadecyl ester, formula: C22H44O2
+cas: 1000191-76-4, name: Acetic acid, 4-methyl-3-oxopent-1-enyl ester, formula: C8H12O3
+cas: 140-39-6, name: Acetic acid, 4-methylphenyl ester, formula: C9H10O2
+cas: 1000192-70-8, name: Acetic acid, 5,5-dimethyl-6-(3-methyl-buta-1,3-dienyl)-7-oxa-bicyclo[4.1.0]hept-1-ylmethyl ester, formula: C16H24O3
+cas: 5196-28-1, name: Acetic acid, 5,8-dihydro-5,8-dioxo-1-naphthyl ester, formula: C12H8O4
+cas: 1000188-43-0, name: Acetic acid, 7,7,10a,12a-tetramethyl-2,5-dioxo-1,2,3,4,4a,4b,5,7,8,9,10,10a,10b,11,12,12a-hexadecahydro-1-azachrysen-8-yl ester, formula: C23H33NO4
+cas: 1000268-46-1, name: Acetic acid, 8-acetyl-2,3,-dihydro-1,4-benzodioxin-5-yl ester, formula: C12H12O5
+cas: 17930-82-4, name: Acetic acid, [(1-thioxoethyl)thio]-, formula: C4H6O2S2
+cas: 67902-78-7, name: Acetic acid, [(2,4,6-triethylbenzoyl)thio]-, formula: C15H20O3S
+cas: 16024-58-1, name: Acetic acid, [2-(2-methoxyethoxy)ethoxy]-, formula: C7H14O5
+cas: 3396-11-0, name: Acetic acid, cesium salt, formula: C2H3CsO2
+cas: 105-39-5, name: Acetic acid, chloro-, ethyl ester, formula: C4H7ClO2
+cas: 5348-82-3, name: Acetic acid, chloro-, octadecyl ester, formula: C20H39ClO2
+cas: 372-09-8, name: Acetic acid, cyano-, formula: C3H3NO2
+cas: 6065-82-3, name: Acetic acid, diethoxy-, ethyl ester, formula: C8H16O4
+cas: 89-91-8, name: Acetic acid, dimethoxy-, methyl ester, formula: C5H10O4
+cas: 3468-99-3, name: Acetic acid, diphenyl-, ethyl ester, formula: C16H16O2
+cas: 637-80-9, name: Acetic acid, hydrazino-, ethyl ester, formula: C4H10N2O2
+cas: 24066-82-8, name: Acetic acid, isothiocyanato-, ethyl ester, formula: C5H7NO2S
+cas: 68-11-1, name: Acetic acid, mercapto-, formula: C2H4O2S
+cas: 3938-96-3, name: Acetic acid, methoxy-, ethyl ester, formula: C5H10O3
+cas: 6290-49-9, name: Acetic acid, methoxy-, methyl ester, formula: C4H8O3
+cas: 2483-57-0, name: Acetic acid, nitro-, methyl ester, formula: C3H5NO4
+cas: 122-79-2, name: Acetic acid, phenyl ester, formula: C8H8O2
+cas: 140-11-4, name: Acetic acid, phenylmethyl ester, formula: C9H10O2
+cas: 127-09-3, name: Acetic acid, sodium salt, formula: C2H3NaO2
+cas: 65611-32-7, name: Acetic acid, trichloro-, nonyl ester, formula: C11H19Cl3O2
+cas: 400-52-2, name: Acetic acid, trifluoro-, 1,1-dimethylethyl ester, formula: C6H9F3O2
+cas: 407-38-5, name: Acetic acid, trifluoro-, 2,2,2-trifluoroethyl ester, formula: C4H2F6O2
+cas: 7556-79-8, name: Acetic acid, trifluoro-, 2,2-dimethylpropyl ester, formula: C7H11F3O2
+cas: 28745-07-5, name: Acetic acid, trifluoro-, 3,7-dimethyloctyl ester, formula: C12H21F3O2
+cas: 327-69-5, name: Acetic acid, trifluoro-, 3-methylbutyl ester, formula: C7H11F3O2
+cas: 407-25-0, name: Acetic acid, trifluoro-, anhydride, formula: C4F6O3
+cas: 6222-00-0, name: Acetic acid, trifluoro-, dodecyl ester, formula: C14H25F3O2
+cas: 383-63-1, name: Acetic acid, trifluoro-, ethyl ester, formula: C4H5F3O2
+cas: 2923-17-3, name: Acetic acid, trifluoro-, lithium salt, formula: C2F3LiO2
+cas: 53800-01-4, name: Acetic acid, trifluoro-, undecyl ester, formula: C13H23F3O2
+cas: 108-24-7, name: Acetic anhydride, formula: C4H6O3
+cas: 513-86-0, name: Acetoin, formula: C4H8O2
+cas: 67-64-1, name: Acetone, formula: C3H6O
+cas: 75-86-5, name: Acetone cyanohydrin, formula: C4H7NO
+cas: 666-52-4, name: Acetone-D6, formula: C3D6O
+cas: 926-64-7, name: Acetonitrile, (dimethylamino)-, formula: C4H8N2
+cas: 353-82-2, name: Acetonitrile, dichlorofluoro-, formula: C2Cl2FN
+cas: 62957-60-2, name: Acetonitrile, ethoxy-, formula: C4H7NO
+cas: 107-16-4, name: Acetonitrile, hydroxy-, formula: C2H3NO
+cas: 1000196-31-1, name: Acetonitrile,2-(methylimino), formula: C3H4N2
+cas: 1235-21-8, name: Acetonyltriphenylphosphonium chloride, formula: C21H20ClOP
+cas: 98-86-2, name: Acetophenone, formula: C8H8O
+cas: 1000159-01-9, name: Acetophenone, 3-methoxymethyl-, formula: C10H12O2
+cas: 99-92-3, name: Acetophenone, 4'-amino-, formula: C8H9NO
+cas: 99-93-4, name: Acetophenone, 4'-hydroxy-, formula: C8H8O2
+cas: 1000308-31-6, name: Acetoxyacetic acid, 1-adamantylmethyl ester, formula: C15H22O4
+cas: 75-36-5, name: Acetyl chloride, formula: C2H3ClO
+cas: 1000284-91-1, name: Acetyl eugenol, formula: C12H14O3
+cas: 507-02-8, name: Acetyl iodide, formula: C2H3IO
+cas: 96-04-8, name: Acetyl valeryl, formula: C7H12O2
+cas: 1000317-35-5, name: Acridin-9-yl-(4-methoxy-phenyl)-amine, formula: C20H16N2O
+cas: 1000317-41-2, name: Acridin-9-yl-[1,2,4]triazol-4-yl-amine, formula: C15H11N5
+cas: 4357-61-3, name: Acridine, 4-bromo-, formula: C13H8BrN
+cas: 92-81-9, name: Acridine, 9,10-dihydro-, formula: C13H11N
+cas: 22493-83-0, name: Acridine, 9-butyl-9,10-dihydro-, formula: C17H19N
+cas: 1000318-45-4, name: Acridine-9-carbaldehyde, formula: C14H9NO
+cas: 85842-92-8, name: Acridine-9-thiole, formula: C13H9NS
+cas: 702-79-4, name: Adamantane, 1,3-dimethyl-, formula: C12H20
+cas: 136860-48-5, name: Adamantane, 1-isothiocyanato-3-methyl-, formula: C12H17NS
+cas: 1000258-59-5, name: Adamantane-1-carboxamide, N-(2-methoxy-4-thiocyanatophenyl)-, formula: C19H22N2O2S
+cas: 2096-10-8, name: Adenosine, 2-amino-, formula: C10H14N6O4
+cas: 1000353-62-7, name: Adipic acid, 3-hexyl octyl ester, formula: C20H38O4
+cas: 1000353-97-2, name: Adipic acid, butyl cis-hex-3-enyl ester, formula: C16H28O4
+cas: 1000324-77-4, name: Adipic acid, butyl cyclopentylmethyl ester, formula: C16H28O4
+cas: 1000324-09-3, name: Adipic acid, butyl isobutyl ester, formula: C14H26O4
+cas: 1000354-11-9, name: Adipic acid, butyl pent-4-en-2-yl ester, formula: C15H26O4
+cas: 1000353-97-3, name: Adipic acid, cis-hex-3-enyl pentyl ester, formula: C17H30O4
+cas: 1000353-97-0, name: Adipic acid, cis-hex-3-enyl propyl ester, formula: C15H26O4
+cas: 1000353-97-9, name: Adipic acid, cis-hex-3-enyl undecyl ester, formula: C23H42O4
+cas: 1000324-26-3, name: Adipic acid, cyclohexyl octyl ester, formula: C20H36O4
+cas: 1000324-58-0, name: Adipic acid, di(2-phenylethyl) ester, formula: C22H26O4
+cas: 1000324-62-0, name: Adipic acid, di(3-pentyl) ester, formula: C16H30O4
+cas: 1000324-71-1, name: Adipic acid, di(but-2-en-1-yl) ester, formula: C14H22O4
+cas: 1000353-98-7, name: Adipic acid, di(cis-hex-3-enyl) ester, formula: C18H30O4
+cas: 1000160-80-1, name: Adipic acid, di(oct-4-yl ester), formula: C22H42O4
+cas: 1000354-00-5, name: Adipic acid, ethyl trans-hex-3-enyl ester, formula: C14H24O4
+cas: 1000324-74-5, name: Adipic acid, isobutyl trans-2-methylcyclohexyl ester, formula: C17H30O4
+cas: 1000354-00-7, name: Adipic acid, isobutyl trans-hex-3-enyl ester, formula: C16H28O4
+cas: 1000324-61-0, name: Adipic acid, octyl 3-pentyl ester, formula: C19H36O4
+cas: 1000354-01-2, name: Adipic acid, octyl trans-hex-3-enyl ester, formula: C20H36O4
+cas: 548-42-5, name: Agroclavine, formula: C16H18N2
+cas: 54745-23-2, name: Alanine, 2-methyl-N-(trimethylsilyl)-, trimethylsilyl ester, formula: C10H25NO2Si2
+cas: 1000329-53-2, name: Alanine, N-methyl-N-(2-chloroethoxycarbonyl)-, pentadecyl ester, formula: C22H42ClNO4
+cas: 1000329-52-9, name: Alanine, N-methyl-N-(2-chloroethoxycarbonyl)-, undecyl ester, formula: C18H34ClNO4
+cas: 1000329-47-1, name: Alanine, N-methyl-N-(2-methoxyethoxycarbonyl)-, propyl ester, formula: C11H21NO5
+cas: 1000329-31-4, name: Alanine, N-methyl-N-allyloxycarbonyl-, butyl ester, formula: C12H21NO4
+cas: 1000329-28-9, name: Alanine, N-methyl-N-ethoxycarbonyl-, dodecyl ester, formula: C19H37NO4
+cas: 1000329-29-1, name: Alanine, N-methyl-N-ethoxycarbonyl-, pentadecyl ester, formula: C22H43NO4
+cas: 1000328-73-1, name: Alanine, N-methyl-N-methoxycarbonyl-, undecyl ester, formula: C17H33NO4
+cas: 1000329-36-0, name: Alanine, N-methyl-n-propargyloxycarbonyl-, heptyl ester, formula: C15H25NO4
+cas: 1000329-35-9, name: Alanine, N-methyl-n-propargyloxycarbonyl-, hexyl ester, formula: C14H23NO4
+cas: 1000329-44-2, name: Alanine, N-methyl-n-propoxycarbonyl-, heptadecyl ester, formula: C25H49NO4
+cas: 1000329-30-2, name: Alanylalanine, N,N'-dimethyl-N-ethoxycarbonyl-, nonyl ester, formula: C20H38N2O5
+cas: 49615-54-5, name: Allophanic acid, phenyl ester, formula: C8H8N2O3
+cas: 518-97-8, name: Allopseudococaine, formula: C17H21NO4
+cas: 57-06-7, name: Allyl Isothiocyanate, formula: C4H5NS
+cas: 591-87-7, name: Allyl acetate, formula: C5H8O2
+cas: 27249-83-8, name: Allyl dithioacetate, formula: C5H8S2
+cas: 3295-97-4, name: Allyl n-octyl ether, formula: C11H22O
+cas: 1000241-83-5, name: Allyl p-(2-hydroxyethoxy)benzoate, formula: C12H14O4
+cas: 383-67-5, name: Allyl trifluoroacetate, formula: C5H5F3O2
+cas: 1000154-37-8, name: Allylamine, bis(2-methoxyethyl)-, formula: C9H19NO2
+cas: 22146-25-4, name: Allyldimethyl(vinyl)silane, formula: C7H14Si
+cas: 3937-30-2, name: Allyldimethylsilane, formula: C5H12Si
+cas: 672-67-3, name: Alpha-pyrone-6-carboxylic acid, formula: C6H4O4
+cas: 14241-84-0, name: Aluminum, bis(2-methylpropyl)(2,4-pentanedionato-O,O')-, (T-4)-, formula: C13H25AlO2
+cas: 102773-95-5, name: Aluminum, bis[diethyl(methoxy)]bis-, formula: C10H26Al2O2
+cas: 97-93-8, name: Aluminum, triethyl-, formula: C6H15Al
+cas: 102-67-0, name: Aluminum, tripropyl-, formula: C9H21Al
+cas: 519-88-0, name: Ambucetamide, formula: C17H28N2O2
+cas: 834-12-8, name: Ametryn, formula: C9H17N5S
+cas: 161944-90-7, name: Amine, dimethyl-2-phosphinoethyl-, formula: C4H12NP
+cas: 22483-09-6, name: Aminoacetaldehyde dimethyl acetal, formula: C4H11NO2
+cas: 540-61-4, name: Aminoacetonitrile, formula: C2H4N2
+cas: 1000126-84-1, name: Aminoformic acid, N-n-decyl-, 2,6-diisopropylphenyl(ester), formula: C25H43NO2
+cas: 79-17-4, name: Aminoguanidine, formula: CH6N4
+cas: 37770-94-8, name: Aminomaleimide, formula: C4H4N2O2
+cas: 13881-91-9, name: Aminomethanesulfonic acid, formula: CH5NO3S
+cas: 5049-61-6, name: Aminopyrazine, formula: C4H5N3
+cas: 631-61-8, name: Ammonium acetate, formula: C2H7NO2
+cas: 57289-70-0, name: Androst-2-en-17-one, 3-hydroxy-, (5.beta.)-, formula: C19H28O2
+cas: 571-25-5, name: Androst-5-en-17.beta.-ol-3-one, formula: C19H28O2
+cas: 294866-91-4, name: Androst-5-ene,1-acetoxy-16,17-dimethyl-20-oxo-, formula: C25H38O3
+cas: 1000194-15-2, name: Androsta-5,7-diene, 4,4-dimethyl-, formula: C21H32
+cas: 57344-99-7, name: Androstan-17-one, 3-ethyl-3-hydroxy-, (5.alpha.)-, formula: C21H34O2
+cas: 53-42-9, name: Androstan-17-one, 3-hydroxy-, (3.alpha.,5.beta.)-, formula: C19H30O2
+cas: 2881-21-2, name: Androstan-3-one, 17-hydroxy-1,17-dimethyl-, (1.alpha.,5.alpha.,17.beta.)-, formula: C21H34O2
+cas: 739-27-5, name: Androstane-11,17-dione, 3-hydroxy-, (3.alpha.,5.beta.)-, formula: C19H28O3
+cas: 5982-99-0, name: Androstane-3,17-dione, formula: C19H28O2
+cas: 846-46-8, name: Androstane-3,17-dione, (5.alpha.)-, formula: C19H28O2
+cas: 1000256-13-4, name: Anhydro 5-mercapto-3-methyl-1,2,3,4-oxatriazolium hydroxide, formula: C2H3N3OS
+cas: 117-37-3, name: Anisindione, formula: C16H12O3
+cas: 129-56-6, name: Anthra[1,9-cd]pyrazol-6(2H)-one, formula: C14H8N2O
+cas: 1000157-53-8, name: Anthracen-9-one, 10-heptyl-10-hydroxy-, formula: C21H24O2
+cas: 120-12-7, name: Anthracene, formula: C14H10
+cas: 22306-30-5, name: Anthracene, 1,2,3,4,5,6,7,8-octahydro-1,1,4,4,5,5,8,8-octamethyl-, formula: C22H34
+cas: 94573-50-9, name: Anthracene, 1,2,3,4-tetrahydro-9,10-dimethyl-, formula: C16H18
+cas: 46868-29-5, name: Anthracene, 9,10-diethyl-9,10-dihydro-, formula: C18H20
+cas: 10394-54-4, name: Anthracene, 9,10-dihydro-9-(1-methylpropyl)-, formula: C18H20
+cas: 63820-36-0, name: Anthracene, 9-(3-bromopropyl)-9,10-dihydro-, formula: C17H17Br
+cas: 55401-75-7, name: Anthracene, 9-dodecyltetradecahydro-, formula: C26H48
+cas: 2395-96-2, name: Anthracene, 9-methoxy-, formula: C15H12O
+cas: 779-02-2, name: Anthracene, 9-methyl-, formula: C15H12
+cas: 6329-10-8, name: Anthracene-9,10-biimine-11,12-dicarboxylic acid, 9,10-dihydro-, diethyl ester, formula: C20H20N2O4
+cas: 20600-79-7, name: Anthraquinone, 1-(o-chlorophenyl)-, formula: C20H11ClO2
+cas: 90-44-8, name: Anthrone, formula: C14H10O
+cas: 1560-32-3, name: Anthrone, 10-bromo-, formula: C14H9BrO
+cas: 60-80-0, name: Antipyrine, formula: C11H12N2O
+cas: 119660-66-1, name: Ar-himachalen-2-ol, formula: C15H22O
+cas: 506-32-1, name: Arachidonic acid, formula: C20H32O2
+cas: 55591-18-9, name: As-Indacen-1(2H)-one, 3,6,7,8-tetrahydro-3,3,6,6-tetramethyl-, formula: C16H20O
+cas: 1912-24-9, name: Atrazine, formula: C8H14ClN5
+cas: 6190-65-4, name: Atrazine-desethyl, formula: C6H10ClN5
+cas: 339364-68-0, name: Azacyclohex-3-en-5-one, 1-tert-butyl-3-methyl-, formula: C10H17NO
+cas: 1000126-80-6, name: Azacyclohexan-2-carboxylic acid, 1-BOC-, formula: C11H19NO4
+cas: 503-29-7, name: Azetidine, formula: C3H7N
+cas: 38455-24-2, name: Azetidine, 1,1'-methylenebis-, formula: C7H14N2
+cas: 51764-32-0, name: Azetidine, 1,2-dimethyl-, formula: C5H11N
+cas: 55702-65-3, name: Azetidine, 1-(1,1-dimethylethyl)-3-methyl-, formula: C8H17N
+cas: 118973-03-8, name: Azetidine, 1-benzoyl-3-ethenyl-, formula: C12H13NO
+cas: 15216-10-1, name: Azetidine, 1-nitroso-, formula: C3H6N2O
+cas: 19812-49-8, name: Azetidine, 2-methyl-, formula: C4H9N
+cas: 1000288-41-2, name: Azetidine, n-propyl-, formula: C6H13N
+cas: 56082-94-1, name: Aziridine, 1-(1,1-dimethylethyl)-2,3-dimethyl-, cis-, formula: C8H17N
+cas: 1000158-95-5, name: Aziridine, 1-(2-buten-1-yl)-, (E)-, formula: C6H11N
+cas: 1000158-95-6, name: Aziridine, 1-(2-buten-1-yl)-, (Z)-, formula: C6H11N
+cas: 80839-93-6, name: Aziridine, 1-(2-methyl-1-propenyl)-, formula: C6H11N
+cas: 5628-99-9, name: Aziridine, 1-ethenyl-, formula: C4H7N
+cas: 5536-98-1, name: Aziridine, 1-propyl-, formula: C5H11N
+cas: 55669-79-9, name: Aziridine, 2-(1,1-dimethylethyl)-1-ethyl-3-methyl-, trans-, formula: C9H19N
+cas: 2549-67-9, name: Aziridine, 2-ethyl-, formula: C4H9N
+cas: 75-55-8, name: Aziridine, 2-methyl-, formula: C3H7N
+cas: 35216-55-8, name: Aziridine-2-carboxamide, 1-(1,1-dimethylethyl)-, formula: C7H14N2O
+cas: 14387-89-4, name: Aziridinone, 1,3-bis(1,1-dimethylethyl)-, formula: C10H19NO
+cas: 103-33-3, name: Azobenzene, formula: C12H10N2
+cas: 17082-12-1, name: Azobenzene, (E)-, formula: C12H10N2
+cas: 527-73-1, name: Azomycin, formula: C3H3N3O2
+cas: 131860-33-8, name: Azoxystrobin, formula: C22H17N3O5
+cas: 489-84-9, name: Azulene, 1,4-dimethyl-7-(1-methylethyl)-, formula: C15H18
+cas: 1000164-49-7, name: Bacteriochlorophyll-c-stearyl, formula: C52H72MgN4O4
+cas: 325836-96-2, name: Bambuterol, N-trifluoroacetyl-O-trimethylsilyl deriv., formula: C23H36F3N3O6Si
+cas: 57-44-3, name: Barbital, formula: C8H12N2O3
+cas: 67-52-7, name: Barbituric acid, formula: C4H4N2O3
+cas: 728-40-5, name: Bayer 28,589, formula: C14H21NO3
+cas: 661-19-8, name: Behenic alcohol, formula: C22H46O
+cas: 64-65-3, name: Bemegride, formula: C8H13NO2
+cas: 71626-11-4, name: Benalaxyl, formula: C20H23NO3
+cas: 5003-48-5, name: Benorilate, formula: C17H15NO5
+cas: 741-58-2, name: Bensulide, formula: C14H24NO4PS3
+cas: 3519-87-7, name: Benz[c]acridine, 5-methyl-, formula: C18H13N
+cas: 100-52-7, name: Benzaldehyde, formula: C7H6O
+cas: 774-48-1, name: Benzaldehyde diethylacetal, formula: C11H16O2
+cas: 33617-38-8, name: Benzaldehyde, 2,4-bis(trimethylsiloxy)-, formula: C13H22O3Si2
+cas: 192927-69-8, name: Benzaldehyde, 2,4-difluoro-3-hydroxy-, formula: C7H4F2O2
+cas: 95-01-2, name: Benzaldehyde, 2,4-dihydroxy-, formula: C7H6O3
+cas: 34883-14-2, name: Benzaldehyde, 2,4-dihydroxy-3,6-dimethyl-, formula: C9H10O3
+cas: 487-69-4, name: Benzaldehyde, 2,4-dihydroxy-6-methyl-, formula: C8H8O3
+cas: 56114-69-3, name: Benzaldehyde, 2,5-bis[(trimethylsilyl)oxy]-, formula: C13H22O3Si2
+cas: 1000116-58-2, name: Benzaldehyde, 2,5-difluoro-3,4-dihydroxy-, formula: C7H4F2O3
+cas: 613-69-4, name: Benzaldehyde, 2-ethoxy-, formula: C9H10O2
+cas: 673-22-3, name: Benzaldehyde, 2-hydroxy-4-methoxy-, formula: C8H8O3
+cas: 34883-10-8, name: Benzaldehyde, 2-hydroxy-6-methyl-4-(phenylmethoxy)-, formula: C15H14O3
+cas: 34883-17-5, name: Benzaldehyde, 2-methoxy-3,6-dimethyl-4-(phenylmethoxy)-, formula: C17H18O3
+cas: 552-89-6, name: Benzaldehyde, 2-nitro-, formula: C7H5NO3
+cas: 86-81-7, name: Benzaldehyde, 3,4,5-trimethoxy-, formula: C10H12O4
+cas: 120-14-9, name: Benzaldehyde, 3,4-dimethoxy-, formula: C9H10O3
+cas: 1000273-81-9, name: Benzaldehyde, 3-(4-nitrophenoxymethyl)-4-methoxy-, formula: C15H13NO5
+cas: 34246-54-3, name: Benzaldehyde, 3-ethyl-, formula: C9H10O
+cas: 2426-87-1, name: Benzaldehyde, 3-methoxy-4-(phenylmethoxy)-, formula: C15H14O3
+cas: 120-21-8, name: Benzaldehyde, 4-(diethylamino)-, formula: C11H15NO
+cas: 5736-91-4, name: Benzaldehyde, 4-(pentyloxy)-, formula: C12H16O2
+cas: 4397-53-9, name: Benzaldehyde, 4-(phenylmethoxy)-, formula: C14H12O2
+cas: 2450-27-3, name: Benzaldehyde, 4-benzyloxy-3-methoxy-2-nitro-, formula: C15H13NO5
+cas: 5736-88-9, name: Benzaldehyde, 4-butoxy-, formula: C11H14O2
+cas: 10031-82-0, name: Benzaldehyde, 4-ethoxy-, formula: C9H10O2
+cas: 1000276-29-9, name: Benzaldehyde, 4-ethoxy-3-iodo-5-methoxy-, formula: C10H11IO3
+cas: 123-08-0, name: Benzaldehyde, 4-hydroxy-, formula: C7H6O2
+cas: 123-11-5, name: Benzaldehyde, 4-methoxy-, formula: C8H8O2
+cas: 55-21-0, name: Benzamide, formula: C7H7NO
+cas: 88-68-6, name: Benzamide, 2-amino-, formula: C7H8N2O
+cas: 1000340-06-9, name: Benzamide, 2-fluoro-N,N-dimethyl-, formula: C9H10FNO
+cas: 1000337-81-2, name: Benzamide, 2-hydroxy-N-(1,2,2-trimethylpropyl)-, formula: C13H19NO2
+cas: 1000339-10-8, name: Benzamide, 2-methoxy-N-(2-fluorophenyl)-, formula: C14H12FNO2
+cas: 1000339-11-3, name: Benzamide, 2-methoxy-N-(4-phenoxyphenyl)-, formula: C20H17NO3
+cas: 1000339-10-5, name: Benzamide, 2-methoxy-N-allyl-, formula: C11H13NO2
+cas: 1000339-10-6, name: Benzamide, 2-methoxy-N-methallyl-, formula: C12H15NO2
+cas: 3572-44-9, name: Benzamide, 3-amino-2-methyl-5-nitro-, formula: C8H9N3O3
+cas: 1000339-09-8, name: Benzamide, 3-methyl-N-allyl-, formula: C11H13NO
+cas: 1000340-30-4, name: Benzamide, 4-butyl-N-(2-bromophenyl)-, formula: C17H18BrNO
+cas: 1000340-29-9, name: Benzamide, 4-butyl-N-allyl-, formula: C14H19NO
+cas: 1000262-86-8, name: Benzamide, 4-chloro-, o-dichloroacetyloxime, formula: C9H7Cl3N2O2
+cas: 1000317-33-1, name: Benzamide, 4-ethoxy-N-(2-methyl-4-nitrophenyl)-, formula: C16H16N2O4
+cas: 1000340-35-3, name: Benzamide, 4-ethyl-N-(2,4-dimethoxyphenyl)-, formula: C17H19NO3
+cas: 1000340-34-5, name: Benzamide, 4-ethyl-N-allyl-, formula: C12H15NO
+cas: 1000340-34-7, name: Benzamide, 4-ethyl-N-methyl-N-phenyl-, formula: C16H17NO
+cas: 1000340-31-7, name: Benzamide, 4-fluoro-N,N-dimethyl-, formula: C9H10FNO
+cas: 1000340-31-8, name: Benzamide, 4-fluoro-N-allyl-, formula: C10H10FNO
+cas: 1000350-16-8, name: Benzamide, 4-nitro-N-[2-(4-pyridinyl)ethyl]-, formula: C14H13N3O3
+cas: 6935-65-5, name: Benzamide, N,N,3-trimethyl-, formula: C10H13NO
+cas: 1000360-14-8, name: Benzamide, N,N-di(2-ethylhexyl)-, formula: C23H39NO
+cas: 2728-05-4, name: Benzamide, N,N-diethyl-4-methyl-, formula: C12H17NO
+cas: 1000316-98-4, name: Benzamide, N-(2'-amino-4'-cyano-[2,3']bithiophenyl-5'-yl)-, formula: C16H11N3OS2
+cas: 78987-16-3, name: Benzamide, N-(2'-ethylphenyl)-, formula: C15H15NO
+cas: 138883-34-8, name: Benzamide, N-(2'-iodophenyl)-N-methyl-, formula: C14H12INO
+cas: 1000362-74-8, name: Benzamide, N-(2-ethyl-2H-1,2,3,4-tetrazol-5-yl)-4-fluoro-, formula: C10H10FN5O
+cas: 1000308-09-1, name: Benzamide, N-(2-fluorophenyl)-2-fluoro-, formula: C13H9F2NO
+cas: 1000307-02-0, name: Benzamide, N-(2-iodo-4-methylphenyl)-4-ethyl-, formula: C16H16INO
+cas: 584-70-3, name: Benzamide, N-(2-methylphenyl)-, formula: C14H13NO
+cas: 50996-03-7, name: Benzamide, N-(2-oxopropyl)-, formula: C10H11NO2
+cas: 67138-68-5, name: Benzamide, N-(3-benzofuryl)-, formula: C15H11NO2
+cas: 6004-21-3, name: Benzamide, N-(3-chlorophenyl)-, formula: C13H10ClNO
+cas: 1000307-49-6, name: Benzamide, N-(3-chlorophenyl)-4-methoxy-, formula: C14H12ClNO2
+cas: 1000287-36-0, name: Benzamide, N-(3-methyl-2,5-dioxo-imidazolidin-4-ylideneamino)-, formula: C11H10N4O3
+cas: 1000307-17-5, name: Benzamide, N-(3-methylphenyl)-2,3,4-trifluoro-, formula: C14H10F3NO
+cas: 1000307-05-8, name: Benzamide, N-(3-methylphenyl)-2-methoxy-, formula: C15H15NO2
+cas: 1000307-08-5, name: Benzamide, N-(3-nitrophenyl)-2-fluoro-, formula: C13H9FN2O3
+cas: 1000307-00-8, name: Benzamide, N-(3-nitrophenyl)-2-methyl-, formula: C14H12N2O3
+cas: 1000307-17-4, name: Benzamide, N-(4-fluorophenyl)-2,3,4-trifluoro-, formula: C13H7F4NO
+cas: 1000307-17-7, name: Benzamide, N-(4-methoxyphenyl)-2,3,4-trifluoro-, formula: C14H10F3NO2
+cas: 1000307-06-0, name: Benzamide, N-(4-methoxyphenyl)-2-methoxy-, formula: C15H15NO3
+cas: 1000307-01-6, name: Benzamide, N-(4-methoxyphenyl)-4-ethyl-, formula: C16H17NO2
+cas: 582-78-5, name: Benzamide, N-(4-methylphenyl)-, formula: C14H13NO
+cas: 1000305-77-6, name: Benzamide, N-(4-phenylacetylaminofurazan-3-yl)-, formula: C17H14N4O3
+cas: 1000265-08-9, name: Benzamide, N-(5,6,7,8-tetrahydro-7,7-dimethyl-2,5-dioxo-4-2H-benzopyranyl)-, formula: C18H17NO4
+cas: 152192-84-2, name: Benzamide, N-(5-methyl-2-oxo-4-imidazolin-1-yl)-, formula: C11H11N3O2
+cas: 297763-57-6, name: Benzamide, N-(5-pentyl-1,3,4-thiadiazol-2-yl)-, formula: C14H17N3OS
+cas: 74764-44-6, name: Benzamide, N-(aminocarbonyl)-N-(1-thioxoethoxy)-, formula: C10H10N2O3S
+cas: 28860-90-4, name: Benzamide, N-[2-oxo-2-(N2-methyl-N2-phenylhydrazino]ethyl-, formula: C16H17N3O2
+cas: 613-93-4, name: Benzamide, N-methyl-, formula: C8H9NO
+cas: 309921-79-7, name: Benzamide, N-methyl-4-(4-methyl-1-phthalazinylamino)-, formula: C17H16N4O
+cas: 93-98-1, name: Benzamide, N-phenyl-, formula: C13H11NO
+cas: 10546-70-0, name: Benzamide, N-propyl-, formula: C10H13NO
+cas: 5692-27-3, name: Benzamidoacetonitrile, formula: C9H8N2O
+cas: 101-47-3, name: Benzamphetamine, formula: C17H21N
+cas: 1801-14-5, name: Benzenamine, 2,3,4,5,6-pentafluoro-N,N-dimethyl-, formula: C8H6F5N
+cas: 961-38-6, name: Benzenamine, 2,4,6-tris(1,1-dimethylethyl)-, formula: C18H31N
+cas: 615-43-0, name: Benzenamine, 2-iodo-, formula: C6H6IN
+cas: 626-43-7, name: Benzenamine, 3,5-dichloro-, formula: C6H5Cl2N
+cas: 13080-86-9, name: Benzenamine, 4,4'-[(1-methylethylidene)bis(4,1-phenyleneoxy)]bis-, formula: C27H26N2O2
+cas: 838-88-0, name: Benzenamine, 4,4'-methylenebis[2-methyl-, formula: C15H18N2
+cas: 15721-78-5, name: Benzenamine, 4-(1,1,3,3-tetramethylbutyl)-N-[4-(1,1,3,3-tetramethylbutyl)phenyl]-, formula: C28H43N
+cas: 2524-67-6, name: Benzenamine, 4-(4-morpholinyl)-, formula: C10H14N2O
+cas: 92-36-4, name: Benzenamine, 4-(6-methyl-2-benzothiazolyl)-, formula: C14H12N2S
+cas: 39905-57-2, name: Benzenamine, 4-(hexyloxy)-, formula: C12H19NO
+cas: 309922-85-8, name: Benzenamine, 4-benzyloxy-N-nitro-N-[2-(4-pyridyl)ethyl]-, formula: C20H19N3O3
+cas: 4344-55-2, name: Benzenamine, 4-butoxy-, formula: C10H15NO
+cas: 156-43-4, name: Benzenamine, 4-ethoxy-, formula: C8H11NO
+cas: 783-08-4, name: Benzenamine, 4-methoxy-N-(phenylmethylene)-, formula: C14H13NO
+cas: 121-72-2, name: Benzenamine, N,N,3-trimethyl-, formula: C9H13N
+cas: 99-97-8, name: Benzenamine, N,N,4-trimethyl-, formula: C9H13N
+cas: 953-21-9, name: Benzenamine, N-(3-phenyl-2-propenylidene)-, formula: C15H13N
+cas: 29722-97-2, name: Benzenamine, N-(3-pyridinylmethylene)-, formula: C12H10N2
+cas: 13395-54-5, name: Benzenamine, N-methyl- N-n-propyl-, formula: C10H15N
+cas: 622-80-0, name: Benzenamine, N-propyl-, formula: C9H13N
+cas: 33046-28-5, name: Benzenaminium, 4-carboxy-N,N,N-trimethyl-, hydroxide, inner salt, formula: C10H13NO2
+cas: 55134-07-1, name: Benzene, (1,1,4,6,6-pentamethylheptyl)-, formula: C18H30
+cas: 4170-84-7, name: Benzene, (1,1-diethylpropyl)-, formula: C13H20
+cas: 27854-40-6, name: Benzene, (1,1-dimethyldecyl)-, formula: C18H30
+cas: 55191-25-8, name: Benzene, (1,1-dimethylnonyl)-, formula: C17H28
+cas: 4537-15-9, name: Benzene, (1-butylheptyl)-, formula: C17H28
+cas: 4534-50-3, name: Benzene, (1-butylnonyl)-, formula: C19H32
+cas: 2719-63-3, name: Benzene, (1-butyloctyl)-, formula: C18H30
+cas: 2400-00-2, name: Benzene, (1-ethyldecyl)-, formula: C18H30
+cas: 4536-87-2, name: Benzene, (1-ethylnonyl)-, formula: C17H28
+cas: 4621-36-7, name: Benzene, (1-ethyloctyl)-, formula: C16H26
+cas: 4534-52-5, name: Benzene, (1-ethylundecyl)-, formula: C19H32
+cas: 2400-01-3, name: Benzene, (1-hexylheptyl)-, formula: C19H32
+cas: 68705-86-2, name: Benzene, (1-methoxy-4-methyl-3-pentenyl)-, formula: C13H18O
+cas: 4536-88-3, name: Benzene, (1-methyldecyl)-, formula: C17H28
+cas: 4534-53-6, name: Benzene, (1-methyldodecyl)-, formula: C19H32
+cas: 777-22-0, name: Benzene, (1-methylheptyl)-, formula: C14H22
+cas: 4537-13-7, name: Benzene, (1-methylnonyl)-, formula: C16H26
+cas: 6031-02-3, name: Benzene, (1-methylpentyl)-, formula: C12H18
+cas: 2719-61-1, name: Benzene, (1-methylundecyl)-, formula: C18H30
+cas: 2719-62-2, name: Benzene, (1-pentylheptyl)-, formula: C18H30
+cas: 4537-14-8, name: Benzene, (1-pentylhexyl)-, formula: C17H28
+cas: 4534-49-0, name: Benzene, (1-pentyloctyl)-, formula: C19H32
+cas: 4534-51-4, name: Benzene, (1-propyldecyl)-, formula: C19H32
+cas: 4537-12-6, name: Benzene, (1-propylheptyl)-, formula: C16H26
+cas: 2719-64-4, name: Benzene, (1-propylnonyl)-, formula: C18H30
+cas: 4536-86-1, name: Benzene, (1-propyloctyl)-, formula: C17H28
+cas: 17498-71-4, name: Benzene, (2-methyl-1-methylenepropyl)-, formula: C11H14
+cas: 33930-85-7, name: Benzene, (4,5,5-trimethyl-1,3-cyclopentadien-1-yl)-, formula: C14H16
+cas: 620-05-3, name: Benzene, (iodomethyl)-, formula: C7H7I
+cas: 622-78-6, name: Benzene, (isothiocyanatomethyl)-, formula: C8H7NS
+cas: 946-80-5, name: Benzene, (phenoxymethyl)-, formula: C13H12O
+cas: 937-61-1, name: Benzene, (propoxymethyl)-, formula: C10H14O
+cas: 707-07-3, name: Benzene, (trimethoxymethyl)-, formula: C10H14O3
+cas: 632-50-8, name: Benzene, 1,1',1'',1'''-(1,2-ethanediylidene)tetrakis-, formula: C26H22
+cas: 34293-21-5, name: Benzene, 1,1',1'',1'''-(1,5-hexadiene-1,3,4,6-tetrayl)tetrakis-, formula: C30H26
+cas: 63934-83-8, name: Benzene, 1,1'-(1,1,10,10-tetramethyl-1,10-decanediyl)bis[3,4-dimethyl-, formula: C30H46
+cas: 1889-67-4, name: Benzene, 1,1'-(1,1,2,2-tetramethyl-1,2-ethanediyl)bis-, formula: C18H22
+cas: 7694-30-6, name: Benzene, 1,1'-(1,2-cyclobutanediyl)bis-, cis-, formula: C16H16
+cas: 20071-09-4, name: Benzene, 1,1'-(1,2-cyclobutanediyl)bis-, trans-, formula: C16H16
+cas: 952-80-7, name: Benzene, 1,1'-(1,2-ethanediyl)bis[2-methyl-, formula: C16H18
+cas: 1081-75-0, name: Benzene, 1,1'-(1,3-propanediyl)bis-, formula: C15H16
+cas: 13141-45-2, name: Benzene, 1,1'-(1-buten-3-yne-1,4-diyl)bis-, formula: C16H12
+cas: 70388-65-7, name: Benzene, 1,1'-(1-butene-1,4-diyl)bis-, (Z)-, formula: C16H16
+cas: 1568-83-8, name: Benzene, 1,1'-(1-methylethylidene)bis[4-methoxy-, formula: C17H20O2
+cas: 25346-95-6, name: Benzene, 1,1'-(1-phenyl-1,2-ethenediyl)bis[4-methoxy-, formula: C22H20O2
+cas: 104-66-5, name: Benzene, 1,1'-[1,2-ethanediylbis(oxy)]bis-, formula: C14H14O2
+cas: 622-22-0, name: Benzene, 1,1'-[1,2-ethanediylbis(oxymethylene)]bis-, formula: C16H18O2
+cas: 21113-55-3, name: Benzene, 1,1'-cyclohexylidenebis-, formula: C18H20
+cas: 55268-62-7, name: Benzene, 1,1'-dodecylidenebis[4-methyl-, formula: C26H38
+cas: 1530-03-6, name: Benzene, 1,1'-propylidenebis-, formula: C15H16
+cas: 599-66-6, name: Benzene, 1,1'-sulfonylbis(4-methyl-), formula: C14H14O2S
+cas: 80-07-9, name: Benzene, 1,1'-sulfonylbis[4-chloro-, formula: C12H8Cl2O2S
+cas: 526-73-8, name: Benzene, 1,2,3-trimethyl-, formula: C9H12
+cas: 635-11-0, name: Benzene, 1,2,4,5-tetrakis(1-methylethyl)-, formula: C18H30
+cas: 14800-16-9, name: Benzene, 1,2,4-tributyl-, formula: C18H30
+cas: 877-44-1, name: Benzene, 1,2,4-triethyl-, formula: C12H18
+cas: 95-63-6, name: Benzene, 1,2,4-trimethyl-, formula: C9H12
+cas: 10222-95-4, name: Benzene, 1,2,4-trimethyl-5-(1-methylethyl)-, formula: C12H18
+cas: 33884-69-4, name: Benzene, 1,2-diethyl-3,4,5,6-tetramethyl-, formula: C14H22
+cas: 1460-02-2, name: Benzene, 1,3,5-tri-tert-butyl-, formula: C18H30
+cas: 29555-07-5, name: Benzene, 1,3,5-trimethyl-2-(1,2-propadienyl)-, formula: C12H14
+cas: 4810-04-2, name: Benzene, 1,3,5-trimethyl-2-propyl-, formula: C12H18
+cas: 717-74-8, name: Benzene, 1,3,5-tris(1-methylethyl)-, formula: C15H24
+cas: 1014-60-4, name: Benzene, 1,3-bis(1,1-dimethylethyl)-, formula: C14H22
+cas: 3748-13-8, name: Benzene, 1,3-bis(1-methylethenyl)-, formula: C12H14
+cas: 21956-56-9, name: Benzene, 1,3-dimethoxy-5-[(1E)-2-phenylethenyl]-, formula: C16H16O2
+cas: 108-38-3, name: Benzene, 1,3-dimethyl-, formula: C8H10
+cas: 1012-72-2, name: Benzene, 1,4-bis(1,1-dimethylethyl)-, formula: C14H22
+cas: 1000267-46-2, name: Benzene, 1,4-diacetoxy-2-[5-(4-morpholyl)pentylthio]-, formula: C19H27NO5S
+cas: 5392-82-5, name: Benzene, 1,4-dichloro-2-isocyanato-, formula: C7H3Cl2NO
+cas: 150-78-7, name: Benzene, 1,4-dimethoxy-, formula: C8H10O2
+cas: 10375-96-9, name: Benzene, 1,4-dimethyl-2,5-bis(1-methylethyl)-, formula: C14H22
+cas: 55669-88-0, name: Benzene, 1,4-dimethyl-2-(2-methylpropyl)-, formula: C12H18
+cas: 6630-01-9, name: Benzene, 1-(1,1-dimethylethyl)-3-ethyl-5-methyl-, formula: C13H20
+cas: 1075-38-3, name: Benzene, 1-(1,1-dimethylethyl)-3-methyl-, formula: C11H16
+cas: 54889-97-3, name: Benzene, 1-(1,1-dimethylethyl)-4-(2-ethoxyethoxy)-, formula: C14H22O2
+cas: 1746-23-2, name: Benzene, 1-(1,1-dimethylethyl)-4-ethenyl-, formula: C12H16
+cas: 17269-94-2, name: Benzene, 1-(1,1-dimethylethyl)-4-ethoxy-, formula: C12H18O
+cas: 5331-28-2, name: Benzene, 1-(1,1-dimethylethyl)-4-phenoxy-, formula: C16H18O
+cas: 74672-05-2, name: Benzene, 1-(1,3-dimethyl-3-butenyl)-4-methoxy-, formula: C13H18O
+cas: 824-98-6, name: Benzene, 1-(chloromethyl)-3-methoxy-, formula: C8H9ClO
+cas: 62790-75-4, name: Benzene, 1-[(tert-butyldimethylsilyl)oxy]-3-methyl-, formula: C13H22OSi
+cas: 55268-68-3, name: Benzene, 1-[2-bromo-1-(methoxydiphenylmethyl)ethyl]-4-methoxy-, formula: C23H23BrO2
+cas: 1000298-57-1, name: Benzene, 1-acetyl-3-ethyl-2-(2-ethenyl-6-ethylphenylazo)-, formula: C20H22N2O
+cas: 588-96-5, name: Benzene, 1-bromo-4-ethoxy-, formula: C8H9BrO
+cas: 20743-95-7, name: Benzene, 1-butoxy-4-methoxy-, formula: C11H16O2
