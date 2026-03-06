@@ -759,45 +759,45 @@ def insertar_nuevas_muestras(uploaded_file):
 
 
 
-def pushear_bbdd(df_petrola, total):
-    # Función que hace un commit y puseha el archivo petrola.db, para actualizar la base de datos del repositorio de forma persistente.
+# def pushear_bbdd(df_petrola, total):
+#     # Función que hace un commit y puseha el archivo petrola.db, para actualizar la base de datos del repositorio de forma persistente.
 
-    # Información requerida para realizar el push al repositorio
-    file_path = "Database/Petrola.db"
-    github_token = os.environ["GITHUB_TOKEN"]
-    repo_url = "github.com/LagunaPetrolaDashboard/Dashboard-Laguna-Petrola-2025"
-    commit_message = f"Añadidas nuevas muestras a base de datos. Total Muestras: {len(df_petrola)+int(total)}"
-    authed_repo_url = f"https://{github_token}@{repo_url}"
+#     # Información requerida para realizar el push al repositorio
+#     file_path = "Database/Petrola.db"
+#     github_token = os.environ["GITHUB_TOKEN"]
+#     repo_url = "github.com/LagunaPetrolaDashboard/Dashboard-Laguna-Petrola-2025"
+#     commit_message = f"Añadidas nuevas muestras a base de datos. Total Muestras: {len(df_petrola)+int(total)}"
+#     authed_repo_url = f"https://{github_token}@{repo_url}"
 
-    try:
-        # Se asegura estar en la rama main para el push
-        subprocess.run(["git", "checkout", "-B", "main"], check=True)
+#     try:
+#         # Se asegura estar en la rama main para el push
+#         subprocess.run(["git", "checkout", "-B", "main"], check=True)
 
-        # Se configura un usuario de Git para realizar el commit
-        subprocess.run(["git", "config", "user.name", "Usuario Externo Community Cloud"], check=True)
-        subprocess.run(["git", "config", "user.email", "streamlit@example.com"], check=True)
+#         # Se configura un usuario de Git para realizar el commit
+#         subprocess.run(["git", "config", "user.name", "Usuario Externo Community Cloud"], check=True)
+#         subprocess.run(["git", "config", "user.email", "streamlit@example.com"], check=True)
 
-        # Se hace añade el archivo al stage
-        subprocess.run(["git", "add", file_path], check=True)
+#         # Se hace añade el archivo al stage
+#         subprocess.run(["git", "add", file_path], check=True)
 
-        # Se hace el commit de la base de datos con el mensaje predefinido
-        subprocess.run(["git", "commit", "-m", commit_message], check=True)
+#         # Se hace el commit de la base de datos con el mensaje predefinido
+#         subprocess.run(["git", "commit", "-m", commit_message], check=True)
 
-        # Se verifica si remote existe, si no existe se crea
-        remotes = subprocess.check_output(["git", "remote"]).decode().split()
-        if "origin" not in remotes:
-            subprocess.run(["git", "remote", "add", "origin", authed_repo_url], check=True)
-        else:
-            subprocess.run(["git", "remote", "set-url", "origin", authed_repo_url], check=True)
+#         # Se verifica si remote existe, si no existe se crea
+#         remotes = subprocess.check_output(["git", "remote"]).decode().split()
+#         if "origin" not in remotes:
+#             subprocess.run(["git", "remote", "add", "origin", authed_repo_url], check=True)
+#         else:
+#             subprocess.run(["git", "remote", "set-url", "origin", authed_repo_url], check=True)
 
-        # Se hace el push a la rama main
-        subprocess.run(["git", "push", "origin", "main"], check=True)
+#         # Se hace el push a la rama main
+#         subprocess.run(["git", "push", "origin", "main"], check=True)
 
-    except subprocess.CalledProcessError as e:
-        print(f"Error durante el push: {e}")
+#     except subprocess.CalledProcessError as e:
+#         print(f"Error durante el push: {e}")
 
-    except Exception as e:
-        print(f"Error general: {e}")
+#     except Exception as e:
+#         print(f"Error general: {e}")
 
 
 
@@ -806,10 +806,10 @@ def pushear_bbdd(df_petrola, total):
 #------------------------------------------------------------
 #------------------- AUTENTIFICACIÓN DE USUARIO--------------
 #------------------------------------------------------------
-json_diccionario = os.environ["USER_CREDENTIALS"]
+#json_diccionario = os.environ["USER_CREDENTIALS"]
 
-USER_CREDENTIALS = json.loads(json_diccionario)
-
+#USER_CREDENTIALS = json.loads(json_diccionario)
+USER_CREDENTIALS = {"admin": "miTFG-2025", "LP2025": "Muestras_Pétrola25"}
 
 # Estado de Sesion
 if "logged_in" not in st.session_state:
@@ -1077,7 +1077,7 @@ with st.container():
                         "\nPor favor, recargue el panel para visualizar los nuevos datos."
                     )
                     if total_compounds != 0 or total_samples != 0:
-                        pushear_bbdd(df_petrola, total_samples)
+                        #pushear_bbdd(df_petrola, total_samples)
                         st.cache_data.clear()
                 else:
                     st.warning("Por favor, sube al menos un archivo Excel en el formato correcto.")
@@ -1216,5 +1216,5 @@ with filtered_data_tab:
     n = len(df_mostrar) if n=="Todas" else int(n)
 
     # Mostramos la tabla sin restricciones de tamaño, se adaptará al espacio disponible
-    st.dataframe(df_mostrar.head(n), width=None, height=540)
+    st.dataframe(df_mostrar.head(n), height=540)
             
