@@ -15,3 +15,4 @@ crash.log
 
 # Secretos de Streamlit
 .streamlit/secrets.toml
+.streamlit/
