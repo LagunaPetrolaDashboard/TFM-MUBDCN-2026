@@ -1,0 +1,17 @@
+# --- Terraform (Ignorar en cualquier subcarpeta) ---
+
+# Directorio de plugins
+.terraform/
+
+# Archivos de estado
+*.tfstate
+*.tfstate.backup
+
+# Logs de errores
+crash.log
+
+# Variables con secretos (claves, passwords locales)
+*.tfvars
+
+# Secretos de Streamlit
+.streamlit/secrets.toml

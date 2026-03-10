@@ -15,6 +15,10 @@ from datetime import datetime, date
 import openpyxl
 import json
 
+import boto3
+import tempfile
+from botocore.exceptions import ClientError
+
 #------------------------------------------------------------
 #------------------- CONFIGURACIÓN INICIAL ------------------
 #------------------------------------------------------------
@@ -126,6 +130,62 @@ def login():
 
 
 @st.cache_data(ttl=3600)
+def cargar_dataframe_desde_s3(bucket_name, s3_key):
+    """
+    Descarga la DB de S3 a un archivo temporal y carga los datos en un DataFrame.
+    - bucket_name: Nombre de tu bucket (ej: 'tfm-almacen-muestras')
+    - s3_key: Nombre del archivo en S3 (ej: 'Petrola.db')
+    """
+    
+    # 1. Configurar el cliente de S3 usando los secrets de Streamlit
+    s3 = boto3.client(
+        's3',
+        aws_access_key_id=st.secrets["AWS_ACCESS_KEY_ID"],
+        aws_secret_access_key=st.secrets["AWS_SECRET_ACCESS_KEY"],
+        aws_session_token=st.secrets.get("AWS_SESSION_TOKEN") # .get para que no falle si no existe
+    )
+
+    # Definimos una ruta local temporal para guardar la DB descargada
+    temp_dir = tempfile.gettempdir() 
+    local_db_path = os.path.join(temp_dir, "temp_petrola.db")
+
+    # 2. Descargar el archivo de S3 a la ruta local
+    try:
+        s3.download_file(bucket_name, s3_key, local_db_path)
+    except ClientError as e:
+        st.error(f"Error al descargar de S3: {e}")
+        return None
+
+    # 3. Conexión a la base de datos local temporal
+    try:
+        conn = sqlite3.connect(local_db_path)
+
+        # Obtenemos los datos de las tres tablas
+        df_muestras = pd.read_sql_query("SELECT * FROM samples", conn)
+        df_stations = pd.read_sql_query("SELECT * FROM stations", conn)
+        df_compounds = pd.read_sql_query("SELECT * FROM compounds", conn)
+
+        conn.close()
+    except Exception as e:
+        st.error(f"Error al leer la base de datos: {e}")
+        return None
+    finally:
+        # Opcional: Borrar el archivo temporal para no ocupar espacio
+        if os.path.exists(local_db_path):
+            os.remove(local_db_path)
+
+    # 4. Procesamiento de datos (igual que tu función original)
+    # Unimos los dataframes
+    df_muestras_stations = df_muestras.merge(df_stations, on='station_id', how='left')
+    df_petrola = df_muestras_stations.merge(df_compounds, left_on='compound_cas', right_on='cas', how='left')
+
+    # Convertimos las fechas
+    df_petrola["sample_date"] = pd.to_datetime(df_petrola["sample_date"])
+    
+    return df_petrola
+
+
+@st.cache_data(ttl=3600)
 def cargar_dataframe_desde_db(db_path):
     # Esta función carga todas las tablas de la base de datos y las une en un solo dataframe para realizar los filtros y graficas mas facilmente
     # Esta función solo se ejecuta una vez cada hora o cuando se reinicie desde terminal el dashboard, para evitar consultas frecuentes irrelevantes con los mismos datos -> mejora velocidad de respuesta
@@ -151,6 +211,7 @@ def cargar_dataframe_desde_db(db_path):
     # Convertimos las fechas para el filtrado por tiempo usando datetime
     df_petrola["sample_date"] = pd.to_datetime(df_petrola["sample_date"])
     return df_petrola
+
 
 @st.cache_data(ttl=3600)
 def generar_diccionario_de_colores_de_grupo(df_petrola):
@@ -809,7 +870,7 @@ def insertar_nuevas_muestras(uploaded_file):
 #json_diccionario = os.environ["USER_CREDENTIALS"]
 
 #USER_CREDENTIALS = json.loads(json_diccionario)
-USER_CREDENTIALS = {"admin": "miTFG-2025", "LP2025": "Muestras_Pétrola25"}
+USER_CREDENTIALS = {"admin": "admin"}
 
 # Estado de Sesion
 if "logged_in" not in st.session_state:
@@ -865,7 +926,10 @@ st.markdown("""
 
 
 # Se carga el dataframe, extrayendo los datos de la base de datos
-df_petrola = cargar_dataframe_desde_db(database_path)
+df_petrola = cargar_dataframe_desde_s3(
+    bucket_name="tfm-almacen-muestras-agua-2026", 
+    s3_key="Petrola.db"
+)
 
 # Se inicializa el diccionario de filtros
 filtros = {}
